@@ -1,0 +1,71 @@
+# Force HTTPS and Redirect to www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{REQUEST_URI} !^/404\.php$
+RewriteRule ^(.*)$ https://www.nisan.co.in/$1 [L,R=301]
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.php
+
+# WebP Rewrite for Supported Browsers
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{REQUEST_FILENAME} \.(jpg|jpeg|png)$
+  RewriteCond %{REQUEST_FILENAME}.webp -f
+  RewriteRule (.+)\.(jpg|jpeg|png)$ $1.webp [T=image/webp]
+</IfModule>
+
+# Enable CORS for Open Graph Images
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# Enable Gzip Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE image/webp
+</IfModule>
+
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect index.php to root URL
+RewriteCond %{THE_REQUEST} /index\.php [NC]
+RewriteRule ^(.*)index\.php$ /$1 [L,R=301]
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Redirect all .php requests to clean URLs (for SEO-friendly)
+RewriteCond %{THE_REQUEST} \.php [NC]
+RewriteRule ^(.*)\.php$ /$1 [L,R=301]
+
+# Custom friendly URLs for specific pages
+RewriteRule ^services$ services.php [L]
+RewriteRule ^contact$ contact.php [L]
+RewriteRule ^about-us$ about-us.php [L]
+RewriteRule ^plans$ plans.php [L]
+
+# Leverage Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access 1 month"
+    ExpiresByType image/jpeg "access 1 month"
+    ExpiresByType image/gif "access 1 month"
+    ExpiresByType image/png "access 1 month"
+    ExpiresByType text/css "access 1 month"
+    ExpiresByType text/html "access 1 month"
+    ExpiresByType application/pdf "access 1 month"
+    ExpiresByType application/javascript "access 1 month"
+    ExpiresByType application/x-javascript "access 1 month"
+</IfModule>
+
+
+# GZIP Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript image/svg+xml
+</IfModule>
+
