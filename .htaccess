@@ -69,3 +69,7 @@ RewriteRule ^plans$ plans.php [L]
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript image/svg+xml
 </IfModule>
 
+<Files "github-webhook.php">
+    Require all denied
+    Require ip 192.30.252.0/22
+</Files>
