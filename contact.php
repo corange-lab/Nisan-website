@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -42,10 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="description" content="Get in touch with Nisan Cable TV & Internet in Bilimora. Call, email, or visit us for inquiries about broadband and cable TV services.">
     <meta name="keywords" content="contact Nisan internet provider, customer support Bilimora, broadband help Bilimora, cable TV contact Bilimora">
     <link rel="canonical" href="https://www.nisan.co.in/">
+
+
+    <?php include('common-css.php'); ?>
 </head>
 
-
-
+<body>
+<?php include('header.php'); ?>
     <!-- main-area -->
     <main>
 

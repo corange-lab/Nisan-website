@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+
 
 
 <head>
@@ -13,10 +13,13 @@
         gtag('event', 'conversion', { 'send_to': 'AW-938737099/oaWPCO7v14AaEMv7z78D' });
     </script>
     <title>Thank You – Nisan Cable TV & Internet</title>
+    <?php include('common-css.php'); ?>
 </head>
 
 
+<body>
 
+<?php include('header.php'); ?>
 
 <!-- main-area -->
 <main>

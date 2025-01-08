@@ -4,7 +4,7 @@ ob_start(function ($buffer) {
 });
 ?>
 
-<?php include('common.php'); ?>
+
 <?php
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>

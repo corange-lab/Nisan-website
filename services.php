@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,13 @@
     <meta name="description" content="Explore Nisan's broadband and cable TV services in Bilimora. High-speed FTTH internet, affordable cable packages, and 24/7 support for your home and business.">
     <meta name="keywords" content="internet services Bilimora, broadband plans Bilimora, cable TV Bilimora, unlimited internet Bilimora, FTTH provider Bilimora">
     <link rel="canonical" href="https://www.nisan.co.in/">
+    <?php include('common-css.php'); ?>
 </head>
+
+
+<body>
+
+<?php include('header.php'); ?>
     <!-- main-area -->
     <main>
 

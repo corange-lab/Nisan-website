@@ -1,6 +1,9 @@
+
+<head>
+<?php include('common-css.php'); ?>
+</head>
+<body>
 <?php include('header.php'); ?>
-
-
     <!-- main-area -->
     <main>
 

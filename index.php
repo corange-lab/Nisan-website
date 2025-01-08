@@ -1,5 +1,4 @@
-<?php include('header.php'); ?>
-<!-- main-area -->
+
 
 <head>
     <meta charset="utf-8">
@@ -194,11 +193,14 @@
 <meta name="facebook-domain-verification" content="zxh7pbdxqpvahj27akuscq7wz0nfm5" />
 
 
-    
+    <?php include('common-css.php'); ?>
     
 </head>
 
 <body>
+
+<?php include('header.php'); ?>
+<!-- main-area -->
 <!-- Preloader -->
         <!-- Google Tag Manager (noscript) -->
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFKNFG9Z"

@@ -1,10 +1,13 @@
-<?php include('header.php'); ?>
+
 
 <head>
     <link rel="canonical" href="https://www.nisan.co.in/">
+    <?php include('common-css.php'); ?>
 </head>
 
+<body>
 
+<?php include('header.php'); ?>
         <!-- main-area -->
         <main>
 

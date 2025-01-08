@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +20,12 @@
             })(window,document,'script','dataLayer','GTM-MFKNFG9Z');
         </script>
     <!-- End Google Tag Manager -->
+    <?php include('common-css.php'); ?>
 </head>
 
+<body>
+
+<?php include('header.php'); ?>
     <!-- main-area -->
     <main>
 
