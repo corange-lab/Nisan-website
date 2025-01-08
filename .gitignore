@@ -1,0 +1,4 @@
+echo ".htaccess" >> .gitignore
+git add .gitignore
+git commit -m "Ignore .htaccess in git"
+git push origin main

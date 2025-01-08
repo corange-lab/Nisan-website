@@ -1,0 +1,65 @@
+2025-01-08 09:37:30 - Deployment attempted:
+From github.com:corange-lab/Nisan-website
+ * branch            main       -> FETCH_HEAD
+   e04ed95..e57a8e5  main       -> origin/main
+Updating e04ed95..e57a8e5
+Fast-forward
+ .idea/.gitignore        | 3 +++
+ .idea/Nisan-website.iml | 9 +++++++++
+ .idea/misc.xml          | 6 ++++++
+ .idea/modules.xml       | 8 ++++++++
+ .idea/vcs.xml           | 6 ++++++
+ README.md               | 2 +-
+ 6 files changed, 33 insertions(+), 1 deletion(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/Nisan-website.iml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+
+
+2025-01-08 09:45:45 - Deployment attempted:
+```
+From github.com:corange-lab/Nisan-website
+ * branch            main       -> FETCH_HEAD
+   e57a8e5..e871902  main       -> origin/main
+Updating e57a8e5..e871902
+Fast-forward
+ README.md | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+commit e871902aa734942746cb583603c431e64fd846b1
+Author: Chirag <>
+Date:   Wed Jan 8 09:45:39 2025 +0530
+
+    successfully deployed automatically
+
+M	README.md
+ .htaccess | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+```
+
+2025-01-08 09:48:32 - Deployment attempted:
+```
+From github.com:corange-lab/Nisan-website
+ * branch            main       -> FETCH_HEAD
+   e871902..67f9701  main       -> origin/main
+Updating e871902..67f9701
+Fast-forward
+ .idea/misc.xml |  1 -
+ viewlog.php    | 25 +++++++++++++++++++++++++
+ 2 files changed, 25 insertions(+), 1 deletion(-)
+ create mode 100644 viewlog.php
+commit 67f97012bb878494b39cf23590a33039050be6ec
+Author: Chirag <>
+Date:   Wed Jan 8 09:48:26 2025 +0530
+
+    view log added
+
+M	.idea/misc.xml
+A	viewlog.php
+ .htaccess | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+```
+
