@@ -198,6 +198,20 @@
     
 </head>
 
+<body>
+<!-- Preloader -->
+        <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFKNFG9Z"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div id="preloader"><img alt="" src="assets/imgs/preloader.gif" /></div>
+<!-- Preloader-end -->
+
+<!-- Scroll-top -->
+
+    <button class="scroll-top scroll-to-target" data-target="html"></button>
+
+<!-- Scroll-top-end-->
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-938737099">
