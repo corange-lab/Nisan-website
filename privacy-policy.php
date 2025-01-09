@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <link rel="canonical" href="https://www.nisan.co.in/">
     <?php include('common-css.php'); ?>

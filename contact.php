@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="en">
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
