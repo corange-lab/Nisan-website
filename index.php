@@ -471,7 +471,8 @@
 </div>
 </div>
 </section>
-<!-- cta-area-end --><!-- special-offer-area -->
+<!-- cta-area-end -->
+<!-- special-offer-area -->
 
 <section class="special-offer-area section-space-top section-meadium-bottom">
 <div class="container">
@@ -512,12 +513,11 @@
 
 
 
-<div class="special-price-wrap">
-<h2 class="special-price"><sup>₹</sup>4999<sub>Yearly</sub></h2>
-
-<p class="trial-link"><a href="/contact">Try Free For 1 Month</a></p>
-</div>
-<a class="btn transparent-btn" href="/contact">Get started</a></div>
+        <div class="special-price-wrap">
+                    <h2 class="special-price"><sup>₹</sup>4999<sub>Yearly</sub></h2>
+                    <p class="trial-link"><i class="flaticon-wifi-router"></i><a href="/contact">Try Free For 1 Month</a></p>
+        </div>
+   <a class="btn transparent-btn" href="/contact">Get started</a></div>
 </div>
 </div>
 </div>
