@@ -26,7 +26,7 @@
                             <h1 class="title">Reliable Internet & Cable TV Services in Bilimora</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Services</li>
                                 </ol>
                             </nav>
@@ -43,7 +43,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-lg-6 order-0 order-lg-2">
                         <div class="services-inner-img wow fadeInRight" data-wow-delay=".2s">
-                            <img src="assets/imgs/images/in_services_img.jpg" alt="">
+                            <img src="assets/imgs/images/in_services_img.webp" alt="services">
                            
                         </div>
                     </div>
@@ -55,28 +55,28 @@
                             <p>Explore our high-speed FTTH broadband and premium cable TV packages designed to meet your entertainment and work needs.</p>
                             <ul class="services-inner-list">
                                 <li>
-                                    <img src="assets/imgs/icons/check.png" alt=""> 
+                                    <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
                                         <h5><b>FTTH Broadband:</b> High-speed fiber internet up to 200 Mbps for streaming and gaming.</h5>
                                     </div>
                                 </li>
                                 
                                 <li>
-                                    <img src="assets/imgs/icons/check.png" alt=""> 
+                                    <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
                                         <h5><b>Cable TV Packages:</b> 100+ HD channels with movies, sports, and entertainment.</h5>
                                     </div>
                                 </li>
                                 
                                 <li>
-                                    <img src="assets/imgs/icons/check.png" alt=""> 
+                                    <img src="assets/imgs/icons/check.web" alt="done">
                                     <div>
                                         <h5><b>Bundled Offers:</b> Internet + cable TV with 2 months free on yearly plans.</h5>
                                     </div>
                                 </li>
                                 
                                 <li>
-                                    <img src="assets/imgs/icons/check.png" alt=""> 
+                                    <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
                                         <h5><b>24/7 Support:</b> Get assistance whenever you need it.</h5>
                                     </div>
@@ -100,10 +100,10 @@
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="services.php">Broadband</a></h3>
+<h3 class="title"><a href="/services">Broadband</a></h3>
 
 <p>Get connected with our high-speed broadband plans designed to meet all your internet needs. Whether it’s streaming, gaming, or working from home, enjoy seamless connectivity with speeds that keep you ahead.</p>
-<a class="btn btn-link" href="services.php">Read more</a></div>
+<a class="btn btn-link" href="/services">Read more</a></div>
 </div>
 </div>
 
@@ -114,10 +114,10 @@
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="services.php">Cable TV</a></h3>
+<h3 class="title"><a href="/services">Cable TV</a></h3>
 
 <p>Enjoy endless entertainment with our Cable TV service. Access a variety of channels in HD quality, including movies, sports, news, and more. Stay entertained with affordable plans tailored for your family.</p>
-<a class="btn btn-link" href="services.php">Read more</a></div>
+<a class="btn btn-link" href="/services">Read more</a></div>
 </div>
 </div>
 </div>
@@ -128,7 +128,7 @@
 
         <!-- pricing-area -->
         <section class="pricing-area position-relative section-space">
-            <div class="pricing-bg" data-background="assets/imgs/bg/pricing_bg.jpg"></div>
+            <div class="pricing-bg" data-background="assets/imgs/bg/pricing_bg.webp"></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-lg-6 col-md-8">
@@ -142,7 +142,7 @@
 <div class="row">
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb01.jpg" />
+<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb01.webp" />
 <h3 class="title"><a href="#">Internet For Personal</a></h3>
 
 <div class="net-speed">
@@ -171,7 +171,7 @@
 
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.jpg" />
+<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" />
 <h3 class="title"><a href="#">Internet For Family</a></h3>
 
 <div class="net-speed">
@@ -200,7 +200,7 @@
 
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb03.jpg" />
+<div class="pricing-thumb"><img alt="pricing" src="assets/imgs/images/pricing_thumb03.webp" />
 <h3 class="title"><a href="#">Internet For Corporate</a></h3>
 
 <div class="net-speed">
@@ -210,11 +210,11 @@
 
 <div class="pricing-content">
 <ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Dualband 5G PON Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Multiple Device Connect Capability</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Phone, Computer & TV</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Free Installation</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Dualband 5G PON Router</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Multiple Device Connect Capability</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone, Computer & TV</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Free Installation</li>e
 </ul>
 
 <div class="price-wrap"><span>Start From</span>
@@ -242,7 +242,8 @@
 
 
     <!-- JS here -->
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>

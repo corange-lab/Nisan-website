@@ -38,7 +38,7 @@
                             <h1 class="title">About Nisan Cable TV & Internet</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">About</li>
                                 </ol>
                             </nav>
@@ -55,8 +55,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-img-wrap">
-                            <img src="assets/imgs/images/about_img01.jpg" alt="">
-                            <img src="assets/imgs/images/about_img02.jpg" class="main-img" alt="">
+                            <img src="assets/imgs/images/about_img01.webp" alt="about us">
+                            <img src="assets/imgs/images/about_img02.webp" class="main-img" alt="about-us">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -74,7 +74,7 @@
                                 <li>Trusted & recommended</li>
                                 <li>Latest Network Infrastructure</li>
                             </ul>
-                            <a href="contact.php" class="btn transparent-btn">Get Started</a>
+                            <a href="/contact" class="btn transparent-btn">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
 <br>
 
         <!-- cta-area -->
-        <section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/cta_bg.jpg">
+        <section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/cta_bg.webp">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-9 col-lg-10">
@@ -95,7 +95,7 @@
                                 <h2 class="title">Nisan: Trusted for Speed and Service Since 2000!</h2>
                             </div>
                             <div class="cta-btn-wrap">
-                                <a href="pricing.php" class="btn">View our Plans</a>
+                                <a href="/pricing" class="btn">View our Plans</a>
                                 <span class="or">OR</span>
                                 <a href="tel:+919825152400" class="btn transparent-btn">+91 98251 52400</a>
                             </div>

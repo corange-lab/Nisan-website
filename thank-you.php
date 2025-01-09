@@ -33,7 +33,7 @@
                         <h3 class="title">Thank You!</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Thank You</li>
                             </ol>
                         </nav>
@@ -50,13 +50,13 @@
             <div class="row justify-content-center">
                 <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
                     <div class="error-img text-center mb-40">
-                        <!--<img src="assets/imgs/images/thank-you.png" alt="Thank You">-->
+                        <!--<img src="assets/imgs/images/thank-you.webp" alt="Thank You">-->
                     </div>
                     <div class="error-content text-center mb-40">
                         <h3 class="title">Thanks for Showing Interest!</h3>
                         <p>We have received your request for a new connection. Our team will contact you soon.</p>
                         <p>Redirecting to the home page in <span id="countdown">10</span> seconds...</p>
-                        <a href="index.php" class="btn">Go Back to Home Now</a>
+                        <a href="/index" class="btn">Go Back to Home Now</a>
                     </div>
                 </div>
             </div>

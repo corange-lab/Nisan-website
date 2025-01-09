@@ -22,7 +22,7 @@
                             <h3 class="title">Refund Policy</h3>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Refund Policy</li>
                                 </ol>
                             </nav>
@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="privacy-wrapper">
-                            <p>Thank you for choosing Netfix as your broadband and internet service provider. This
+                            <p>Thank you for choosing Nisan as your cable tv and internet service provider. This
                                 Refund Policy explains the terms and conditions regarding refunds for our services. By
                                 using our website and purchasing our services, you agree to comply with this policy.</p>
                             <div class="privacy-wrapper-box">
@@ -79,7 +79,7 @@
                             </div>
                             <div class="privacy-wrapper-box">
                                 <h5>5. Changes to the Refund Policy</h5>
-                                <p>Netfix reserves the right to modify or update this Refund Policy at any time without
+                                <p>Nisan reserves the right to modify or update this Refund Policy at any time without
                                     prior notice. The updated policy will be effective immediately upon posting on our
                                     website. We encourage you to review this policy periodically to stay informed about
                                     any changes.</p>
@@ -87,8 +87,7 @@
                             <div class="privacy-wrapper-box">
                                 <h5>6. Contact Us</h5>
                                 <p class="mb-40">If you have any questions, concerns, or requests regarding this Privacy &amp; Policy,
-                                    please contact us at<a class="hover-underline" href="https://www.devsnews.com/cdn-cgi/l/email-protection#5e303b2a3837261e39333f3732703d3133">
-                                        <span class="__cf_email__" data-cfemail="b4dad1c0d2ddccf4d3d9d5ddd89ad7dbd9">[email&#160;protected]</span></a>.</p>
+                                    please contact us at hello@nisan.co.in</span></a>.</p>
                             </div>
                         </div>
                     </div>
@@ -97,44 +96,7 @@
         </div>
         <!-- Refund Policy-end -->
 
-        <!-- brand-area -->
-        <div class="brand-area section-meadium-bottom">
-            <div class="container">
-                <div class="row brand-active">
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item01.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item02.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item03.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item04.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item05.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item05.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- brand-area-end -->
+
 
 
     </main>
@@ -148,7 +110,8 @@
 
 
     <!-- JS here -->
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
@@ -165,5 +128,5 @@
 </body>
 
 
-<!-- Mirrored from www.devsnews.com/template/netfix-prev/refund-policy.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Dec 2024 09:15:21 GMT -->
+
 </html>

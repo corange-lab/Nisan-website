@@ -20,7 +20,7 @@
                                 <h3 class="title">Packages</h3>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Packages</li>
                                     </ol>
                                 </nav>
@@ -47,17 +47,17 @@
                             <div class="col-lg-4 col-md-6 col-sm-9">
                                 <div class="pricing-item mb-30">
                                     <div class="pricing-thumb">
-                                        <img src="assets/imgs/images/pricing_thumb01.jpg" alt="">
-                                        <h3 class="title"><a href="pricing.html">Internet For Personal</a></h3>
+                                        <img src="assets/imgs/images/pricing_thumb01.webp" alt="">
+                                        <h3 class="title"><a href="/pricing">Internet For Personal</a></h3>
                                         <div class="net-speed">
                                             <h5>5-10 <span>MBPS</span></h5>
                                         </div>
                                     </div>
                                     <div class="pricing-content">
                                         <ul class="pricing-list">
-                                            <li><img src="assets/imgs/icons/check.png" alt=""> Single Device Uses</li>
-                                            <li><img src="assets/imgs/icons/check.png" alt=""> Phone & Computer</li>
-                                            <li><img src="assets/imgs/icons/check.png" alt=""> Random IP</li>
+                                            <li><img src="assets/imgs/icons/check.webp" alt="done"> Single Device Uses</li>
+                                            <li><img src="assets/imgs/icons/check.webp" alt="done"> Phone & Computer</li>
+                                            <li><img src="assets/imgs/icons/check.webp" alt="done"> Random IP</li>
                                         </ul>
                                         <div class="price-wrap">
                                             <span>Start From</span>
@@ -131,7 +131,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-7 col-lg-6 order-0 order-lg-2">
                             <div class="subscribe-img wow fadeInRight" data-wow-delay=".2s">
-                                <img src="assets/imgs/images/subscribe_img02.png" alt="">
+                                <img src="assets/imgs/images/subscribe_img02.webp" alt="">
                                 <h2 class="overlay-price"><span>Only</span> $89 <span>Per Month</span></h2>
                             </div>
                         </div>

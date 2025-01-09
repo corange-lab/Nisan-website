@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h1 class="title">Contact Nisan – Your Local Internet & Cable Provider</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Contact</li>
                                 </ol>
                             </nav>
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <p class="contact-form-check">
                                 <input type="checkbox" class="form-check-input" id="cookies-consent">
                                 <label for="cookies-consent" class="form-check-label">I agree with that, my data is
-                                    being saved for further contact, see our <a href="privacy-policy.php">Privacy
+                                    being saved for further contact, see our <a href="/privacy-policy">Privacy
                                         Policy</a></label>
                             </p>
                             <button type="submit" class="btn">Submit Message</button>
@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <p>We’re here to help you with any questions or support you need. Reach out to us using the details below:</p>
                             <ul class="contact-info-list">
                                 <li><i class="fal fa-phone"></i> <a href="tel:+919825152400">+91 98251 52400</a></li>
-                                <li><i class="fal fa-envelope"></i> <a href="nisanmotors@yahoo.com</span></a></li>
+                                <li><i class="fal fa-envelope"></i> <a href="hello@nisan.co.in</span></a></li>
                                 <li><i class="fal fa-map-marker-alt"></i> <span>Morden Radio, <br>Opp. Laxmi Palace, <br>Station Road, <br>Bilimora-396321</span></li>
                             </ul>
                         </div>

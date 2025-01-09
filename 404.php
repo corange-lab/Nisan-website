@@ -16,7 +16,7 @@
                             <h3 class="title">404 Error</h3>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Error Page</li>
                                 </ol>
                             </nav>
@@ -33,7 +33,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
                         <div class="error-img text-center mb-40">
-                            <img src="assets/imgs/images/404.png" alt="">
+                            <img src="assets/imgs/images/404.webp" alt="">
                         </div>
                         <div class="error-content text-center mb-40">
                             <h3 class="title">Page Not Found</h3>

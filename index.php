@@ -228,7 +228,7 @@
 <!-- Google tag (gtag.js) -->
 
 <main><!-- banner-area -->
-<section class="banner-area banner-bg" data-background="assets/imgs/slider/banner_bg.jpg">
+<section class="banner-area banner-bg" data-background="assets/imgs/slider/banner_bg.webp">
 <div class="container">
 <div class="row">
 <div class="col-xl-5 col-lg-6 col-md-9">
@@ -240,21 +240,23 @@
 <div class="banner-price wow fadeInUp" data-wow-delay=".6s">
 <h3 class="price">₹4999<sub>/Year</sub></h3>
 </div>
-<a class="btn wow fadeInUp" data-wow-delay=".8s" href="contact.php">Get Started</a></div>
+<a class="btn wow fadeInUp" data-wow-delay=".8s" href="/contact">Get Started</a></div>
 </div>
 </div>
 </div>
 
 <div class="banner-phone">
-<div class="icon"></div>
-
-<div class="content"><span>Customer Service:</span>
-
-<h5 class="number"><a href="tel:+919825152400">+91 98251 52400</a></h5>
-</div>
+                <div class="icon">
+                    <i class="fal fa-mobile-android"></i>
+                </div>
+                    <div class="content">
+                        <span>Customer Service:</span>
+                        <h5 class="number"><a href="tel:+919825152400">+91 98251 52400</a></h5>
+                    </div>
 </div>
 </section>
-<!-- banner-area-end --><!-- pricing-area -->
+<!-- banner-area-end -->
+<!-- pricing-area -->
 
 <section class="pricing-area section-space">
 <div class="container">
@@ -270,7 +272,7 @@
 <div class="row">
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb01.jpg" />
+<div class="pricing-thumb"><img alt="plan1" src="assets/imgs/images/pricing_thumb01.webp" />
 <h3 class="title"><a href="#">Internet For Personal</a></h3>
 
 <div class="net-speed">
@@ -280,11 +282,11 @@
 
 <div class="pricing-content">
 <ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Single Band Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Single Device Uses</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Phone &amp; Computer</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Free Installation</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Single Band Router</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Single Device Uses</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone &amp; Computer</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Free Installation</li>
 </ul>
 
 <div class="price-wrap"><span>Start From</span>
@@ -299,7 +301,7 @@
 
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.jpg" />
+<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" />
 <h3 class="title"><a href="#">Internet For Family</a></h3>
 
 <div class="net-speed">
@@ -309,11 +311,11 @@
 
 <div class="pricing-content">
 <ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Dualband 5G PON Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Multiple Device Connect Capability</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Phone, Computer & TV</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Free Installation</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Dualband 5G PON Router</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Multiple Device Connect Capability</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone, Computer & TV</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Free Installation</li>
 </ul>
 
 <div class="price-wrap"><span>Start From</span>
@@ -328,7 +330,7 @@
 
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb03.jpg" />
+<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb03.webp" />
 <h3 class="title"><a href="#">Internet For Corporate</a></h3>
 
 <div class="net-speed">
@@ -338,11 +340,11 @@
 
 <div class="pricing-content">
 <ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Dualband 5G PON Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Multiple Device Connect Capability</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Phone, Computer & TV</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Free Installation</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Dualband 5G PON Router</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Multiple Device Connect Capability</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone, Computer & TV</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Free Installation</li>
 </ul>
 
 <div class="price-wrap"><span>Start From</span>
@@ -360,7 +362,7 @@
 </section>
 <!-- pricing-area-end --><!-- video-area -->
 
-<section class="video-area video-bg" data-background="assets/imgs/bg/video_bg.jpg">
+<section class="video-area video-bg" data-background="assets/imgs/bg/video_bg.webp">
 <div class="container">
 <div class="row justify-content-between align-items-center">
 <div class="col-lg-4">
@@ -397,7 +399,7 @@
                                     </div>
                                 </div>
                             </div>
-<a class="btn" href="contact.php">Try Us Free</a></div>
+<a class="btn" href="/contact">Try Us Free</a></div>
 <br>
 <br>
 <br>
@@ -426,10 +428,10 @@
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="services.php">Broadband</a></h3>
+<h3 class="title"><a href="/services">Broadband</a></h3>
 
 <p>Get connected with our high-speed broadband plans designed to meet all your internet needs. Whether it’s streaming, gaming, or working from home, enjoy seamless connectivity with speeds that keep you ahead.</p>
-<a class="btn btn-link" href="services.php">Read more</a></div>
+<a class="btn btn-link" href="/services">Read more</a></div>
 </div>
 </div>
 
@@ -440,10 +442,10 @@
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="services.php">Cable TV</a></h3>
+<h3 class="title"><a href="/services">Cable TV</a></h3>
 
 <p>Enjoy endless entertainment with our Cable TV service. Access a variety of channels in HD quality, including movies, sports, news, and more. Stay entertained with affordable plans tailored for your family.</p>
-<a class="btn btn-link" href="services.php">Read more</a></div>
+<a class="btn btn-link" href="/services">Read more</a></div>
 </div>
 </div>
 </div>
@@ -451,7 +453,7 @@
 </section>
 <!-- services-area-end --><!-- cta-area -->
 
-<section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/cta_bg.jpg">
+<section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/cta_bg.webp">
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-xl-9 col-lg-10">
@@ -460,7 +462,7 @@
 <h2 class="title">Experience High-Speed Broadband and Reliable Cable TV Services in Bilimora – Stay Connected, Always!</h2>
 </div>
 
-<div class="cta-btn-wrap"><a class="btn" href="pricing.php">View our Plans</a> <span class="or">OR</span> <a class="btn transparent-btn" href="tel:+919825152400">+91 98251 52400</a></div>
+<div class="cta-btn-wrap"><a class="btn" href="/pricing">View our Plans</a> <span class="or">OR</span> <a class="btn transparent-btn" href="tel:+919825152400">+91 98251 52400</a></div>
 </div>
 </div>
 </div>
@@ -472,7 +474,7 @@
 <div class="container">
 <div class="row align-items-center">
 <div class="col-lg-6 order-0 order-lg-2">
-<div class="special-offer-img wow fadeInRight" data-wow-delay=".2s"><img alt="" src="assets/imgs/images/special_offer_img.jpg" />
+<div class="special-offer-img wow fadeInRight" data-wow-delay=".2s"><img alt="" src="assets/imgs/images/special_offer_img.webp" />
 <div class="special-offer-text">Risk Free</div>
 
 <div class="special-offer-mbps"><span>Full</span>
@@ -510,20 +512,20 @@
 <div class="special-price-wrap">
 <h2 class="special-price"><sup>₹</sup>4999<sub>Yearly</sub></h2>
 
-<p class="trial-link"><a href="contact.php">Try Free For 1 Month</a></p>
+<p class="trial-link"><a href="/contact">Try Free For 1 Month</a></p>
 </div>
-<a class="btn transparent-btn" href="contact.php">Get started</a></div>
+<a class="btn transparent-btn" href="/contact">Get started</a></div>
 </div>
 </div>
 </div>
 </section>
 <!-- special-offer-area-end --><!-- subscribe-area -->
 
-<section class="subscribe-area subscribe-bg" data-background="assets/imgs/bg/subscribe_bg.jpg">
+<section class="subscribe-area subscribe-bg" data-background="assets/imgs/bg/subscribe_bg.webp">
 <div class="container">
 <div class="row align-items-center">
 <div class="col-xl-7 col-lg-6">
-<div class="subscribe-img wow fadeInLeft" data-wow-delay=".2s"><img alt="" src="assets/imgs/images/subscribe_img.png" /></div>
+<div class="subscribe-img wow fadeInLeft" data-wow-delay=".2s"><img alt="" src="assets/imgs/images/subscribe_img.webp" /></div>
 </div>
 
 <div class="col-xl-5 col-lg-6">
@@ -538,7 +540,7 @@
 
 <div class="subscribe-plan">
 <h2 class="price"><span>Only</span> ₹8999<sub>/Year</sub></h2>
-<a class="btn btn-link" href="pricing.php">View All Plans</a></div>
+<a class="btn btn-link" href="/pricing">View All Plans</a></div>
 </div>
 </div>
 </div>

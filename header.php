@@ -51,20 +51,20 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 <div class="menu-wrap">
 <nav class="menu-nav">
-<div class="logo"><a href="index.php"><img alt="" src="assets/imgs/logo/logo.webp" /></a></div>
+<div class="logo"><a href="index.php"><img alt="logo" src="assets/imgs/logo/logo.webp" /></a></div>
 
 <div class="navbar-wrap main-menu d-none d-lg-flex">
 <ul class="navigation">
-	<li class="<?= ($currentPage == 'index.php') ? 'active' : '' ?>"><a href="index.php">Home</a></li>
-	<li class="<?= ($currentPage == 'about-us.php') ? 'active' : '' ?>"><a href="about-us.php">About</a></li>
-	<li class="<?= ($currentPage == 'services.php') ? 'active' : '' ?>"><a href="services.php">Services</a></li>
-	<li class="<?= ($currentPage == 'contact.php') ? 'active' : '' ?>"><a href="contact.php">contacts</a></li>
+	<li class="<?= ($currentPage == 'index.php') ? 'active' : '' ?>"><a href="/index">Home</a></li>
+	<li class="<?= ($currentPage == 'about-us.php') ? 'active' : '' ?>"><a href="/about-us">About</a></li>
+	<li class="<?= ($currentPage == 'services.php') ? 'active' : '' ?>"><a href="/services">Services</a></li>
+	<li class="<?= ($currentPage == 'contact.php') ? 'active' : '' ?>"><a href="/contact">contacts</a></li>
 </ul>
 </div>
 
 <div class="header-action d-none d-md-block">
 <ul>
-	<li class="header-btn"><a class="btn transparent-btn" href="contact.php">Get a Quote</a></li>
+	<li class="header-btn"><a class="btn transparent-btn" href="/contact">Get a Quote</a></li>
 </ul>
 </div>
 </nav>
@@ -73,7 +73,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                         <div class="mobile-menu">
                             <nav class="menu-box">
                                 <div class="close-btn"><i class="fal fa-times"></i></div>
-                                <div class="nav-logo"><a href="index.php"><img src="assets/imgs/logo/logo.png" alt=""
+                                <div class="nav-logo"><a href="/index"><img src="assets/imgs/logo/logo.webp" alt="logo"
                                             title=""></a>
                                 </div>
                                 <div class="menu-outer">

@@ -20,7 +20,7 @@
                             <h3 class="title">Privacy & Policy</h3>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Privacy & Policy</li>
                                 </ol>
                             </nav>
@@ -111,44 +111,7 @@
         </div>
         <!-- privacy-policy-end -->
 
-        <!-- brand-area -->
-        <div class="brand-area section-meadium-bottom">
-            <div class="container">
-                <div class="row brand-active">
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item01.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item02.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item03.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item04.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item05.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="brand-item">
-                            <a href="#"><img src="assets/imgs/brand/brand_item05.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- brand-area-end -->
+
 
 
     </main>
