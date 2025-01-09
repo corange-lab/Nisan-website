@@ -431,7 +431,7 @@
 <h3 class="title"><a href="/services">Broadband</a></h3>
 
 <p>Get connected with our high-speed broadband plans designed to meet all your internet needs. Whether it’s streaming, gaming, or working from home, enjoy seamless connectivity with speeds that keep you ahead.</p>
-<a class="btn btn-link" href="/services">Read more</a></div>
+<a class="btn btn-link" href="/services">View Broadband Plans</a></div>
 </div>
 </div>
 
@@ -445,7 +445,7 @@
 <h3 class="title"><a href="/services">Cable TV</a></h3>
 
 <p>Enjoy endless entertainment with our Cable TV service. Access a variety of channels in HD quality, including movies, sports, news, and more. Stay entertained with affordable plans tailored for your family.</p>
-<a class="btn btn-link" href="/services">Read more</a></div>
+<a class="btn btn-link" href="/services">Explore Cable TV Packages</a></div>
 </div>
 </div>
 </div>
