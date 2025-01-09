@@ -212,7 +212,9 @@
 
 <!-- Scroll-top -->
 
-    <button class="scroll-top scroll-to-target" data-target="html"></button>
+    <button class="scroll-top scroll-to-target open" data-target="html">
+            <i class="fas fa-angle-up"></i>
+        </button>
 
 <!-- Scroll-top-end-->
 
