@@ -33,10 +33,10 @@
                                 <h4 class="title">About Company</h4>
                             </div>
                             <ul class="fw-list">
-                                <li><a href="about-us.php">About Company</a></li>
-                                <li><a href="contact.php">Contact Us</a></li>
-                                <li><a href="privacy-policy.php">Privacy policy</a></li>
-                                <li><a href="refund-policy.php">Terms & Conditions</a></li>
+                                <li><a href="/about-us">About Company</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="/privacy-policy">Privacy policy</a></li>
+                                <li><a href="/refund-policy">Terms & Conditions</a></li>
                                
                             </ul>
                         </div>
@@ -60,7 +60,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="footer-logo">
-                            <a href="index.php"><img src="assets/imgs/logo/w_logo.png" alt=""></a>
+                            <a href="/index"><img src="assets/imgs/logo/w_logo.webp" alt="Nisan logo"></a>
                         </div>
                     </div>
                     <div class="col-md-8">
