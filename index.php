@@ -510,14 +510,12 @@
     </div>
 </section>
 
-
-
-
-        <div class="special-price-wrap">
+<div class="special-price-wrap">
                     <h2 class="special-price"><sup>₹</sup>4999<sub>Yearly</sub></h2>
                     <p class="trial-link"><i class="flaticon-wifi-router"></i><a href="/contact">Try Free For 1 Month</a></p>
         </div>
    <a class="btn transparent-btn" href="/contact">Get started</a></div>
+</div>
 </div>
 </div>
 </div>
