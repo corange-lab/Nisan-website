@@ -621,7 +621,7 @@ label {
 /*  2.2 Breadcrumb
 /*----------------------------------------*/
 .breadcrumb-bg {
-  background-image: url("../imgs/bg/breadcrumb_bg.jpg");
+  background-image: url("../imgs/bg/breadcrumb_bg.webp");
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1449,7 +1449,7 @@ label {
   position: absolute;
   right: -133px;
   top: 0;
-  background-image: url(../imgs/logo/logo_path.png);
+  background-image: url(../imgs/logo/logo_path.webp);
   width: 433px;
   height: 100%;
   z-index: -1;
@@ -2576,7 +2576,7 @@ label {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-image: url(../imgs/icons/quote.png);
+  background-image: url(../imgs/icons/quote.webp);
   width: 64px;
   height: 46px;
   background-size: contain;
@@ -2610,7 +2610,7 @@ label {
 .blog-details-list li::before {
   content: "";
   display: inline-block;
-  background-image: url(../imgs/icons/check.png);
+  background-image: url(../imgs/icons/check.webp);
   width: 20px;
   height: 19px;
   background-size: contain;
@@ -2912,7 +2912,7 @@ label {
   position: absolute;
   left: 5%;
   top: -75%;
-  background-image: url(../imgs/blog/comment_line.png);
+  background-image: url(../imgs/blog/comment_line.webp);
   background-repeat: no-repeat;
   width: 59px;
   height: 210px;
@@ -3056,7 +3056,7 @@ label {
 
 .comment-from form .form-check-input:checked[type=checkbox],
 .contact-form-check .form-check-input:checked[type=checkbox] {
-  background-image: url(../imgs/icons/checkbox.png);
+  background-image: url(../imgs/icons/checkbox.webp);
   background-color: transparent;
 }
 
@@ -3608,7 +3608,7 @@ label {
 }
 .about-list li::before {
   content: "";
-  background-image: url(../imgs/icons/checkmark-filled_red.png);
+  background-image: url(../imgs/icons/checkmark-filled_red.webp);
   width: 17px;
   height: 17px;
   display: block;
@@ -4913,7 +4913,7 @@ label {
 }
 .pricing-three-list ul li::before {
   content: "";
-  background-image: url(../imgs/icons/checkmark-fill.png);
+  background-image: url(../imgs/icons/checkmark-fill.webp);
   width: 15px;
   height: 15px;
   display: block;
@@ -5058,7 +5058,7 @@ label {
 /*  7.11 Services css
 /*----------------------------------------*/
 .services-item {
-  background-image: url(../imgs/images/services_img.jpg);
+  background-image: url(../imgs/images/services_img.webp);
   background-position: center;
   background-size: cover;
   position: relative;
