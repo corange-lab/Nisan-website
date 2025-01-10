@@ -166,7 +166,7 @@
 <meta property="og:title" content="Nisan Cable & Internet - High-Speed Broadband in Bilimora">
 <meta property="og:type" content="website"> <!-- For general pages -->
 <meta property="og:url" content="https://www.nisan.co.in">
-<meta property="og:image" content="https://www.nisan.co.in/assets/imgs/logo/logo.webp">
+<meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 <meta property="og:image:alt" content="Nisan Cable & Internet Logo">
 <meta property="og:image:type" content="image/webp">
 <meta property="og:image:width" content="1200"> <!-- Width of image in pixels -->
