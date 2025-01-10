@@ -187,7 +187,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nisan Cable & Internet - Fast Broadband & TV in Bilimora">
 <meta name="twitter:description" content="Reliable internet and premium cable TV. Get seamless streaming, gaming, and live TV. Affordable plans starting at ₹4,999/year!">
-<meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/logo/logo.webp">
+<meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 
 
 
