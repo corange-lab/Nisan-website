@@ -19,8 +19,8 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.nisan.co.in/">
     <link rel="preload" as="image" href="assets/imgs/slider/banner_bg.webp">
+    <link rel="alternate" href="https://www.nisan.co.in/" hreflang="x-default" />
 
-    
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
