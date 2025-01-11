@@ -633,7 +633,7 @@
 <p>Enjoy high-speed internet and reliable cable TV services wherever you are in Bilimora. Check your network coverage and join our growing family of satisfied customers today.</p>
 </div>
 
-<div class="faq-map text-center"><img alt="" src="assets/imgs/images/map_img.png" /> <a class="btn map-btn" href="contact.php">Check Your Network Coverage</a></div>
+<div class="faq-map text-center"><img alt="map" src="assets/imgs/images/map_img.webp" /> <a class="btn map-btn" href="/contact">Check Your Network Coverage</a></div>
 </div>
 </div>
 </div>
