@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Nisan Cable TV & Internet in Bilimora</title>
-    <meta name="description" content="Learn about Nisan Cable TV & Internet in Bilimora. Providing cable TV since 2000 and FTTH high-speed internet since 2019. Trusted for reliability and service.">
+    <meta name="description" content="Learn about Nisan Cable TV & Internet in Bilimora. Providing cable TV since 1993 and FTTH high-speed internet since 2019. Trusted for reliability and service.">
     <meta name="keywords" content="about Nisan, internet provider Bilimora, cable TV Bilimora, FTTH broadband Bilimora, high-speed internet provider, highspeed internet in bilimora, Bilimora internet, 
                                     Best internet in bilimora">
     <meta name="robots" content="index, follow">
@@ -65,7 +65,7 @@
                             <h2 class="title">Your Trusted Partner for Internet and Cable TV Services</h2>
                         </div>
                         <div class="about-content">
-                            <p>At Nisan Cable TV & Internet, we have been a trusted name in the industry since 2000 for Cable TV services and have expanded into high-speed internet services since 2019. Our goal is to provide seamless connectivity and unmatched entertainment to the people of Bilimora and surrounding areas.<br><br><strong>Our Commitment to Excellence</strong><br>We specialize in FTTH (Fiber-to-the-Home) technology, ensuring that our customers experience the fastest and most reliable connections. By using the latest technology, we deliver high-speed internet and crystal-clear cable TV that keeps you connected to what matters most.</p>
+                            <p>At Nisan Cable TV & Internet, we have been a trusted name in the industry since 1993 for Cable TV services and have expanded into high-speed internet services since 2019. Our goal is to provide seamless connectivity and unmatched entertainment to the people of Bilimora and surrounding areas.<br><br><strong>Our Commitment to Excellence</strong><br>We specialize in FTTH (Fiber-to-the-Home) technology, ensuring that our customers experience the fastest and most reliable connections. By using the latest technology, we deliver high-speed internet and crystal-clear cable TV that keeps you connected to what matters most.</p>
                             <ul class="about-list">
                                 <li>Expert technical team</li>
                                 <li>Best network</li>
@@ -93,7 +93,7 @@
                     <div class="col-xl-9 col-lg-10">
                         <div class="cta-content text-center">
                             <div class="section-title white-title mb-35">
-                                <h2 class="title">Nisan: Trusted for Speed and Service Since 2000!</h2>
+                                <h2 class="title">Nisan: Trusted for Speed and Service Since 1993!</h2>
                             </div>
                             <div class="cta-btn-wrap">
                                 <a href="/pricing" class="btn">View our Plans</a>

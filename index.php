@@ -91,7 +91,7 @@
           "name": "When was Nisan Cable TV & Internet established?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We have been providing cable TV services since 2000 and started offering broadband internet services in 2019."
+            "text": "We have been providing cable TV services since 1993 and started offering broadband internet services in 2019."
           }
         },
         {
@@ -179,7 +179,7 @@
 <meta property="og:image:type" content="image/webp">
 <meta property="og:image:width" content="1200"> <!-- Width of image in pixels -->
 <meta property="og:image:height" content="630"> <!-- Height of image in pixels -->
-<meta property="og:description" content="Get blazing-fast FTTH internet and premium cable TV service in Bilimora. Trusted by locals since 2000!">
+<meta property="og:description" content="Get blazing-fast FTTH internet and premium cable TV service in Bilimora. Trusted by locals since 1993!">
 <meta property="og:site_name" content="Nisan Cable & Internet">
 <meta property="og:locale" content="en_IN"> <!-- For India-specific users -->
 <meta property="og:updated_time" content="2025-01-06T12:00:00+05:30"> <!-- Last updated time in ISO format -->
