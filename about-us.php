@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://www.nisan.co.in/">
+    <link rel="canonical" href="https://www.nisan.co.in/about-us">
     
     <!-- Google Tag Manager -->
         <script>

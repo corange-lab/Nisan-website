@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://www.nisan.co.in/">
+    <link rel="canonical" href="https://www.nisan.co.in/privacy-policy">
     <?php include('common-css.php'); ?>
 </head>
 

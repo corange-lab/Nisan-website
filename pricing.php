@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="canonical" href="https://www.nisan.co.in/">
+    <link rel="canonical" href="https://www.nisan.co.in/pricing">
     <?php include('common-css.php'); ?>
 </head>
 

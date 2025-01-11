@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Contact Us – Nisan Cable TV & Internet in Bilimora</title>
     <meta name="description" content="Get in touch with Nisan Cable TV & Internet in Bilimora. Call, email, or visit us for inquiries about broadband and cable TV services.">
     <meta name="keywords" content="contact Nisan internet provider, customer support Bilimora, broadband help Bilimora, cable TV contact Bilimora">
-    <link rel="canonical" href="https://www.nisan.co.in/">
+    <link rel="canonical" href="https://www.nisan.co.in/contact">
 
 
     <?php include('common-css.php'); ?>

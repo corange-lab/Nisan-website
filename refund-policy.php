@@ -3,7 +3,7 @@
 
 
 <head>
-    <link rel="canonical" href="https://www.nisan.co.in/">
+    <link rel="canonical" href="https://www.nisan.co.in/refund-policy">
     <?php include('common-css.php'); ?>
 </head>
 
