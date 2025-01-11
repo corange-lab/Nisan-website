@@ -7,7 +7,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Nisan - Cable TV &amp; Internet Service Provider in Bilimora</title>
 	<meta name="description" content="Nisan Cable TV & Internet offers fast broadband and cable TV in Bilimora. Enjoy speeds up to 200 Mbps with a risk-free 1-month trial and affordable plans.">
-    <meta name="keywords" content="broadband Bilimora, cable TV Bilimora, FTTH internet Bilimora, fast internet provider, affordable broadband Bilimora, speedtest, speed test">
+    <meta name="keywords" content="broadband Bilimora, cable TV Bilimora, FTTH internet Bilimora, fast internet provider,
+    affordable broadband Bilimora, speedtest, speed test, Internet Service Bilimora, Cable TV Bilimora, High-Speed Internet Bilimora,
+    FTTH Bilimora, WiFi Bilimora, ISP Bilimora, Digital TV Bilimora, Fiber Internet Bilimora, Home Internet Bilimora,
+    internet connection bilimora, wifi connection bilimora, Best internet service provider in Bilimora,
+    Affordable cable TV packages in Bilimora, High-speed broadband plans Bilimora, Unlimited internet plans in Bilimora,
+    Fiber to the home services Bilimora, Reliable WiFi connection in Bilimora, Top-rated ISP in Bilimora,
+    Digital cable TV providers Bilimora, Fast fiber internet Bilimora, Home broadband services in Bilimora,
+    Internet and cable TV bundles Bilimora, Local internet providers in Bilimora, Cheapest broadband plans Bilimora,
+     High-speed internet for gaming Bilimora, 24/7 customer support internet Bilimora">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.nisan.co.in/">
     <link rel="preload" as="image" href="assets/imgs/slider/banner_bg.webp">
