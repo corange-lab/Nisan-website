@@ -1,6 +1,9 @@
-# Force HTTPS and Redirect to www
+# Enable URL rewriting
 RewriteEngine On
+
+# Force HTTPS and Redirect to www
 RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{REQUEST_URI} !^/404\.php$
 RewriteRule ^(.*)$ https://www.nisan.co.in/$1 [L,R=301]
@@ -10,26 +13,31 @@ ErrorDocument 404 /404.php
 
 # WebP Rewrite for Supported Browsers
 <IfModule mod_rewrite.c>
-  RewriteEngine On
   RewriteCond %{HTTP_ACCEPT} image/webp
-  RewriteCond %{REQUEST_FILENAME} \.(jpg|jpeg|png)$
+  RewriteCond %{REQUEST_FILENAME} \.(jpg|jpeg|png|gif)$ [NC]
   RewriteCond %{REQUEST_FILENAME}.webp -f
-  RewriteRule (.+)\.(jpg|jpeg|png)$ $1.webp [T=image/webp]
+  RewriteRule (.+)\.(jpg|jpeg|png|gif)$ $1.webp [T=image/webp] [L]
 </IfModule>
 
 # Enable CORS for Open Graph Images
 <IfModule mod_headers.c>
   Header set Access-Control-Allow-Origin "*"
+  Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+  Header set Access-Control-Allow-Headers "Content-Type"
 </IfModule>
 
-# Enable Gzip Compression
+# Enable Gzip and Brotli Compression for Faster Loading
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE image/webp
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml application/xhtml+xml application/x-javascript application/font-woff2 image/webp
+    # Exclude certain older browsers from using gzip
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
 
-
-# Enable URL rewriting
-RewriteEngine On
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css application/javascript application/json application/xml application/font-woff2
+</IfModule>
 
 # Redirect index.php to root URL
 RewriteCond %{THE_REQUEST} /index\.php [NC]
@@ -56,6 +64,7 @@ RewriteRule ^plans$ plans.php [L]
     ExpiresByType image/jpeg "access 1 month"
     ExpiresByType image/gif "access 1 month"
     ExpiresByType image/png "access 1 month"
+    ExpiresByType image/webp "access 1 month"
     ExpiresByType text/css "access 1 month"
     ExpiresByType text/html "access 1 month"
     ExpiresByType application/pdf "access 1 month"
@@ -63,13 +72,10 @@ RewriteRule ^plans$ plans.php [L]
     ExpiresByType application/x-javascript "access 1 month"
 </IfModule>
 
-
-
-# Enable GZIP Compression
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml application/xhtml+xml application/x-javascript application/font-woff2
-    # Exclude certain browsers
-    BrowserMatch ^Mozilla/4 gzip-only-text/html
-    BrowserMatch ^Mozilla/4\.0[678] no-gzip
-    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin"
 </IfModule>
