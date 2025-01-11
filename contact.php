@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="live-chat">
                                             </div>
                                                 <div class="icon"><i class="flaticon-chat"></i>
-                                            </div>
+
                                             <a href="https://wa.me/9825152400" class="live-chat-link">Live Chat to Executive</a>
                                     </div>
                         </div>
