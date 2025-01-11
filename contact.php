@@ -123,13 +123,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <li><i class="fal fa-map-marker-alt"></i> <span>Morden Radio, <br>Opp. Laxmi Palace, <br>Station Road, <br>Bilimora-396321</span></li>
                             </ul>
                         </div>
-                        <div class="contact-info-wrap">
-                            <h3 class="contact-info-title">Live Chat</h3>
-                            <p>Need immediate assistance?</p>
-                            <div class="live-chat">
-                                <div class="icon"><i class="flaticon-chat"></i></div>
-                                <a href="#" class="live-chat-link">Live Chat to Executive</a>
-                            </div>
+                                    <div class="contact-info-wrap">
+                                        <h3 class="contact-info-title">Live Chat</h3>
+                                        <p>Need immediate assistance?</p>
+                                            <div class="live-chat">
+                                            </div>
+                                                <div class="icon"><i class="flaticon-chat"></i>
+                                            </div>
+                                            <a href="https://wa.me/9825152400" class="live-chat-link">Live Chat to Executive</a>
+                                    </div>
                         </div>
                     </div>
                 </div>
