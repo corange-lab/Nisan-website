@@ -2,16 +2,14 @@ name: FTP Deploy
 
 on:
   push:
-    branches:
-      - main  # Trigger deployment when code is pushed to the main branch
+    branches: [ "main" ]
 
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -19,12 +17,13 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          server-dir: /public_html/nisan.co.in/   # Change this if your hosting path is different
-          local-dir: ./                           # MUST end with a slash
-          protocol: ftp                           # Use 'ftp', change to 'ftps' if your host supports it
+          server-dir: /nisan.co.in/     # ← your real server folder
+          local-dir: ./                 # ← deploy the repo root (must end with /)
+          protocol: ftp                 # use ftps if supported
           exclude: |
             **/.git*
             **/.github/**
+            **/.DS_Store
             **/node_modules/**
             **/vendor/**
-            **/.DS_Store
+          dangerous-clean-slate: true   # optional: removes old stray files on server
