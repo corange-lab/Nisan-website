@@ -2,7 +2,7 @@ name: FTP Deploy
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]   # deploy on pushes to main
 
 jobs:
   ftp-deploy:
@@ -11,33 +11,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # (Optional) print repo tree once to confirm paths
-      - name: Show repo tree
-        run: |
-          pwd
-          ls -la
-          find . -maxdepth 2 -type d -print
-
-      - name: FTP Deploy (repo root -> FTP home)
+      - name: FTP Deploy (incremental, no wipe)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_HOST }}
+          server:   ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
 
-          # Because your FTP user lands in /home/officialmobile/nisan.co.in,
-          # deploy to that *login root* by setting server-dir to "/"
-          server-dir: /               # ✅ no duplication now
+          # Your FTP user already lands in /home/officialmobile/nisan.co.in
+          # so deploy to the login root to avoid /nisan.co.in/nisan.co.in duplication
+          server-dir: /
 
-          # Upload the repo root (change if your site lives in a subfolder)
-          local-dir: ./               # MUST end with a slash
+          # Upload from the repo root (change if your site lives in a subfolder)
+          local-dir: ./               # MUST end with /
 
-          # Use FTPS if supported, otherwise remove this line
+          # Use FTPS if your host supports it; otherwise remove this line
           protocol: ftp
 
-          # Optional: wipe leftovers so old files don't accumulate
-          dangerous-clean-slate: true
-
+          # IMPORTANT: no full wipe, fast incremental sync
+          # (just omit dangerous-clean-slate entirely)
           exclude: |
             **/.git*
             **/.github/**
