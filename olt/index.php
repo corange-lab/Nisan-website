@@ -1,11 +1,21 @@
-<?php $CFG = require __DIR__.'/lib/config.php'; ?>
+<?php
+$CFG = require __DIR__.'/lib/config.php';
+
+// Auto-detect this app’s base path (e.g. "/" or "/olt")
+$BASE_PATH = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+if ($BASE_PATH === '') $BASE_PATH = '/';
+$API_BASE  = $BASE_PATH . '/api/';      // e.g. "/api/" or "/olt/api/"
+$ASSETS    = $BASE_PATH . '/assets/';   // e.g. "/assets/" or "/olt/assets/"
+?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Syrotech OLT — ONU Monitor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="assets/styles.css">
+<!-- Tell JS exactly where the API lives -->
+<meta name="api-base" content="<?= htmlspecialchars($API_BASE, ENT_QUOTES) ?>">
+<link rel="stylesheet" href="<?= htmlspecialchars($ASSETS, ENT_QUOTES) ?>styles.css">
 </head>
 <body>
   <h1>Syrotech OLT — ONU Monitor</h1>
@@ -37,6 +47,6 @@
 <script>
 window.PONS = <?php echo json_encode($CFG['PONS']); ?>;
 </script>
-<script src="assets/app.js"></script>
+<script src="<?= htmlspecialchars($ASSETS, ENT_QUOTES) ?>app.js"></script>
 </body>
 </html>

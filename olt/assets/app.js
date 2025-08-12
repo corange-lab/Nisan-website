@@ -1,5 +1,7 @@
 (function(){
-  const PONS = window.PONS || [1,2,3,4,5,6,7,8];
+  const PONS    = window.PONS || [1,2,3,4,5,6,7,8];
+  const API_BASE = (document.querySelector('meta[name="api-base"]')?.content || '/api/').replace(/\/+$/,'') + '/';
+
   const tbody   = document.getElementById('body');
   const notesEl = document.getElementById('notes');
   const countEl = document.getElementById('count');
@@ -112,7 +114,7 @@
     for (const pon of PONS){
       notesEl.textContent = `Loading PON ${pon} (auth)…`;
       try{
-        const auth = await getJSON(`api/auth.php?pon=${pon}`);
+        const auth = await getJSON(`${API_BASE}auth.php?pon=${pon}`);
         if (!auth.ok) throw new Error(auth.error || 'auth failed');
         (auth.rows || []).forEach(addRow);
         search.dispatchEvent(new Event('input'));
@@ -124,7 +126,7 @@
         // RX by ONU ID
         notesEl.textContent = `Loading PON ${pon} (optical)…`;
         try{
-          const opt = await getJSON(`api/optical.php?pon=${pon}&ids=${idsParam}`);
+          const opt = await getJSON(`${API_BASE}optical.php?pon=${pon}&ids=${idsParam}`);
           if (opt.ok){
             const rxByOnu = new Map();
             (opt.rx || []).forEach(i=>{
@@ -153,7 +155,7 @@
           if (/online/i.test(statusTxt)){
             tasks.push(async ()=>{
               try{
-                const r = await getJSON(`api/wan.php?pon=${p}&onu=${o}`);
+                const r = await getJSON(`${API_BASE}wan.php?pon=${p}&onu=${o}`);
                 const stillOnline = /online/i.test(tr.children[6].textContent || '');
                 if (!stillOnline){ el.textContent='N/A'; el.className='dim'; return; }
                 el.textContent = (r.ok && r.status) ? r.status : 'Unknown';
@@ -174,7 +176,7 @@
 
     // === Fetch 24h averages once and annotate all rows ===
     try{
-      const avg = await getJSON(`api/avg.php?hours=24`);
+      const avg = await getJSON(`${API_BASE}avg.php?hours=24`);
       if (avg.ok) applyAverages(avg.avg || {});
     }catch(e){ /* ignore; averages stay N/A */ }
 
