@@ -15,4 +15,17 @@ return [
 
   // reuse one login cookie across API calls
   'COOKIE_TTL'    => 300, // 5 minutes
+
+  // Database (SQLite by default; switch to MySQL by changing DSN/user/pass)
+  'DB' => [
+    // SQLite file in /data (make sure folder exists and is writable)
+    'dsn'  => 'sqlite:' . __DIR__ . '/../data/olt.sqlite',
+    'user' => null,
+    'pass' => null,
+
+    // Example MySQL:
+    // 'dsn'  => 'mysql:host=127.0.0.1;dbname=olt;charset=utf8mb4',
+    // 'user' => 'olt_user',
+    // 'pass' => 'supersecret',
+  ],
 ];

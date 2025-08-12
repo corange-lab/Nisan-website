@@ -10,7 +10,8 @@
   const normOnu  = s => String(s||'').toUpperCase().replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim();
 
   const allRows = [];
-  const rowsByKey = new Map(); // "pon-onu" -> <tr> (WAN)
+  const rowsByKey = new Map();   // "pon-onu" -> <tr> (WAN)
+  const rowsByOnu = new Map();   // onuid_norm -> <tr> (Avg/Delta)
 
   function addRow(r){
     const key = (r.pon!=null && r.onu!=null) ? `${r.pon}-${r.onu}` : `x-${Math.random()}`;
@@ -31,10 +32,13 @@
       <td class="${/online/i.test(r.status||'')?'ok':'bad'}">${esc(r.status||'')}</td>
       <td id="wan-${key}" class="dim">…</td>
       <td id="rx-${key}" class="dim">…</td>
+      <td id="avg-${key}" class="dim">N/A</td>
+      <td id="delta-${key}" class="delta-ok">—</td>
     `;
     tbody.appendChild(tr);
     allRows.push(tr);
     if (r.pon!=null && r.onu!=null) rowsByKey.set(key, tr);
+    if (r.onuid) rowsByOnu.set(normOnu(r.onuid), tr);
   }
 
   // search filter
@@ -66,6 +70,42 @@
         await new Promise(res=>setTimeout(res, 300));
       }
     }
+  }
+
+  function applyAverages(avgMap){
+    // avgMap: { onuid_norm: {avg, cnt} }
+    rowsByKey.forEach((tr, key)=>{
+      const idn = tr.dataset.onuid;
+      const rxCell = tr.querySelector(`#rx-${key}`);
+      const avgCell = tr.querySelector(`#avg-${key}`);
+      const deltaCell = tr.querySelector(`#delta-${key}`);
+
+      const entry = avgMap[idn];
+      if (!entry) {
+        avgCell.textContent = 'N/A'; avgCell.className = 'dim';
+        deltaCell.textContent = '—'; deltaCell.className = 'delta-ok';
+        return;
+      }
+      const avg = Number(entry.avg);
+      avgCell.textContent = isFinite(avg) ? avg.toFixed(2) : 'N/A';
+      avgCell.className = isFinite(avg) ? '' : 'dim';
+
+      const rx = Number(rxCell?.textContent);
+      if (!isFinite(rx)) {
+        deltaCell.textContent = '—'; deltaCell.className = 'delta-ok';
+        return;
+      }
+      const delta = rx - avg; // signed
+      const absd = Math.abs(delta);
+      let cls = 'delta-ok';
+      let icon = '';
+      if (absd >= 2) { cls = 'delta-bad';  icon = '⚠️'; }
+      else if (absd >= 1) { cls = 'delta-warn'; icon = '⚠️'; }
+
+      deltaCell.className = cls;
+      deltaCell.innerHTML = (isFinite(delta) ? (delta>=0?'+':'')+delta.toFixed(2)+' dB' : '—')
+                            + (icon ? ` <span class="warn-icon" title="Deviation vs 24h avg">${icon}</span>` : '');
+    });
   }
 
   (async function run(){
@@ -126,11 +166,18 @@
       }catch(e){
         const tr = document.createElement('tr');
         tr.className = `pon-${pon}`;
-        tr.innerHTML = `<td class="mono">${pon}</td><td></td><td></td><td colspan="6" class="bad">Error loading PON ${pon}: ${esc(e.message || e)}</td>`;
+        tr.innerHTML = `<td class="mono">${pon}</td><td></td><td></td><td colspan="8" class="bad">Error loading PON ${pon}: ${esc(e.message || e)}</td>`;
         tbody.appendChild(tr);
         search.dispatchEvent(new Event('input'));
       }
     }
+
+    // === Fetch 24h averages once and annotate all rows ===
+    try{
+      const avg = await getJSON(`api/avg.php?hours=24`);
+      if (avg.ok) applyAverages(avg.avg || {});
+    }catch(e){ /* ignore; averages stay N/A */ }
+
     notesEl.textContent = 'Done.';
   })();
 

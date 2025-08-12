@@ -7,7 +7,9 @@ function olt_urls(array $CFG){
     'OPT'   => $CFG['BASE'].'/action/pononuopticalinfo.html',
   ];
 }
-function have_valid_cookie($cookie, $ttl){ return $cookie && is_file($cookie) && (time()-filemtime($cookie) < $ttl); }
+function have_valid_cookie($cookie, $ttl){
+  return $cookie && is_file($cookie) && (time()-filemtime($cookie) < $ttl);
+}
 
 function olt_login_or_reuse(array $CFG){
   $urls = olt_urls($CFG);

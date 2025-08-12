@@ -20,11 +20,12 @@
     <table id="tbl">
       <colgroup>
         <col class="col-pon"><col class="col-onu"><col class="col-onuid"><col class="col-desc"><col class="col-model">
-        <col class="col-info"><col class="col-status"><col class="col-wan"><col class="col-rx">
+        <col class="col-info"><col class="col-status"><col class="col-wan"><col class="col-rx"><col class="col-avg"><col class="col-delta">
       </colgroup>
       <thead>
         <tr>
-          <th>PON</th><th>ONU</th><th>ONU ID</th><th>Description</th><th>Model</th><th>Info</th><th>Status</th><th>WAN Status</th><th>RX Power (dBm)</th>
+          <th>PON</th><th>ONU</th><th>ONU ID</th><th>Description</th><th>Model</th><th>Info</th><th>Status</th><th>WAN Status</th>
+          <th>RX Power (dBm)</th><th>24h Avg</th><th>Δ vs 24h</th>
         </tr>
       </thead>
       <tbody id="body"></tbody>

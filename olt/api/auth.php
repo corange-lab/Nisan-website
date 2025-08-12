@@ -12,6 +12,7 @@ curl_setopt_array($ch, [
   CURLOPT_URL=>$urls['AUTH'], CURLOPT_POST=>true,
   CURLOPT_HTTPHEADER=>["Origin: {$CFG['BASE']}","Referer: {$CFG['BASE']}/action/onuauthinfo.html","Content-Type: application/x-www-form-urlencoded"],
   CURLOPT_POSTFIELDS=>http_build_query(["select"=>(string)$pon,"authmode"=>"0","who"=>"100","onuid"=>"0"]),
+  CURLOPT_TIMEOUT=>$CFG['TIMEOUT'],
 ]);
 $html = curl_exec($ch);
 if ($html===false){ $e=curl_error($ch); olt_close($ch); json_out(["ok"=>false,"error"=>"auth:$e"]); }
