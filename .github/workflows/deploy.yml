@@ -11,28 +11,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: FTP Deploy (upload subfolder contents to site root)
+      # Optional: show repo tree in logs once, helpful for debugging paths
+      - name: Show repo tree
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 2 -type d -print
+
+      - name: FTP Deploy (repo root -> /nisan.co.in)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-
-          # Your real server root for the site:
-          server-dir: /nisan.co.in/
-
-          # IMPORTANT: point to the folder that holds index.php etc. (must end with /)
-          # If your files are inside GitHub/nisan.co.in/ in the repo:
-          local-dir: ./GitHub/nisan.co.in/
-
-          # If the above path is different, change it to match your repo structure exactly.
-          # Examples (pick ONE, keep trailing slash):
-          # local-dir: ./GitHub/public_html/nisan.co.in/
-          # local-dir: ./website/        # (if you move files to /website)
-          # local-dir: ./                # (if you move files to repo root)
-
-          protocol: ftp
-          dangerous-clean-slate: true
+          server-dir: /nisan.co.in/     # your real site folder
+          local-dir: ./                 # deploy the repo ROOT (must end with /)
+          # protocol: ftps              # uncomment if your host supports FTPS; otherwise plain FTP
+          dangerous-clean-slate: true   # removes stray old files on the server
           exclude: |
             **/.git*
             **/.github/**
