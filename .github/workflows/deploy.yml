@@ -1,29 +1,30 @@
-name: Deploy via FTP on push to main
+name: FTP Deploy
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main  # Trigger deployment when code is pushed to the main branch
 
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: FTP Deploy
-  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-  with:
-    server: ${{ secrets.FTP_HOST }}
-    username: ${{ secrets.FTP_USER }}
-    password: ${{ secrets.FTP_PASS }}
-    server-dir: /nisan.co.in/          # or /public_html/nisan.co.in/
-    local-dir: ./                       # ← add the trailing slash
-    protocol: ftps                      # remove if your host doesn’t support FTPS
-    exclude: |
-      **/.git*
-      **/.github/**
-      **/node_modules/**
-      **/vendor/**
-      **/.DS_Store
-
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          server-dir: /public_html/nisan.co.in/   # Change this if your hosting path is different
+          local-dir: ./                           # MUST end with a slash
+          protocol: ftp                           # Use 'ftp', change to 'ftps' if your host supports it
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/vendor/**
+            **/.DS_Store
