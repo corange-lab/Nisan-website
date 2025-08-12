@@ -12,20 +12,18 @@ jobs:
         uses: actions/checkout@v4
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          # pick the correct one and delete the other:
-          server-dir: /nisan.co.in/
-          # server-dir: /public_html/nisan.co.in/
+  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+  with:
+    server: ${{ secrets.FTP_HOST }}
+    username: ${{ secrets.FTP_USER }}
+    password: ${{ secrets.FTP_PASS }}
+    server-dir: /nisan.co.in/          # or /public_html/nisan.co.in/
+    local-dir: ./                       # ← add the trailing slash
+    protocol: ftps                      # remove if your host doesn’t support FTPS
+    exclude: |
+      **/.git*
+      **/.github/**
+      **/node_modules/**
+      **/vendor/**
+      **/.DS_Store
 
-          local-dir: .
-          protocol: ftps           # if your host doesn't support FTPS, delete this line
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/vendor/**
-            **/.DS_Store
