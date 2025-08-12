@@ -1,34 +1,19 @@
-name: Deploy via FTP on push to main
-
-on:
-  push:
-    branches: [ "main" ]
-
-jobs:
-  ftp-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      # Deploy over FTPS/FTP
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          # 👉 Set this to YOUR folder (pick ONE of these two):
-          server-dir: /nisan.co.in/
-          # server-dir: /public_html/nisan.co.in/
-          local-dir: .
-          # Optional: enable FTPS (recommended if your host supports it)
-          protocol: "ftps"
-          # Good excludes so we only upload what’s needed
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/vendor/**
-            **/.DS_Store
-            **/package-lock.json
-            **/composer.lock
+- name: FTP Deploy
+  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+  with:
+    server: ${{ secrets.FTP_HOST }}
+    username: ${{ secrets.FTP_USER }}
+    password: ${{ secrets.FTP_PASS }}
+    # pick the correct dir for your host (use ONE)
+    server-dir: /nisan.co.in/
+    # server-dir: /public_html/nisan.co.in/
+    local-dir: .
+    protocol: ftps        # if your host doesn't support FTPS, delete this line
+    exclude: |
+      **/.git*
+      **/.github/**
+      **/node_modules/**
+      **/vendor/**
+      **/.DS_Store
+      **/package-lock.json
+      **/composer.lock
