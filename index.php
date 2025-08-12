@@ -351,7 +351,7 @@
 
 <div class="pricing-content">
 <ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Dualband 5G PON Router</li>
+	<li><img alt="" src="assets/imgs/icons/check.webp" /> Dualband 55G PON Router</li>
 	<li><img alt="" src="assets/imgs/icons/check.webp" /> Multiple Device Connect Capability</li>
 	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone, Computer & TV</li>
 	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
