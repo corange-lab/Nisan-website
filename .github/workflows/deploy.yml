@@ -11,23 +11,33 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Optional: show repo tree in logs once, helpful for debugging paths
+      # (Optional) print repo tree once to confirm paths
       - name: Show repo tree
         run: |
           pwd
           ls -la
           find . -maxdepth 2 -type d -print
 
-      - name: FTP Deploy (repo root -> /nisan.co.in)
+      - name: FTP Deploy (repo root -> FTP home)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          server-dir: /nisan.co.in/     # your real site folder
-          local-dir: ./                 # deploy the repo ROOT (must end with /)
-          # protocol: ftps              # uncomment if your host supports FTPS; otherwise plain FTP
-          dangerous-clean-slate: true   # removes stray old files on the server
+
+          # Because your FTP user lands in /home/officialmobile/nisan.co.in,
+          # deploy to that *login root* by setting server-dir to "/"
+          server-dir: /               # ✅ no duplication now
+
+          # Upload the repo root (change if your site lives in a subfolder)
+          local-dir: ./               # MUST end with a slash
+
+          # Use FTPS if supported, otherwise remove this line
+          protocol: ftp
+
+          # Optional: wipe leftovers so old files don't accumulate
+          dangerous-clean-slate: true
+
           exclude: |
             **/.git*
             **/.github/**
