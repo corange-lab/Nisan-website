@@ -1,15 +1,23 @@
 <?php
-// Parse rows from onustatistics.html table into structured array
+// Robustly parse rows from onustatistics.html table into structured array.
 function parse_onu_statistics_html($html, $pon){
   $rows = [];
 
-  // Fallback-friendly: scan every <tr>, pick those starting with GPON*
+  // Grab every <tr> and examine the <td>s; accept rows where the 1st cell starts with GPON
   if (!preg_match_all('~<tr[^>]*>\s*(.*?)\s*</tr>~is', $html, $trs)) {
     return $rows;
   }
+
   foreach ($trs[0] as $tr) {
     if (!preg_match_all('~<td[^>]*>\s*(.*?)\s*</td>~is', $tr, $cells)) continue;
-    $td = array_map(function($v){ return trim(strip_tags($v)); }, $cells[1]);
+
+    // Normalize cell text
+    $td = array_map(function($v){
+      $v = trim(strip_tags($v));
+      // Some devices put NBSP or commas; leave as-is for val_or_null to clean numbers
+      return ($v === '') ? null : $v;
+    }, $cells[1]);
+
     if (count($td) < 5) continue;
 
     $onuid = $td[0] ?? '';
