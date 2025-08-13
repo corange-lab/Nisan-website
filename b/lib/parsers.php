@@ -1,36 +1,30 @@
 <?php
-// Robustly parse rows from onustatistics.html table into structured array.
+// tolerant parser: group <td> cells by 5 when the first starts with GPON*
 function parse_onu_statistics_html($html, $pon){
   $rows = [];
-
-  // Grab every <tr> and examine the <td>s; accept rows where the 1st cell starts with GPON
-  if (!preg_match_all('~<tr[^>]*>\s*(.*?)\s*</tr>~is', $html, $trs)) {
-    return $rows;
+  $tableHtml = null;
+  if (preg_match('~<table[^>]*border\s*=\s*["\']?1["\']?[^>]*>.*?ONU\s*ID.*?</table>~is', $html, $m)) {
+    $tableHtml = $m[0];
+  } else {
+    $tableHtml = $html;
   }
+  if (!preg_match_all('~<td[^>]*>\s*(.*?)\s*</td>~is', $tableHtml, $cells)) return $rows;
+  $tds = array_map(function($v){ $v = trim(strip_tags($v)); return $v===''?null:$v; }, $cells[1]);
 
-  foreach ($trs[0] as $tr) {
-    if (!preg_match_all('~<td[^>]*>\s*(.*?)\s*</td>~is', $tr, $cells)) continue;
-
-    // Normalize cell text
-    $td = array_map(function($v){
-      $v = trim(strip_tags($v));
-      // Some devices put NBSP or commas; leave as-is for val_or_null to clean numbers
-      return ($v === '') ? null : $v;
-    }, $cells[1]);
-
-    if (count($td) < 5) continue;
-
-    $onuid = $td[0] ?? '';
-    if (!preg_match('~^GPON~i', $onuid)) continue;
-
-    $rows[] = [
-      'pon'            => (int)$pon,
-      'onuid'          => normalize_onuid($onuid),
-      'input_bytes'    => val_or_null($td[1] ?? null),
-      'input_packets'  => val_or_null($td[2] ?? null),
-      'output_bytes'   => val_or_null($td[3] ?? null),
-      'output_packets' => val_or_null($td[4] ?? null),
-    ];
+  $i=0; $n=count($tds);
+  while ($i+4 < $n){
+    $c0=$tds[$i]; $c1=$tds[$i+1]; $c2=$tds[$i+2]; $c3=$tds[$i+3]; $c4=$tds[$i+4];
+    if ($c0!==null && preg_match('~^GPON~i',$c0)){
+      $rows[] = [
+        'pon'          => (int)$pon,
+        'onuid'        => normalize_onuid($c0),
+        'input_bytes'  => val_or_null($c1),
+        'output_bytes' => val_or_null($c3),
+      ];
+      $i+=5;
+    } else {
+      $i+=1;
+    }
   }
   return $rows;
 }

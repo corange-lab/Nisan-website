@@ -6,13 +6,13 @@ return [
   'PASSWORD'      => 'Chirag@31',
   'PONS'          => range(1, 8),
 
-  // timeouts / caches (seconds)
-  'TIMEOUT'       => 15,
-  'COOKIE_TTL'    => 300, // reuse one login cookie across API calls
+ // network/session
+  'TIMEOUT'    => 15,
+  'COOKIE_TTL' => 300, // reuse login 5 minutes
 
-  // (reserved for later if you want to log into SQLite/MySQL)
+  // Database (SQLite)
   'DB' => [
-    'dsn'  => 'sqlite:' . __DIR__ . '/../data/bandwidth.sqlite',
+    'dsn'  => 'sqlite:' . __DIR__ . '/../data/usage.sqlite',
     'user' => null,
     'pass' => null,
   ],

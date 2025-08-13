@@ -4,3 +4,5 @@ $CFG = require __DIR__.'/config.php';
 require __DIR__.'/util.php';
 require __DIR__.'/session.php';
 require __DIR__.'/parsers.php';
+require __DIR__.'/db.php';
+require __DIR__.'/fetch.php';
