@@ -1,9 +1,13 @@
-<?php $CFG = require __DIR__.'/../lib/config.php'; ?>
+<?php
+$CFG = require __DIR__.'/lib/config.php';
+$PONS = $CFG['PONS'] ?? range(1,8);
+?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>ONU Statistics</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:20px}
     table{border-collapse:collapse;width:100%;max-width:1100px}
@@ -12,7 +16,11 @@
     .mono{font-family:ui-monospace,Consolas,monospace}
     .dim{opacity:.7}
   </style>
-  <script>window.API_BASE='../api/';</script>
+  <script>
+    // index.php is now at /b/, so api is ./api/
+    window.API_BASE = './api/';
+    window.PONS = <?php echo json_encode($PONS, JSON_UNESCAPED_SLASHES); ?>;
+  </script>
 </head>
 <body>
   <h2>ONU Statistics (Input/Output Bytes & Packets)</h2>
@@ -27,6 +35,11 @@
     </tr></thead>
     <tbody id="body"></tbody>
   </table>
+
+  <!-- If you moved app.js next to index.php -->
   <script src="./app.js"></script>
+
+  <!-- If you kept app.js in /b/public/, comment the line above and use this: -->
+  <!-- <script src="./public/app.js"></script> -->
 </body>
 </html>

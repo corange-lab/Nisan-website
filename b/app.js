@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  var API_BASE = (window.API_BASE? String(window.API_BASE):'../api/').replace(/\/+$/,'')+'/';
+  var API_BASE = (window.API_BASE? String(window.API_BASE):'./api/').replace(/\/+$/,'')+'/';
   var tbody=document.getElementById('body'), notes=document.getElementById('notes'),
       count=document.getElementById('count'), q=document.getElementById('q');
 
