@@ -1,231 +1,282 @@
 (function(){
   'use strict';
-  var API_BASE = (window.API_BASE ? String(window.API_BASE) : './api/').replace(/\/+$/,'') + '/';
+  var API = (window.API_BASE||'./api/').replace(/\/+$/,'')+'/';
 
-  // ---------- helpers ----------
-  var $ = s => document.querySelector(s);
-  function esc(s){ s=(s==null?'':String(s)); return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]); }
-  function idSafe(s){ return (s||'').replace(/[^\w\-]+/g,'_'); }
-  function getJSON(url, opts){ return fetch(url,opts||{cache:'no-store'}).then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }); }
-  function fmtMBGB(val){ if(val==null||val==='')return'NULL'; var n=+val; if(!isFinite(n))return String(val); var mb=n/1048576; return mb>=1024?(mb/1024).toFixed(2)+' GB':mb.toFixed(2)+' MB'; }
-  function fMbps(x){ return (x==null||!isFinite(x)) ? '— Mbps' : Number(x).toFixed(2)+' Mbps'; }
-  function parsePort(id){ var m=/^GPON\d+\/(\d+):(\d+)/i.exec(id||''); return m?{port:+m[1]||0,onu:+m[2]||0}:{port:0,onu:0}; }
-  function bars(level){ var html='<span class="bars">'; for(let i=1;i<=5;i++) html+=`<span class="bar ${i<=level?'on':''}"></span>`; return html+'</span>'; }
+  // ===== helpers =====
+  const $ = s => document.querySelector(s);
+  const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]);
+  const idSafe = s => (s||'').replace(/[^\w\-]+/g,'_');
+  const getJSON = (u,o)=>fetch(u,o||{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
+  function fmtMBGB(v){ if(v==null||v==='')return'NULL'; const n=+v; if(!isFinite(n))return String(v); const mb=n/1048576; return mb>=1024?(mb/1024).toFixed(2)+' GB':mb.toFixed(2)+' MB'; }
+  const fMbps = x => (x==null||!isFinite(x))?'— Mbps':Number(x).toFixed(2)+' Mbps';
+  const parsePort = id => { const m=/^GPON\d+\/(\d+):(\d+)/i.exec(id||''); return m?{port:+m[1]||0, onu:+m[2]||0}:{port:0,onu:0}; };
+  const bars = lvl => { let h='<span class="bars">'; for(let i=1;i<=5;i++) h+=`<span class="bar ${i<=lvl?'on':''}"></span>`; return h+'</span>'; };
 
-  // ---------- Network hero (variable 10s/30s) ----------
-  var state={loop:true, windowSec:30, cd:30, cdTimer:null, dotsTimer:null};
-  var el={ cd:$('#net_cd'), dt:$('#net_dt'), when:$('#net_when'),
-           total:$('#net_total'), up:$('#net_up'), down:$('#net_down'),
-           status:$('#net_status'), tlen:$('#test_len'),
-           btn10:$('#btn_10s'), btn30:$('#btn_30s') };
-
-  function setStatusMeasuring(){ let i=0; clearInterval(state.dotsTimer); el.status.textContent='Measuring… running test'; state.dotsTimer=setInterval(()=>{ i=(i+1)%4; el.status.textContent='Measuring'+'.'.repeat(i)+' running test'; },600); }
-  function setStatusReady(){ clearInterval(state.dotsTimer); el.status.textContent='Latest result ready'; }
-
-  function networkSample(){ return getJSON(API_BASE+'network_sample.php').catch(()=>({ok:false})); }
-  function networkSpeed(win){ // win: {min,max}
-    var qs = win ? (`?min=${encodeURIComponent(win.min)}&max=${encodeURIComponent(win.max)}`) : '';
-    return getJSON(API_BASE+'network_speed_from_last.php'+qs);
-  }
-  function networkPeaks(){
-    return getJSON(API_BASE+'network_peaks.php').then(j=>{
+  // ===== peaks =====
+  function loadPeaks(){
+    return getJSON(API+'network_peaks.php').then(j=>{
       if(!j.ok) return;
-      function upd(key,rec){ let v=$(`#pk_${key}`), t=$(`#pk_${key}_t`); if(!v||!t)return;
-        if(!rec || !rec.has_data){ v.textContent='— Mbps'; t.textContent='—'; return; }
-        v.textContent = Number(rec.total_mbps).toFixed(2)+' Mbps';
-        t.textContent = new Date(rec.ts_curr*1000).toLocaleString()+' (Δ '+rec.dt_sec+'s)';
-      }
+      const upd=(k,rec)=>{ let V=$('#pk_'+k), T=$('#pk_'+k+'_t'); if(!V||!T)return;
+        if(!rec||!rec.has_data){ V.textContent='— Mbps'; T.textContent='—'; return; }
+        V.textContent = Number(rec.total_mbps).toFixed(2)+' Mbps';
+        T.textContent = new Date(rec.ts_curr*1000).toLocaleString()+' (Δ '+rec.dt_sec+'s)';
+      };
       upd('24h', j.peaks['24h']); upd('7d', j.peaks['7d']); upd('30d', j.peaks['30d']);
     }).catch(()=>{});
   }
-  function updateHero(j){
-    if(!j||!j.ok||!j.has_data){
-      el.dt.textContent='—'; el.when.textContent='—';
-      el.total.innerHTML='—<span class="unit">Mbps</span>';
-      el.up.innerHTML='—<span class="unit">Mbps</span>';
-      el.down.innerHTML='—<span class="unit">Mbps</span>';
-      el.status.textContent='Waiting for two snapshots…';
-      return;
-    }
-    el.dt.textContent = j.dt_sec;
-    el.when.textContent = new Date(j.ts_curr*1000).toLocaleString();
-    el.total.innerHTML = esc(Number(j.total_mbps).toFixed(2))+'<span class="unit">Mbps</span>';
-    el.up.innerHTML    = esc(Number(j.upload_mbps).toFixed(2))  +'<span class="unit">Mbps</span>';
-    el.down.innerHTML  = esc(Number(j.download_mbps).toFixed(2))+'<span class="unit">Mbps</span>';
-    setStatusReady();
-  }
-  function startCountdown(){
-    clearInterval(state.cdTimer);
-    state.cd = state.windowSec;
-    el.cd.textContent = state.cd;
-    setStatusMeasuring();
-    state.cdTimer = setInterval(()=>{
-      state.cd -= 1; if (state.cd<0) state.cd=0;
-      el.cd.textContent = state.cd;
-      if (state.cd===0){
-        clearInterval(state.cdTimer); state.cdTimer=null;
-        // second sample → compute → if loop, chain into next window
-        var is10s = (state.windowSec===10);
-        var rg = is10s ? {min:8,max:20} : {min:25,max:60};
-        networkSample().then(()=>networkSpeed(rg)).then(updateHero).finally(()=>{
-          // Immediately prime next window with a fresh sample
-          if (state.loop){
-            // keep 30s loop always
-            state.windowSec = 30; el.tlen.textContent='30s';
-            networkSample().finally(startCountdown);
-          } else {
-            // one-shot (10s): exit measuring text, restore 30s loop
-            setStatusReady();
-            state.windowSec = 30; el.tlen.textContent='30s';
-          }
-        });
-      }
-    },1000);
-  }
-  function startAuto30(){
-    state.loop = true; state.windowSec = 30; el.tlen.textContent='30s';
-    networkSample().finally(()=>{ networkSpeed({min:25,max:60}).then(updateHero).catch(()=>{}); startCountdown(); networkPeaks(); });
-  }
-  function run10sOnce(){
-    state.loop = false; state.windowSec = 10; el.tlen.textContent='10s';
-    networkSample().finally(()=>{ startCountdown(); });
-  }
-  el.btn10.addEventListener('click', run10sOnce);
-  el.btn30.addEventListener('click', startAuto30);
 
-  // ---------- Table (now / avg / max) with online bars ----------
-  var tbody = $('#body'), notes = $('#notes');
-  var allRows = []; // metadata for rendering
+  // ===== table =====
+  const tbody = $('#body'), notes = $('#notes');
+  let allRows = [];
 
   function renderRows(rows){
     tbody.innerHTML='';
     rows.forEach(r=>{
-      var id = r.onuid, safe = idSafe(id);
-      var tr = document.createElement('tr');
+      const id=r.onuid, safe=idSafe(id);
+      const tr=document.createElement('tr');
       tr.innerHTML =
-        `<td><button class="btn" data-onu="${esc(id)}">+</button></td>`+
         `<td class="mono"><span id="dot-${safe}" class="status-dot"></span>${esc(id)}</td>`+
         `<td>${esc(r.pon!=null?String(r.pon):'')}</td>`+
-        `<td class="mono">${esc(fmtMBGB(r.input_bytes))}</td>`+
-        `<td class="mono">${esc(fmtMBGB(r.output_bytes))}</td>`+
-        `<td class="mono" id="now-${safe}">— Mbps ${bars(0)}</td>`+
-        `<td class="mono" id="avg-${safe}">— Mbps</td>`+
-        `<td class="mono" id="max-${safe}">— Mbps</td>`;
+        `<td class="num">${esc(fmtMBGB(r.input_bytes))}</td>`+
+        `<td class="num">${esc(fmtMBGB(r.output_bytes))}</td>`+
+        `<td class="num" id="now-${safe}">— Mbps ${bars(0)}</td>`+
+        `<td class="num" id="avg-${safe}">— Mbps</td>`+
+        `<td class="num" id="max-${safe}">— Mbps</td>`;
       tbody.appendChild(tr);
-      attachExpander(tr, id); // keep your + expand (with 30s countdown inside)
     });
   }
 
-  // Per-ONU expand (unchanged logic, only label tweaks)
-  var cdowns={}, cdvals={}, dotT={};
-  function startOnuCountdown(id){
-    stopOnuCountdown(id);
-    cdvals[id]=30; var el=document.getElementById('cd-'+idSafe(id)); if(el) el.textContent=cdvals[id];
-    dotT[id]=setInterval(()=>{ var s=document.getElementById('st-'+idSafe(id)); if(!s)return; s.textContent='Measuring… 30s test'; },800);
-    cdowns[id]=setInterval(()=>{ cdvals[id]-=1; if(cdvals[id]<0) cdvals[id]=0;
-      var e=document.getElementById('cd-'+idSafe(id)); if(e) e.textContent=cdvals[id];
-      if (cdvals[id]===0){ clearInterval(cdowns[id]); delete cdowns[id]; refreshDetail(id); startOnuCountdown(id); }
-    },1000);
-  }
-  function stopOnuCountdown(id){ if(cdowns[id]){ clearInterval(cdowns[id]); delete cdowns[id]; } if(dotT[id]){ clearInterval(dotT[id]); delete dotT[id]; } }
-
-  function makeDetailRow(id){
-    var sid=idSafe(id);
-    var tr=document.createElement('tr'); tr.className='detail';
-    var td=document.createElement('td'); td.colSpan=8;
-    td.innerHTML =
-      `<div style="display:flex;align-items:center;gap:8px"><span class="status-dot on"></span><strong class="mono">${esc(id)}</strong> — <span id="st-${sid}">Measuring… 30s test</span></div>`+
-      `<div class="notes">Next update in <span class="countdown" id="cd-${sid}">30</span>s · Updated <span id="ts-${sid}">—</span> (Δ <span id="dt-${sid}">—</span> s)</div>`+
-      `<table style="margin-top:6px;"><tr><th></th><th>Upload</th><th>Download</th><th>Total</th></tr>`+
-      `<tr><td>Speed</td><td class="mono" id="up-${sid}">— Mbps</td><td class="mono" id="down-${sid}">— Mbps</td><td class="mono" id="tot-${sid}">— Mbps</td></tr></table>`;
-    tr.appendChild(td);
-    return tr;
-  }
-
-  function refreshDetail(id){
-    fetch(API_BASE+'sample_one.php?onuid='+encodeURIComponent(id)).catch(()=>{});
-    getJSON(API_BASE+'speed_now.php?onuid='+encodeURIComponent(id)).then(j=>{
-      var sid=idSafe(id);
-      document.getElementById('up-'+sid).textContent   = fMbps(j.in_mbps);     // inbound → upload
-      document.getElementById('down-'+sid).textContent = fMbps(j.out_mbps);    // outbound → download
-      document.getElementById('tot-'+sid).textContent  = fMbps(j.total_mbps);
-      $('#dt-'+sid).textContent = j.dt_sec==null?'—':j.dt_sec;
-      $('#ts-'+sid).textContent = j.at_ts? new Date(j.at_ts*1000).toLocaleString() : '—';
-      var s=$('#st-'+sid); if(s) s.textContent='Latest result ready';
-    }).catch(()=>{});
-  }
-
-  function attachExpander(tr, id){
-    var btn = tr.querySelector('button[data-onu]');
-    var expanded=false, dtr=null;
-    btn.addEventListener('click', ()=>{
-      if(!expanded){
-        btn.textContent='−';
-        dtr=makeDetailRow(id);
-        tr.parentNode.insertBefore(dtr, tr.nextSibling);
-        expanded=true;
-        refreshDetail(id);
-        startOnuCountdown(id);
-      }else{
-        btn.textContent='+';
-        if(dtr&&dtr.parentNode) dtr.parentNode.removeChild(dtr);
-        stopOnuCountdown(id);
-        expanded=false;
-      }
-    });
-  }
-
-  // Fill table base rows (static bytes)
   function loadTable(){
     notes.innerHTML='<span class="skeleton">Measuring ONUs…</span>';
-    getJSON(API_BASE+'stats_all.php').then(j=>{
+    getJSON(API+'stats_all.php').then(j=>{
       if(!j.ok) throw new Error(j.error||'failed');
-      var rows=(j.rows||[]).slice();
+      const rows=(j.rows||[]).slice();
       rows.sort((a,b)=>{
-        var pa=(+a.pon||0), pb=(+b.pon||0); if(pa!==pb) return pa-pb;
-        var aa=parsePort(a.onuid), bb=parsePort(b.onuid);
+        const pa=(+a.pon||0), pb=(+b.pon||0); if(pa!==pb) return pa-pb;
+        const aa=parsePort(a.onuid), bb=parsePort(b.onuid);
         if(aa.port!==bb.port) return aa.port-bb.port; return aa.onu-bb.onu;
       });
-      allRows=rows;
-      renderRows(rows);
-      notes.textContent='Loaded '+rows.length+' ONUs. “Now/Avg/Max” update automatically.';
-      refreshNowBars();            // first “now” paint
-      refreshTodayAvgMax();        // first avg/max paint
-      setInterval(refreshNowBars, 30000); // keep “now” fresh every 30s
+      allRows=rows; renderRows(rows);
+      notes.textContent='Loaded '+rows.length+' ONUs. “Now / Avg / Max” update automatically.';
+      // first fills
+      refreshNowFromServer(); refreshTodayAvgMax();
+      // realtime loop (≈3s): take snapshot → refresh NOW + top card
+      setInterval(()=>{ sampleAll().then(refreshNowFromServer).catch(()=>{}); }, 3000);
+      // refresh Avg/Max every 15s
+      setInterval(refreshTodayAvgMax, 15000);
     }).catch(e=>{ notes.textContent='Error: '+e.message; });
   }
 
-  // Update NOW bars/dots from last two snapshots
-  function refreshNowBars(){
-    getJSON(API_BASE+'online_now_all.php').then(j=>{
+  // ===== realtime “NOW” + top card =====
+  function sampleAll(){ return getJSON(API+'network_sample.php').catch(()=>({ok:false})); }
+
+  function refreshNowFromServer(){
+    return getJSON(API+'online_now_all.php').then(j=>{
       if(!j.ok || !j.has_data) return;
-      for (var id in j.rows){
-        var safe=idSafe(id), rec=j.rows[id];
-        var nowEl = document.getElementById('now-'+safe);
-        var dotEl = document.getElementById('dot-'+safe);
+      let sumUp=0, sumDown=0;
+      Object.keys(j.rows).forEach(id=>{
+        const safe=idSafe(id), rec=j.rows[id];
+        const nowEl = $('#now-'+safe), dotEl=$('#dot-'+safe);
         if(nowEl) nowEl.innerHTML = fMbps(rec.total_mbps)+' '+bars(rec.level);
         if(dotEl) dotEl.classList.toggle('on', !!rec.online);
-      }
+        sumUp   += +rec.upload_mbps  || 0;
+        sumDown += +rec.download_mbps|| 0;
+      });
+      $('#net_up').innerHTML    = esc(sumUp.toFixed(2))   +'<span class="unit">Mbps</span>';
+      $('#net_down').innerHTML  = esc(sumDown.toFixed(2)) +'<span class="unit">Mbps</span>';
+      $('#net_total').innerHTML = esc((sumUp+sumDown).toFixed(2))+'<span class="unit">Mbps</span>';
+      $('#net_dt').textContent  = j.dt_sec;
+      $('#net_when').textContent= new Date(j.ts_curr*1000).toLocaleString();
+      $('#net_status').textContent = 'Realtime stream';
     }).catch(()=>{});
   }
 
-  // Update AVG/MAX (today) for all ONUs
+  // ===== Avg/Max (today) =====
   function refreshTodayAvgMax(){
-    var today = new Date().toISOString().slice(0,10);
-    getJSON(API_BASE+'day_stats_all.php?date='+today).then(j=>{
+    const dateInput = $('#chart_date');
+    const date = (dateInput && dateInput.value) ? dateInput.value : new Date().toISOString().slice(0,10);
+    getJSON(API+'day_stats_all.php?date='+encodeURIComponent(date)).then(j=>{
       if(!j.ok) return;
-      var map=j.rows||{};
+      const map = j.rows || {};
       allRows.forEach(r=>{
-        var safe=idSafe(r.onuid), st=map[r.onuid]||{};
-        var avgEl=document.getElementById('avg-'+safe);
-        var maxEl=document.getElementById('max-'+safe);
-        if(avgEl) avgEl.textContent = fMbps(st.avg_total_mbps);
-        if(maxEl) maxEl.textContent = fMbps(st.max_total_mbps);
+        const safe = idSafe(r.onuid);
+        const st = map[r.onuid];
+        const avgEl = $('#avg-'+safe);
+        const maxEl = $('#max-'+safe);
+        if (st){
+          if (avgEl) avgEl.textContent = fMbps(st.avg_total_mbps);
+          if (maxEl) maxEl.textContent = fMbps(st.max_total_mbps);
+        } else {
+          if (avgEl) avgEl.textContent = '— Mbps';
+          if (maxEl) maxEl.textContent = '— Mbps';
+        }
       });
     }).catch(()=>{});
   }
 
-  // Boot
-  loadTable();
-  startAuto30(); // default loop
+  // ===== Chart (Upload + Download only) with time axis & hover; client-side decimation =====
+  const el = { cdate:$('#chart_date'), crefresh:$('#chart_refresh'), svg:$('#chart_svg'), box:$('#chart_box'), tip:$('#chart_tip') };
+
+  function decimate(points, target){
+    if(points.length<=target) return points;
+    const step = points.length/target;
+    const out=[]; for(let i=0;i<points.length;i+=step){ out.push(points[Math.floor(i)]); }
+    if(out[out.length-1]!==points[points.length-1]) out.push(points[points.length-1]);
+    return out;
+  }
+
+  function loadChart(){
+    const date = el.cdate.value || new Date().toISOString().slice(0,10);
+    getJSON(API+'network_timeseries.php?date='+encodeURIComponent(date)).then(j=>{
+      const svg = el.svg; svg.innerHTML='';
+      let pts = j.points||[]; if(!pts.length){ svg.innerHTML=''; return; }
+
+      // Reduce clutter based on actual pixel width (≈ one point per 2px, max 900)
+      const rect = el.box.getBoundingClientRect();
+      const target = Math.min(900, Math.max(120, Math.floor(rect.width/2)));
+      pts = decimate(pts, target);
+
+      // ranges
+      const minT = pts[0].t, maxT = pts[pts.length-1].t;
+      let maxY = 0; pts.forEach(p=>{ maxY=Math.max(maxY,p.upload_mbps,p.download_mbps); });
+      if (maxY<=0) maxY = 1;
+
+      const W=1000,H=420,Px=44,Py=34; // larger padding for labels
+      const X = t => Px + ((t-minT)/(maxT-minT))*(W-2*Px);
+      const Y = v => H-Py - (v/maxY)*(H-2*Py);
+
+      // axes
+      const gAxes = document.createElementNS(svg.namespaceURI,'g');
+      // y grid
+      for(let i=0;i<=5;i++){
+        const y=Y(maxY*i/5);
+        const ln=document.createElementNS(svg.namespaceURI,'line');
+        ln.setAttribute('x1',Px); ln.setAttribute('x2',W-Px);
+        ln.setAttribute('y1',y); ln.setAttribute('y2',y);
+        ln.setAttribute('stroke','#18224b'); ln.setAttribute('stroke-width','1');
+        gAxes.appendChild(ln);
+        const lab=document.createElementNS(svg.namespaceURI,'text');
+        lab.textContent=(maxY*i/5).toFixed(0)+' Mbps';
+        lab.setAttribute('x',10); lab.setAttribute('y',y-2);
+        lab.setAttribute('fill','#7d8fbf'); lab.setAttribute('font-size','11');
+        gAxes.appendChild(lab);
+      }
+      // x ticks
+      const tickCount = 10;
+      for(let i=0;i<=tickCount;i++){
+        const t = minT + (i*(maxT-minT)/tickCount);
+        const x = X(t);
+        const ln=document.createElementNS(svg.namespaceURI,'line');
+        ln.setAttribute('x1',x); ln.setAttribute('x2',x);
+        ln.setAttribute('y1',H-Py); ln.setAttribute('y2',H-Py+6);
+        ln.setAttribute('stroke','#18224b'); ln.setAttribute('stroke-width','1.2');
+        gAxes.appendChild(ln);
+        const lab=document.createElementNS(svg.namespaceURI,'text');
+        const d=new Date(t*1000);
+        const hh=String(d.getHours()).padStart(2,'0'), mm=String(d.getMinutes()).padStart(2,'0');
+        lab.textContent = hh+':'+mm;
+        lab.setAttribute('x',x-14); lab.setAttribute('y',H-10);
+        lab.setAttribute('fill','#9bb0e4'); lab.setAttribute('font-size','10');
+        gAxes.appendChild(lab);
+      }
+      svg.appendChild(gAxes);
+
+      function pathFor(key, color){
+        let d='M '+X(pts[0].t)+' '+Y(pts[0][key]);
+        for(let i=1;i<pts.length;i++) d+=' L '+X(pts[i].t)+' '+Y(pts[i][key]);
+        const p=document.createElementNS(svg.namespaceURI,'path');
+        p.setAttribute('d',d); p.setAttribute('fill','none'); p.setAttribute('stroke',color); p.setAttribute('stroke-width','2');
+        return p;
+      }
+      const colU = getComputedStyle(document.documentElement).getPropertyValue('--u')||'#60a5fa';
+      const colD = getComputedStyle(document.documentElement).getPropertyValue('--d')||'#f472b6';
+      svg.appendChild(pathFor('upload_mbps',   colU));
+      svg.appendChild(pathFor('download_mbps', colD));
+
+      // hover (upload/download only)
+      const vline=document.createElementNS(svg.namespaceURI,'line');
+      vline.setAttribute('y1',Py); vline.setAttribute('y2',H-Py);
+      vline.setAttribute('stroke','#93a4c7'); vline.setAttribute('stroke-width','1'); vline.setAttribute('opacity','0');
+      svg.appendChild(vline);
+
+      const dotU=document.createElementNS(svg.namespaceURI,'circle');
+      const dotD=document.createElementNS(svg.namespaceURI,'circle');
+      [dotU,dotD].forEach(c=>{ c.setAttribute('r','3.5'); c.setAttribute('opacity','0'); svg.appendChild(c); });
+      dotU.setAttribute('fill',colU); dotD.setAttribute('fill',colD);
+
+      const tip=$('#chart_tip'), box=$('#chart_box');
+
+      function nearestIdx(px){
+        const frac = (px-Px)/(W-2*Px);
+        const t = minT + Math.min(1,Math.max(0,frac))*(maxT-minT);
+        let lo=0, hi=pts.length-1;
+        while(hi-lo>1){
+          const mid=(lo+hi)>>1;
+          if (pts[mid].t < t) lo=mid; else hi=mid;
+        }
+        return (t-pts[lo].t <= pts[hi].t - t) ? lo : hi;
+      }
+
+      function showAt(x){
+        const i = nearestIdx(x);
+        const p = pts[i];
+        const sx = X(p.t);
+        vline.setAttribute('x1',sx); vline.setAttribute('x2',sx); vline.setAttribute('opacity','1');
+        const yU=Y(p.upload_mbps), yD=Y(p.download_mbps);
+        dotU.setAttribute('cx',sx); dotU.setAttribute('cy',yU); dotU.setAttribute('opacity','1');
+        dotD.setAttribute('cx',sx); dotD.setAttribute('cy',yD); dotD.setAttribute('opacity','1');
+        const d=new Date(p.t*1000);
+        const hh=String(d.getHours()).padStart(2,'0'), mm=String(d.getMinutes()).padStart(2,'0'), ss=String(d.getSeconds()).padStart(2,'0');
+        tip.innerHTML = `<div style="font-weight:700;margin-bottom:4px">${hh}:${mm}:${ss}</div>
+          <div><span class="dot u"></span> Upload: ${p.upload_mbps.toFixed(2)} Mbps</div>
+          <div><span class="dot d"></span> Download: ${p.download_mbps.toFixed(2)} Mbps</div>`;
+        tip.style.display='block';
+        const rect = box.getBoundingClientRect();
+        let tx = sx/1000*rect.width + 10;
+        let ty = 10;
+        if (tx + tip.offsetWidth > rect.width) tx = rect.width - tip.offsetWidth - 10;
+        tip.style.left = tx+'px'; tip.style.top = ty+'px';
+      }
+      function hideHover(){ vline.setAttribute('opacity','0'); dotU.setAttribute('opacity','0'); dotD.setAttribute('opacity','0'); tip.style.display='none'; }
+
+      const overlay = document.createElementNS(svg.namespaceURI,'rect');
+      overlay.setAttribute('x',0); overlay.setAttribute('y',0);
+      overlay.setAttribute('width','100%'); overlay.setAttribute('height','100%');
+      overlay.setAttribute('fill','transparent');
+      overlay.addEventListener('mousemove',e=>{
+        const rect=svg.getBoundingClientRect();
+        const x=e.clientX-rect.left;
+        showAt(x);
+      });
+      overlay.addEventListener('mouseleave',hideHover);
+      svg.appendChild(overlay);
+    }).catch(()=>{});
+  }
+
+  // ===== boot =====
+  const todayISO = new Date().toISOString().slice(0,10);
+  $('#chart_date').value = todayISO;
+  $('#chart_refresh').addEventListener('click',()=>{ loadChart(); refreshTodayAvgMax(); });
+
+  // initial loads
+  getJSON(API+'stats_all.php').then(j=>{
+    if(!j.ok) throw new Error(j.error||'failed');
+    const rows=(j.rows||[]).slice();
+    rows.sort((a,b)=>{
+      const pa=(+a.pon||0), pb=(+b.pon||0); if(pa!==pb) return pa-pb;
+      const aa=parsePort(a.onuid), bb=parsePort(b.onuid);
+      if(aa.port!==bb.port) return aa.port-bb.port; return aa.onu-bb.onu;
+    });
+    allRows=rows; renderRows(rows);
+    notes.textContent='Loaded '+rows.length+' ONUs. “Now / Avg / Max” update automatically.';
+    // first fills
+    refreshNowFromServer(); refreshTodayAvgMax();
+    // realtime loop (≈3s)
+    setInterval(()=>{ sampleAll().then(refreshNowFromServer).catch(()=>{}); }, 3000);
+    // avg/max loop
+    setInterval(refreshTodayAvgMax, 15000);
+  }).catch(e=>{ notes.textContent='Error: '+e.message; });
+
+  loadPeaks();
+  loadChart();
 })();

@@ -4,83 +4,94 @@ set_error_handler(function($no,$str,$file,$line){ throw new ErrorException($str,
 
 require __DIR__.'/../lib/_bootstrap.php';
 
-try{
-  $pdo = db($CFG);
-  $now = time();
-  $windows = [
-    '24h' => $now - 24*3600,
-    '7d'  => $now - 7*86400,
-    '30d' => $now - 30*86400,
-  ];
+function ensure_rollup_table(PDO $pdo){
+  $pdo->exec("CREATE TABLE IF NOT EXISTS rollup_daily(
+    ymd TEXT PRIMARY KEY,
+    start_ts INTEGER NOT NULL,
+    end_ts INTEGER NOT NULL,
+    avg_total_mbps REAL,
+    max_total_mbps REAL,
+    intervals INTEGER NOT NULL DEFAULT 0
+  )");
+}
 
-  $out = [];
+function to_num_or_null($v){ if($v===null) return null; $n=+($v); return is_finite($n)?$n:null; }
 
-  foreach ($windows as $label=>$startTs) {
-    // list distinct timestamps in window
-    $stmt = $pdo->prepare("SELECT ts FROM samples WHERE ts >= ? GROUP BY ts ORDER BY ts ASC");
-    $stmt->execute([$startTs]);
-    $tsList = array_map(function($r){ return (int)$r['ts']; }, $stmt->fetchAll());
+// Peak from SAMPLES between [start,end)
+function peak_from_samples(PDO $pdo, int $start, int $end){
+  $qTs = $pdo->prepare("SELECT ts FROM samples WHERE ts>=? AND ts<? GROUP BY ts ORDER BY ts ASC");
+  $qTs->execute([$start,$end]);
+  $tsList = array_map(fn($r)=>(int)$r['ts'],$qTs->fetchAll());
+  $n=count($tsList);
+  if($n<2) return [ 'has_data'=>false ];
 
-    if (empty($tsList)) { $out[$label] = ['has_data'=>false]; continue; }
-
-    // downsample to keep runtime reasonable (max ~6000 evaluations)
-    $n = count($tsList);
-    $step = max(1, (int)ceil($n / 6000));
-
-    $best = ['has_data'=>false, 'total_mbps'=>0.0, 'in_mbps'=>0.0, 'out_mbps'=>0.0, 'ts_curr'=>null, 'ts_prev'=>null, 'dt_sec'=>null];
-
-    // helper to compute network speed between a ts_prev and ts_curr (same logic as network_speed_from_last)
-    $calc = function(int $tsCurr) use ($pdo){
-      // choose a prev sample ~30s back (25–60s)
-      $target = $tsCurr - 25;
-      $lower  = $tsCurr - 60;
-      $stmt = $pdo->prepare("SELECT MAX(ts) AS t FROM samples WHERE ts <= ? AND ts >= ?");
-      $stmt->execute([$target,$lower]);
-      $tsPrev = (int)$stmt->fetch()['t'];
-      if (!$tsPrev) return null;
-
-      // load both snapshots
-      $q = $pdo->prepare("SELECT onuid,input_bytes,output_bytes FROM samples WHERE ts=?");
-      $q->execute([$tsCurr]); $curr = $q->fetchAll();
-      $q->execute([$tsPrev]); $prev = $q->fetchAll();
-      $pm = []; foreach ($prev as $r){ $pm[$r['onuid']]=$r; }
-
-      $dt = max(1, $tsCurr - $tsPrev);
-      $sumIn = 0.0; $sumOut = 0.0; $pairs=0;
-
-      foreach ($curr as $c){
-        $id = $c['onuid']; if (!isset($pm[$id])) continue;
-        $p = $pm[$id];
-
-        $inC  = to_num($c['input_bytes']);  $inP  = to_num($p['input_bytes']);
-        $outC = to_num($c['output_bytes']); $outP = to_num($p['output_bytes']);
-
-        if ($inC!==null && $inP!==null && $inC >= $inP)   $sumIn  += (($inC - $inP) * 8.0) / ($dt * 1000000.0);
-        if ($outC!==null && $outP!==null && $outC >= $outP) $sumOut += (($outC - $outP) * 8.0) / ($dt * 1000000.0);
-        $pairs++;
-      }
-      return ['in'=>$sumIn,'out'=>$sumOut,'dt'=>$dt,'ts_prev'=>$tsPrev,'pairs'=>$pairs];
-    };
-
-    for ($i=0; $i<$n; $i+=$step){
-      $ts = $tsList[$i];
-      $r = $calc($ts);
-      if (!$r) continue;
-      $total = $r['in'] + $r['out'];
-      if (!$best['has_data'] || $total > $best['total_mbps']){
-        $best = [
-          'has_data'=>true,
-          'total_mbps'=>$total, 'in_mbps'=>$r['in'], 'out_mbps'=>$r['out'],
-          'ts_curr'=>$ts, 'ts_prev'=>$r['ts_prev'], 'dt_sec'=>$r['dt']
-        ];
-      }
+  $qRows = $pdo->prepare("SELECT onuid,input_bytes,output_bytes FROM samples WHERE ts=?");
+  $mx=0.0; $mx_t=0; $mx_dt=0;
+  for($i=1;$i<$n;$i++){
+    $t1=$tsList[$i-1]; $t2=$tsList[$i]; $dt=max(1,$t2-$t1);
+    $qRows->execute([$t2]); $curr=$qRows->fetchAll();
+    $qRows->execute([$t1]); $prev=$qRows->fetchAll();
+    $pm=[]; foreach($prev as $r){ $pm[$r['onuid']]=$r; }
+    $tot=0.0;
+    foreach($curr as $c){
+      $id=$c['onuid']; if(!isset($pm[$id])) continue; $p=$pm[$id];
+      $inC=to_num_or_null($c['input_bytes']);  $inP=to_num_or_null($p['input_bytes']);
+      $outC=to_num_or_null($c['output_bytes']); $outP=to_num_or_null($p['output_bytes']);
+      if($inC!==null && $inP!==null && $inC >= $inP)   $tot += (($inC-$inP)*8.0)/($dt*1000000.0);
+      if($outC!==null && $outP!==null && $outC >= $outP) $tot += (($outC-$outP)*8.0)/($dt*1000000.0);
     }
-
-    $out[$label] = $best;
+    if($tot>$mx){ $mx=$tot; $mx_t=$t2; $mx_dt=$dt; }
   }
+  return [ 'has_data'=>true, 'total_mbps'=>$mx, 'ts_curr'=>$mx_t, 'dt_sec'=>$mx_dt ];
+}
 
-  json_out(['ok'=>true,'peaks'=>$out]);
+// Peak from ROLLUPS between YMD inclusive range
+function peak_from_rollups(PDO $pdo, string $ymd_from, string $ymd_to){
+  $q=$pdo->prepare("SELECT MAX(max_total_mbps) AS m FROM rollup_daily WHERE ymd>=? AND ymd<=?");
+  $q->execute([$ymd_from,$ymd_to]);
+  $m=$q->fetchColumn();
+  if($m===false || $m===null) return [ 'has_data'=>false ];
+  // represent as day-long window (for UI text)
+  $ts = strtotime($ymd_to.' 12:00:00');
+  return [ 'has_data'=>true, 'total_mbps'=>(float)$m, 'ts_curr'=>$ts, 'dt_sec'=>86400 ];
+}
 
+try{
+  $pdo=db($CFG);
+  ensure_rollup_table($pdo);
+
+  $now=time();
+  $today0=strtotime('today 00:00:00');
+  $recentStart = $today0 - 2*86400; // we expect to have raw samples for today, D-1, D-2
+
+  // 24h peak: use raw samples only (we keep 3 days)
+  $p24 = peak_from_samples($pdo, $now-86400, $now);
+
+  // 7d peak: combine recent raw (up to 3d) + rollups for older days in window
+  $win7_from = date('Y-m-d', $now - 7*86400);
+  $cut_roll  = date('Y-m-d', $today0 - 3*86400); // rollups cover days strictly older than D-2
+  $p7_raw  = peak_from_samples($pdo, max($recentStart,$now-7*86400), $now);
+  $p7_roll = peak_from_rollups($pdo, $win7_from, $cut_roll);
+  $p7 = $p7_raw['has_data'] && $p7_roll['has_data']
+        ? ( $p7_raw['total_mbps'] >= $p7_roll['total_mbps'] ? $p7_raw : $p7_roll )
+        : ( $p7_raw['has_data'] ? $p7_raw : $p7_roll );
+
+  // 30d peak: same mix
+  $win30_from = date('Y-m-d', $now - 30*86400);
+  $p30_raw  = peak_from_samples($pdo, max($recentStart,$now-30*86400), $now);
+  $p30_roll = peak_from_rollups($pdo, $win30_from, $cut_roll);
+  $p30 = $p30_raw['has_data'] && $p30_roll['has_data']
+        ? ( $p30_raw['total_mbps'] >= $p30_roll['total_mbps'] ? $p30_raw : $p30_roll )
+        : ( $p30_raw['has_data'] ? $p30_raw : $p30_roll );
+
+  json_out([
+    'ok'=>true,
+    'peaks'=>[
+      '24h'=>$p24,
+      '7d' =>$p7,
+      '30d'=>$p30,
+    ],
+  ]);
 }catch(Throwable $e){
   json_out(['ok'=>false,'error'=>'php:'.$e->getMessage()]);
 }

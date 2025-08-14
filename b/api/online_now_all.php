@@ -18,24 +18,24 @@ try{
   $q->execute([$tsPrev]); $prev = $q->fetchAll();
   $pm = []; foreach($prev as $r){ $pm[$r['onuid']]=$r; }
 
-  $levels = []; // onuid => {up,down,total,level}
+  $levels = []; // onuid => {upload_mbps, download_mbps, total_mbps, level, online}
   foreach ($curr as $c){
     $id=$c['onuid']; if (!isset($pm[$id])) continue; $p=$pm[$id];
     $inC=to_num($c['input_bytes']); $inP=to_num($p['input_bytes']);
     $outC=to_num($c['output_bytes']); $outP=to_num($p['output_bytes']);
 
-    $up=$down=$tot=0.0; $online=false;
+    $up=$down=0.0; $online=false;
     if ($inC!==null && $inP!==null && $inC >= $inP){ $up   = (($inC - $inP) * 8.0) / ($dt * 1000000.0); if ($up>0) $online=true; }
     if ($outC!==null && $outP!==null && $outC >= $outP){ $down = (($outC - $outP) * 8.0) / ($dt * 1000000.0); if ($down>0) $online=true; }
     $tot = $up + $down;
 
-    // map total Mbps to 0..5 bars
+    // bars: <10=1, 10–20=2, 20–35=3, 35–50=4, 50+=5
     $lvl = 0;
-    if ($tot >= 0.1) $lvl = 1;
-    if ($tot >= 1.0) $lvl = 2;
-    if ($tot >= 5.0) $lvl = 3;
-    if ($tot >= 20.0)$lvl = 4;
-    if ($tot >= 50.0)$lvl = 5;
+    if ($tot > 0)  $lvl = 1;
+    if ($tot >= 10) $lvl = 2;
+    if ($tot >= 20) $lvl = 3;
+    if ($tot >= 35) $lvl = 4;
+    if ($tot >= 50) $lvl = 5;
 
     $levels[$id] = ['upload_mbps'=>$up,'download_mbps'=>$down,'total_mbps'=>$tot,'level'=>$lvl,'online'=>$online];
   }
