@@ -2,3 +2,25 @@ echo ".htaccess" >> .gitignore
 git add .gitignore
 git commit -m "Ignore .htaccess in git"
 git push origin main
+
+
+
+# --- App data (never commit local DBs) ---
+b/data/
+*.sqlite
+*.db
+
+# Local-only overrides (server/local secrets)
+b/lib/config.local.php
+
+# Logs
+*.log
+b/cron.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE/project files
+.vscode/
+.idea/
