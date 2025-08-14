@@ -4,10 +4,17 @@ set_error_handler(function($no,$str,$file,$line){ throw new ErrorException($str,
 
 require __DIR__.'/../lib/_bootstrap.php';
 
-/**
- * Minimal HTML table parser for onustatistics.html
- * Looks for rows with 5 TDs: [onuid, input_bytes, input_pkts, output_bytes, output_pkts]
- */
+/** Return true if table has given column (SQLite). */
+function table_has_column(PDO $pdo, $table, $column){
+  $st = $pdo->prepare("PRAGMA table_info(".$table.")");
+  $st->execute();
+  while ($r = $st->fetch(PDO::FETCH_ASSOC)) {
+    if (strcasecmp($r['name'],$column)===0) return true;
+  }
+  return false;
+}
+
+/** Minimal HTML table parser for onustatistics.html */
 function parse_onu_stats_rows($html){
   $rows = [];
   $doc = new DOMDocument();
@@ -25,10 +32,8 @@ function parse_onu_stats_rows($html){
     $outb  = trim($tds->item(3)->textContent);
     if ($onuid === '' || stripos($onuid,'gpon')===false) continue;
 
-    // Normalize NULLs -> null
     $inb  = (strcasecmp($inb,'NULL')===0 ? null : $inb);
     $outb = (strcasecmp($outb,'NULL')===0 ? null : $outb);
-
     $rows[] = ['onuid'=>$onuid, 'input_bytes'=>$inb, 'output_bytes'=>$outb];
   }
   return $rows;
@@ -37,6 +42,9 @@ function parse_onu_stats_rows($html){
 try{
   $debug = !empty($_GET['debug']);
   $pdo   = db($CFG);
+
+  // See if 'pon' column exists in server DB
+  $hasPon = table_has_column($pdo, 'samples', 'pon');
 
   // login (reuse cookie if valid)
   [$ch,$cookie,$err,$reused] = olt_login_or_reuse($CFG);
@@ -48,9 +56,15 @@ try{
   $ts = time();
   $inserted = 0; $byPon = []; $log = [];
 
-  // Iterate PON 1..8 (or the range in config) and both ONU groups (0: 1-64, 1: 65-128)
+  // Prepare insert statements (depending on schema)
+  if ($hasPon) {
+    $ins = $pdo->prepare("INSERT INTO samples(pon, onuid, ts, input_bytes, output_bytes) VALUES(?,?,?,?,?)");
+  } else {
+    $ins = $pdo->prepare("INSERT INTO samples(onuid, ts, input_bytes, output_bytes) VALUES(?,?,?,?)");
+  }
+
+  // Iterate PONs & both ONU groups (0: 1-64, 1: 65-128)
   $pons = isset($CFG['PONS']) && is_array($CFG['PONS']) ? $CFG['PONS'] : range(1,8);
-  $ins = $pdo->prepare("INSERT INTO samples(onuid, ts, input_bytes, output_bytes) VALUES(?,?,?,?)");
 
   foreach ($pons as $pon){
     foreach ([0,1] as $group){
@@ -77,22 +91,25 @@ try{
         continue;
       }
 
-      // If we somehow got the login page again, do one re-login and retry this group once
+      // If we hit a login screen again, re-login once and retry this group
       if (stripos($html, 'login') !== false && stripos($html, 'password') !== false) {
         olt_close($ch);
         [$ch,$cookie,$err,$reused2] = olt_login_or_reuse($CFG);
         if ($err) throw new RuntimeException("relogin:$err");
-        // retry same group
-        $group--; 
+        $group--; // retry same group
         continue;
       }
 
       $rows = parse_onu_stats_rows($html);
       if ($debug) $log[] = "PON {$pon} grp {$group} parsed rows: ".count($rows);
-
       if (!isset($byPon[$pon])) $byPon[$pon]=0;
+
       foreach ($rows as $r){
-        $ins->execute([$r['onuid'], $ts, $r['input_bytes'], $r['output_bytes']]);
+        if ($hasPon) {
+          $ins->execute([$pon, $r['onuid'], $ts, $r['input_bytes'], $r['output_bytes']]);
+        } else {
+          $ins->execute([$r['onuid'], $ts, $r['input_bytes'], $r['output_bytes']]);
+        }
         $inserted++; $byPon[$pon]++;
       }
     }
