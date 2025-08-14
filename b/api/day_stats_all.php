@@ -1,77 +1,58 @@
 <?php
+// /b/api/day_stats_all.php
+header('Content-Type: application/json; charset=utf-8');
 ini_set('display_errors','0'); error_reporting(E_ALL);
-set_error_handler(function($no,$str,$file,$line){
-  throw new ErrorException($str, 0, $no, $file, $line);
-});
-
-require __DIR__.'/../lib/_bootstrap.php';
+set_error_handler(function($n,$s,$f,$l){ throw new ErrorException($s,0,$n,$f,$l); });
 
 try{
-  // Date window (server timezone). You can pass ?date=YYYY-MM-DD
-  $date  = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
-  $start = strtotime($date.' 00:00:00');
-  $end   = $start + 86400;
-
+  $CFG = require __DIR__.'/../lib/config.php';
+  require __DIR__.'/../lib/db.php';
+  if (!isset($_SESSION)) session_start();
   $pdo = db($CFG);
 
-  // Stream rows ordered by ONU then timestamp
-  $stmt = $pdo->prepare("
-    SELECT onuid, ts, input_bytes, output_bytes
-    FROM samples
-    WHERE ts >= :s AND ts < :e
-    ORDER BY onuid ASC, ts ASC
-  ");
-  $stmt->execute([':s'=>$start, ':e'=>$end]);
+  $date = isset($_GET['date']) ? trim($_GET['date']) : date('Y-m-d');
+  if (!preg_match('/^\d{4}-\d{2}-\d{2}$/',$date)) $date = date('Y-m-d');
+  $start = strtotime($date.' 00:00:00'); $end = $start + 86400;
 
-  $stats = []; // onuid => ['sum'=>float,'cnt'=>int,'max'=>float]
-  $last  = []; // onuid => last row used for delta
+  $st = $pdo->prepare("SELECT ts FROM samples WHERE ts>=? AND ts<? GROUP BY ts ORDER BY ts ASC");
+  $st->execute([$start,$end]);
+  $tsList = array_map(function($r){ return (int)$r['ts']; }, $st->fetchAll(PDO::FETCH_ASSOC));
+  $n = count($tsList);
+  if ($n < 2) { echo json_encode(['ok'=>true,'rows'=>[]]); exit; }
 
-  while ($r = $stmt->fetch()){
-    $id = $r['onuid'];
+  $get = $pdo->prepare("SELECT onuid,input_bytes,output_bytes FROM samples WHERE ts=?");
+  $toNum = function($v){ if($v===null||$v==='') return null; return is_numeric($v)?(float)$v:null; };
 
-    // Initialize bins
-    if (!isset($stats[$id])) $stats[$id] = ['sum'=>0.0,'cnt'=>0,'max'=>0.0];
+  $sum = []; $cnt = []; $mx = [];
 
-    // Need a previous point to measure speed
-    if (!isset($last[$id])) { $last[$id] = $r; continue; }
+  for($i=1;$i<$n;$i++){
+    $t1=$tsList[$i-1]; $t2=$tsList[$i]; $dt=max(1,$t2-$t1);
+    $get->execute([$t2]); $curr=$get->fetchAll(PDO::FETCH_ASSOC);
+    $get->execute([$t1]); $prev=$get->fetchAll(PDO::FETCH_ASSOC);
+    $pm = []; foreach($prev as $r){ $pm[$r['onuid']] = $r; }
 
-    $a = $last[$id];
-    $b = $r;
-    $dt = (int)$b['ts'] - (int)$a['ts'];
-    if ($dt <= 0) { $last[$id] = $b; continue; }
-
-    // Convert counters to Mbps (skip NULLs / wraps)
-    $inA  = to_num($a['input_bytes']);   $inB  = to_num($b['input_bytes']);
-    $outA = to_num($a['output_bytes']);  $outB = to_num($b['output_bytes']);
-
-    $up = null; $down = null;
-    if ($inA  !== null && $inB  !== null && $inB  >= $inA)   $up   = (($inB  - $inA)  * 8.0) / ($dt * 1000000.0);
-    if ($outA !== null && $outB !== null && $outB >= $outA)  $down = (($outB - $outA) * 8.0) / ($dt * 1000000.0);
-
-    if ($up !== null || $down !== null) {
-      $tot = (float)($up ?: 0) + (float)($down ?: 0);
-      $s =& $stats[$id];
-      $s['sum'] += $tot;
-      $s['cnt'] += 1;
-      if ($tot > $s['max']) $s['max'] = $tot;
+    foreach($curr as $c){
+      $id=$c['onuid']; if(!isset($pm[$id])) continue; $p=$pm[$id];
+      $inC=$toNum($c['input_bytes']);  $inP=$toNum($p['input_bytes']);
+      $outC=$toNum($c['output_bytes']); $outP=$toNum($p['output_bytes']);
+      $up=0.0; $down=0.0;
+      if($inC!==null && $inP!==null && $inC >= $inP)   $up   = (($inC-$inP)*8.0)/($dt*1000000.0);
+      if($outC!==null && $outP!==null && $outC >= $outP) $down = (($outC-$outP)*8.0)/($dt*1000000.0);
+      $tot = $up + $down;
+      if (!isset($sum[$id])) { $sum[$id]=0.0; $cnt[$id]=0; $mx[$id]=0.0; }
+      $sum[$id] += $tot; $cnt[$id] += 1; if ($tot > $mx[$id]) $mx[$id] = $tot;
     }
-
-    $last[$id] = $b;
   }
 
-  // Build output
   $out = [];
-  foreach ($stats as $id=>$s){
-    if ($s['cnt'] > 0) {
-      $out[$id] = [
-        'avg_total_mbps' => $s['sum'] / $s['cnt'],
-        'max_total_mbps' => $s['max'],
-      ];
-    }
+  foreach($sum as $id=>$s){
+    $out[$id] = [
+      'avg_total_mbps' => ($cnt[$id] ? ($s/$cnt[$id]) : null),
+      'max_total_mbps' => $mx[$id],
+    ];
   }
 
-  json_out(['ok'=>true,'date'=>$date,'rows'=>$out]);
-
+  echo json_encode(['ok'=>true,'rows'=>$out]);
 }catch(Throwable $e){
-  json_out(['ok'=>false,'error'=>'php:'.$e->getMessage()]);
+  echo json_encode(['ok'=>false,'error'=>'php:'.$e->getMessage()]);
 }

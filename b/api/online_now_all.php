@@ -1,46 +1,54 @@
 <?php
+// /b/api/online_now_all.php
+header('Content-Type: application/json; charset=utf-8');
 ini_set('display_errors','0'); error_reporting(E_ALL);
-set_error_handler(function($no,$str,$file,$line){ throw new ErrorException($str,0,$no,$file,$line); });
-require __DIR__.'/../lib/_bootstrap.php';
+set_error_handler(function($n,$s,$f,$l){ throw new ErrorException($s,0,$n,$f,$l); });
 
 try{
+  $CFG = require __DIR__.'/../lib/config.php';
+  require __DIR__.'/../lib/db.php';
+  if (!isset($_SESSION)) session_start();
   $pdo = db($CFG);
 
-  $rowsTs = $pdo->query("SELECT ts FROM samples GROUP BY ts ORDER BY ts DESC LIMIT 2")->fetchAll();
-  if (count($rowsTs)<2) json_out(['ok'=>true,'has_data'=>false]);
-
-  $tsCurr = (int)$rowsTs[0]['ts'];
-  $tsPrev = (int)$rowsTs[1]['ts'];
-  $dt = max(1, $tsCurr - $tsPrev);
+  $tsRows = $pdo->query("SELECT ts FROM samples GROUP BY ts ORDER BY ts DESC LIMIT 2")->fetchAll(PDO::FETCH_ASSOC);
+  if (count($tsRows) < 2) { echo json_encode(['ok'=>true,'has_data'=>false,'rows'=>[]]); exit; }
+  $t2 = (int)$tsRows[0]['ts']; $t1 = (int)$tsRows[1]['ts']; $dt = max(1, $t2-$t1);
 
   $q = $pdo->prepare("SELECT onuid,input_bytes,output_bytes FROM samples WHERE ts=?");
-  $q->execute([$tsCurr]); $curr = $q->fetchAll();
-  $q->execute([$tsPrev]); $prev = $q->fetchAll();
-  $pm = []; foreach($prev as $r){ $pm[$r['onuid']]=$r; }
+  $q->execute([$t2]); $curr = $q->fetchAll(PDO::FETCH_ASSOC);
+  $q->execute([$t1]); $prev = $q->fetchAll(PDO::FETCH_ASSOC);
 
-  $levels = []; // onuid => {upload_mbps, download_mbps, total_mbps, level, online}
-  foreach ($curr as $c){
-    $id=$c['onuid']; if (!isset($pm[$id])) continue; $p=$pm[$id];
-    $inC=to_num($c['input_bytes']); $inP=to_num($p['input_bytes']);
-    $outC=to_num($c['output_bytes']); $outP=to_num($p['output_bytes']);
+  $pm = []; foreach($prev as $r){ $pm[$r['onuid']] = $r; }
+  $rows = [];
+  $toNum = function($v){ if($v===null||$v==='') return null; return is_numeric($v)?(float)$v:null; };
 
-    $up=$down=0.0; $online=false;
-    if ($inC!==null && $inP!==null && $inC >= $inP){ $up   = (($inC - $inP) * 8.0) / ($dt * 1000000.0); if ($up>0) $online=true; }
-    if ($outC!==null && $outP!==null && $outC >= $outP){ $down = (($outC - $outP) * 8.0) / ($dt * 1000000.0); if ($down>0) $online=true; }
+  foreach($curr as $c){
+    $id = $c['onuid']; if (!isset($pm[$id])) continue; $p = $pm[$id];
+    $inC=$toNum($c['input_bytes']);  $inP=$toNum($p['input_bytes']);
+    $outC=$toNum($c['output_bytes']); $outP=$toNum($p['output_bytes']);
+
+    $up=0.0; $down=0.0;
+    if($inC!==null && $inP!==null && $inC >= $inP)   $up   = (($inC-$inP)*8.0)/($dt*1000000.0);
+    if($outC!==null && $outP!==null && $outC >= $outP) $down = (($outC-$outP)*8.0)/($dt*1000000.0);
     $tot = $up + $down;
 
-    // bars: <10=1, 10–20=2, 20–35=3, 35–50=4, 50+=5
     $lvl = 0;
-    if ($tot > 0)  $lvl = 1;
-    if ($tot >= 10) $lvl = 2;
-    if ($tot >= 20) $lvl = 3;
-    if ($tot >= 35) $lvl = 4;
-    if ($tot >= 50) $lvl = 5;
+    if ($tot >= 100) $lvl=5;
+    else if ($tot >= 50) $lvl=4;
+    else if ($tot >= 20) $lvl=3;
+    else if ($tot >= 10) $lvl=2;
+    else if ($tot >= 0.1) $lvl=1;
 
-    $levels[$id] = ['upload_mbps'=>$up,'download_mbps'=>$down,'total_mbps'=>$tot,'level'=>$lvl,'online'=>$online];
+    $rows[$id] = [
+      'upload_mbps'   => $up,
+      'download_mbps' => $down,
+      'total_mbps'    => $tot,
+      'online'        => ($up>0 || $down>0),
+      'level'         => $lvl
+    ];
   }
 
-  json_out(['ok'=>true,'has_data'=>true,'ts_curr'=>$tsCurr,'ts_prev'=>$tsPrev,'dt_sec'=>$dt,'rows'=>$levels]);
+  echo json_encode(['ok'=>true,'has_data'=>!empty($rows),'rows'=>$rows,'dt_sec'=>$dt,'ts_curr'=>$t2]);
 }catch(Throwable $e){
-  json_out(['ok'=>false,'error'=>'php:'.$e->getMessage()]);
+  echo json_encode(['ok'=>false,'error'=>'php:'.$e->getMessage()]);
 }

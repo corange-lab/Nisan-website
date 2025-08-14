@@ -1,26 +1,37 @@
 <?php
+// /b/api/stats_all.php
+header('Content-Type: application/json; charset=utf-8');
 ini_set('display_errors','0'); error_reporting(E_ALL);
-set_error_handler(function($no,$str,$file,$line){ throw new ErrorException($str,0,$no,$file,$line); });
+set_error_handler(function($n,$s,$f,$l){ throw new ErrorException($s,0,$n,$f,$l); });
 
-require __DIR__.'/../lib/_bootstrap.php';
-
-try{
-  [$rows,$errors,$reused] = fetch_stats_all($CFG);
-
-  // natural sort by PON, then GPON port, then ONU
-  usort($rows,function($a,$b){
-    $pa=(int)($a['pon']??0); $pb=(int)($b['pon']??0);
-    if($pa!==$pb) return $pa-$pb;
-    [$aport,$aonu]=extract_port_onu($a['onuid']??''); [$bport,$bonu]=extract_port_onu($b['onuid']??'');
-    if($aport!==$bport) return $aport-$bport;
-    return $aonu-$bonu;
-  });
-  json_out(['ok'=>true,'rows'=>$rows,'errors'=>$errors,'reused'=>$reused]);
-}catch(Throwable $e){
-  json_out(['ok'=>false,'error'=>'php:'.$e->getMessage()]);
+function parsePonFromOnu($onuid){
+  if (preg_match('/GPON\d+\/(\d+):(\d+)/i', $onuid, $m)) return (int)$m[1];
+  return null;
 }
 
-function extract_port_onu($id){
-  if (preg_match('~^GPON\d+/(\d+):(\d+)~i',$id,$m)) return [(int)$m[1],(int)$m[2]];
-  return [0,0];
+try{
+  $CFG = require __DIR__.'/../lib/config.php';
+  require __DIR__.'/../lib/db.php';
+  if (!isset($_SESSION)) session_start();
+  $pdo = db($CFG);
+
+  $t2 = $pdo->query("SELECT ts FROM samples ORDER BY ts DESC LIMIT 1")->fetchColumn();
+  if (!$t2) { echo json_encode(['ok'=>true,'rows'=>[]]); exit; }
+
+  $rows = $pdo->prepare("SELECT onuid,input_bytes,output_bytes,pon FROM samples WHERE ts=?");
+  $rows->execute([$t2]);
+  $data = [];
+  while($r = $rows->fetch(PDO::FETCH_ASSOC)){
+    $pon = isset($r['pon']) ? $r['pon'] : parsePonFromOnu($r['onuid']);
+    $data[] = [
+      'onuid'        => $r['onuid'],
+      'pon'          => $pon,
+      'input_bytes'  => $r['input_bytes'],
+      'output_bytes' => $r['output_bytes'],
+    ];
+  }
+
+  echo json_encode(['ok'=>true,'ts'=>$t2,'rows'=>$data]);
+}catch(Throwable $e){
+  echo json_encode(['ok'=>false,'error'=>'php:'.$e->getMessage()]);
 }
