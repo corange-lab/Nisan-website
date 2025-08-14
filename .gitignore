@@ -2,10 +2,3 @@ echo ".htaccess" >> .gitignore
 git add .gitignore
 git commit -m "Ignore .htaccess in git"
 git push origin main
-# SQLite databases (both projects)
-b/data/
-b/data/*.sqlite
-b/data/*.db
-
-# Local-only config (never commit real creds)
-b/lib/config.local.php
