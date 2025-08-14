@@ -1,70 +1,71 @@
 <?php
-// /b/api/network_timeseries.php
+// /b/api/network_timeseries.php  — self-contained, safe, fast enough for daily views
+header('Content-Type: application/json; charset=utf-8');
 ini_set('display_errors','0'); error_reporting(E_ALL);
 set_error_handler(function($n,$s,$f,$l){ throw new ErrorException($s,0,$n,$f,$l); });
 
-require __DIR__.'/../lib/_bootstrap.php';
-
-function num_or_null($v){
-  if ($v===null || $v==='') return null;
-  return is_numeric($v) ? (float)$v : null;
-}
-
 try{
-  $pdo   = db($CFG);
-  $date  = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
-  $tf    = isset($_GET['tf']) ? strtolower(trim($_GET['tf'])) : '1m'; // 'raw' or '1m'
-  if ($tf==='1min') $tf='1m';
+  // Load config + DB directly (no other includes required)
+  $CFG = require __DIR__.'/../lib/config.php';
+  require __DIR__.'/../lib/db.php';
+  if (!isset($_SESSION)) session_start();
+  $pdo = db($CFG);
+
+  // Inputs
+  $date = isset($_GET['date']) ? trim($_GET['date']) : date('Y-m-d');
+  if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) $date = date('Y-m-d');
+  $tf = isset($_GET['tf']) ? strtolower(trim($_GET['tf'])) : '1m';   // 'raw' or '1m'
+  if ($tf === '1min') $tf = '1m';
 
   $start = strtotime($date.' 00:00:00');
   $end   = $start + 86400;
 
-  // Collect distinct timestamps for the day
-  $st = $pdo->prepare("SELECT ts FROM samples WHERE ts>=? AND ts<? GROUP BY ts ORDER BY ts ASC");
-  $st->execute([$start,$end]);
-  $tsRows = $st->fetchAll();
+  // List distinct snapshot times
+  $qTs = $pdo->prepare("SELECT ts FROM samples WHERE ts>=? AND ts<? GROUP BY ts ORDER BY ts ASC");
+  $qTs->execute([$start,$end]);
   $tsList = [];
-  foreach($tsRows as $r){ $tsList[] = (int)$r['ts']; }
-  $n = count($tsList);
+  foreach($qTs->fetchAll(PDO::FETCH_ASSOC) as $r){ $tsList[] = (int)$r['ts']; }
 
-  if ($n < 2) {
+  $n = count($tsList);
+  if ($n < 2){
     echo json_encode(['ok'=>true,'date'=>$date,'tf'=>$tf,'points'=>[]]);
     exit;
   }
 
-  $get = $pdo->prepare("SELECT onuid,input_bytes,output_bytes FROM samples WHERE ts=?");
+  // Prepare row fetch
+  $qRows = $pdo->prepare("SELECT onuid,input_bytes,output_bytes FROM samples WHERE ts=?");
+  $toNum = function($v){ if ($v===null || $v==='') return null; return is_numeric($v) ? (float)$v : null; };
 
-  // Build per-interval speeds
-  $intervals = []; // each: ['t'=>t2,'up'=>Mbps,'down'=>Mbps]
-  for ($i=1;$i<$n;$i++){
+  // Build per-interval totals
+  $intervals = []; // ['t'=>t2, 'up'=>Mbps, 'down'=>Mbps]
+  for ($i=1; $i<$n; $i++){
     $t1=$tsList[$i-1]; $t2=$tsList[$i]; $dt=max(1,$t2-$t1);
 
-    $get->execute([$t2]); $curr=$get->fetchAll();
-    $get->execute([$t1]); $prev=$get->fetchAll();
+    $qRows->execute([$t2]); $curr=$qRows->fetchAll(PDO::FETCH_ASSOC);
+    $qRows->execute([$t1]); $prev=$qRows->fetchAll(PDO::FETCH_ASSOC);
+
     $pm=[]; foreach($prev as $r){ $pm[$r['onuid']]=$r; }
 
     $up=0.0; $down=0.0;
     foreach($curr as $c){
-      $id=$c['onuid']; if(!isset($pm[$id])) continue; $p=$pm[$id];
-      $inC=num_or_null($c['input_bytes']);  $inP=num_or_null($p['input_bytes']);
-      $outC=num_or_null($c['output_bytes']); $outP=num_or_null($p['output_bytes']);
-      if($inC!==null && $inP!==null && $inC >= $inP)   $up   += (($inC-$inP)*8.0)/($dt*1000000.0);
-      if($outC!==null && $outP!==null && $outC >= $outP) $down += (($outC-$outP)*8.0)/($dt*1000000.0);
+      $id=$c['onuid']; if(!isset($pm[$id])) continue;
+      $p=$pm[$id];
+      $inC=$toNum($c['input_bytes']);  $inP=$toNum($p['input_bytes']);
+      $outC=$toNum($c['output_bytes']); $outP=$toNum($p['output_bytes']);
+      if($inC!==null && $inP!==null && $inC>=$inP)   $up   += (($inC-$inP)*8.0)/($dt*1000000.0);
+      if($outC!==null && $outP!==null && $outC>=$outP) $down += (($outC-$outP)*8.0)/($dt*1000000.0);
     }
     $intervals[] = ['t'=>$t2,'up'=>$up,'down'=>$down];
   }
 
   if ($tf==='raw' || $tf==='3s' || $tf==='sec'){
-    // decimate to keep payload reasonable
+    // Light decimation to keep payload reasonable
     $maxPoints = 2000;
     $m = count($intervals);
     if ($m > $maxPoints){
-      $step = (int)ceil($m / $maxPoints);
+      $step = max(1, (int)ceil($m/$maxPoints));
       $dec=[]; for($i=0;$i<$m;$i+=$step){ $dec[] = $intervals[$i]; }
-      if ($dec && $intervals) {
-        $lastDec = $dec[count($dec)-1]; $lastAll = $intervals[count($intervals)-1];
-        if ($lastDec['t'] !== $lastAll['t']) $dec[] = $lastAll;
-      }
+      if ($dec && end($dec)['t'] !== end($intervals)['t']) $dec[] = end($intervals);
       $intervals = $dec;
     }
     $points=[]; foreach($intervals as $x){
@@ -74,17 +75,17 @@ try{
     exit;
   }
 
-  // 1-minute MAX aggregation
-  $buckets = []; // ts_minute => ['up'=>max,'down'=>max]
-  foreach ($intervals as $x){
+  // 1-minute PEAK aggregation (TradingView-style)
+  $bucket = []; // ts_minute => ['up'=>max,'down'=>max]
+  foreach($intervals as $x){
     $b = (int)floor($x['t']/60)*60;
-    if (!isset($buckets[$b])) $buckets[$b] = ['up'=>0.0,'down'=>0.0];
-    if ($x['up']   > $buckets[$b]['up'])   $buckets[$b]['up']   = $x['up'];
-    if ($x['down'] > $buckets[$b]['down']) $buckets[$b]['down'] = $x['down'];
+    if (!isset($bucket[$b])) $bucket[$b] = ['up'=>0.0,'down'=>0.0];
+    if ($x['up']   > $bucket[$b]['up'])   $bucket[$b]['up']   = $x['up'];
+    if ($x['down'] > $bucket[$b]['down']) $bucket[$b]['down'] = $x['down'];
   }
-  ksort($buckets);
-  $points=[];
-  foreach($buckets as $t=>$v){
+  ksort($bucket);
+  $points = [];
+  foreach($bucket as $t=>$v){
     $points[] = ['t'=>$t,'upload_mbps'=>$v['up'],'download_mbps'=>$v['down']];
   }
 
