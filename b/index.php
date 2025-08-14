@@ -25,17 +25,16 @@
     .sub{color:var(--muted);font-size:13px;margin-top:6px}
     .notes{color:var(--muted);font-size:13px;margin:10px 2px 12px}
 
-    /* peaks (no bars) */
     .peaks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
     .peak{background:#0b1432;border:1px solid #1c2550;border-radius:14px;padding:10px 12px}
     .peak .k{font-size:12px;color:#9bb0e4;text-transform:uppercase;letter-spacing:.06em}
     .peak .v{font-weight:800;font-size:22px}
     .peak .t{color:#7d8fbf;font-size:12px;margin-top:4px}
 
-    /* chart */
     .chartWrap{margin-top:12px}
-    .chartToolbar{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+    .chartToolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
     .btn{cursor:pointer;border:1px solid #2a3670;background:#0e1630;color:#d7def9;border-radius:10px;padding:6px 10px}
+    select.btn{padding-right:28px}
     .legend{display:flex;gap:16px;font-size:12px;color:#b9c7ee;margin-left:auto}
     .dot{display:inline-block;width:10px;height:10px;border-radius:50%}
     .u{background:var(--u)} .d{background:var(--d)}
@@ -44,7 +43,6 @@
     .tip{position:absolute;pointer-events:none;background:#0f172a;border:1px solid #263062;color:#e6e9f2;border-radius:10px;
          padding:6px 8px;font-size:12px;box-shadow:0 10px 25px rgba(0,0,0,.4);display:none;white-space:nowrap;z-index:5}
 
-    /* table */
     table{width:100%;border-collapse:separate;border-spacing:0 6px}
     thead th{color:#b9c7ee;font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:12px;padding:8px 10px}
     tbody td, thead th{background:#0c1533;border:1px solid #1a2450}
@@ -57,16 +55,12 @@
     .bars{display:inline-flex;gap:3px;margin-left:8px;vertical-align:middle}
     .bar{width:6px;height:10px;border-radius:2px;background:#1f2a55;opacity:.5}
     .bar.on{background:#25d0a7;opacity:1}
-
-    .skeleton{display:inline-block;min-width:7ch;background:linear-gradient(90deg,#111e49,#172868,#111e49);background-size:200% 100%;animation:shimmer 1.2s linear infinite;color:transparent;border-radius:6px}
-    @keyframes shimmer{0%{background-position:0% 0}100%{background-position:200% 0}}
   </style>
   <script>window.API_BASE='./api/';</script>
 </head>
 <body>
   <div class="wrap">
 
-    <!-- Network card (Realtime ≈3s) -->
     <div class="card">
       <div class="title">Network Live Throughput <span class="pill">≈3s realtime</span></div>
       <div class="grid3">
@@ -86,13 +80,21 @@
         <div class="peak"><div class="k">30-day peak</div><div class="v" id="pk_30d">— Mbps</div><div class="t" id="pk_30d_t">—</div></div>
       </div>
 
-      <!-- Big chart (Upload/Download only) -->
       <div class="chartWrap">
         <div class="chartToolbar">
           <div class="title" style="margin:0">Daily Trend</div>
-          <input id="chart_date" type="date" class="btn" style="padding:6px 10px">
+          <input id="chart_date" type="date" class="btn">
+          <select id="chart_tf" class="btn">
+            <option value="1m" selected>1m (peak)</option>
+            <option value="raw">3s (raw)</option>
+          </select>
           <button id="chart_refresh" class="btn">Load</button>
-          <div class="legend">
+          <div style="margin-left:auto;display:flex;gap:8px">
+            <button id="zoom_in" class="btn">Zoom In</button>
+            <button id="zoom_out" class="btn">Zoom Out</button>
+            <button id="zoom_reset" class="btn">Reset</button>
+          </div>
+          <div class="legend" style="width:100%">
             <span class="dot u"></span> Upload
             <span class="dot d"></span> Download
           </div>
