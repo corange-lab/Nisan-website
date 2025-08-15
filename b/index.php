@@ -66,9 +66,18 @@
     <div class="card">
       <div class="title">Network Live Throughput <span class="pill">≈3s realtime</span></div>
       <div class="grid3">
-        <div><div class="big" id="net_total">—<span class="unit">Mbps</span></div><div class="sub">Total (Upload + Download)</div></div>
-        <div><div class="big" id="net_up">—<span class="unit">Mbps</span></div><div class="sub">Upload (Inbound)</div></div>
-        <div><div class="big" id="net_down">—<span class="unit">Mbps</span></div><div class="sub">Download (Outbound)</div></div>
+        <div>
+          <div class="big"><span id="net_total_val" data-val="0">—</span><span class="unit"> Mbps</span></div>
+          <div class="sub">Total (Upload + Download)</div>
+        </div>
+        <div>
+          <div class="big"><span id="net_up_val" data-val="0">—</span><span class="unit"> Mbps</span></div>
+          <div class="sub">Upload (Inbound)</div>
+        </div>
+        <div>
+          <div class="big"><span id="net_down_val" data-val="0">—</span><span class="unit"> Mbps</span></div>
+          <div class="sub">Download (Outbound)</div>
+        </div>
       </div>
       <div class="notes">
         <span id="net_status">Realtime stream</span>
@@ -146,9 +155,44 @@
       return fetch(url, Object.assign({cache:'no-store'}, o||{})).then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); });
     }
     function fmtMBGB(v){ if(v==null||v==='')return'NULL'; const n=+v; if(!isFinite(n))return String(v); const mb=n/1048576; return mb>=1024?(mb/1024).toFixed(2)+' GB':mb.toFixed(2)+' MB'; }
-    const fMbps = x => (x==null||!isFinite(x))?'— Mbps':Number(x).toFixed(2)+' Mbps';
-    const parsePort = id => { const m=/^GPON\d+\/(\d+):(\d+)/i.exec(id||''); return m?{port:+m[1]||0, onu:+m[2]||0}:{port:0,onu:0}; };
-    const bars = lvl => { let h='<span class="bars">'; for(let i=1;i<=5;i++) h+=`<span class="bar ${i<=lvl?'on':''}"></span>`; return h+'</span>'; };
+    const fMbps = x => (x==null||!isFinite(x))?'—':Number(x).toFixed(2);
+
+    // === animated numbers ===
+    // Easing like Ookla ramp: fast start, soft finish
+    const easeOutExpo = t => (t===1?1:1 - Math.pow(2, -10*t));
+    // Duration short for big jumps, longer for tiny corrections
+    function animMs(delta){
+      const d = Math.abs(delta);
+      if (d >= 200) return 280;   // huge jump -> very fast
+      if (d >= 50)  return 380;
+      if (d >= 20)  return 520;
+      if (d >= 5)   return 700;
+      return 850;                 // tiny change -> slower so it’s visible
+    }
+    function animateNumber(el, target){
+      if (!el) return;
+      const from = parseFloat(el.dataset.val || '0') || 0;
+      const to   = (isFinite(target)? target : 0);
+      const dur  = animMs(to - from);
+      const start = performance.now();
+      const gran = (to>=100?1:(to>=10?0.1:0.01)); // visual “tick” size
+      function frame(now){
+        const p = Math.min(1, (now - start) / dur);
+        const eased = easeOutExpo(p);
+        let v = from + (to - from) * eased;
+        v = Math.round(v / gran) * gran;
+        el.textContent = fMbps(v);
+        el.dataset.val = String(v);
+        if (p < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+    function setBarsLevel(containerId, lvl){
+      const box = document.getElementById(containerId);
+      if (!box) return;
+      const kids = box.querySelectorAll('.bar');
+      kids.forEach((b,i)=>b.classList.toggle('on', i < lvl));
+    }
 
     // ===== peaks =====
     function loadPeaks(){
@@ -163,17 +207,14 @@
       }).catch(()=>{});
     }
 
-    // ===== chart (1m peak / raw) with zoom/pan =====
-    const el = {
-      cdate:$('#chart_date'), tf:$('#chart_tf'), loadBtn:$('#chart_refresh'),
+    // ===== chart (same as before) =====
+    const el = { cdate:$('#chart_date'), tf:$('#chart_tf'), loadBtn:$('#chart_refresh'),
       box:$('#chart_box'), svg:$('#chart_svg'), tip:$('#chart_tip'),
-      zin:$('#zoom_in'), zout:$('#zoom_out'), zreset:$('#zoom_reset')
-    };
+      zin:$('#zoom_in'), zout:$('#zoom_out'), zreset:$('#zoom_reset') };
     let chart = { points:[], minT:0, maxT:0, viewMin:0, viewMax:0, tf:'1m' };
     const W=1000,H=420,Px=44,Py=34;
     function X(t){ const vspan=chart.viewMax-chart.viewMin||1; return Px + ((t-chart.viewMin)/vspan)*(W-2*Px); }
     function Y(v, maxY){ return H-Py - (v/(maxY||1))*(H-2*Py); }
-
     function loadChart(){
       const date = el.cdate.value || new Date().toISOString().slice(0,10);
       const tf   = el.tf.value || '1m';
@@ -290,18 +331,17 @@
         chart.viewMin=nMin; chart.viewMax=nMax; renderChart();
       }, {passive:false});
 
-      // hover bind
       overlay.addEventListener('mousemove',e=>{
         const rect=svg.getBoundingClientRect(); const x=e.clientX-rect.left; showAt(x);
       });
       overlay.addEventListener('mouseleave',hideHover);
     }
-    if (el.zin) el.zin.addEventListener('click',()=>{ const c=(chart.viewMin+chart.viewMax)/2, span=(chart.viewMax-chart.viewMin)*0.5;
+    if ($('#zoom_in'))  $('#zoom_in').addEventListener('click',()=>{ const c=(chart.viewMin+chart.viewMax)/2, span=(chart.viewMax-chart.viewMin)*0.5;
       chart.viewMin=Math.max(chart.minT, c-span/2); chart.viewMax=Math.min(chart.maxT, c+span/2); renderChart(); });
-    if (el.zout) el.zout.addEventListener('click',()=>{ const c=(chart.viewMin+chart.viewMax)/2, span=(chart.viewMax-chart.viewMin)*2.0;
+    if ($('#zoom_out')) $('#zoom_out').addEventListener('click',()=>{ const c=(chart.viewMin+chart.viewMax)/2, span=(chart.viewMax-chart.viewMin)*2.0;
       let vmin=c-span/2, vmax=c+span/2; if(vmin<chart.minT){ const d=chart.minT-vmin; vmin+=d; vmax+=d; }
       if(vmax>chart.maxT){ const d=vmax-chart.maxT; vmin-=d; vmax-=d; } chart.viewMin=vmin; chart.viewMax=vmax; renderChart(); });
-    if (el.zreset) el.zreset.addEventListener('click',()=>{ chart.viewMin=chart.minT; chart.viewMax=chart.maxT; renderChart(); });
+    if ($('#zoom_reset')) $('#zoom_reset').addEventListener('click',()=>{ chart.viewMin=chart.minT; chart.viewMax=chart.maxT; renderChart(); });
 
     // ===== table / live =====
     const tbody = $('#body'), notes = $('#notes'); let allRows = [];
@@ -316,6 +356,10 @@
     }
     function stopTracking(){ clearTimers(); $('#net_status').textContent='Tracking paused'; }
 
+    const barsHTML = lvl => { let h='<span class="bars">';
+      for(let i=1;i<=5;i++) h+=`<span class="bar ${i<=lvl?'on':''}"></span>`;
+      return h+'</span>'; };
+
     function rowHTML(r){
       const safe=idSafe(r.onuid);
       return (
@@ -323,7 +367,10 @@
         `<td>${esc(r.pon!=null?String(r.pon):'')}</td>`+
         `<td class="num">${esc(fmtMBGB(r.input_bytes))}</td>`+
         `<td class="num">${esc(fmtMBGB(r.output_bytes))}</td>`+
-        `<td class="num" id="now-${safe}">— Mbps ${bars(0)}</td>`+
+        `<td class="num">
+            <span class="now-num" id="nowv-${safe}" data-val="0">—</span> Mbps
+            <span class="bars" id="bars-${safe}">${barsHTML(0).replace('<span class="bars">','').replace('</span>','')}</span>
+         </td>`+
         `<td class="num" id="avg-${safe}">— Mbps</td>`+
         `<td class="num" id="max-${safe}">— Mbps</td>`+
         `<td class="num" id="test-${safe}">
@@ -341,8 +388,9 @@
         const rows=(j.rows||[]).slice();
         rows.sort((a,b)=>{
           const pa=(+a.pon||0), pb=(+b.pon||0); if(pa!==pb) return pa-pb;
-          const aa=parsePort(a.onuid), bb=parsePort(b.onuid);
-          if(aa.port!==bb.port) return aa.port-bb.port; return aa.onu-bb.onu;
+          const aa=/^GPON\d+\/(\d+):(\d+)/i.exec(a.onuid||'')||[null,0,0];
+          const bb=/^GPON\d+\/(\d+):(\d+)/i.exec(b.onuid||'')||[null,0,0];
+          if(+aa[1]!==+bb[1]) return +aa[1]-+bb[1]; return +aa[2]-+bb[2];
         });
         allRows=rows; renderRows(rows);
         notes.textContent='Loaded '+rows.length+' ONUs. “Now / Avg / Max” update automatically.';
@@ -357,15 +405,18 @@
         let sumUp=0, sumDown=0;
         Object.keys(j.rows).forEach(id=>{
           const safe=idSafe(id), rec=j.rows[id];
-          const nowEl = $('#now-'+safe), dotEl=$('#dot-'+safe);
-          if(nowEl) nowEl.innerHTML = fMbps(rec.total_mbps)+' '+bars(rec.level);
+          const nowValEl = document.getElementById('nowv-'+safe);
+          const barsElId = 'bars-'+safe;
+          const dotEl = document.getElementById('dot-'+safe);
+          if(nowValEl) animateNumber(nowValEl, rec.total_mbps||0);
+          setBarsLevel(barsElId, rec.level||0);
           if(dotEl) dotEl.classList.toggle('on', !!rec.online);
           sumUp   += +rec.upload_mbps  || 0;
           sumDown += +rec.download_mbps|| 0;
         });
-        $('#net_up').innerHTML    = esc(sumUp.toFixed(2))   +'<span class="unit">Mbps</span>';
-        $('#net_down').innerHTML  = esc(sumDown.toFixed(2)) +'<span class="unit">Mbps</span>';
-        $('#net_total').innerHTML = esc((sumUp+sumDown).toFixed(2))+'<span class="unit">Mbps</span>';
+        animateNumber(document.getElementById('net_up_val'),   sumUp);
+        animateNumber(document.getElementById('net_down_val'), sumDown);
+        animateNumber(document.getElementById('net_total_val'), sumUp+sumDown);
         $('#net_dt').textContent  = j.dt_sec;
         $('#net_when').textContent= new Date(j.ts_curr*1000).toLocaleString();
       }).catch(()=>{});
@@ -376,14 +427,14 @@
         if(!j.ok) return; const map=j.rows||{};
         allRows.forEach(r=>{
           const safe=idSafe(r.onuid); const st=map[r.onuid];
-          const avgEl=$('#avg-'+safe), maxEl=$('#max-'+safe);
-          if(avgEl) avgEl.textContent = st ? fMbps(st.avg_total_mbps) : '— Mbps';
-          if(maxEl) maxEl.textContent = st ? fMbps(st.max_total_mbps) : '— Mbps';
+          const avgEl=document.getElementById('avg-'+safe), maxEl=document.getElementById('max-'+safe);
+          if(avgEl) avgEl.textContent = st ? fMbps(st.avg_total_mbps)+' Mbps' : '— Mbps';
+          if(maxEl) maxEl.textContent = st ? fMbps(st.max_total_mbps)+' Mbps' : '— Mbps';
         });
       }).catch(()=>{});
     }
 
-    // ===== per-ONU real-time test (1s updates) =====
+    // ===== per-ONU real-time test (1s updates + animated) =====
     let testLock = false, testTicker = null;
     function disableRowButtons(onuid, disabled){
       document.querySelectorAll(`.btn-test[data-onu="${CSS.escape(onuid)}"]`).forEach(b=>{ b.disabled = !!disabled; });
@@ -392,54 +443,54 @@
       if (testLock) return;
       testLock = true;
       const safe=idSafe(onuid);
-      const nowCell = $('#now-'+safe);
-      const dotEl = $('#dot-'+safe);
-      const testCell = $('#test-'+safe);
+      const nowValEl = document.getElementById('nowv-'+safe);
+      const barsElId = 'bars-'+safe';
+      const dotEl = document.getElementById('dot-'+safe);
+      const testCell = document.getElementById('test-'+safe);
       const wasTracking = tracking;
 
-      // Pause global tracking during per-ONU test (keeps last-two-snapshots clean)
       if (wasTracking) { tracking=false; localStorage.setItem('tracking','off'); stopTracking(); if($('#track_toggle')) $('#track_toggle').checked=false; }
       disableRowButtons(onuid,true);
 
       let remain = secs;
       if (testCell) testCell.dataset.originalHTML = testCell.innerHTML;
-      if (nowCell) nowCell.textContent = `Testing… ${remain}s`;
 
-      // First baseline sample
+      // baseline
       sampleAll().then(()=>{
-        // Start 1-second loop
         testTicker = setInterval(()=>{
           remain--;
-          // every tick: sample and compute this ONU
-          sampleAll().then(()=>getJSON(API+'online_now_single.php?onuid='+encodeURIComponent(onuid))).then(j=>{
-            if (j && j.ok && j.has_data){
-              if (nowCell) nowCell.innerHTML = fMbps(j.total_mbps)+' '+bars(j.level||0)+` <span style="color:#9bb0e4;font-size:11px;margin-left:6px">(${remain}s)</span>`;
-              if (dotEl) dotEl.classList.toggle('on', (j.total_mbps>0));
-            } else {
-              if (nowCell) nowCell.textContent = `Testing… ${remain}s`;
-            }
-          }).catch(()=>{ if (nowCell) nowCell.textContent = `Testing… ${remain}s`; });
+          sampleAll()
+            .then(()=>getJSON(API+'online_now_single.php?onuid='+encodeURIComponent(onuid)))
+            .then(j=>{
+              if (j && j.ok && j.has_data){
+                if (nowValEl) animateNumber(nowValEl, j.total_mbps||0);
+                setBarsLevel(barsElId, j.level||0);
+                if (dotEl) dotEl.classList.toggle('on', (j.total_mbps>0));
+                if (testCell) testCell.innerHTML = `<button class="btn btn-test" data-onu="${esc(onuid)}" data-secs="10" style="margin-right:6px" disabled>Test 10s</button><button class="btn btn-test" data-onu="${esc(onuid)}" data-secs="30" disabled>Test 30s</button> <span style="color:#9bb0e4;font-size:11px;margin-left:6px">(${remain}s)</span>`;
+              } else if (testCell) {
+                testCell.innerHTML = `<button class="btn btn-test" data-onu="${esc(onuid)}" data-secs="10" style="margin-right:6px" disabled>Test 10s</button><button class="btn btn-test" data-onu="${esc(onuid)}" data-secs="30" disabled>Test 30s</button> <span style="color:#9bb0e4;font-size:11px;margin-left:6px">(${remain}s)</span>`;
+              }
+            }).catch(()=>{ /* keep countdown */ if (testCell) testCell.innerHTML = `<button class="btn btn-test" data-onu="${esc(onuid)}" data-secs="10" style="margin-right:6px" disabled>Test 10s</button><button class="btn btn-test" data-onu="${esc(onuid)}" data-secs="30" disabled>Test 30s</button> <span style="color:#9bb0e4;font-size:11px;margin-left:6px">(${remain}s)</span>`; });
 
           if (remain<=0){
             clearInterval(testTicker); testTicker=null;
-            // final snapshot to close the window (optional)
             sampleAll().finally(()=>{
+              if (testCell) testCell.innerHTML = testCell.dataset.originalHTML || testCell.innerHTML;
               disableRowButtons(onuid,false);
-              // restore tracking
               if (wasTracking){ tracking=true; localStorage.setItem('tracking','on'); startTracking(); if($('#track_toggle')) $('#track_toggle').checked=true; }
               testLock=false;
             });
           }
         }, 1000);
       }).catch(()=>{
-        if (nowCell) nowCell.textContent = 'Test error';
+        if (testCell) testCell.innerHTML = testCell.dataset.originalHTML || testCell.innerHTML;
         disableRowButtons(onuid,false);
         if (wasTracking){ tracking=true; localStorage.setItem('tracking','on'); startTracking(); if($('#track_toggle')) $('#track_toggle').checked=true; }
         testLock=false;
       });
     }
 
-    // Test buttons
+    // click handlers
     $('#body').addEventListener('click', function(e){
       const btn = e.target && e.target.classList && e.target.classList.contains('btn-test') ? e.target : null;
       if (!btn) return;
@@ -467,7 +518,6 @@
     loadPeaks();
     loadChart();
     loadTable();
-    // light auto chart refresh when tracking on
     setInterval(()=>{ if(tracking && $('#chart_refresh')) $('#chart_refresh').click(); }, 60000);
   })();
   </script>
