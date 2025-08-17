@@ -60,7 +60,6 @@
 <body>
   <div class="wrap">
 
-    <!-- Top bar -->
     <div class="topbar">
       <h1 style="margin:0">Network Bandwidth & ONU Usage</h1>
       <div style="display:flex;align-items:center;gap:12px">
@@ -72,7 +71,6 @@
       </div>
     </div>
 
-    <!-- Network now summary -->
     <div class="cards">
       <div class="card">
         <h3>Download (Now)</h3>
@@ -91,7 +89,6 @@
       </div>
     </div>
 
-    <!-- Peaks -->
     <div class="cards">
       <div class="card">
         <h3>Peak (24h)</h3>
@@ -110,7 +107,6 @@
       </div>
     </div>
 
-    <!-- Chart (00:00–23:59 IST, no zoom controls) -->
     <div class="panel">
       <div class="controls">
         <div class="ctrl">
@@ -132,7 +128,6 @@
       </div>
     </div>
 
-    <!-- Table -->
     <div class="title">ONU Usage (Now • Today • Max)</div>
     <div class="notes" id="notes"><span class="skeleton">Measuring ONUs…</span></div>
 
@@ -154,6 +149,8 @@
   </div>
 
   <script>window.API_BASE='./api/';</script>
-  <script src="./app.js?v=2025-08-17-usage"></script>
+  <script src="./js/helpers.js?v=2025-08-17a"></script>
+  <script src="./js/chart.js?v=2025-08-17a"></script>
+  <script src="./js/table.js?v=2025-08-17a"></script>
 </body>
 </html>
