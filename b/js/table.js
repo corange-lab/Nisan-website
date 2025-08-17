@@ -1,10 +1,11 @@
+// /b/js/table.js
 (function(){
   'use strict';
   const { API,$,esc,idSafe,normOnu,getJSON,fmtMBGB,fmtBytesNice,animateNumber,setBarsLevel } = window.App;
 
   const tbody = $('#body'), notes = $('#notes');
   let allRows = [];
-  let tracking = (localStorage.getItem('tracking')!=='off'); // default ON
+  let tracking = (localStorage.getItem('tracking')!=='off');
   let timers = { sample:null, agg:null };
 
   function clearTimers(){ if(timers.sample){ clearInterval(timers.sample); timers.sample=null; } if(timers.agg){ clearInterval(timers.agg); timers.agg=null; } }
@@ -76,26 +77,45 @@
     }).catch(()=>{});
   }
 
-  // Normalize any shape from day_usage_all:
-  function normalizeUsageMap(j){
+  // Make usage mapping tolerant to any server shape
+  function normalizeUsageMap(resp){
     const map = {};
-    if (!j || !j.rows) return map;
-    if (Array.isArray(j.rows)){
-      for (const it of j.rows){
-        const key = it && it.onuid ? normOnu(it.onuid) : null;
-        if (key) map[key] = it;
-      }
-    } else {
-      // object map; accept both direct rows and rows.by_onuid
-      const src = j.by_onuid || j.rows;
-      for (const k in src){
-        if (!Object.prototype.hasOwnProperty.call(src,k)) continue;
+    if (!resp) return map;
+
+    // 1) preferred: resp.by_onuid
+    if (resp.by_onuid && typeof resp.by_onuid === 'object'){
+      for (const k in resp.by_onuid){
         const key = normOnu(k);
-        const v = src[k];
+        const v = resp.by_onuid[k] || {};
         map[key] = {
           onuid: key,
-          download_bytes: Number(v.download_bytes||v.d||0),
-          upload_bytes: Number(v.upload_bytes||v.u||0)
+          download_bytes: Number(v.download_bytes ?? v.d ?? 0),
+          upload_bytes:   Number(v.upload_bytes   ?? v.u ?? 0)
+        };
+      }
+    }
+
+    // 2) also accept resp.rows as array or map
+    const rows = resp.rows || [];
+    if (Array.isArray(rows)){
+      for (const it of rows){
+        if (!it) continue;
+        const key = normOnu(it.onuid || it.onuid_norm || it.onuid_raw || '');
+        if (!key) continue;
+        map[key] = {
+          onuid: key,
+          download_bytes: Number(it.download_bytes ?? it.d ?? 0),
+          upload_bytes:   Number(it.upload_bytes   ?? it.u ?? 0)
+        };
+      }
+    } else if (typeof rows === 'object'){
+      for (const k in rows){
+        const key = normOnu(k);
+        const v = rows[k] || {};
+        map[key] = {
+          onuid: key,
+          download_bytes: Number(v.download_bytes ?? v.d ?? 0),
+          upload_bytes:   Number(v.upload_bytes   ?? v.u ?? 0)
         };
       }
     }
@@ -106,6 +126,7 @@
     const date = $('#chart_date') ? ($('#chart_date').value || new Date().toISOString().slice(0,10)) : new Date().toISOString().slice(0,10);
     const p1 = getJSON(API+'day_usage_all.php?date='+encodeURIComponent(date)+'&tz=Asia%2FKolkata').catch(()=>({}));
     const p2 = getJSON(API+'day_stats_all.php?date='+encodeURIComponent(date)).catch(()=>({}));
+
     Promise.all([p1,p2]).then(([u,m])=>{
       const usage = normalizeUsageMap(u);
       const maxes = (m && m.rows) ? m.rows : {};
@@ -135,7 +156,7 @@
     });
   }
 
-  // Per-ONU 10s/30s test
+  // Per-ONU tests (unchanged)
   let testLock=false, testTicker=null;
   function disableRowButtons(onuid, disabled){
     document.querySelectorAll(`.btn-test[data-onu="${CSS.escape(onuid)}"]`).forEach(b=>{ b.disabled=!!disabled; });
@@ -158,7 +179,7 @@
               if (nowValEl) animateNumber(nowValEl, j.total_mbps||0);
               setBarsLevel(barsElId, j.level||0);
               if (dotEl) dotEl.classList.toggle('on', (j.total_mbps>0));
-              if (testCell) testCell.innerHTML = `<button class="btn btn-test" data-onu="${esc(onuid)}" data-secs="10" style="margin-right:6px" disabled>Test 10s</button><button class="btn btn-test" data-onu="${esc(onuid)}" data-secs="30" disabled>Test 30s</button> <span style="color:#9bb0e4;font-size:11px;margin-left:6px">(${remain}s)</span>`;
+              if (testCell) testCell.innerHTML = `<button class="btn btn-test" data-onu="${onuid}" data-secs="10" style="margin-right:6px" disabled>Test 10s</button><button class="btn btn-test" data-onu="${onuid}" data-secs="30" disabled>Test 30s</button> <span style="color:#9bb0e4;font-size:11px;margin-left:6px">(${remain}s)</span>`;
             }
           }).catch(()=>{});
         if (remain<=0){
@@ -179,7 +200,6 @@
     });
   }
 
-  // events
   $('#body').addEventListener('click', function(e){
     const btn = e.target && e.target.classList && e.target.classList.contains('btn-test') ? e.target : null;
     if (!btn) return;
@@ -198,14 +218,10 @@
     });
   }
 
-  // boot
   document.addEventListener('DOMContentLoaded', function(){
-    window.App.loadPeaks && window.App.loadPeaks();
-    window.App.loadChart && window.App.loadChart();
     loadTable();
     setInterval(()=>{ if(tracking && $('#chart_refresh')) $('#chart_refresh').click(); }, 60000);
   });
 
-  // expose a couple helpers for other scripts if needed
   window.App.refreshTodayUsageAndMax = refreshTodayUsageAndMax;
 })();
