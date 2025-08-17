@@ -5,48 +5,44 @@
   <meta charset="utf-8">
   <title>Nisan • Network Bandwidth & ONU Usage</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- Your main stylesheet (keep your existing styles here) -->
   <link rel="stylesheet" href="./assets/style.css">
   <style>
-    /* Minimal fallbacks so page looks sane even without assets/style.css */
     :root{
       --bg:#0b1226; --card:#0f1833; --muted:#9bb0e4; --text:#e8eeff;
-      --u:#60a5fa; /* upload color */
-      --d:#f472b6; /* download color */
-      --accent:#3b82f6; --ok:#22c55e; --warn:#f59e0b;
-      --table-row:#0c152d; --table-row-alt:#0d1731;
+      --u:#60a5fa; --d:#f472b6; --accent:#3b82f6; --ok:#22c55e;
+      --row:#0c152d; --row2:#0d1731;
     }
     html,body{background:#070e1f;color:var(--text);font:14px/1.45 system-ui,Segoe UI,Roboto,Helvetica,Arial;}
     .wrap{max-width:1200px;margin:18px auto;padding:0 12px;}
-    h1{font-size:20px;margin:0 0 12px;}
     .topbar{display:flex;align-items:center;gap:12px;justify-content:space-between;margin-bottom:10px;}
-    .toggle{display:flex;align-items:center;gap:10px;}
+    .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#142458;color:#cfe0ff;font-size:11px}
     .switch{position:relative;width:44px;height:24px;background:#1f2a4d;border-radius:12px;cursor:pointer}
     .switch input{display:none}
     .switch .knob{position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:transform .2s}
     .switch input:checked + .knob{transform:translateX(20px)}
+
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0}
-    .card{background:var(--card);border-radius:14px;padding:12px 14px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+    .card{background:#0f1833;border-radius:14px;padding:12px 14px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
     .card h3{margin:0 0 6px;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.3px}
     .big{font-size:26px;font-weight:800}
     .muted{color:var(--muted);font-size:12px}
-    .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .grow{flex:1 1 auto}
-    .panel{background:var(--card);border-radius:14px;padding:12px 14px;margin:12px 0}
-    .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+
+    .panel{background:#0f1833;border-radius:14px;padding:12px 14px;margin:12px 0}
+    .controls{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-bottom:8px}
+    .ctrl{display:flex;flex-direction:column;gap:6px}
     .btn{background:#16224a;border:1px solid #23336c;color:#cfe0ff;border-radius:10px;padding:6px 10px;cursor:pointer}
-    .btn:hover{background:#1b2b60}
     .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-    #chart_box{position:relative;background:#0c1431;border-radius:12px;padding:6px;overflow:hidden}
+    #chart_box{position:relative;background:#0c1431;border-radius:12px;padding:6px}
     #chart_svg{width:100%;height:420px;display:block}
     #chart_tip{position:absolute;display:none;background:#0e1a3d;color:#e8eeff;border:1px solid #24336e;border-radius:8px;padding:8px 10px;font-size:12px;pointer-events:none}
     #chart_tip .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:-1px}
     #chart_tip .dot.u{background:var(--u)} #chart_tip .dot.d{background:var(--d)}
+
     table{width:100%;border-collapse:separate;border-spacing:0 6px;margin-top:10px}
     th,td{text-align:left;padding:10px 12px}
     thead th{font-size:12px;color:var(--muted);font-weight:700}
-    tbody tr{background:var(--table-row);border-radius:10px}
-    tbody tr:nth-child(2n){background:var(--table-row-alt)}
+    tbody tr{background:var(--row);border-radius:10px}
+    tbody tr:nth-child(2n){background:var(--row2)}
     td.num{text-align:right}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
     .status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#2b365e;margin-right:8px;vertical-align:1px}
@@ -58,17 +54,16 @@
     .notes{color:var(--muted);font-size:12px;margin:4px 2px}
     .skeleton{display:inline-block;background:linear-gradient(90deg,#13214a 25%,#1a2a5f 37%,#13214a 63%);background-size:400% 100%;border-radius:8px;color:transparent;user-select:none;padding:2px 8px;animation:sh 1.4s ease infinite}
     @keyframes sh{0%{background-position:100% 50%}100%{background-position:0 50%}}
-    .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#142458;color:#cfe0ff;font-size:11px}
   </style>
-  <script>window.API_BASE = './api/';</script>
+  <script>window.API_BASE='./api/';</script>
 </head>
 <body>
   <div class="wrap">
 
     <!-- Top bar -->
     <div class="topbar">
-      <h1>Network Bandwidth & ONU Usage</h1>
-      <div class="toggle">
+      <h1 style="margin:0">Network Bandwidth & ONU Usage</h1>
+      <div style="display:flex;align-items:center;gap:12px">
         <span id="net_status" class="pill">Loading…</span>
         <label class="switch" title="Toggle tracking">
           <input type="checkbox" id="track_toggle" checked>
@@ -77,7 +72,7 @@
       </div>
     </div>
 
-    <!-- Network Now summary -->
+    <!-- Network now summary -->
     <div class="cards">
       <div class="card">
         <h3>Download (Now)</h3>
@@ -92,7 +87,7 @@
       <div class="card">
         <h3>Total (Now)</h3>
         <div class="big"><span id="net_total_val" data-val="0">0.00</span> <span class="muted">Mbps</span></div>
-        <div class="muted">Last update <span id="net_dt">—</span>s ago · <span id="net_when">—</span></div>
+        <div class="muted">Updated <span id="net_dt">—</span>s ago · <span id="net_when">—</span></div>
       </div>
     </div>
 
@@ -115,28 +110,21 @@
       </div>
     </div>
 
-    <!-- Chart -->
+    <!-- Chart (00:00–23:59 IST, no zoom controls) -->
     <div class="panel">
       <div class="controls">
-        <div class="row grow">
-          <div>
-            <label class="muted" for="chart_date">Date</label><br>
-            <input id="chart_date" type="date" class="btn" style="padding:6px 8px">
-          </div>
-          <div>
-            <label class="muted" for="chart_tf">Timeframe</label><br>
-            <select id="chart_tf" class="btn" style="padding:6px 8px">
-              <option value="1m" selected>1-minute (per-minute peak)</option>
-              <option value="raw">Raw (~3s)</option>
-            </select>
-          </div>
+        <div class="ctrl">
+          <label class="muted" for="chart_date">Date</label>
+          <input id="chart_date" type="date" class="btn" style="padding:6px 8px">
         </div>
-        <div class="row">
-          <button id="zoom_in" class="btn">Zoom In</button>
-          <button id="zoom_out" class="btn">Zoom Out</button>
-          <button id="zoom_reset" class="btn">Reset</button>
-          <button id="chart_refresh" class="btn primary">Refresh</button>
+        <div class="ctrl">
+          <label class="muted" for="chart_tf">Timeframe</label>
+          <select id="chart_tf" class="btn" style="padding:6px 8px">
+            <option value="1m" selected>1-minute (per-minute peak)</option>
+            <option value="raw">Raw (~3s)</option>
+          </select>
         </div>
+        <button id="chart_refresh" class="btn primary">Refresh</button>
       </div>
       <div id="chart_box">
         <svg id="chart_svg" viewBox="0 0 1000 420" preserveAspectRatio="none"></svg>
@@ -163,12 +151,9 @@
       </thead>
       <tbody id="body"></tbody>
     </table>
-
   </div>
 
-  <!-- Point the app at /b/api -->
-  <script>window.API_BASE = './api/';</script>
-  <!-- Cache-bust to ensure latest JS loads -->
-  <script src="./app.js?v=2025-08-17-3"></script>
+  <script>window.API_BASE='./api/';</script>
+  <script src="./app.js?v=2025-08-17-usage"></script>
 </body>
 </html>
