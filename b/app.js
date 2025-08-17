@@ -6,16 +6,16 @@
   const $ = s => document.querySelector(s);
   const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]);
   const idSafe = s => (s||'').replace(/[^\w\-]+/g,'_');
-  // CSS.escape fallback (older Safari)
   if (!window.CSS || !CSS.escape) window.CSS = Object.assign(window.CSS||{}, { escape: s => String(s).replace(/[^\w\-]/g,'_') });
+
   function getJSON(u,o){
-    const url = u + (u.indexOf('?')>=0?'&':'?') + '_t=' + Date.now(); // Safari cache-bust
-    return fetch(url, Object.assign({cache:'no-store'}, o||{})).then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); });
+    const url = u + (u.indexOf('?')>=0?'&':'?') + '_t=' + Date.now(); // cache-bust (Safari)
+    return fetch(url, Object.assign({cache:'no-store'}, o||{})).then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status+' for '+u); return r.json(); });
   }
   function fmtMBGB(v){ if(v==null||v==='')return'NULL'; const n=+v; if(!isFinite(n))return String(v); const mb=n/1048576; return mb>=1024?(mb/1024).toFixed(2)+' GB':mb.toFixed(2)+' MB'; }
   const fMbps = x => (x==null||!isFinite(x))?'—':Number(x).toFixed(2);
 
-  // === animated number like speed-test ===
+  // === animated number (Ookla-style feeling) ===
   const easeOutExpo = t => (t===1?1:1 - Math.pow(2, -10*t));
   function animMs(delta){
     const d = Math.abs(delta);
@@ -49,11 +49,6 @@
     const kids = box.querySelectorAll('.bar');
     kids.forEach((b,i)=>b.classList.toggle('on', i < lvl));
   }
-  function barsMarkup(level){
-    let h='<span class="bars">';
-    for(let i=1;i<=5;i++) h+=`<span class="bar ${i<=level?'on':''}"></span>`;
-    return h+'</span>';
-  }
 
   // ===== Peaks =====
   function loadPeaks(){
@@ -68,7 +63,7 @@
     }).catch(()=>{});
   }
 
-  // ===== Chart (unchanged core, with zoom/pan/hover) =====
+  // ===== Chart (1m buckets or raw, with tz+fill) =====
   const el = { cdate:$('#chart_date'), tf:$('#chart_tf'), loadBtn:$('#chart_refresh'),
     box:$('#chart_box'), svg:$('#chart_svg'), tip:$('#chart_tip'),
     zin:$('#zoom_in'), zout:$('#zoom_out'), zreset:$('#zoom_reset') };
@@ -78,9 +73,10 @@
   function Y(v, maxY){ return H-Py - (v/(maxY||1))*(H-2*Py); }
 
   function loadChart(){
-    const date = el.cdate.value || new Date().toISOString().slice(0,10);
-    const tf   = el.tf.value || '1m';
-    getJSON(API+'network_timeseries.php?date='+encodeURIComponent(date)+'&tf='+encodeURIComponent(tf)).then(j=>{
+    const date = el.cdate?.value || new Date().toISOString().slice(0,10);
+    const tf   = el.tf?.value || '1m';
+    const params = `date=${encodeURIComponent(date)}&tf=${encodeURIComponent(tf)}&tz=Asia%2FKolkata&fill=1`;
+    getJSON(API+'network_timeseries.php?'+params).then(j=>{
       const pts = j.points||[]; chart.points=pts; chart.tf=j.tf||tf;
       if(!pts.length){ el.svg.innerHTML=''; return; }
       chart.minT = pts[0].t; chart.maxT = pts[pts.length-1].t;
@@ -89,7 +85,7 @@
     }).catch(()=>{});
   }
   function renderChart(){
-    const svg = el.svg; svg.innerHTML='';
+    const svg = el.svg; if(!svg) return; svg.innerHTML='';
     const pts = chart.points; if(!pts.length) return;
     const vmin=chart.viewMin, vmax=chart.viewMax;
     const vis = pts.filter(p=>p.t>=vmin && p.t<=vmax); if(!vis.length) return;
@@ -267,7 +263,7 @@
       Object.keys(j.rows).forEach(id=>{
         const safe=idSafe(id), rec=j.rows[id];
         const nowValEl = document.getElementById('nowv-'+safe);
-        const barsElId = 'bars-'+safe; // <-- fixed (no stray quote)
+        const barsElId = 'bars-'+safe;
         const dotEl = document.getElementById('dot-'+safe);
         if(nowValEl) animateNumber(nowValEl, rec.total_mbps||0);
         setBarsLevel(barsElId, rec.level||0);
@@ -296,7 +292,7 @@
     }).catch(()=>{});
   }
 
-  // ===== per-ONU real-time test (1s updates + animated) =====
+  // ===== per-ONU realtime test (1s) =====
   let testLock = false, testTicker = null;
   function disableRowButtons(onuid, disabled){
     document.querySelectorAll(`.btn-test[data-onu="${CSS.escape(onuid)}"]`).forEach(b=>{ b.disabled = !!disabled; });
@@ -361,13 +357,14 @@
     runSingleTest(onuid, secs);
   });
 
-  // Tracking toggle
+  // Tracking toggle (also tells the server)
   const trackToggle = $('#track_toggle');
   if (trackToggle){
     trackToggle.checked = tracking;
     trackToggle.addEventListener('change', function(){
       tracking = !!this.checked;
       localStorage.setItem('tracking', tracking ? 'on':'off');
+      fetch(API + 'tracking_set.php?on=' + (tracking?1:0), {cache:'no-store'}).catch(()=>{});
       if (tracking) startTracking(); else stopTracking();
     });
   }
