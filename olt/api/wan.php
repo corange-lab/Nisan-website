@@ -18,7 +18,13 @@ curl_setopt_array($ch, [
 ]);
 $html=curl_exec($ch);
 if($html===false){ $e=curl_error($ch); olt_close($ch); json_out(["ok"=>false,"error"=>"wan:$e"]); }
-$status = parse_wan_status($html) ?: 'Unknown';
+
+// Use detailed parser to get status, username, and MAC
+$details = parse_wan_details($html);
+$status = $details['status'] ?: 'Unknown';
+$username = $details['username'];
+$mac = $details['mac'];
+
 olt_close($ch);
-$resp=["ok"=>true,"pon"=>$pon,"onu"=>$onu,"status"=>$status,"ts"=>time()];
+$resp=["ok"=>true,"pon"=>$pon,"onu"=>$onu,"status"=>$status,"username"=>$username,"mac"=>$mac,"ts"=>time()];
 cache_set($ckey,$resp); json_out($resp);

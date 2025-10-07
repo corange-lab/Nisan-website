@@ -10,8 +10,8 @@ return [
   'TIMEOUT'       => 15,
   'WAN_TIMEOUT'   => 8,
   'OPT_TIMEOUT'   => 10,
-  'OPT_CACHE_TTL' => 10,
-  'WAN_CACHE_TTL' => 10,
+  'OPT_CACHE_TTL' => 30,  // Increased from 10 to 30 seconds
+  'WAN_CACHE_TTL' => 30,  // Increased from 10 to 30 seconds
 
   // reuse one login cookie across API calls
   'COOKIE_TTL'    => 300, // 5 minutes

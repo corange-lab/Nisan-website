@@ -45,6 +45,65 @@ function parse_wan_status($html){
   }
   return null;
 }
+
+function parse_wan_details($html){
+  $dom=new DOMDocument(); libxml_use_internal_errors(true);
+  $ok=$dom->loadHTML($html); libxml_clear_errors(); 
+  if(!$ok) return ['status'=>null,'username'=>null,'mac'=>null];
+  
+  $result = ['status'=>null,'username'=>null,'mac'=>null];
+  
+  foreach($dom->getElementsByTagName("table") as $tbl){
+    $trs=$tbl->getElementsByTagName("tr"); if($trs->length<2) continue;
+    $hdr=$trs->item(0)->getElementsByTagName("td");
+    
+    // Build column index map
+    $colMap = [];
+    for($i=0;$i<$hdr->length;$i++){
+      $colName = trim($hdr->item($i)->textContent);
+      $colLower = strtolower($colName);
+      
+      if(stripos($colLower,'status')!==false) $colMap['status']=$i;
+      if(stripos($colLower,'configuration')!==false || stripos($colLower,'information')!==false) $colMap['config']=$i;
+      if(stripos($colLower,'mac')!==false && stripos($colLower,'address')!==false) $colMap['mac']=$i;
+    }
+    
+    if(empty($colMap)) continue;
+    
+    $row=$trs->item(1)->getElementsByTagName("td");
+    
+    // Get Status
+    if(isset($colMap['status']) && $row->length>$colMap['status']){
+      $s=trim($row->item($colMap['status'])->textContent);
+      if($s!=='') $result['status']=$s;
+    }
+    
+    // Get ConfigurationInformation
+    if(isset($colMap['config']) && $row->length>$colMap['config']){
+      $config=trim($row->item($colMap['config'])->textContent);
+      
+      // Extract UserName
+      if(preg_match('/UserName:\s*([^\s,]+)/i',$config,$m)){
+        $result['username']=$m[1];
+      }
+      
+      // Extract MAC Address
+      if(preg_match('/MACAddress:\s*([0-9A-F:]+)/i',$config,$m)){
+        $result['mac']=$m[1];
+      }
+    }
+    
+    // Get MAC from dedicated column if exists
+    if(isset($colMap['mac']) && $row->length>$colMap['mac']){
+      $mac=trim($row->item($colMap['mac'])->textContent);
+      if($mac!=='') $result['mac']=$mac;
+    }
+    
+    if($result['status']!==null) return $result;
+  }
+  
+  return $result;
+}
 function parse_optical_map($html,$ponContext=null){
   $dom=new DOMDocument(); libxml_use_internal_errors(true);
   $ok=$dom->loadHTML($html); libxml_clear_errors(); if(!$ok) return [];
