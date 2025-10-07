@@ -564,7 +564,7 @@ td {
   </div>
 
 <script>
-  window.API_BASE = "/api/";
+  window.API_BASE = "/olt/api/";
   window.PONS = <?= json_encode(array_values($ponList)) ?>;
   
   console.log('Ultra-fast page loaded');
