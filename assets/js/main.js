@@ -515,13 +515,24 @@ $('.qtybutton-box span').on("click", function () {
 /*=============================================
 	=    		Odometer Active  	       =
 =============================================*/
-$('.odometer').appear(function (e) {
-	var odo = $(".odometer");
-	odo.each(function () {
-		var countNumber = $(this).attr("data-count");
-		$(this).html(countNumber);
+if (typeof $.fn !== 'undefined' && typeof $.fn.appear === 'function') {
+	$('.odometer').appear(function (e) {
+		var odo = $(".odometer");
+		odo.each(function () {
+			var countNumber = $(this).attr("data-count");
+			$(this).html(countNumber);
+		});
 	});
-});
+} else {
+	// Fallback: initialize odometer on window load even if appear plugin is missing
+	$(window).on('load', function () {
+		var odo = $(".odometer");
+		odo.each(function () {
+			var countNumber = $(this).attr("data-count");
+			$(this).html(countNumber);
+		});
+	});
+}
 
 
 /*=============================================
