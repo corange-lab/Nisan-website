@@ -1558,8 +1558,10 @@ label {
 /*----------------------------------------*/
 /* Banner */
 .banner-bg {
+  background-image: url('../imgs/slider/banner_bg.webp');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   padding: 120px 0;
@@ -3884,8 +3886,10 @@ label {
 /*  7.5 Cta css
 /*----------------------------------------*/
 .cta-bg {
+  background-image: url('../imgs/bg/cta_bg.webp');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   padding: 150px 0 160px;
   z-index: 1;
@@ -6751,8 +6755,10 @@ label {
 /*  7.15 subscribe css
 /*----------------------------------------*/
 .subscribe-bg {
+  background-image: url('../imgs/bg/subscribe_bg.webp');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 120px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -7277,8 +7283,10 @@ label {
 /*  7.16 Video css
 /*----------------------------------------*/
 .video-bg {
+  background-image: url('../imgs/bg/video_bg.webp');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 110px 0 120px;
 }
 @media (max-width:991px) {

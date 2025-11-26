@@ -62,9 +62,27 @@ if ($('.mobile-menu').length) {
 /*=============================================
 	=           Data Background             =
 =============================================*/
-$("[data-background]").each(function () {
-	$(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
-})
+function setDataBackgrounds() {
+	if (typeof $ === 'undefined') return;
+	
+	$("[data-background]").each(function () {
+		var bgUrl = $(this).attr("data-background");
+		if (bgUrl) {
+			// Ensure proper URL format - add quotes for safety
+			$(this).css("background-image", "url('" + bgUrl + "')");
+		}
+	});
+}
+
+// Run on DOM ready and window load to ensure elements exist
+$(document).ready(function() {
+	setDataBackgrounds();
+});
+
+$(window).on('load', function() {
+	// Re-run in case images weren't ready on DOM ready
+	setDataBackgrounds();
+});
 
 
 /*=============================================
