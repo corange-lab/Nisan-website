@@ -5,13 +5,26 @@
 	=    		 Preloader			      =
 =============================================*/
 function preloader() {
-	$('#preloader').delay(0).fadeOut();
-};
+	if (typeof $ !== 'undefined' && $('#preloader').length) {
+		$('#preloader').delay(0).fadeOut();
+	}
+}
 
+// Hide preloader on window load
 $(window).on('load', function () {
 	preloader();
-	mainSlider();
-	wowAnimation();
+	if (typeof mainSlider === 'function') mainSlider();
+	if (typeof wowAnimation === 'function') wowAnimation();
+});
+
+// Fallback: Hide preloader after DOM is ready (in case window.load doesn't fire)
+$(document).ready(function() {
+	// Set a timeout to hide preloader after 3 seconds if window.load hasn't fired
+	setTimeout(function() {
+		if (typeof $ !== 'undefined' && $('#preloader').length && $('#preloader').is(':visible')) {
+			$('#preloader').fadeOut();
+		}
+	}, 3000);
 });
 
 

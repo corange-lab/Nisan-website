@@ -217,6 +217,33 @@
         <!-- End Google Tag Manager (noscript) -->
     <div id="preloader"><img alt="" src="assets/imgs/preloader.gif" /></div>
 <!-- Preloader-end -->
+<script>
+// Fallback preloader hide - works even if jQuery fails to load
+(function() {
+    var preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Hide after DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', hidePreloader);
+        } else {
+            hidePreloader();
+        }
+        // Fallback timeout - hide after 3 seconds regardless
+        setTimeout(hidePreloader, 3000);
+        // Hide on window load
+        window.addEventListener('load', hidePreloader);
+    }
+    function hidePreloader() {
+        if (preloader) {
+            preloader.style.opacity = '0';
+            preloader.style.transition = 'opacity 0.5s';
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 500);
+        }
+    }
+})();
+</script>
 
 <!-- Scroll-top -->
 
@@ -645,7 +672,25 @@
 <!-- main-area-end -->
 <?php include('footer.php'); ?>
 <!-- JS here -->
+<!-- jQuery with CDN fallback -->
 <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+<script>
+// jQuery CDN fallback - check if jQuery loaded, if not load from CDN
+(function() {
+    function checkAndLoadJQuery() {
+        if (typeof jQuery === 'undefined' || typeof $ === 'undefined') {
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js';
+            script.integrity = 'sha512-+k1pnlgt4F1H8L7t3z95o3/KO+1lk5k1OokYNbJlZJvMwL5oF8FbS2X4zrYxexzQ8zA3Le2mm2ngKfJ2dJYvMw==';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+    }
+    // Check immediately and after a short delay
+    checkAndLoadJQuery();
+    setTimeout(checkAndLoadJQuery, 200);
+})();
+</script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
