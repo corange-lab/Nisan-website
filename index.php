@@ -1,3 +1,7 @@
+<?php
+// Include security headers
+include('security-headers.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +9,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#0066cc">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
 	<title>Nisan - Cable TV &amp; Internet Service Provider in Bilimora</title>
 	<meta name="description" content="Nisan Cable TV & Internet offers fast broadband and cable TV in Bilimora. Enjoy speeds up to 200 Mbps with a risk-free 1-month trial and affordable plans.">
     <meta name="keywords" content="broadband Bilimora, cable TV Bilimora, FTTH internet Bilimora, fast internet provider,
@@ -16,9 +24,14 @@
     Digital cable TV providers Bilimora, Fast fiber internet Bilimora, Home broadband services in Bilimora,
     Internet and cable TV bundles Bilimora, Local internet providers in Bilimora, Cheapest broadband plans Bilimora,
      High-speed internet for gaming Bilimora, 24/7 customer support internet Bilimora">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//maps.app.goo.gl">
     <link rel="preload" as="image" href="assets/imgs/slider/banner_bg.webp">
+    <link rel="preload" as="image" href="assets/imgs/logo/logo.webp">
+    <link rel="preload" as="image" href="assets/imgs/favicon.webp">
     <link rel="alternate" href="https://www.nisan.co.in/" hreflang="x-default" />
 
     <script type="application/ld+json">
@@ -167,9 +180,6 @@
 }
 </script>
 
-
-
-
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="Nisan Cable & Internet - High-Speed Broadband in Bilimora">
 <meta property="og:type" content="website"> <!-- For general pages -->
@@ -197,16 +207,15 @@
 <meta name="twitter:description" content="Reliable internet and premium cable TV. Get seamless streaming, gaming, and live TV. Affordable plans starting at ₹4,999/year!">
 <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 
-
-
 <meta name="facebook-domain-verification" content="zxh7pbdxqpvahj27akuscq7wz0nfm5" />
-
 
     <?php include('common-css.php'); ?>
     
 </head>
 
 <body>
+<!-- Skip to main content for screen readers -->
+<a href="#main-content" class="skip-link sr-only sr-only-focusable">Skip to main content</a>
 
 <?php include('header.php'); ?>
 <!-- main-area -->
@@ -215,45 +224,18 @@
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFKNFG9Z"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-    <div id="preloader"><img alt="" src="assets/imgs/preloader.gif" /></div>
+    <div id="preloader" role="status" aria-label="Loading page"><img alt="Loading..." src="assets/imgs/preloader.gif" /></div>
 <!-- Preloader-end -->
-<script>
-// Fallback preloader hide - works even if jQuery fails to load
-(function() {
-    var preloader = document.getElementById('preloader');
-    if (preloader) {
-        // Hide after DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', hidePreloader);
-        } else {
-            hidePreloader();
-        }
-        // Fallback timeout - hide after 3 seconds regardless
-        setTimeout(hidePreloader, 3000);
-        // Hide on window load
-        window.addEventListener('load', hidePreloader);
-    }
-    function hidePreloader() {
-        if (preloader) {
-            preloader.style.opacity = '0';
-            preloader.style.transition = 'opacity 0.5s';
-            setTimeout(function() {
-                preloader.style.display = 'none';
-            }, 500);
-        }
-    }
-})();
-</script>
 
 <!-- Scroll-top -->
 
-    <button class="scroll-top scroll-to-target open" data-target="html">
-            <i class="fas fa-angle-up"></i>
+    <button class="scroll-top scroll-to-target open" data-target="html" aria-label="Scroll to top">
+            <i class="fas fa-angle-up" aria-hidden="true"></i>
         </button>
 
 <!-- Scroll-top-end-->
 
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-938737099">
 </script>
 <script>
@@ -265,7 +247,7 @@
 </script>
 <!-- Google tag (gtag.js) -->
 
-<main><!-- banner-area -->
+<main id="main-content" role="main"><!-- banner-area -->
 <section class="banner-area banner-bg" data-background="assets/imgs/slider/banner_bg.webp">
 <div class="container">
 <div class="row">
@@ -283,13 +265,13 @@
 </div>
 </div>
 
-<div class="banner-phone">
-                <div class="icon">
+<div class="banner-phone" role="region" aria-label="Customer service contact">
+                <div class="icon" aria-hidden="true">
                     <i class="fal fa-mobile-android"></i>
                 </div>
                     <div class="content">
                         <span>Customer Service:</span>
-                        <h5 class="number"><a href="tel:+919825152400">+91 98251 52400</a></h5>
+                        <h5 class="number"><a href="tel:+919825152400" aria-label="Call customer service at +91 98251 52400">+91 98251 52400</a></h5>
                     </div>
 </div>
 </section>
@@ -310,7 +292,7 @@
 <div class="row">
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="plan1" src="assets/imgs/images/pricing_thumb01.webp" />
+<div class="pricing-thumb"><img alt="plan1" src="assets/imgs/images/pricing_thumb01.webp" loading="lazy" />
 <h3 class="title"><a href="#">Internet For Personal</a></h3>
 
 <div class="net-speed">
@@ -339,7 +321,7 @@
 
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" />
+<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" loading="lazy" />
 <h3 class="title"><a href="#">Internet For Family</a></h3>
 
 <div class="net-speed">
@@ -368,7 +350,7 @@
 
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb03.webp" />
+<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb03.webp" loading="lazy" />
 <h3 class="title"><a href="#">Internet For Corporate</a></h3>
 
 <div class="net-speed">
@@ -417,18 +399,6 @@
     </p>
     <div class="fact-wrap">
                                 <div class="row">
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                    <!--    <div class="fact-item">-->
-                                    <!--        <h4 class="title"><span class="odometer" data-count="4"></span>K</h4>-->
-                                    <!--        <p>Ultra HD Quality</p>-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-4 col-sm-6">-->
-                                    <!--    <div class="fact-item">-->
-                                    <!--        <h4 class="title"><span class="odometer" data-count="90"></span>+</h4>-->
-                                    <!--        <p>Online TV Channels</p>-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
                                     <div class="col-md-4 col-sm-6">
                                         <div class="fact-item">
                                             <h4 class="title"><span class="odometer" data-count="350"></span>+</h4>
@@ -438,9 +408,6 @@
                                 </div>
                             </div>
 <a class="btn" href="/contact">Try Us Free</a></div>
-<br>
-<br>
-<br>
 </div>
 </div>
 </div>
@@ -513,7 +480,7 @@
 <div class="container">
 <div class="row align-items-center">
 <div class="col-lg-6 order-0 order-lg-2">
-<div class="special-offer-img wow fadeInRight" data-wow-delay=".2s"><img alt="" src="assets/imgs/images/special_offer_img.webp" />
+<div class="special-offer-img wow fadeInRight" data-wow-delay=".2s"><img alt="" src="assets/imgs/images/special_offer_img.webp" loading="lazy" />
 <div class="special-offer-text">Risk Free</div>
 
 <div class="special-offer-mbps"><span>Full</span>
@@ -561,7 +528,7 @@
 <div class="container">
 <div class="row align-items-center">
 <div class="col-xl-7 col-lg-6">
-<div class="subscribe-img wow fadeInLeft" data-wow-delay=".2s"><img alt="" src="assets/imgs/images/subscribe_img.webp" /></div>
+<div class="subscribe-img wow fadeInLeft" data-wow-delay=".2s"><img alt="" src="assets/imgs/images/subscribe_img.webp" loading="lazy" /></div>
 </div>
 
 <div class="col-xl-5 col-lg-6">
@@ -660,7 +627,7 @@
 <p>Enjoy high-speed internet and reliable cable TV services wherever you are in Bilimora. Check your network coverage and join our growing family of satisfied customers today.</p>
 </div>
 
-<div class="faq-map text-center"><img alt="map" src="assets/imgs/images/map_img.webp" /> <a class="btn map-btn" href="/contact">Check Your Network Coverage</a></div>
+<div class="faq-map text-center"><img alt="map" src="assets/imgs/images/map_img.webp" loading="lazy" /> <a class="btn map-btn" href="/contact">Check Your Network Coverage</a></div>
 </div>
 </div>
 </div>
@@ -671,38 +638,19 @@
 </main>
 <!-- main-area-end -->
 <?php include('footer.php'); ?>
-<!-- JS here -->
-<!-- jQuery with CDN fallback -->
+<!-- Critical JS - Load immediately -->
 <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-<script>
-// jQuery CDN fallback - check if jQuery loaded, if not load from CDN
-(function() {
-    function checkAndLoadJQuery() {
-        if (typeof jQuery === 'undefined' || typeof $ === 'undefined') {
-            var script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js';
-            script.integrity = 'sha512-+k1pnlgt4F1H8L7t3z95o3/KO+1lk5k1OokYNbJlZJvMwL5oF8FbS2X4zrYxexzQ8zA3Le2mm2ngKfJ2dJYvMw==';
-            script.crossOrigin = 'anonymous';
-            document.head.appendChild(script);
-        }
-    }
-    // Check immediately and after a short delay
-    checkAndLoadJQuery();
-    setTimeout(checkAndLoadJQuery, 200);
-})();
-</script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/jquery.odometer.min.js"></script>
-<script src="assets/js/jquery.appear.js"></script>
-<script src="assets/js/jquery.flipster.min.js"></script>
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jarallax.min.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+<!-- Non-critical JS - Load asynchronously -->
+<script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+<script src="assets/js/owl.carousel.min.js" defer></script>
+<script src="assets/js/jquery.odometer.min.js" defer></script>
+<script src="assets/js/jquery.appear.js" defer></script>
+<script src="assets/js/jarallax.min.js" defer></script>
+<script src="assets/js/slick.min.js" defer></script>
+<script src="assets/js/swiper.min.js" defer></script>
+<script src="assets/js/wow.min.js" defer></script>
 
 </body>

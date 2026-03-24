@@ -39,3 +39,56 @@ function fetch_stats_all($CFG){
   olt_close($ch);
   return [ array_values($byOnu), $errors, $reused ];
 }
+
+function insert_samples(PDO $pdo, array $rows, int $ts): int
+{
+  if (empty($rows)) {
+    return 0;
+  }
+
+  static $hasPon = null;
+  if ($hasPon === null) {
+    $hasPon = false;
+    $res = $pdo->query("PRAGMA table_info(samples)");
+    foreach ($res as $r) {
+      if (strcasecmp((string)$r['name'], 'pon') === 0) {
+        $hasPon = true;
+        break;
+      }
+    }
+  }
+
+  $inserted = 0;
+  if ($hasPon) {
+    $stmt = $pdo->prepare("INSERT INTO samples(pon, onuid, ts, input_bytes, output_bytes) VALUES(?,?,?,?,?)");
+  } else {
+    $stmt = $pdo->prepare("INSERT INTO samples(onuid, ts, input_bytes, output_bytes) VALUES(?,?,?,?)");
+  }
+
+  $pdo->beginTransaction();
+  try {
+    foreach ($rows as $r) {
+      $onuid = normalize_onuid($r['onuid'] ?? '');
+      if ($onuid === '') {
+        continue;
+      }
+
+      $pon = isset($r['pon']) ? (int)$r['pon'] : null;
+      $inb = val_or_null($r['input_bytes'] ?? null);
+      $outb = val_or_null($r['output_bytes'] ?? null);
+
+      if ($hasPon) {
+        $stmt->execute([$pon, $onuid, $ts, $inb, $outb]);
+      } else {
+        $stmt->execute([$onuid, $ts, $inb, $outb]);
+      }
+      $inserted++;
+    }
+    $pdo->commit();
+  } catch (Throwable $e) {
+    $pdo->rollBack();
+    throw $e;
+  }
+
+  return $inserted;
+}

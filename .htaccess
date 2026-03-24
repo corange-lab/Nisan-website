@@ -1,81 +1,101 @@
-# Enable URL rewriting
-RewriteEngine On
+# Nisan Website Optimization .htaccess
 
-# Force HTTPS and Redirect to www
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{REQUEST_URI} !^/404\.php$
-RewriteRule ^(.*)$ https://www.nisan.co.in/$1 [L,R=301]
-
-# Custom 404 Error Page
-ErrorDocument 404 /404.php
-
-# WebP Rewrite for Supported Browsers
-<IfModule mod_rewrite.c>
-  RewriteCond %{HTTP_ACCEPT} image/webp
-  RewriteCond %{REQUEST_FILENAME} \.(jpg|jpeg|png|gif)$ [NC]
-  RewriteCond %{REQUEST_FILENAME}.webp -f
-  RewriteRule (.+)\.(jpg|jpeg|png|gif)$ $1.webp [T=image/webp] [L]
-</IfModule>
-
-# Enable CORS for Open Graph Images
-<IfModule mod_headers.c>
-  Header set Access-Control-Allow-Origin "*"
-  Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
-  Header set Access-Control-Allow-Headers "Content-Type"
-</IfModule>
-
-# Enable Gzip and Brotli Compression for Faster Loading
+# Enable compression
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml application/xhtml+xml application/x-javascript application/font-woff2 image/webp
-    # Exclude certain older browsers from using gzip
-    BrowserMatch ^Mozilla/4 gzip-only-text/html
-    BrowserMatch ^Mozilla/4\.0[678] no-gzip
-    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    # Compress HTML, CSS, JavaScript, Text, XML and fonts
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
 </IfModule>
-
-<IfModule mod_brotli.c>
-    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css application/javascript application/json application/xml application/font-woff2
-</IfModule>
-
-# Redirect index.php to root URL
-RewriteCond %{THE_REQUEST} /index\.php [NC]
-RewriteRule ^(.*)index\.php$ /$1 [L,R=301]
-
-# Remove .php extension from URLs
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php [L]
-
-# Redirect all .php requests to clean URLs (for SEO-friendly)
-RewriteCond %{THE_REQUEST} \.php [NC]
-RewriteRule ^(.*)\.php$ /$1 [L,R=301]
-
-# Custom friendly URLs for specific pages
-RewriteRule ^services$ services.php [L]
-RewriteRule ^contact$ contact.php [L]
-RewriteRule ^about-us$ about-us.php [L]
-RewriteRule ^plans$ plans.php [L]
 
 # Leverage Browser Caching
 <IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresByType image/jpg "access 1 month"
-    ExpiresByType image/jpeg "access 1 month"
-    ExpiresByType image/gif "access 1 month"
-    ExpiresByType image/png "access 1 month"
-    ExpiresByType image/webp "access 1 month"
-    ExpiresByType text/css "access 1 month"
-    ExpiresByType text/html "access 1 month"
-    ExpiresByType application/pdf "access 1 month"
-    ExpiresByType application/javascript "access 1 month"
-    ExpiresByType application/x-javascript "access 1 month"
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType application/x-font-woff "access plus 1 year"
+    ExpiresByType application/x-font-woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|webp|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+    <FilesMatch "\.(html|php)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
 </IfModule>
 
 # Security Headers
 <IfModule mod_headers.c>
-    Header set X-Content-Type-Options "nosniff"
-    Header set X-Frame-Options "SAMEORIGIN"
-    Header set X-XSS-Protection "1; mode=block"
-    Header always set Referrer-Policy "strict-origin"
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options SAMEORIGIN
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Force HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Remove trailing slashes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [R=301,L]
+</IfModule>
+
+# Custom error pages
+ErrorDocument 404 /404.php
+
+# Prevent access to sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent directory browsing
+Options -Indexes
+
+# Add MIME types for web fonts
+<IfModule mod_mime.c>
+    AddType application/font-woff woff
+    AddType application/font-woff2 woff2
+    AddType application/vnd.ms-fontobject eot
+    AddType application/x-font-ttf ttf
+    AddType font/opentype otf
 </IfModule>

@@ -49,7 +49,7 @@ try{
   if ($match){
     // store to DB
     $pdo = db($CFG);
-    $stmt = $pdo->prepare("INSERT OR REPLACE INTO samples (ts, pon, onuid, input_bytes, output_bytes) VALUES (:ts,:pon,:onuid,:inb,:outb)");
+    $stmt = $pdo->prepare("INSERT INTO samples (ts, pon, onuid, input_bytes, output_bytes) VALUES (:ts,:pon,:onuid,:inb,:outb)");
     $stmt->execute([
       ':ts'=>$ts, ':pon'=>$ponPort, ':onuid'=>$onuid,
       ':inb'=>($match['input_bytes']===null?null:(string)$match['input_bytes']),

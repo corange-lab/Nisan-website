@@ -5,6 +5,22 @@ require __DIR__.'/../lib/db.php';
 
 set_time_limit(120); // Allow up to 2 minutes for full refresh
 
+$mode = isset($_GET['mode']) ? strtolower((string)$_GET['mode']) : 'quick';
+$updateWan = isset($_GET['wan']) ? ((int)$_GET['wan'] === 1) : ($mode === 'full');
+$lockPath = sys_get_temp_dir() . '/olt_refresh.lock';
+
+if (is_file($lockPath) && (time() - filemtime($lockPath)) < 45) {
+    json_out([
+        "ok" => false,
+        "busy" => true,
+        "error" => "Refresh already in progress",
+        "mode" => $mode,
+        "ts" => time()
+    ]);
+}
+
+@file_put_contents($lockPath, (string)time());
+
 $pons = isset($_GET['pons']) ? array_map('intval', explode(',', $_GET['pons'])) : $CFG['PONS'];
 $pons = array_filter($pons, function($p) { return $p >= 1; });
 
@@ -14,14 +30,15 @@ if (empty($pons)) {
 
 $start_time = microtime(true);
 $urls = olt_urls($CFG);
-
-// Login to OLT
-[$ch,$cookie,$err,$reused] = olt_login_or_reuse($CFG);
-if ($err) {
-    json_out(["ok" => false, "error" => $err]);
-}
+$ch = null;
 
 try {
+    // Login to OLT
+    [$ch,$cookie,$err,$reused] = olt_login_or_reuse($CFG);
+    if ($err) {
+        json_out(["ok" => false, "error" => $err]);
+    }
+
     $pdo = db();
     $now = date('Y-m-d H:i:s');
     $totalUpdated = 0;
@@ -39,11 +56,18 @@ try {
             model TEXT,
             status TEXT,
             wan_status TEXT,
+            wan_username TEXT,
+            wan_mac TEXT,
             rx_power REAL,
             last_update DATETIME DEFAULT CURRENT_TIMESTAMP,
             UNIQUE(pon, onu)
         )
     ");
+    try { $pdo->exec("ALTER TABLE onu_cache ADD COLUMN wan_username TEXT"); } catch (Exception $e) {}
+    try { $pdo->exec("ALTER TABLE onu_cache ADD COLUMN wan_mac TEXT"); } catch (Exception $e) {}
+    $pdo->exec("CREATE INDEX IF NOT EXISTS idx_pon ON onu_cache(pon)");
+    $pdo->exec("CREATE INDEX IF NOT EXISTS idx_onuid_norm ON onu_cache(onuid_norm)");
+    $pdo->exec("CREATE INDEX IF NOT EXISTS idx_status ON onu_cache(status)");
 
     foreach ($pons as $pon) {
         // 1) Get AUTH data
@@ -173,43 +197,47 @@ try {
         }
     }
 
-    // 4) Update WAN status for ALL online ONUs in the selected PONs
-    $ponList = implode(',', array_map('intval', $pons));
-    $onlineOnusStmt = $pdo->query("
-        SELECT pon, onu, onuid_norm 
-        FROM onu_cache 
-        WHERE status LIKE '%online%' AND pon IN ($ponList)
-        ORDER BY pon ASC, onu ASC
-    ");
-    $onlineOnusList = $onlineOnusStmt->fetchAll();
-
-    $wanStmt = $pdo->prepare("UPDATE onu_cache SET wan_status = ?, wan_username = ?, wan_mac = ?, last_update = ? WHERE pon = ? AND onu = ?");
     $wanUpdated = 0;
     $wanFailed = 0;
+    $onlineOnusList = [];
+    if ($updateWan) {
+        // 4) Update WAN status for ALL online ONUs in the selected PONs
+        $ponList = implode(',', array_map('intval', $pons));
+        $onlineOnusStmt = $pdo->query("
+            SELECT pon, onu, onuid_norm 
+            FROM onu_cache 
+            WHERE status LIKE '%online%' AND pon IN ($ponList)
+            ORDER BY pon ASC, onu ASC
+        ");
+        $onlineOnusList = $onlineOnusStmt->fetchAll();
 
-    foreach ($onlineOnusList as $onuRow) {
-        $url = $urls['WAN'].'?'.http_build_query(['gponid'=>$onuRow['pon'],'gonuid'=>$onuRow['onu']]);
-        curl_setopt_array($ch, [
-            CURLOPT_URL=>$url, 
-            CURLOPT_HTTPGET=>true, 
-            CURLOPT_TIMEOUT=>$CFG['WAN_TIMEOUT'],
-            CURLOPT_HTTPHEADER=>["Referer: {$CFG['BASE']}/action/onuconfigsrv.html?ponid={$onuRow['pon']}&onuid={$onuRow['onu']}&targid=onuTcont.html"],
-        ]);
-        $wh = curl_exec($ch);
-        if ($wh !== false) {
-            $details = parse_wan_details($wh);
-            $wanStatus = $details['status'] ?: 'Unknown';
-            $wanUsername = $details['username'];
-            $wanMac = $details['mac'];
-            
-            $wanStmt->execute([$wanStatus, $wanUsername, $wanMac, $now, $onuRow['pon'], $onuRow['onu']]);
-            $wanUpdated++;
-        } else {
-            $wanFailed++;
+        $wanStmt = $pdo->prepare("UPDATE onu_cache SET wan_status = ?, wan_username = ?, wan_mac = ?, last_update = ? WHERE pon = ? AND onu = ?");
+        foreach ($onlineOnusList as $onuRow) {
+            $url = $urls['WAN'].'?'.http_build_query(['gponid'=>$onuRow['pon'],'gonuid'=>$onuRow['onu']]);
+            curl_setopt_array($ch, [
+                CURLOPT_URL=>$url, 
+                CURLOPT_HTTPGET=>true, 
+                CURLOPT_TIMEOUT=>$CFG['WAN_TIMEOUT'],
+                CURLOPT_HTTPHEADER=>["Referer: {$CFG['BASE']}/action/onuconfigsrv.html?ponid={$onuRow['pon']}&onuid={$onuRow['onu']}&targid=onuTcont.html"],
+            ]);
+            $wh = curl_exec($ch);
+            if ($wh !== false) {
+                $details = parse_wan_details($wh);
+                $wanStatus = $details['status'] ?: 'Unknown';
+                $wanUsername = $details['username'];
+                $wanMac = $details['mac'];
+                
+                $wanStmt->execute([$wanStatus, $wanUsername, $wanMac, $now, $onuRow['pon'], $onuRow['onu']]);
+                $wanUpdated++;
+            } else {
+                $wanFailed++;
+            }
         }
     }
 
-    olt_close($ch);
+    if ($ch) {
+        olt_close($ch);
+    }
     
     $total_time = microtime(true) - $start_time;
     
@@ -219,6 +247,7 @@ try {
         'pons_updated' => count($pons),
         'onus_updated' => $totalUpdated,
         'online_onus' => $totalOnline,
+        'mode' => $mode,
         'wan_updated' => $wanUpdated,
         'wan_failed' => $wanFailed,
         'wan_total' => count($onlineOnusList),
@@ -228,7 +257,11 @@ try {
     ]);
     
 } catch (Exception $e) {
-    olt_close($ch);
+    if ($ch) {
+        olt_close($ch);
+    }
     error_log("Refresh API error: " . $e->getMessage());
     json_out(['ok' => false, 'error' => 'Refresh error: ' . $e->getMessage()]);
+} finally {
+    @unlink($lockPath);
 }

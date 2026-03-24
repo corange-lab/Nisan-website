@@ -269,6 +269,27 @@ td {
   letter-spacing: 0.5px;
 }
 
+.speed-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(56, 189, 248, 0.12);
+  color: #0369a1;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  min-width: 90px;
+  justify-content: center;
+}
+
+.speed-sub {
+  margin-top: 3px;
+  font-size: 11px;
+  color: var(--gray-500);
+}
+
 .status-badge.online {
   background: rgba(34, 197, 94, 0.1);
   color: var(--success);
@@ -359,6 +380,39 @@ td {
   background: var(--primary-dark);
 }
 
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.insight-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.insight-card h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--gray-700);
+}
+
+.insight-list {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12px;
+  color: var(--gray-700);
+}
+
+.insight-list li {
+  margin: 4px 0;
+}
+
 @media (max-width: 768px) {
   body { padding: 8px; }
   
@@ -437,6 +491,11 @@ td {
     font-size: 12px;
     flex-wrap: wrap;
   }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    padding: 10px 16px;
+  }
   
   .table-container {
     max-height: calc(100vh - 320px);
@@ -513,9 +572,41 @@ td {
         <span class="label">❌ Offline:</span>
         <span class="value" id="offline-onus">0</span>
       </div>
+      <div class="stat-card">
+        <span class="label">🌐 Net Now:</span>
+        <span class="value" id="net-total-now">0.00 Mbps</span>
+      </div>
+      <div class="stat-card">
+        <span class="label">⬆ Net Up:</span>
+        <span class="value" id="net-up-now">0.00 Mbps</span>
+      </div>
+      <div class="stat-card">
+        <span class="label">⬇ Net Down:</span>
+        <span class="value" id="net-down-now">0.00 Mbps</span>
+      </div>
+      <div class="stat-card">
+        <span class="label">📦 Net 24h Usage:</span>
+        <span class="value" id="net-usage-24h">0 B</span>
+      </div>
       <div style="margin-left: auto; font-size: 13px; color: var(--gray-500);">
         <span id="count">0 shown</span>
       </div>
+  </div>
+
+  <div class="insights-grid">
+    <div class="insight-card">
+      <h3>Network Peak (24h)</h3>
+      <div id="net-peak-24h" style="font-weight:700;font-size:15px;">—</div>
+      <div id="net-peak-24h-time" style="font-size:12px;color:var(--gray-500);margin-top:4px;">—</div>
+    </div>
+    <div class="insight-card">
+      <h3>Top Users Now</h3>
+      <ol id="top-users-now" class="insight-list"><li>Loading…</li></ol>
+    </div>
+    <div class="insight-card">
+      <h3>Top Users by 24h Usage</h3>
+      <ol id="top-users-usage" class="insight-list"><li>Loading…</li></ol>
+    </div>
   </div>
 
   <div class="toolbar">
@@ -531,8 +622,17 @@ td {
         🔄 Fetch Live
       </button>
       <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 13px; color: var(--gray-600); white-space: nowrap;">
+        <input type="checkbox" id="realtime-master-checkbox" style="width: 16px; height: 16px; cursor: pointer;" checked>
+        Realtime Global
+      </label>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <input id="specific-onu-input" type="text" placeholder="Specific ONU (e.g. GPON0/1:12)" style="padding:7px 10px;border:1px solid var(--gray-300);border-radius:8px;min-width:220px;font-size:12px;">
+        <button class="refresh-btn" id="specific-onu-btn" style="background:#0ea5e9;border:none;cursor:pointer;padding:6px 12px;font-size:12px;">🎯 Specific Realtime</button>
+        <button class="refresh-btn" id="specific-onu-stop-btn" style="background:#ef4444;border:none;cursor:pointer;padding:6px 10px;font-size:12px;">Stop</button>
+      </div>
+      <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 12px; color: var(--gray-600); white-space: nowrap;">
         <input type="checkbox" id="auto-refresh-checkbox" style="width: 16px; height: 16px; cursor: pointer;">
-        Auto (5m)
+        Auto OLT Pull
       </label>
   </div>
 
@@ -540,13 +640,11 @@ td {
     <table id="tbl">
       <thead>
         <tr>
-            <th>PON</th>
-            <th>ONU</th>
             <th>ONU ID</th>
             <th>Description</th>
-            <th>Model</th>
             <th>Status</th>
             <th>WAN Status</th>
+            <th>Speed Now</th>
             <th>RX Power</th>
             <th>24h Avg</th>
             <th>Δ vs 24h</th>
@@ -554,7 +652,7 @@ td {
       </thead>
         <tbody id="body">
           <tr>
-            <td colspan="10" style="text-align: center; padding: 40px;">
+            <td colspan="8" style="text-align: center; padding: 40px;">
               <div style="font-size: 16px; color: var(--gray-500);">⏳ Loading ultra-fast data...</div>
             </td>
           </tr>
@@ -571,7 +669,7 @@ td {
   console.log('API_BASE:', window.API_BASE);
   console.log('PONS:', window.PONS);
 
-  // Ultra-fast loading using database
+  // Realtime loading using database cache + quick live refresh
   (function(){
     'use strict';
 
@@ -588,17 +686,45 @@ td {
     var dataAgeEl = document.getElementById('data-age');
     var liveRefreshBtn = document.getElementById('live-refresh-btn');
     var liveRefreshBtnToolbar = document.getElementById('live-refresh-btn-toolbar');
+    var realtimeMasterCheckbox = document.getElementById('realtime-master-checkbox');
+    var specificOnuInput = document.getElementById('specific-onu-input');
+    var specificOnuBtn = document.getElementById('specific-onu-btn');
+    var specificOnuStopBtn = document.getElementById('specific-onu-stop-btn');
     
     var totalPonsEl = document.getElementById('total-pons');
     var totalOnusEl = document.getElementById('total-onus');
     var onlineOnusEl = document.getElementById('online-onus');
     var offlineOnusEl = document.getElementById('offline-onus');
+    var netTotalNowEl = document.getElementById('net-total-now');
+    var netUpNowEl = document.getElementById('net-up-now');
+    var netDownNowEl = document.getElementById('net-down-now');
+    var netUsage24hEl = document.getElementById('net-usage-24h');
+    var netPeak24hEl = document.getElementById('net-peak-24h');
+    var netPeak24hTimeEl = document.getElementById('net-peak-24h-time');
+    var topUsersNowEl = document.getElementById('top-users-now');
+    var topUsersUsageEl = document.getElementById('top-users-usage');
     var count = document.getElementById('count');
     
     if (snapEl) snapEl.textContent = new Date().toISOString().replace('T',' ').slice(0,19);
 
     var allRows = [];
     var currentFilter = 'all';
+    var liveRefreshing = false;
+    var dashboardPollInterval = null;
+    var autoLiveInterval = null;
+    var speedPollInterval = null;
+    var fastSampleInterval = null;
+    var specificPollInterval = null;
+    var specificOnuMode = null;
+    var metricsByOnu = {};
+    var networkMetrics = null;
+    var fastSpeedByOnu = {};
+    var expandedRowKeys = new Set();
+    var REALTIME_UI_MS = 1000;       // table + speed repaint cadence
+    var DASHBOARD_POLL_MS = 6000;    // full table re-query cadence
+    var REALTIME_OLT_MS = 5000;      // pull fresh OLT data cadence (quick mode)
+    var latestLiveTs = null;
+    var latestCacheAgeSec = null;
 
     function escapeHtml(text) {
       if (text == null) return '';
@@ -654,254 +780,509 @@ td {
       });
     });
 
-    // Load data from database API (ULTRA FAST!)
-    var startTime = Date.now();
-    
-    fetch(API_BASE + 'dashboard.php?pons=' + encodeURIComponent(PONS.join(',')))
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(result) {
-        var loadTime = (Date.now() - startTime) / 1000;
-        console.log('Data loaded in', loadTime, 'seconds');
-        
-        if (loadTimeEl) loadTimeEl.textContent = loadTime.toFixed(2);
-        
-        if (!result.ok) {
-          throw new Error(result.error || 'Failed to load data');
-        }
-        
-        // Update stats
-        if (totalPonsEl) totalPonsEl.textContent = PONS.length;
-        if (totalOnusEl) totalOnusEl.textContent = result.stats.total_onus;
-        if (onlineOnusEl) onlineOnusEl.textContent = result.stats.online_onus;
-        if (offlineOnusEl) offlineOnusEl.textContent = result.stats.offline_onus;
-        
-        // Show data age notice
-        if (result.data_age_seconds !== null) {
-          var minutes = Math.floor(result.data_age_seconds / 60);
-          var seconds = result.data_age_seconds % 60;
-          var ageText = minutes > 0 ? minutes + 'm ' + Math.floor(seconds) + 's' : Math.floor(seconds) + 's';
-          
-          if (dataAgeEl) dataAgeEl.textContent = ageText + ' old';
-          
-          if (result.is_stale) {
-            refreshNotice.className = 'refresh-notice stale';
-            refreshMessage.innerHTML = '⚠️ Data is stale (' + ageText + ' old) - <strong>Please refresh!</strong>';
-          } else {
-            refreshNotice.className = 'refresh-notice';
-            refreshMessage.innerHTML = '📊 Data age: ' + ageText;
-          }
-          
-          refreshNotice.style.display = 'flex';
-        }
-        
-        // Clear loading message
-        tbody.innerHTML = '';
-        
-        // Add all rows
-        for (var pon in result.data) {
-          var ponData = result.data[pon];
-          
-          for (var i = 0; i < ponData.length; i++) {
-            var row = ponData[i];
-            
-            var key = row.pon + '-' + row.onu;
-            var tr = document.createElement('tr');
-            tr.className = 'pon-' + row.pon;
-            tr.dataset.pon = row.pon;
-            tr.dataset.onu = row.onu;
-            tr.dataset.desc = normalizeDesc(row.desc || '');
-            tr.dataset.status = normalizeDesc(row.status || '');
-            
-            var statusOk = /online/i.test(row.status || '');
-            var statusClass = statusOk ? 'online' : 'offline';
-            var statusIcon = statusOk ? '✅' : '❌';
-            
-            var wanHtml = '<span class="dim">N/A</span>';
-            if (statusOk) {
-              if (row.wan && row.wan !== 'N/A' && row.wan !== null) {
-                var isConnected = /connect/i.test(row.wan);
-                var isUnknown = /unknown/i.test(row.wan);
-                
-                if (isConnected) {
-                  wanHtml = '<span class="status-badge online">✅ ' + escapeHtml(row.wan) + '</span>';
-                } else if (isUnknown) {
-                  wanHtml = '<span class="status-badge" style="background: rgba(234, 179, 8, 0.1); color: var(--warning); border: 1px solid rgba(234, 179, 8, 0.2);">⚠️ ' + escapeHtml(row.wan) + '</span>';
-                } else {
-                  wanHtml = '<span class="status-badge offline">❌ ' + escapeHtml(row.wan) + '</span>';
-                }
-              } else {
-                // Online but WAN not fetched yet - show loading spinner
-                wanHtml = '<span class="spinner-text dim"><span class="spinner"></span> Loading...</span>';
-              }
-            } else {
-              // Offline - no WAN to check
-              wanHtml = '<span class="dim" title="ONU is offline - no WAN data available">—</span>';
-            }
-            
-            var rxHtml = '<span class="dim">N/A</span>';
-            if (statusOk) {
-              if (row.rx !== null) {
-                var rxClass = getRxClass(row.rx);
-                rxHtml = '<span class="rx-value ' + rxClass + '">' + 
-                        parseFloat(row.rx).toFixed(2) + ' dBm</span>';
-              } else {
-                // Online but RX not fetched yet - show loading spinner
-                rxHtml = '<span class="spinner-text dim"><span class="spinner"></span> Loading...</span>';
-              }
-            } else {
-              // Offline - no RX to check
-              rxHtml = '<span class="dim" title="ONU is offline - no optical data">—</span>';
-            }
-            
-            var avgHtml = '<span class="dim">N/A</span>';
-            if (row.rx_avg_24h !== null) {
-              avgHtml = parseFloat(row.rx_avg_24h).toFixed(2);
-            }
-            
-            var deltaHtml = '<span style="color: var(--gray-400);">—</span>';
-            if (row.rx_delta !== null) {
-              var deltaAbs = Math.abs(row.rx_delta);
-              var deltaClass = deltaAbs >= 2 ? 'color: var(--danger); font-weight: 700;' : 
-                              (deltaAbs >= 1 ? 'color: var(--warning); font-weight: 600;' : 'color: var(--gray-600);');
-              var deltaIcon = deltaAbs >= 1 ? ' ⚠️' : '';
-              deltaHtml = '<span style="' + deltaClass + '">' + 
-                         (row.rx_delta >= 0 ? '+' : '') + row.rx_delta.toFixed(2) + ' dB' + deltaIcon + '</span>';
-            }
-            
-            // Build tooltip for description with username and MAC
-            var descTooltip = '';
-            if (row.wan_username || row.wan_mac) {
-              var tooltipParts = [];
-              if (row.wan_username) tooltipParts.push('Username: ' + row.wan_username);
-              if (row.wan_mac) tooltipParts.push('MAC: ' + row.wan_mac);
-              descTooltip = ' title="' + escapeHtml(tooltipParts.join(' | ')) + '"';
-            }
-            
-            var html = '';
-            html += '<td><div class="pon-badge pon-' + row.pon + '">' + row.pon + '</div></td>';
-            html += '<td class="mono">' + row.onu + '</td>';
-            html += '<td class="mono" title="' + escapeHtml(row.onuid) + '">' + escapeHtml(row.onuid) + '</td>';
-            html += '<td' + descTooltip + '><strong>' + escapeHtml(row.desc) + '</strong>';
-            
-            // Show username and MAC inline if available
-            if (row.wan_username || row.wan_mac) {
-              html += '<div style="font-size: 11px; color: var(--gray-500); margin-top: 2px;">';
-              if (row.wan_username) html += '👤 ' + escapeHtml(row.wan_username);
-              if (row.wan_username && row.wan_mac) html += ' · ';
-              if (row.wan_mac) html += '🔗 ' + escapeHtml(row.wan_mac);
-              html += '</div>';
-            }
-            
-            html += '</td>';
-            html += '<td>' + escapeHtml(row.model) + '</td>';
-            html += '<td><span class="status-badge ' + statusClass + '">' + statusIcon + ' ' + escapeHtml(row.status) + '</span></td>';
-            html += '<td>' + wanHtml + '</td>';
-            html += '<td>' + rxHtml + '</td>';
-            html += '<td>' + avgHtml + '</td>';
-            html += '<td>' + deltaHtml + '</td>';
-            
-            tr.innerHTML = html;
-            tbody.appendChild(tr);
-            allRows.push(tr);
-          }
-        }
-        
-        updateDisplay();
-        console.log('Total rows:', allRows.length);
-      })
-      .catch(function(error) {
-        console.error('Error loading data:', error);
-        tbody.innerHTML = '<tr><td colspan="10" style="text-align: center; padding: 40px; color: var(--danger);">' +
-                         '❌ Error: ' + escapeHtml(error.message) + '</td></tr>';
-      });
-    
-    // Live Refresh Functionality
-    function fetchLiveData() {
-      console.log('Fetching live data from OLT...');
-      
-      // Disable buttons during refresh
-      if (liveRefreshBtn) {
-        liveRefreshBtn.disabled = true;
-        liveRefreshBtn.innerHTML = '<span class="spinner-text"><span class="spinner"></span> Fetching...</span>';
+    function normalizeOnuId(v) {
+      if (v == null) return '';
+      return String(v).toUpperCase().replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+
+    function fmtBytes(n) {
+      n = Number(n || 0);
+      if (!isFinite(n) || n <= 0) return '0 B';
+      var u = ['B', 'KB', 'MB', 'GB', 'TB'];
+      var i = Math.min(u.length - 1, Math.floor(Math.log(n) / Math.log(1024)));
+      var v = n / Math.pow(1024, i);
+      return v.toFixed(i > 1 ? 2 : 0) + ' ' + u[i];
+    }
+
+    function fmtTs(ts) {
+      if (!ts) return '—';
+      var d = new Date(Number(ts) * 1000);
+      if (isNaN(d.getTime())) return '—';
+      return d.toLocaleString();
+    }
+
+    function formatAgeText(sec) {
+      sec = Math.max(0, Math.floor(Number(sec || 0)));
+      var m = Math.floor(sec / 60);
+      var s = sec % 60;
+      return m > 0 ? (m + 'm ' + s + 's') : (s + 's');
+    }
+
+    function updateFreshnessUI() {
+      if (!refreshNotice || !refreshMessage) return;
+      var nowTs = Math.floor(Date.now() / 1000);
+      var liveAge = latestLiveTs ? Math.max(0, nowTs - Number(latestLiveTs)) : null;
+      var cacheAge = (latestCacheAgeSec == null ? null : Number(latestCacheAgeSec));
+
+      var parts = [];
+      if (liveAge != null) parts.push('⚡ Live traffic age: ' + formatAgeText(liveAge));
+      if (cacheAge != null) parts.push('🗂 ONU cache age: ' + formatAgeText(cacheAge));
+      if (!parts.length) return;
+
+      refreshNotice.style.display = 'flex';
+      refreshMessage.innerHTML = parts.join(' · ');
+      refreshNotice.className = (liveAge != null && liveAge > 20) ? 'refresh-notice stale' : 'refresh-notice';
+      if (dataAgeEl && liveAge != null) dataAgeEl.textContent = formatAgeText(liveAge);
+    }
+
+    function renderTopList(targetEl, rows, valueLabelFn) {
+      if (!targetEl) return;
+      if (!rows || !rows.length) {
+        targetEl.innerHTML = '<li>No data</li>';
+        return;
       }
-      if (liveRefreshBtnToolbar) {
-        liveRefreshBtnToolbar.disabled = true;
-        liveRefreshBtnToolbar.innerHTML = '<span class="spinner-text"><span class="spinner"></span> Fetching...</span>';
+      targetEl.innerHTML = rows.map(function(item) {
+        return '<li><span class="mono">' + escapeHtml(item.onuid) + '</span> — ' + escapeHtml(valueLabelFn(item)) + '</li>';
+      }).join('');
+    }
+
+    function animateNumber(el, target) {
+      if (!el) return;
+      var from = parseFloat(el.dataset.val || '0') || 0;
+      var to = (isFinite(target) ? Number(target) : 0);
+      var start = performance.now();
+      var dur = 650;
+      function easeOutExpo(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
+      function frame(now) {
+        var p = Math.min(1, (now - start) / dur);
+        var v = from + (to - from) * easeOutExpo(p);
+        el.dataset.val = String(v);
+        el.textContent = v.toFixed(2);
+        if (p < 1) requestAnimationFrame(frame);
       }
-      
-      // Show all WAN/RX cells as loading
+      requestAnimationFrame(frame);
+    }
+
+    function animateMbpsText(el, target) {
+      if (!el) return;
+      var raw = String(el.dataset.rawVal || el.textContent || '0').replace(/[^\d.\-]/g, '');
+      var from = parseFloat(raw) || 0;
+      var to = (isFinite(target) ? Number(target) : 0);
+      var start = performance.now();
+      var dur = 650;
+      function easeOutExpo(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
+      function frame(now) {
+        var p = Math.min(1, (now - start) / dur);
+        var v = from + (to - from) * easeOutExpo(p);
+        el.dataset.rawVal = String(v);
+        el.textContent = v.toFixed(2) + ' Mbps';
+        if (p < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    function speedCellHtml(onuidNorm) {
+      var rec = metricsByOnu[onuidNorm];
+      if (!rec) return '<span class="dim">—</span>';
+
+      var fast = fastSpeedByOnu[onuidNorm] || {};
+      var total = Number((fast.total_mbps != null ? fast.total_mbps : rec.total_mbps) || 0);
+      var up = Number((fast.upload_mbps != null ? fast.upload_mbps : rec.upload_mbps) || 0);
+      var down = Number((fast.download_mbps != null ? fast.download_mbps : rec.download_mbps) || 0);
+      return '<div><span class="speed-pill"><span class="spd-total" data-val="' + total + '">' + total.toFixed(2) + '</span> Mbps</span></div>' +
+             '<div class="speed-sub">U <span class="spd-up" data-val="' + up + '">' + up.toFixed(2) + '</span> · D <span class="spd-down" data-val="' + down + '">' + down.toFixed(2) + '</span></div>';
+    }
+
+    function applySpeedToRows() {
       for (var i = 0; i < allRows.length; i++) {
         var tr = allRows[i];
-        var isOnline = /online/i.test(tr.dataset.status);
-        
-        if (isOnline) {
-          // Find WAN and RX cells for this row
-          var wanCell = tr.querySelector('[id^="wan-"]');
-          var rxCell = tr.querySelector('[id^="rx-"]');
-          
-          if (wanCell) {
-            wanCell.innerHTML = '<span class="spinner-text dim"><span class="spinner"></span> Fetching...</span>';
+        var onuidNorm = tr.dataset.onuidNorm || '';
+        var speedTd = tr.querySelector('.speed-cell');
+        if (speedTd) speedTd.innerHTML = speedCellHtml(onuidNorm);
+
+        var detail = tr.__detailRow;
+        if (!detail) continue;
+        var rec = metricsByOnu[onuidNorm];
+        if (!rec) {
+          detail.innerHTML = '<td colspan="8" style="background:#f8fafc;padding:10px 12px;"><strong>Live details</strong>: no recent sample.</td>';
+          continue;
+        }
+
+        var up = Number(rec.upload_mbps || 0);
+        var down = Number(rec.download_mbps || 0);
+        var total = Number(rec.total_mbps || 0);
+        var top = Number(rec.top_total_mbps || 0);
+        var usageUp = Number(rec.usage_24h_upload_bytes || 0);
+        var usageDown = Number(rec.usage_24h_download_bytes || 0);
+        var usageTotal = Number(rec.usage_24h_total_bytes || 0);
+        var liveAt = fmtTs(rec.at_ts);
+        var topAt = fmtTs(rec.top_at_ts);
+
+        detail.innerHTML =
+          '<td colspan="8" style="background:#f8fafc;padding:10px 12px;">' +
+            '<strong>Live details</strong> &nbsp;|&nbsp; ' +
+            '<strong>Now:</strong> ' + total.toFixed(2) + ' Mbps (U ' + up.toFixed(2) + ' / D ' + down.toFixed(2) + ') at ' + escapeHtml(liveAt) +
+            ' &nbsp;|&nbsp; <strong>Top (24h):</strong> ' + top.toFixed(2) + ' Mbps at ' + escapeHtml(topAt) +
+            ' &nbsp;|&nbsp; <strong>Usage (24h):</strong> ' + escapeHtml(fmtBytes(usageTotal)) +
+            ' (U ' + escapeHtml(fmtBytes(usageUp)) + ' / D ' + escapeHtml(fmtBytes(usageDown)) + ')' +
+          '</td>';
+      }
+    }
+
+    function applyFastSpeedToRows() {
+      var sumUp = 0;
+      var sumDown = 0;
+      for (var i = 0; i < allRows.length; i++) {
+        var tr = allRows[i];
+        var onuidNorm = tr.dataset.onuidNorm || '';
+        var rec = fastSpeedByOnu[onuidNorm];
+        if (!rec) continue;
+
+        var total = Number(rec.total_mbps || 0);
+        var up = Number(rec.upload_mbps || 0);
+        var down = Number(rec.download_mbps || 0);
+
+        var totalEl = tr.querySelector('.spd-total');
+        var upEl = tr.querySelector('.spd-up');
+        var downEl = tr.querySelector('.spd-down');
+        animateNumber(totalEl, total);
+        animateNumber(upEl, up);
+        animateNumber(downEl, down);
+
+        sumUp += up;
+        sumDown += down;
+      }
+
+      animateMbpsText(netUpNowEl, sumUp);
+      animateMbpsText(netDownNowEl, sumDown);
+      animateMbpsText(netTotalNowEl, sumUp + sumDown);
+    }
+
+    function refreshFastSpeeds() {
+      if (specificOnuMode) return Promise.resolve();
+      return fetch('/b/api/online_now_all.php', { cache: 'no-store' })
+        .then(function(resp) { return resp.json(); })
+        .then(function(data) {
+          if (!data || !data.ok || !data.rows) return;
+          var next = {};
+          for (var k in data.rows) {
+            if (!Object.prototype.hasOwnProperty.call(data.rows, k)) continue;
+            next[normalizeOnuId(k)] = data.rows[k];
           }
-          if (rxCell) {
-            rxCell.innerHTML = '<span class="spinner-text dim"><span class="spinner"></span> Fetching...</span>';
+          fastSpeedByOnu = next;
+          if (data.ts_curr) latestLiveTs = Number(data.ts_curr);
+          applyFastSpeedToRows();
+          updateFreshnessUI();
+        })
+        .catch(function() {});
+    }
+
+    function getRowByOnuId(onuidNorm) {
+      for (var i = 0; i < allRows.length; i++) {
+        var tr = allRows[i];
+        if ((tr.dataset.onuidNorm || '') === onuidNorm) return tr;
+      }
+      return null;
+    }
+
+    function refreshSpecificOnuSpeed(onuidNorm) {
+      if (!onuidNorm) return Promise.resolve();
+      return fetch('/b/api/online_now_single.php?onuid=' + encodeURIComponent(onuidNorm), { cache: 'no-store' })
+        .then(function(resp) { return resp.json(); })
+        .then(function(data) {
+          if (!data || !data.ok || !data.has_data) return;
+          var rec = {
+            upload_mbps: Number(data.upload_mbps || 0),
+            download_mbps: Number(data.download_mbps || 0),
+            total_mbps: Number(data.total_mbps || 0),
+            online: Number(data.total_mbps || 0) > 0
+          };
+          fastSpeedByOnu[onuidNorm] = rec;
+          if (data.ts_curr) latestLiveTs = Number(data.ts_curr);
+
+          var tr = getRowByOnuId(onuidNorm);
+          if (tr) {
+            var totalEl = tr.querySelector('.spd-total');
+            var upEl = tr.querySelector('.spd-up');
+            var downEl = tr.querySelector('.spd-down');
+            animateNumber(totalEl, rec.total_mbps);
+            animateNumber(upEl, rec.upload_mbps);
+            animateNumber(downEl, rec.download_mbps);
           }
+          updateFreshnessUI();
+        })
+        .catch(function() {});
+    }
+
+    function triggerFastSample() {
+      if (specificOnuMode) return Promise.resolve();
+      return fetch('/b/api/network_sample.php', { cache: 'no-store' }).catch(function() {});
+    }
+
+    function refreshMetricsNow() {
+      return fetch(API_BASE + 'user_metrics.php', { cache: 'no-store' })
+        .then(function(resp) { return resp.json(); })
+        .then(function(data) {
+          if (!data || !data.ok || !data.users) return;
+          var next = {};
+          for (var k in data.users) {
+            if (!Object.prototype.hasOwnProperty.call(data.users, k)) continue;
+            next[normalizeOnuId(k)] = data.users[k];
+          }
+          metricsByOnu = next;
+          networkMetrics = data.network || null;
+          if (networkMetrics && networkMetrics.current) {
+            if (netTotalNowEl) netTotalNowEl.textContent = Number(networkMetrics.current.total_mbps || 0).toFixed(2) + ' Mbps';
+            if (netUpNowEl) netUpNowEl.textContent = Number(networkMetrics.current.upload_mbps || 0).toFixed(2) + ' Mbps';
+            if (netDownNowEl) netDownNowEl.textContent = Number(networkMetrics.current.download_mbps || 0).toFixed(2) + ' Mbps';
+            if (networkMetrics.current.at_ts) latestLiveTs = Number(networkMetrics.current.at_ts);
+          }
+          if (networkMetrics && networkMetrics.usage_24h && netUsage24hEl) {
+            netUsage24hEl.textContent = fmtBytes(networkMetrics.usage_24h.total_bytes || 0);
+          }
+          if (networkMetrics && networkMetrics.peak_24h) {
+            if (netPeak24hEl) netPeak24hEl.textContent = Number(networkMetrics.peak_24h.total_mbps || 0).toFixed(2) + ' Mbps';
+            if (netPeak24hTimeEl) netPeak24hTimeEl.textContent = 'at ' + fmtTs(networkMetrics.peak_24h.at_ts);
+          }
+
+          var topNow = [];
+          var topUsage = [];
+          for (var id in next) {
+            if (!Object.prototype.hasOwnProperty.call(next, id)) continue;
+            var rec = next[id] || {};
+            topNow.push({
+              onuid: id,
+              total_mbps: Number(rec.total_mbps || 0)
+            });
+            topUsage.push({
+              onuid: id,
+              total_bytes: Number(rec.usage_24h_total_bytes || 0)
+            });
+          }
+          topNow.sort(function(a, b) { return b.total_mbps - a.total_mbps; });
+          topUsage.sort(function(a, b) { return b.total_bytes - a.total_bytes; });
+
+          renderTopList(topUsersNowEl, topNow.slice(0, 6), function(item) {
+            return item.total_mbps.toFixed(2) + ' Mbps';
+          });
+          renderTopList(topUsersUsageEl, topUsage.slice(0, 6), function(item) {
+            return fmtBytes(item.total_bytes);
+          });
+
+          updateFreshnessUI();
+          applySpeedToRows();
+        })
+        .catch(function() {});
+    }
+
+    function renderDashboard(result) {
+      if (!result || !result.ok) {
+        throw new Error((result && result.error) || 'Failed to load data');
+      }
+
+      if (totalPonsEl) totalPonsEl.textContent = PONS.length;
+      if (totalOnusEl) totalOnusEl.textContent = result.stats.total_onus;
+      if (onlineOnusEl) onlineOnusEl.textContent = result.stats.online_onus;
+      if (offlineOnusEl) offlineOnusEl.textContent = result.stats.offline_onus;
+
+      latestCacheAgeSec = result.data_age_seconds;
+      updateFreshnessUI();
+
+      var frag = document.createDocumentFragment();
+      allRows = [];
+
+      for (var pon in result.data) {
+        if (!Object.prototype.hasOwnProperty.call(result.data, pon)) continue;
+        var ponData = result.data[pon];
+        for (var i = 0; i < ponData.length; i++) {
+          var row = ponData[i];
+          var tr = document.createElement('tr');
+          tr.className = 'pon-' + row.pon;
+          tr.dataset.rowKey = String(row.pon) + '-' + String(row.onu);
+          tr.dataset.pon = row.pon;
+          tr.dataset.onu = row.onu;
+          tr.dataset.onuidNorm = normalizeOnuId(row.onuid || row.onuid_norm || '');
+          tr.dataset.desc = normalizeDesc(row.desc || '');
+          tr.dataset.status = normalizeDesc(row.status || '');
+
+          var statusOk = /online/i.test(row.status || '');
+          var statusClass = statusOk ? 'online' : 'offline';
+          var statusIcon = statusOk ? '✅' : '❌';
+
+          var wanHtml = '<span class="dim">N/A</span>';
+          if (statusOk) {
+            if (row.wan && row.wan !== 'N/A' && row.wan !== null) {
+              if (/connect/i.test(row.wan)) {
+                wanHtml = '<span class="status-badge online">✅ ' + escapeHtml(row.wan) + '</span>';
+              } else if (/unknown/i.test(row.wan)) {
+                wanHtml = '<span class="status-badge" style="background: rgba(234, 179, 8, 0.1); color: var(--warning); border: 1px solid rgba(234, 179, 8, 0.2);">⚠️ ' + escapeHtml(row.wan) + '</span>';
+              } else {
+                wanHtml = '<span class="status-badge offline">❌ ' + escapeHtml(row.wan) + '</span>';
+              }
+            } else {
+              wanHtml = '<span class="spinner-text dim"><span class="spinner"></span> Pending...</span>';
+            }
+          } else {
+            wanHtml = '<span class="dim" title="ONU is offline - no WAN data available">—</span>';
+          }
+
+          var rxHtml = '<span class="dim">N/A</span>';
+          if (statusOk) {
+            if (row.rx !== null) {
+              var rxClass = getRxClass(row.rx);
+              rxHtml = '<span class="rx-value ' + rxClass + '">' + parseFloat(row.rx).toFixed(2) + ' dBm</span>';
+            } else {
+              rxHtml = '<span class="spinner-text dim"><span class="spinner"></span> Pending...</span>';
+            }
+          } else {
+            rxHtml = '<span class="dim" title="ONU is offline - no optical data">—</span>';
+          }
+
+          var avgHtml = '<span class="dim">N/A</span>';
+          if (row.rx_avg_24h !== null) avgHtml = parseFloat(row.rx_avg_24h).toFixed(2);
+
+          var deltaHtml = '<span style="color: var(--gray-400);">—</span>';
+          if (row.rx_delta !== null) {
+            var deltaAbs = Math.abs(row.rx_delta);
+            var deltaClass = deltaAbs >= 2 ? 'color: var(--danger); font-weight: 700;' :
+                            (deltaAbs >= 1 ? 'color: var(--warning); font-weight: 600;' : 'color: var(--gray-600);');
+            var deltaIcon = deltaAbs >= 1 ? ' ⚠️' : '';
+            deltaHtml = '<span style="' + deltaClass + '">' +
+                       (row.rx_delta >= 0 ? '+' : '') + row.rx_delta.toFixed(2) + ' dB' + deltaIcon + '</span>';
+          }
+
+          var descTooltip = '';
+          if (row.wan_username || row.wan_mac) {
+            var tooltipParts = [];
+            if (row.wan_username) tooltipParts.push('Username: ' + row.wan_username);
+            if (row.wan_mac) tooltipParts.push('MAC: ' + row.wan_mac);
+            descTooltip = ' title="' + escapeHtml(tooltipParts.join(' | ')) + '"';
+          }
+
+          var html = '';
+          html += '<td class="mono" title="' + escapeHtml(row.onuid) + '">' + escapeHtml(row.onuid) + '</td>';
+          html += '<td' + descTooltip + '><strong>' + escapeHtml(row.desc) + '</strong>';
+          if (row.wan_username || row.wan_mac) {
+            html += '<div style="font-size: 11px; color: var(--gray-500); margin-top: 2px;">';
+            if (row.wan_username) html += '👤 ' + escapeHtml(row.wan_username);
+            if (row.wan_username && row.wan_mac) html += ' · ';
+            if (row.wan_mac) html += '🔗 ' + escapeHtml(row.wan_mac);
+            html += '</div>';
+          }
+          html += '</td>';
+          html += '<td><span class="status-badge ' + statusClass + '">' + statusIcon + ' ' + escapeHtml(row.status) + '</span></td>';
+          html += '<td>' + wanHtml + '</td>';
+          html += '<td class="speed-cell">' + speedCellHtml(tr.dataset.onuidNorm) + '</td>';
+          html += '<td>' + rxHtml + '</td>';
+          html += '<td>' + avgHtml + '</td>';
+          html += '<td>' + deltaHtml + '</td>';
+
+          tr.innerHTML = html;
+          frag.appendChild(tr);
+          allRows.push(tr);
+
+          var detailTr = document.createElement('tr');
+          detailTr.className = 'detail-row';
+          detailTr.style.display = 'none';
+          detailTr.innerHTML = '<td colspan="8" style="background:#f8fafc;padding:10px 12px;">' +
+            '<strong>Live details</strong>: loading…' +
+            '</td>';
+          tr.__detailRow = detailTr;
+          frag.appendChild(detailTr);
         }
       }
+
+      tbody.innerHTML = '';
+      tbody.appendChild(frag);
+      for (var z = 0; z < allRows.length; z++) {
+        (function(mainTr) {
+          mainTr.style.cursor = 'pointer';
+          mainTr.addEventListener('click', function() {
+            var drow = mainTr.__detailRow;
+            if (!drow) return;
+            var opening = drow.style.display === 'none';
+            drow.style.display = opening ? '' : 'none';
+            var key = mainTr.dataset.rowKey || '';
+            if (!key) return;
+            if (opening) expandedRowKeys.add(key);
+            else expandedRowKeys.delete(key);
+          });
+
+          var key = mainTr.dataset.rowKey || '';
+          if (key && expandedRowKeys.has(key) && mainTr.__detailRow) {
+            mainTr.__detailRow.style.display = '';
+          }
+        })(allRows[z]);
+      }
+      updateDisplay();
+      applySpeedToRows();
+    }
+
+    function loadDashboard(silent) {
+      var startTime = Date.now();
+      return fetch(API_BASE + 'dashboard.php?pons=' + encodeURIComponent(PONS.join(',')), {cache: 'no-store'})
+        .then(function(response) { return response.json(); })
+        .then(function(result) {
+          var loadTime = (Date.now() - startTime) / 1000;
+          if (loadTimeEl) loadTimeEl.textContent = loadTime.toFixed(2);
+          renderDashboard(result);
+          if (!silent) console.log('Dashboard loaded in', loadTime.toFixed(2), 'seconds');
+        })
+        .catch(function(error) {
+          if (silent) return;
+          console.error('Error loading data:', error);
+          tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 40px; color: var(--danger);">❌ Error: ' +
+                           escapeHtml(error.message) + '</td></tr>';
+        });
+    }
+    
+    // Live Refresh Functionality
+    function setLiveButtonsBusy(busy) {
+      if (liveRefreshBtn) {
+        liveRefreshBtn.disabled = !!busy;
+        liveRefreshBtn.innerHTML = busy ? '<span class="spinner-text"><span class="spinner"></span> Fetching...</span>' : '🔄 Fetch Live Data';
+      }
+      if (liveRefreshBtnToolbar) {
+        liveRefreshBtnToolbar.disabled = !!busy;
+        liveRefreshBtnToolbar.innerHTML = busy ? '<span class="spinner-text"><span class="spinner"></span> Fetching...</span>' : '🔄 Fetch Live';
+      }
+    }
+
+    function fetchLiveData(mode) {
+      if (liveRefreshing) return Promise.resolve();
+      liveRefreshing = true;
+      mode = mode || 'quick';
+      console.log('Fetching live data from OLT... mode=' + mode);
+      setLiveButtonsBusy(true);
       
-      // Show loading notice
       if (refreshNotice) {
         refreshNotice.style.display = 'flex';
-        refreshMessage.innerHTML = '<span class="spinner-text"><span class="spinner"></span> Fetching real-time data from OLT device...</span>';
+        refreshMessage.innerHTML = '<span class="spinner-text"><span class="spinner"></span> Fetching live data (' + mode + ')...</span>';
       }
       
-      // Trigger live refresh via API
-      fetch(API_BASE + 'refresh.php?pons=' + encodeURIComponent(PONS.join(',')))
+      return fetch(API_BASE + 'refresh.php?pons=' + encodeURIComponent(PONS.join(',')) + '&mode=' + encodeURIComponent(mode), {cache: 'no-store'})
         .then(function(response) {
           return response.json();
         })
         .then(function(result) {
-          console.log('Live refresh result:', result);
-          
+          if (result && result.busy) {
+            refreshMessage.innerHTML = '⏳ Another refresh is already running. Waiting for latest data...';
+            return;
+          }
           if (result.ok) {
-            // Show success message with detailed info
             var wanInfo = '';
             if (result.wan_total) {
               wanInfo = ' | WAN: ' + result.wan_updated + '/' + result.wan_total;
-              if (result.wan_failed > 0) {
-                wanInfo += ' (' + result.wan_failed + ' failed)';
-              }
+              if (result.wan_failed > 0) wanInfo += ' (' + result.wan_failed + ' failed)';
             }
-            
             if (refreshMessage) {
-              refreshMessage.innerHTML = '✅ Live data refreshed! Updated ' + result.onus_updated + ' ONUs' + wanInfo + ' in ' + result.refresh_time + 's. Reloading page...';
+              refreshMessage.innerHTML = '✅ Live data refreshed (' + (result.mode || mode) + '): ' +
+                result.onus_updated + ' ONUs' + wanInfo + ' in ' + result.refresh_time + 's';
             }
-            
-            // Reload the page to show fresh data
-            setTimeout(function() {
-              location.reload();
-            }, 1500);
+            return;
           } else {
             throw new Error(result.error || 'Refresh failed');
           }
         })
         .catch(function(error) {
           console.error('Live refresh error:', error);
-          
           if (refreshMessage) {
             refreshMessage.innerHTML = '❌ Failed to fetch live data: ' + escapeHtml(error.message);
           }
-          
-          // Re-enable buttons
-          if (liveRefreshBtn) {
-            liveRefreshBtn.disabled = false;
-            liveRefreshBtn.textContent = '🔄 Fetch Live Data';
-          }
-          if (liveRefreshBtnToolbar) {
-            liveRefreshBtnToolbar.disabled = false;
-            liveRefreshBtnToolbar.textContent = '🔄 Fetch Live Data';
-          }
+        })
+        .finally(function() {
+          liveRefreshing = false;
+          setLiveButtonsBusy(false);
         });
     }
     
@@ -913,64 +1294,203 @@ td {
       liveRefreshBtnToolbar.addEventListener('click', fetchLiveData);
     }
     
-    // Keyboard shortcut: Ctrl+R or F5 to refresh live data
+    // Keyboard shortcut: Ctrl+R or F5 for quick live fetch
     document.addEventListener('keydown', function(e) {
       if ((e.ctrlKey && e.key === 'r') || e.key === 'F5') {
         e.preventDefault();
-        fetchLiveData();
+        fetchLiveData('quick');
       }
     });
     
-    // Auto-refresh functionality
-    var autoRefreshInterval = null;
-    var autoRefreshCheckbox = document.getElementById('auto-refresh-checkbox');
-    
-    if (autoRefreshCheckbox) {
-      // Load saved preference
-      var autoRefreshEnabled = localStorage.getItem('autoRefresh') === 'true';
-      autoRefreshCheckbox.checked = autoRefreshEnabled;
-      
-      // Start auto-refresh if enabled
-      if (autoRefreshEnabled) {
-        startAutoRefresh();
+    // Poll dashboard every 5s for near realtime UI without heavy OLT calls
+    function startDashboardPolling() {
+      if (dashboardPollInterval) return;
+      dashboardPollInterval = setInterval(function() {
+        if (!liveRefreshing) loadDashboard(true);
+      }, DASHBOARD_POLL_MS);
+    }
+
+    function stopDashboardPolling() {
+      if (dashboardPollInterval) {
+        clearInterval(dashboardPollInterval);
+        dashboardPollInterval = null;
       }
-      
+    }
+
+    function startSpeedPolling() {
+      if (speedPollInterval) return;
+      speedPollInterval = setInterval(function() {
+        refreshFastSpeeds();
+      }, REALTIME_UI_MS);
+    }
+
+    function stopSpeedPolling() {
+      if (speedPollInterval) {
+        clearInterval(speedPollInterval);
+        speedPollInterval = null;
+      }
+    }
+
+    function startFastSampling() {
+      if (fastSampleInterval) return;
+      fastSampleInterval = setInterval(function() {
+        triggerFastSample();
+      }, 3000);
+    }
+
+    function stopFastSampling() {
+      if (fastSampleInterval) {
+        clearInterval(fastSampleInterval);
+        fastSampleInterval = null;
+      }
+    }
+
+    // Auto live functionality
+    var autoRefreshCheckbox = document.getElementById('auto-refresh-checkbox');
+    var autoLiveEnabled = false;
+
+    function stopAutoLive() {
+      if (autoLiveInterval) {
+        clearInterval(autoLiveInterval);
+        autoLiveInterval = null;
+      }
+    }
+
+    function stopSpecificMode() {
+      specificOnuMode = null;
+      if (specificPollInterval) {
+        clearInterval(specificPollInterval);
+        specificPollInterval = null;
+      }
+      for (var i = 0; i < allRows.length; i++) {
+        allRows[i].style.outline = '';
+      }
+      if (specificOnuInput) specificOnuInput.value = '';
+      if (refreshMessage) refreshMessage.innerHTML = '🎯 Specific ONU mode stopped';
+    }
+
+    function startSpecificMode(onuidRaw) {
+      var onuidNorm = normalizeOnuId(onuidRaw);
+      if (!onuidNorm) return;
+      var tr = getRowByOnuId(onuidNorm);
+      if (!tr) {
+        if (refreshMessage) refreshMessage.innerHTML = '❌ ONU not found in table: ' + escapeHtml(onuidNorm);
+        return;
+      }
+
+      // Stop global load-heavy loops.
+      stopAutoLive();
+      stopFastSampling();
+      stopSpeedPolling();
+      stopDashboardPolling();
+
+      // Clear previous highlight and set new one.
+      for (var i = 0; i < allRows.length; i++) allRows[i].style.outline = '';
+      tr.style.outline = '2px solid #0ea5e9';
+      tr.style.outlineOffset = '-2px';
+
+      specificOnuMode = onuidNorm;
+      if (refreshMessage) refreshMessage.innerHTML = '🎯 Specific realtime active for ' + escapeHtml(onuidNorm) + ' (1s)';
+
+      if (specificPollInterval) clearInterval(specificPollInterval);
+      refreshSpecificOnuSpeed(onuidNorm);
+      specificPollInterval = setInterval(function() {
+        refreshSpecificOnuSpeed(onuidNorm);
+      }, 1000);
+    }
+
+    function setGlobalRealtimeEnabled(enabled) {
+      if (!enabled) {
+        stopAutoLive();
+        stopFastSampling();
+        stopSpeedPolling();
+        stopDashboardPolling();
+        if (refreshMessage) refreshMessage.innerHTML = '⏸ Global realtime OFF. Use Specific ONU mode for targeted checks.';
+        return;
+      }
+      if (specificOnuMode) return;
+      startDashboardPolling();
+      startSpeedPolling();
+      startFastSampling();
+      if (autoRefreshCheckbox && autoRefreshCheckbox.checked) startAutoLive();
+      if (refreshMessage) refreshMessage.innerHTML = '🟢 Global realtime ON';
+    }
+
+    function startAutoLive() {
+      if (autoLiveInterval) return;
+      autoLiveInterval = setInterval(function() {
+        if (!liveRefreshing) fetchLiveData('quick');
+      }, REALTIME_OLT_MS);
+      console.log('Auto live started (every ' + (REALTIME_OLT_MS / 1000) + 's)');
+    }
+
+    if (autoRefreshCheckbox) {
+      var saved = localStorage.getItem('autoLive');
+      autoLiveEnabled = (saved === null) ? true : (saved === 'true');
+      autoRefreshCheckbox.checked = autoLiveEnabled;
+      if (autoLiveEnabled) startAutoLive();
+
       autoRefreshCheckbox.addEventListener('change', function() {
         if (this.checked) {
-          localStorage.setItem('autoRefresh', 'true');
-          startAutoRefresh();
-          console.log('Auto-refresh enabled (every 5 minutes)');
+          localStorage.setItem('autoLive', 'true');
+          startAutoLive();
+          if (refreshMessage) {
+            refreshMessage.innerHTML = '🟢 Realtime ON: UI ' + (REALTIME_UI_MS / 1000) + 's, OLT pull ' + (REALTIME_OLT_MS / 1000) + 's';
+          }
         } else {
-          localStorage.setItem('autoRefresh', 'false');
-          stopAutoRefresh();
-          console.log('Auto-refresh disabled');
+          localStorage.setItem('autoLive', 'false');
+          stopAutoLive();
+          if (refreshMessage) {
+            refreshMessage.innerHTML = '🟡 Realtime OFF';
+          }
         }
       });
     }
-    
-    function startAutoRefresh() {
-      if (autoRefreshInterval) return; // Already running
-      
-      autoRefreshInterval = setInterval(function() {
-        console.log('Auto-refresh triggered');
-        fetchLiveData();
-      }, 5 * 60 * 1000); // 5 minutes
-      
-      console.log('Auto-refresh started (every 5 minutes)');
+
+    if (realtimeMasterCheckbox) {
+      var savedGlobalRealtime = localStorage.getItem('globalRealtime');
+      var globalRealtimeEnabled = (savedGlobalRealtime === null) ? true : (savedGlobalRealtime === 'true');
+      realtimeMasterCheckbox.checked = globalRealtimeEnabled;
+      realtimeMasterCheckbox.addEventListener('change', function() {
+        localStorage.setItem('globalRealtime', this.checked ? 'true' : 'false');
+        if (!this.checked && specificOnuMode) stopSpecificMode();
+        setGlobalRealtimeEnabled(this.checked);
+      });
     }
-    
-    function stopAutoRefresh() {
-      if (autoRefreshInterval) {
-        clearInterval(autoRefreshInterval);
-        autoRefreshInterval = null;
-        console.log('Auto-refresh stopped');
-      }
+
+    if (specificOnuBtn) {
+      specificOnuBtn.addEventListener('click', function() {
+        var value = specificOnuInput ? specificOnuInput.value : '';
+        startSpecificMode(value);
+      });
     }
-    
-    // Show refresh notice by default with helpful info
-    if (refreshNotice) {
-      refreshNotice.style.display = 'flex';
+    if (specificOnuInput) {
+      specificOnuInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          startSpecificMode(specificOnuInput.value || '');
+        }
+      });
     }
+    if (specificOnuStopBtn) {
+      specificOnuStopBtn.addEventListener('click', function() {
+        stopSpecificMode();
+        var globalEnabled = realtimeMasterCheckbox ? realtimeMasterCheckbox.checked : true;
+        setGlobalRealtimeEnabled(globalEnabled);
+      });
+    }
+
+    loadDashboard(false).then(function() {
+      refreshMetricsNow();
+      refreshFastSpeeds();
+      triggerFastSample();
+      var globalEnabled = realtimeMasterCheckbox ? realtimeMasterCheckbox.checked : true;
+      setGlobalRealtimeEnabled(globalEnabled);
+      setInterval(updateFreshnessUI, 1000);
+      // First quick live fetch after initial render to reduce stale gap.
+      if (globalEnabled) return fetchLiveData('quick');
+      return Promise.resolve();
+    });
   })();
 </script>
 </body>

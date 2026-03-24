@@ -23,12 +23,18 @@ try {
     $ponList = implode(',', array_map('intval', $pons));
     $query = "
         SELECT 
-            pon, onu, onuid, onuid_norm, description, model, 
-            status, wan_status, wan_username, wan_mac, rx_power, last_update,
-            (SELECT AVG(rx) FROM rx_samples WHERE onuid_norm = onu_cache.onuid_norm AND ts >= (strftime('%s', 'now') - 86400)) as rx_avg_24h
-        FROM onu_cache 
-        WHERE pon IN ($ponList)
-        ORDER BY pon ASC, onu ASC
+            oc.pon, oc.onu, oc.onuid, oc.onuid_norm, oc.description, oc.model, 
+            oc.status, oc.wan_status, oc.wan_username, oc.wan_mac, oc.rx_power, oc.last_update,
+            a.avg_rx AS rx_avg_24h
+        FROM onu_cache oc
+        LEFT JOIN (
+            SELECT onuid_norm, AVG(rx) AS avg_rx
+            FROM rx_samples
+            WHERE ts >= (strftime('%s','now') - 86400)
+            GROUP BY onuid_norm
+        ) a ON a.onuid_norm = oc.onuid_norm
+        WHERE oc.pon IN ($ponList)
+        ORDER BY oc.pon ASC, oc.onu ASC
     ";
     
     $stmt = $pdo->query($query);

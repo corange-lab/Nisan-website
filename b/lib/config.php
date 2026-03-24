@@ -9,6 +9,8 @@ $defaults = [
   'BASE'     => 'https://103.178.104.34:18292',
   'USERNAME' => 'Chirag',
   'PASSWORD' => 'Chirag@31',
+  // Optional API key for /b/api endpoints (send via X-API-Key header or ?key=...)
+  'API_KEY'  => '',
 
   // PON ports you want to scan
   'PONS'     => range(1, 8),

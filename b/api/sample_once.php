@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors','0'); error_reporting(EALL);
+ini_set('display_errors','0'); error_reporting(E_ALL);
 set_error_handler(function($no,$str,$file,$line){ throw new ErrorException($str,0,$no,$file,$line); });
 require __DIR__.'/../lib/_bootstrap.php';
 

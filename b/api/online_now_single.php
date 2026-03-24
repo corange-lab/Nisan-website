@@ -7,10 +7,11 @@ set_error_handler(function($n,$s,$f,$l){ throw new ErrorException($s,0,$n,$f,$l)
 try{
   $CFG = require __DIR__.'/../lib/config.php';
   require __DIR__.'/../lib/db.php';
+  require __DIR__.'/../lib/util.php';
   if (!isset($_SESSION)) session_start();
   $pdo = db($CFG);
 
-  $onuid = isset($_GET['onuid']) ? trim($_GET['onuid']) : '';
+  $onuid = isset($_GET['onuid']) ? normalize_onuid($_GET['onuid']) : '';
   if ($onuid==='') { echo json_encode(['ok'=>false,'error'=>'missing onuid']); exit; }
 
   $tsRows = $pdo->query("SELECT ts FROM samples GROUP BY ts ORDER BY ts DESC LIMIT 2")->fetchAll(PDO::FETCH_ASSOC);

@@ -18,10 +18,8 @@
                                 <h6 class="title">Contact info</h6>
                                 <p><strong>Morden Radio </strong><br>Opp. Laxmi Palace, <br>Station Road, <br>Bilimora-396321.</p>
                                 <div class="footer-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.facebook.com/nisaninternet"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/nisaninternet"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +58,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="footer-logo">
-                            <a href="/index"><img src="assets/imgs/logo/w_logo.webp" alt="Nisan logo"></a>
+                            <a href="/index"><img src="assets/imgs/logo/w_logo.webp" alt="Nisan logo" loading="lazy"></a>
                         </div>
                     </div>
                     <div class="col-md-8">
