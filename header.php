@@ -13,6 +13,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <html lang="en">
 
 
+<?php include_once('conversion-widgets.php'); ?>
+
 <!-- header-area -->
 
 <header>
