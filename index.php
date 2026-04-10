@@ -1,7 +1,3 @@
-<?php
-// Include security headers
-include('security-headers.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -623,11 +619,11 @@ include('security-headers.php');
 <!-- Critical JS - Load immediately -->
 <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/main.js"></script>
 
 <!-- Non-critical JS - Load asynchronously -->
 <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
-<script src="assets/js/owl.carousel.min.js" defer></script>
 <script src="assets/js/jquery.odometer.min.js" defer></script>
 <script src="assets/js/jquery.appear.js" defer></script>
 <script src="assets/js/jarallax.min.js" defer></script>
