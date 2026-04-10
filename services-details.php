@@ -23,8 +23,8 @@
                             <h3 class="title">Broadband</h3>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="/services">Service</a></li>
+                                    <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/services.php">Service</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Broadband Connection</li>
                                 </ol>
                             </nav>

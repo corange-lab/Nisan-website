@@ -21,7 +21,7 @@
                                 <h3 class="title">Packages</h3>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Packages</li>
                                     </ol>
                                 </nav>
@@ -49,7 +49,7 @@
                                 <div class="pricing-item mb-30">
                                     <div class="pricing-thumb">
                                         <img src="assets/imgs/images/pricing_thumb01.webp" alt="">
-                                        <h3 class="title"><a href="/pricing">Internet For Personal</a></h3>
+                                        <h3 class="title"><a href="/pricing.php">Internet For Personal</a></h3>
                                         <div class="net-speed">
                                             <h5>5-10 <span>MBPS</span></h5>
                                         </div>

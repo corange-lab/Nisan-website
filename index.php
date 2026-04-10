@@ -238,7 +238,7 @@
 <div class="banner-price wow fadeInUp" data-wow-delay=".6s">
 <h3 class="price">₹4999<sub>/Year</sub></h3>
 </div>
-<a class="btn wow fadeInUp" data-wow-delay=".8s" href="/contact">Get Started</a></div>
+<a class="btn wow fadeInUp" data-wow-delay=".8s" href="/contact.php">Get Started</a></div>
 </div>
 </div>
 </div>
@@ -271,7 +271,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="plan1" src="assets/imgs/images/pricing_thumb01.webp" loading="lazy" />
-<h3 class="title"><a href="/pricing">Internet For Personal</a></h3>
+<h3 class="title"><a href="/pricing.php">Internet For Personal</a></h3>
 
 <div class="net-speed">
 <h5>50 <span>MBPS</span></h5>
@@ -292,7 +292,7 @@
 <h3 class="price">₹4999<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -300,7 +300,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" loading="lazy" />
-<h3 class="title"><a href="/pricing">Internet For Family</a></h3>
+<h3 class="title"><a href="/pricing.php">Internet For Family</a></h3>
 
 <div class="net-speed">
 <h5>100 <span>MBPS</span></h5>
@@ -321,7 +321,7 @@
 <h3 class="price">₹5999<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -329,7 +329,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb03.webp" loading="lazy" />
-<h3 class="title"><a href="/pricing">Internet For Corporate</a></h3>
+<h3 class="title"><a href="/pricing.php">Internet For Corporate</a></h3>
 
 <div class="net-speed">
 <h5>150 <span>MBPS</span></h5>
@@ -350,7 +350,7 @@
 <h3 class="price">₹8499<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -385,7 +385,7 @@
                                     </div>
                                 </div>
                             </div>
-<a class="btn" href="/contact">Try Us Free</a></div>
+<a class="btn" href="/contact.php">Try Us Free</a></div>
 </div>
 </div>
 </div>
@@ -411,10 +411,10 @@
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="/services">Broadband</a></h3>
+<h3 class="title"><a href="/services.php">Broadband</a></h3>
 
 <p>Get connected with our high-speed broadband plans designed to meet all your internet needs. Whether it’s streaming, gaming, or working from home, enjoy seamless connectivity with speeds that keep you ahead.</p>
-<a class="btn btn-link" href="/services">View Broadband Plans</a></div>
+<a class="btn btn-link" href="/services.php">View Broadband Plans</a></div>
 </div>
 </div>
 
@@ -425,10 +425,10 @@
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="/services">Cable TV</a></h3>
+<h3 class="title"><a href="/services.php">Cable TV</a></h3>
 
 <p>Enjoy endless entertainment with our Cable TV service. Access a variety of channels in HD quality, including movies, sports, news, and more. Stay entertained with affordable plans tailored for your family.</p>
-<a class="btn btn-link" href="/services">Explore Cable TV Packages</a></div>
+<a class="btn btn-link" href="/services.php">Explore Cable TV Packages</a></div>
 </div>
 </div>
 </div>
@@ -445,7 +445,7 @@
 <h2 class="title">Experience High-Speed Broadband and Reliable Cable TV Services in Bilimora – Stay Connected, Always!</h2>
 </div>
 
-<div class="cta-btn-wrap"><a class="btn" href="/pricing">View our Plans</a> <span class="or">OR</span> <a class="btn transparent-btn" href="tel:+919825152400">+91 98251 52400</a></div>
+<div class="cta-btn-wrap"><a class="btn" href="/pricing.php">View our Plans</a> <span class="or">OR</span> <a class="btn transparent-btn" href="tel:+919825152400">+91 98251 52400</a></div>
 </div>
 </div>
 </div>
@@ -492,9 +492,9 @@
 
 <div class="special-price-wrap">
                     <h2 class="special-price"><sup>₹</sup>4999<sub>Yearly</sub></h2>
-                    <p class="trial-link"><i class="flaticon-wifi-router"></i><a href="/contact">Try Free For 1 Month</a></p>
+                    <p class="trial-link"><i class="flaticon-wifi-router"></i><a href="/contact.php">Try Free For 1 Month</a></p>
         </div>
-   <a class="btn transparent-btn" href="/contact">Get started</a></div>
+   <a class="btn transparent-btn" href="/contact.php">Get started</a></div>
 </div>
 </div>
 </div>
@@ -521,7 +521,7 @@
 
 <div class="subscribe-plan">
 <h2 class="price"><span>Only</span> ₹8999<sub>/Year</sub></h2>
-<a class="btn btn-link" href="/pricing">View All Plans</a></div>
+<a class="btn btn-link" href="/pricing.php">View All Plans</a></div>
 </div>
 </div>
 </div>
@@ -605,7 +605,7 @@
 <p>Enjoy high-speed internet and reliable cable TV services wherever you are in Bilimora. Check your network coverage and join our growing family of satisfied customers today.</p>
 </div>
 
-<div class="faq-map text-center"><img alt="map" src="assets/imgs/images/map_img.webp" loading="lazy" /> <a class="btn map-btn" href="/contact">Check Your Network Coverage</a></div>
+<div class="faq-map text-center"><img alt="map" src="assets/imgs/images/map_img.webp" loading="lazy" /> <a class="btn map-btn" href="/contact.php">Check Your Network Coverage</a></div>
 </div>
 </div>
 </div>

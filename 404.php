@@ -17,7 +17,7 @@
                             <h3 class="title">404 Error</h3>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Error Page</li>
                                 </ol>
                             </nav>
@@ -39,7 +39,7 @@
                         <div class="error-content text-center mb-40">
                             <h3 class="title">Page Not Found</h3>
                             <p>The page you are looking for was moved, removed,renamed or might never existed.</p>
-                            <a href="/index" class="btn">Go Back to Home</a>
+                            <a href="/index.php" class="btn">Go Back to Home</a>
                         </div>
                     </div>
                 </div>

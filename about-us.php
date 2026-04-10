@@ -28,7 +28,7 @@
                             <h1 class="title">About Nisan Cable TV & Internet</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">About</li>
                                 </ol>
                             </nav>
@@ -64,7 +64,7 @@
                                 <li>Trusted & recommended</li>
                                 <li>Latest Network Infrastructure</li>
                             </ul>
-                            <a href="/contact" class="btn transparent-btn">Get Started</a>
+                            <a href="/contact.php" class="btn transparent-btn">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                                 <h2 class="title">Nisan: Trusted for Speed and Service Since 1993!</h2>
                             </div>
                             <div class="cta-btn-wrap">
-                                <a href="/pricing" class="btn">View our Plans</a>
+                                <a href="/pricing.php" class="btn">View our Plans</a>
                                 <span class="or">OR</span>
                                 <a href="tel:+919825152400" class="btn transparent-btn">+91 98251 52400</a>
                             </div>

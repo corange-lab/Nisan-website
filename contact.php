@@ -33,7 +33,7 @@
                             <h1 class="title">Contact Nisan – Your Local Internet & Cable Provider</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Contact</li>
                                 </ol>
                             </nav>
@@ -78,7 +78,7 @@
                             <p class="contact-form-check">
                                 <input type="checkbox" class="form-check-input" id="cookies-consent">
                                 <label for="cookies-consent" class="form-check-label">I agree with that, my data is
-                                    being saved for further contact, see our <a href="/privacy-policy">Privacy
+                                    being saved for further contact, see our <a href="/privacy-policy.php">Privacy
                                         Policy</a></label>
                             </p>
                             <button type="submit" class="btn">Submit Message</button>

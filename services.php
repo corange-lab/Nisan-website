@@ -27,7 +27,7 @@
                             <h1 class="title">Reliable Internet & Cable TV Services in Bilimora</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Services</li>
                                 </ol>
                             </nav>
@@ -101,10 +101,10 @@
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="/services">Broadband</a></h3>
+<h3 class="title"><a href="/services.php">Broadband</a></h3>
 
 <p>Get connected with our high-speed broadband plans designed to meet all your internet needs. Whether it’s streaming, gaming, or working from home, enjoy seamless connectivity with speeds that keep you ahead.</p>
-<a class="btn btn-link" href="/services">Read more</a></div>
+<a class="btn btn-link" href="/services.php">Read more</a></div>
 </div>
 </div>
 
@@ -115,10 +115,10 @@
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="/services">Cable TV</a></h3>
+<h3 class="title"><a href="/services.php">Cable TV</a></h3>
 
 <p>Enjoy endless entertainment with our Cable TV service. Access a variety of channels in HD quality, including movies, sports, news, and more. Stay entertained with affordable plans tailored for your family.</p>
-<a class="btn btn-link" href="/services">Read more</a></div>
+<a class="btn btn-link" href="/services.php">Read more</a></div>
 </div>
 </div>
 </div>
@@ -144,7 +144,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb01.webp" />
-<h3 class="title"><a href="/pricing">Internet For Personal</a></h3>
+<h3 class="title"><a href="/pricing.php">Internet For Personal</a></h3>
 
 <div class="net-speed">
 <h5>50 <span>MBPS</span></h5>
@@ -165,7 +165,7 @@
 <h3 class="price">₹4999<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -173,7 +173,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" />
-<h3 class="title"><a href="/pricing">Internet For Family</a></h3>
+<h3 class="title"><a href="/pricing.php">Internet For Family</a></h3>
 
 <div class="net-speed">
 <h5>100 <span>MBPS</span></h5>
@@ -194,7 +194,7 @@
 <h3 class="price">₹5999<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -202,7 +202,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="pricing" src="assets/imgs/images/pricing_thumb03.webp" />
-<h3 class="title"><a href="/pricing">Internet For Corporate</a></h3>
+<h3 class="title"><a href="/pricing.php">Internet For Corporate</a></h3>
 
 <div class="net-speed">
 <h5>150 <span>MBPS</span></h5>
@@ -223,7 +223,7 @@
 <h3 class="price">₹8499<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
 </div>
 </div>
 </div>

@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         <h3 class="title">Thank You!</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Thank You</li>
                             </ol>
                         </nav>
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         <h3 class="title">Thanks for Showing Interest!</h3>
                         <p>We have received your request for a new connection. Our team will contact you soon.</p>
                         <p>Redirecting to the home page in <span id="countdown">10</span> seconds...</p>
-                        <a href="/index" class="btn">Go Back to Home Now</a>
+                        <a href="/index.php" class="btn">Go Back to Home Now</a>
                     </div>
                 </div>
             </div>
