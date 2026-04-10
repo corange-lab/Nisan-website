@@ -2,38 +2,9 @@
 <html lang="en">
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the form fields and remove whitespace
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $name = trim($_POST["name"]);
-    $phone = trim($_POST["number"]);
-
-    // Set the recipient email address
-    $recipient = "hello@nisan.co.in";
-
-    // Set the email subject
-    $email_subject = "New Connection request";
-
-    // Build the email content
-    $email_content = "Name:\n $name\n\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Contact:\n$phone\n\n";
-
-    // Build the email headers
-    $email_headers = "From: $email";
-
-    // Send the email
-    mail($recipient, $email_subject, $email_content, $email_headers);
-} else {
-    // Not a POST request, set a 403 (forbidden) response code
-    http_response_code(403);
-}
+// Form is handled by thank-you.php on POST submission
+// This page only renders the contact form
 ?>
-
-<!-- Event snippet for Contact conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-938737099/oaWPCO7v14AaEMv7z78D'});
-</script>
 
 
 <head>
@@ -119,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <p>We’re here to help you with any questions or support you need. Reach out to us using the details below:</p>
                             <ul class="contact-info-list">
                                 <li><i class="fal fa-phone"></i> <a href="tel:+919825152400">+91 98251 52400</a></li>
-                                <li><i class="fal fa-envelope"></i> <a href="hello@nisan.co.in</span></a></li>
+                                <li><i class="fal fa-envelope"></i> <a href="mailto:hello@nisan.co.in">hello@nisan.co.in</a></li>
                                 <li><i class="fal fa-map-marker-alt"></i> <span>Morden Radio, <br>Opp. Laxmi Palace, <br>Station Road, <br>Bilimora-396321</span></li>
                             </ul>
                         </div>

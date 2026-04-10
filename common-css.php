@@ -1,3 +1,4 @@
+<?php include_once('analytics.php'); ?>
 	<link href="assets/imgs/favicon.png" rel="shortcut icon" type="image/x-icon" /><!-- Place favicon.ico in the root directory --><!-- CSS here -->
 	<!-- Critical CSS - Load immediately -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />

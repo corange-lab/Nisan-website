@@ -1,16 +1,28 @@
+<?php
+// Process form submission
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $name    = htmlspecialchars(trim($_POST["name"] ?? ''));
+    $phone   = htmlspecialchars(trim($_POST["number"] ?? ''));
+    $email   = filter_var(trim($_POST["email"] ?? ''), FILTER_SANITIZE_EMAIL);
+
+    if ($name && $phone) {
+        $to      = "hello@nisan.co.in";
+        $subject = "New Connection Request from $name";
+        $body    = "Name: $name\nPhone: $phone\nEmail: $email\n";
+        $headers = "From: noreply@nisan.co.in\r\nReply-To: $email";
+        mail($to, $subject, $body, $headers);
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 
 <head>
-    <!-- Google tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-938737099"></script>
+    <!-- Conversion tracking fired on thank-you page load -->
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-938737099');
-        // Conversion event snippet
+        function gtag(){dataLayer.push(arguments);}
         gtag('event', 'conversion', { 'send_to': 'AW-938737099/oaWPCO7v14AaEMv7z78D' });
     </script>
     <title>Thank You – Nisan Cable TV & Internet</title>
@@ -96,7 +108,7 @@
 
         if (seconds === 0) {
             clearInterval(countdownTimer);
-            window.location.href = "index.php"; // Redirect to home page
+            window.location.href = "/index";
         }
     }, 1000); // Update every 1 second
 </script>

@@ -235,7 +235,7 @@
                                     </div>
                                     <div class="content">
                                         <span>Call For Help</span>
-                                        <h6 class="title"><a href="tel:987547587587">(987) 547587587</a></h6>
+                                        <h6 class="title"><a href="tel:+919825152400">+91 98251 52400</a></h6>
                                     </div>
                                 </div>
                             </div>

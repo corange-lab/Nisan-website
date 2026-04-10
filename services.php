@@ -144,7 +144,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb01.webp" />
-<h3 class="title"><a href="#">Internet For Personal</a></h3>
+<h3 class="title"><a href="/pricing">Internet For Personal</a></h3>
 
 <div class="net-speed">
 <h5>50 <span>MBPS</span></h5>
@@ -165,7 +165,7 @@
 <h3 class="price">₹4999<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="#">View Plans</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -173,7 +173,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" />
-<h3 class="title"><a href="#">Internet For Family</a></h3>
+<h3 class="title"><a href="/pricing">Internet For Family</a></h3>
 
 <div class="net-speed">
 <h5>100 <span>MBPS</span></h5>
@@ -194,7 +194,7 @@
 <h3 class="price">₹5999<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="#">View Plans</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -202,7 +202,7 @@
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="pricing" src="assets/imgs/images/pricing_thumb03.webp" />
-<h3 class="title"><a href="#">Internet For Corporate</a></h3>
+<h3 class="title"><a href="/pricing">Internet For Corporate</a></h3>
 
 <div class="net-speed">
 <h5>150 <span>MBPS</span></h5>
@@ -223,7 +223,7 @@
 <h3 class="price">₹8499<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="#">View Plans</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
 </div>
 </div>
 </div>

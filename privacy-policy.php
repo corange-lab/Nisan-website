@@ -103,7 +103,7 @@
                             <div class="privacy-wrapper-box">
                                 <h5>7. Contact Us</h5>
                                 <p class="mb-40">If you have any questions, concerns, or requests regarding this Privacy &amp; Policy,
-                                    please contact us at <a class="hover-underline" href="#">hello@nisan.co.in</span></a>.</p>
+                                    please contact us at <a class="hover-underline" href="mailto:hello@nisan.co.in">hello@nisan.co.in</a>.</p>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,12 @@
 User-agent: *
-Allow: /contact.php
+Allow: /
 Disallow: /admin/
-Sitemap: https://nisan.co.in/sitemap.xml
+
+# Allow Google AdsBot explicitly
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+Sitemap: https://www.nisan.co.in/sitemap.xml

@@ -10,9 +10,7 @@ include('security-headers.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="theme-color" content="#0066cc">
-    <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
 	<title>Nisan - Cable TV &amp; Internet Service Provider in Bilimora</title>
 	<meta name="description" content="Nisan Cable TV & Internet offers fast broadband and cable TV in Bilimora. Enjoy speeds up to 200 Mbps with a risk-free 1-month trial and affordable plans.">
     <meta name="keywords" content="broadband Bilimora, cable TV Bilimora, FTTH internet Bilimora, fast internet provider,
@@ -220,10 +218,6 @@ include('security-headers.php');
 <?php include('header.php'); ?>
 <!-- main-area -->
 <!-- Preloader -->
-        <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFKNFG9Z"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
     <div id="preloader" role="status" aria-label="Loading page"><img alt="Loading..." src="assets/imgs/preloader.gif" /></div>
 <!-- Preloader-end -->
 
@@ -234,18 +228,6 @@ include('security-headers.php');
         </button>
 
 <!-- Scroll-top-end-->
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-938737099">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-938737099');
-</script>
-<!-- Google tag (gtag.js) -->
 
 <main id="main-content" role="main"><!-- banner-area -->
 <section class="banner-area banner-bg" data-background="assets/imgs/slider/banner_bg.webp">
@@ -293,7 +275,7 @@ include('security-headers.php');
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="plan1" src="assets/imgs/images/pricing_thumb01.webp" loading="lazy" />
-<h3 class="title"><a href="#">Internet For Personal</a></h3>
+<h3 class="title"><a href="/pricing">Internet For Personal</a></h3>
 
 <div class="net-speed">
 <h5>50 <span>MBPS</span></h5>
@@ -314,7 +296,7 @@ include('security-headers.php');
 <h3 class="price">₹4999<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="#">View Plans</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -322,7 +304,7 @@ include('security-headers.php');
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" loading="lazy" />
-<h3 class="title"><a href="#">Internet For Family</a></h3>
+<h3 class="title"><a href="/pricing">Internet For Family</a></h3>
 
 <div class="net-speed">
 <h5>100 <span>MBPS</span></h5>
@@ -343,7 +325,7 @@ include('security-headers.php');
 <h3 class="price">₹5999<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="#">View Plans</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
 </div>
 </div>
 </div>
@@ -351,7 +333,7 @@ include('security-headers.php');
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
 <div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb03.webp" loading="lazy" />
-<h3 class="title"><a href="#">Internet For Corporate</a></h3>
+<h3 class="title"><a href="/pricing">Internet For Corporate</a></h3>
 
 <div class="net-speed">
 <h5>150 <span>MBPS</span></h5>
@@ -372,7 +354,7 @@ include('security-headers.php');
 <h3 class="price">₹8499<sub>/Year</sub></h3>
 </div>
 
-<div class="pricing-btn"><a class="btn btn-link" href="#">View Plans</a></div>
+<div class="pricing-btn"><a class="btn btn-link" href="/contact">Get This Plan</a></div>
 </div>
 </div>
 </div>

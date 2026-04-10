@@ -3,7 +3,7 @@ ob_start(function ($buffer) {
     return str_replace([".jpg", ".png"], ".webp", $buffer);
 });
 ?>
-
+<?php include_once('analytics-body.php'); ?>
 
 <?php
 $currentPage = basename($_SERVER['PHP_SELF']);
@@ -58,7 +58,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 	<li class="<?= ($currentPage == 'index.php') ? 'active' : '' ?>"><a href="/index">Home</a></li>
 	<li class="<?= ($currentPage == 'about-us.php') ? 'active' : '' ?>"><a href="/about-us">About</a></li>
 	<li class="<?= ($currentPage == 'services.php') ? 'active' : '' ?>"><a href="/services">Services</a></li>
-	<li class="<?= ($currentPage == 'contact.php') ? 'active' : '' ?>"><a href="/contact">contacts</a></li>
+	<li class="<?= ($currentPage == 'contact.php') ? 'active' : '' ?>"><a href="/contact">Contact</a></li>
 </ul>
 </div>
 
