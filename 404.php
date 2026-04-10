@@ -39,7 +39,7 @@
                         <div class="error-content text-center mb-40">
                             <h3 class="title">Page Not Found</h3>
                             <p>The page you are looking for was moved, removed,renamed or might never existed.</p>
-                            <a href="index.php" class="btn">Go Back to Home</a>
+                            <a href="/index" class="btn">Go Back to Home</a>
                         </div>
                     </div>
                 </div>

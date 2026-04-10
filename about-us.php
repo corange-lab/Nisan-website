@@ -8,8 +8,6 @@
     <meta name="keywords" content="about Nisan, internet provider Bilimora, cable TV Bilimora, FTTH broadband Bilimora, high-speed internet provider, highspeed internet in bilimora, Bilimora internet, 
                                     Best internet in bilimora">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://www.nisan.co.in/about-us">
     
     <!-- Google Tag Manager -->
