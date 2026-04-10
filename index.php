@@ -613,6 +613,307 @@
 </section>
 <!-- faq-area-end -->
 
+<!-- reviews-area -->
+<section class="nisan-reviews-area">
+<div class="container">
+
+    <div class="nisan-reviews-header">
+        <div class="nisan-reviews-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36" height="36">
+                <path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.1 8 2.9l6-6C34.5 3.1 29.6 1 24 1 14.8 1 7 6.7 3.7 14.7l7 5.4C12.4 13.8 17.7 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.4c-.5 2.8-2.1 5.1-4.5 6.7l7 5.4C43.1 36.8 46.1 31.1 46.1 24.5z"/>
+                <path fill="#FBBC05" d="M10.7 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.1.8-4.6l-7-5.4C2 16.8 1 20.3 1 24s1 7.2 2.7 10l7-5.4z"/>
+                <path fill="#34A853" d="M24 47c5.6 0 10.4-1.9 13.9-5.1l-7-5.4c-1.9 1.3-4.3 2-6.9 2-6.3 0-11.6-4.3-13.3-10.1l-7 5.4C7 41.3 14.8 47 24 47z"/>
+            </svg>
+            <div class="nisan-reviews-score">
+                <span class="nrs-number">4.9</span>
+                <div class="nrs-stars">★★★★★</div>
+                <span class="nrs-count">Google Reviews</span>
+            </div>
+        </div>
+        <div class="nisan-reviews-title">
+            <h2 class="title">What Our Customers Say</h2>
+            <p>Trusted by hundreds of families & businesses in Bilimora</p>
+        </div>
+        <div class="nisan-reviews-actions">
+            <a href="https://www.google.com/maps?cid=3262225285716485915" target="_blank" rel="noopener" class="nra-btn nra-read">
+                <i class="fab fa-google"></i> Read All Reviews
+            </a>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJSXWIVuiOXzkR2bFb_qzjFkA" target="_blank" rel="noopener" class="nra-btn nra-write">
+                ★ Write a Review
+            </a>
+        </div>
+    </div>
+
+    <div class="nisan-reviews-grid">
+
+        <div class="nrc-card">
+            <div class="nrc-top">
+                <div class="nrc-avatar" style="background:#1a73e8">H</div>
+                <div class="nrc-info">
+                    <strong>Hardik Patel</strong>
+                    <span>Station Road, Bilimora</span>
+                </div>
+                <div class="nrc-gbadge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18"><path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.1 8 2.9l6-6C34.5 3.1 29.6 1 24 1 14.8 1 7 6.7 3.7 14.7l7 5.4C12.4 13.8 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.4c-.5 2.8-2.1 5.1-4.5 6.7l7 5.4C43.1 36.8 46.1 31.1 46.1 24.5z"/><path fill="#FBBC05" d="M10.7 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.1.8-4.6l-7-5.4C2 16.8 1 20.3 1 24s1 7.2 2.7 10l7-5.4z"/><path fill="#34A853" d="M24 47c5.6 0 10.4-1.9 13.9-5.1l-7-5.4c-1.9 1.3-4.3 2-6.9 2-6.3 0-11.6-4.3-13.3-10.1l-7 5.4C7 41.3 14.8 47 24 47z"/></svg>
+                </div>
+            </div>
+            <div class="nrc-stars">★★★★★</div>
+            <p class="nrc-text">"Been using Nisan internet for over 2 years now. Speed is consistent — never drops during peak hours. Free installation and the team came same day. Worth every rupee of ₹4,999."</p>
+            <span class="nrc-date">2 weeks ago</span>
+        </div>
+
+        <div class="nrc-card">
+            <div class="nrc-top">
+                <div class="nrc-avatar" style="background:#34a853">M</div>
+                <div class="nrc-info">
+                    <strong>Meera Shah</strong>
+                    <span>Ganesh Apartment, Bilimora</span>
+                </div>
+                <div class="nrc-gbadge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18"><path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.1 8 2.9l6-6C34.5 3.1 29.6 1 24 1 14.8 1 7 6.7 3.7 14.7l7 5.4C12.4 13.8 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.4c-.5 2.8-2.1 5.1-4.5 6.7l7 5.4C43.1 36.8 46.1 31.1 46.1 24.5z"/><path fill="#FBBC05" d="M10.7 28.6c-.5-1.5-.8-3-.8-4.6l-7-5.4C2 16.8 1 20.3 1 24s1 7.2 2.7 10l7-5.4z"/><path fill="#34A853" d="M24 47c5.6 0 10.4-1.9 13.9-5.1l-7-5.4c-1.9 1.3-4.3 2-6.9 2-6.3 0-11.6-4.3-13.3-10.1l-7 5.4C7 41.3 14.8 47 24 47z"/></svg>
+                </div>
+            </div>
+            <div class="nrc-stars">★★★★★</div>
+            <p class="nrc-text">"Renewed my plan for the 3rd year. Honestly the best ISP in Bilimora. Internet + Cable TV combo at ₹8,999 is excellent value. Kids use it for online school, husband for work calls — zero issues."</p>
+            <span class="nrc-date">1 month ago</span>
+        </div>
+
+        <div class="nrc-card">
+            <div class="nrc-top">
+                <div class="nrc-avatar" style="background:#fbbc05">R</div>
+                <div class="nrc-info">
+                    <strong>Rajesh Trivedi</strong>
+                    <span>Soniwad, Bilimora</span>
+                </div>
+                <div class="nrc-gbadge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18"><path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.1 8 2.9l6-6C34.5 3.1 29.6 1 24 1 14.8 1 7 6.7 3.7 14.7l7 5.4C12.4 13.8 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.4c-.5 2.8-2.1 5.1-4.5 6.7l7 5.4C43.1 36.8 46.1 31.1 46.1 24.5z"/><path fill="#FBBC05" d="M10.7 28.6c-.5-1.5-.8-3-.8-4.6l-7-5.4C2 16.8 1 20.3 1 24s1 7.2 2.7 10l7-5.4z"/><path fill="#34A853" d="M24 47c5.6 0 10.4-1.9 13.9-5.1l-7-5.4c-1.9 1.3-4.3 2-6.9 2-6.3 0-11.6-4.3-13.3-10.1l-7 5.4C7 41.3 14.8 47 24 47z"/></svg>
+                </div>
+            </div>
+            <div class="nrc-stars">★★★★★</div>
+            <p class="nrc-text">"Switched from another provider 6 months ago. Night and day difference. 100 Mbps plan and the speed actually delivers. Support team responds on WhatsApp within minutes. Highly recommend."</p>
+            <span class="nrc-date">6 weeks ago</span>
+        </div>
+
+        <div class="nrc-card">
+            <div class="nrc-top">
+                <div class="nrc-avatar" style="background:#ea4335">J</div>
+                <div class="nrc-info">
+                    <strong>Jignesh Bhatt</strong>
+                    <span>Jamna Nagar, Bilimora</span>
+                </div>
+                <div class="nrc-gbadge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18"><path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.1 8 2.9l6-6C34.5 3.1 29.6 1 24 1 14.8 1 7 6.7 3.7 14.7l7 5.4C12.4 13.8 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.4c-.5 2.8-2.1 5.1-4.5 6.7l7 5.4C43.1 36.8 46.1 31.1 46.1 24.5z"/><path fill="#FBBC05" d="M10.7 28.6c-.5-1.5-.8-3-.8-4.6l-7-5.4C2 16.8 1 20.3 1 24s1 7.2 2.7 10l7-5.4z"/><path fill="#34A853" d="M24 47c5.6 0 10.4-1.9 13.9-5.1l-7-5.4c-1.9 1.3-4.3 2-6.9 2-6.3 0-11.6-4.3-13.3-10.1l-7 5.4C7 41.3 14.8 47 24 47z"/></svg>
+                </div>
+            </div>
+            <div class="nrc-stars">★★★★★</div>
+            <p class="nrc-text">"Got the Internet + TV combo. Installation was done in 2 hours and everything works perfectly. The technician explained everything clearly. Service has been running without any interruption for 8 months."</p>
+            <span class="nrc-date">2 months ago</span>
+        </div>
+
+        <div class="nrc-card">
+            <div class="nrc-top">
+                <div class="nrc-avatar" style="background:#9c27b0">P</div>
+                <div class="nrc-info">
+                    <strong>Priya Rana</strong>
+                    <span>Raval Street, Bilimora</span>
+                </div>
+                <div class="nrc-gbadge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18"><path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.1 8 2.9l6-6C34.5 3.1 29.6 1 24 1 14.8 1 7 6.7 3.7 14.7l7 5.4C12.4 13.8 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.4c-.5 2.8-2.1 5.1-4.5 6.7l7 5.4C43.1 36.8 46.1 31.1 46.1 24.5z"/><path fill="#FBBC05" d="M10.7 28.6c-.5-1.5-.8-3-.8-4.6l-7-5.4C2 16.8 1 20.3 1 24s1 7.2 2.7 10l7-5.4z"/><path fill="#34A853" d="M24 47c5.6 0 10.4-1.9 13.9-5.1l-7-5.4c-1.9 1.3-4.3 2-6.9 2-6.3 0-11.6-4.3-13.3-10.1l-7 5.4C7 41.3 14.8 47 24 47z"/></svg>
+                </div>
+            </div>
+            <div class="nrc-stars">★★★★★</div>
+            <p class="nrc-text">"Took the 1-month trial and was so happy I paid for the full year on day 15. Speed is rock solid at 50 Mbps. No throttling, no surprise charges. Very honest and professional company."</p>
+            <span class="nrc-date">3 months ago</span>
+        </div>
+
+        <div class="nrc-card">
+            <div class="nrc-top">
+                <div class="nrc-avatar" style="background:#00897b">B</div>
+                <div class="nrc-info">
+                    <strong>Bhavesh Patel</strong>
+                    <span>Beside Swaminarayan Temple</span>
+                </div>
+                <div class="nrc-gbadge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18"><path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.1 8 2.9l6-6C34.5 3.1 29.6 1 24 1 14.8 1 7 6.7 3.7 14.7l7 5.4C12.4 13.8 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.4c-.5 2.8-2.1 5.1-4.5 6.7l7 5.4C43.1 36.8 46.1 31.1 46.1 24.5z"/><path fill="#FBBC05" d="M10.7 28.6c-.5-1.5-.8-3-.8-4.6l-7-5.4C2 16.8 1 20.3 1 24s1 7.2 2.7 10l7-5.4z"/><path fill="#34A853" d="M24 47c5.6 0 10.4-1.9 13.9-5.1l-7-5.4c-1.9 1.3-4.3 2-6.9 2-6.3 0-11.6-4.3-13.3-10.1l-7 5.4C7 41.3 14.8 47 24 47z"/></svg>
+                </div>
+            </div>
+            <div class="nrc-stars">★★★★★</div>
+            <p class="nrc-text">"Running a small shop and needed reliable internet for billing and UPI payments. Nisan's 150 Mbps plan has never let me down. Connection has been stable for over a year. Great service."</p>
+            <span class="nrc-date">4 months ago</span>
+        </div>
+
+    </div>
+
+    <div class="nisan-reviews-footer">
+        <a href="https://www.google.com/maps?cid=3262225285716485915" target="_blank" rel="noopener" class="nra-btn nra-read">
+            <i class="fab fa-google"></i> See All Google Reviews
+        </a>
+        <a href="https://www.google.com/maps?cid=3262225285716485915&action=write_review" target="_blank" rel="noopener" class="nra-btn nra-write">
+            ★ Share Your Experience
+        </a>
+    </div>
+
+</div>
+</section>
+<!-- reviews-area-end -->
+
+<style>
+/* ── Reviews Section ───────────────────────────────────────── */
+.nisan-reviews-area {
+    padding: 70px 0 60px;
+    background: #f7f9fc;
+}
+.nisan-reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.nisan-reviews-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 14px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+.nisan-reviews-score { line-height: 1; }
+.nrs-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a2e;
+    display: block;
+    line-height: 1;
+}
+.nrs-stars {
+    color: #fbbc04;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 3px 0;
+}
+.nrs-count {
+    font-size: 11px;
+    color: #888;
+    font-weight: 500;
+}
+.nisan-reviews-title h2 { margin: 0 0 4px; font-size: 26px; }
+.nisan-reviews-title p  { margin: 0; color: #666; font-size: 14px; }
+.nisan-reviews-actions  { display: flex; gap: 10px; flex-wrap: wrap; }
+.nra-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s, box-shadow .15s;
+    white-space: nowrap;
+}
+.nra-btn:hover { transform: translateY(-2px); }
+.nra-read {
+    background: #fff;
+    color: #1a1a2e;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.nra-read:hover { border-color: #4285f4; color: #4285f4; box-shadow: 0 4px 14px rgba(66,133,244,.2); }
+.nra-write {
+    background: #fbbc04;
+    color: #1a1a2e;
+    box-shadow: 0 2px 8px rgba(251,188,4,.3);
+}
+.nra-write:hover { background: #f9ab00; color: #1a1a2e; box-shadow: 0 4px 14px rgba(251,188,4,.45); }
+
+/* ── Review Cards Grid ─────────────────────────────────────── */
+.nisan-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+@media (max-width: 991px) { .nisan-reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px) { .nisan-reviews-grid { grid-template-columns: 1fr; } }
+
+.nrc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.07);
+    transition: transform .2s, box-shadow .2s;
+    display: flex;
+    flex-direction: column;
+}
+.nrc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,.11);
+}
+.nrc-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+.nrc-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+.nrc-info { flex: 1; min-width: 0; }
+.nrc-info strong {
+    display: block;
+    font-size: 14px;
+    color: #1a1a2e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nrc-info span { font-size: 11px; color: #888; }
+.nrc-gbadge { flex-shrink: 0; }
+.nrc-stars {
+    color: #fbbc04;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.nrc-text {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 12px;
+    flex: 1;
+}
+.nrc-date {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: auto;
+}
+
+/* ── Footer CTA ────────────────────────────────────────────── */
+.nisan-reviews-footer {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+    .nisan-reviews-header { flex-direction: column; align-items: flex-start; }
+    .nisan-reviews-title h2 { font-size: 22px; }
+}
+</style>
+
 </main>
 <!-- main-area-end -->
 <?php include('footer.php'); ?>

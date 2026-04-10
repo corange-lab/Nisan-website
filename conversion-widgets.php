@@ -27,7 +27,7 @@
 
 <!-- ③ Google Review Nudge -->
 <div id="nisan-review-nudge" aria-label="Rate us on Google">
-    <a id="nrn-link" href="https://maps.app.goo.gl/TUHbd83NAyXgmCvN9" target="_blank" rel="noopener">
+    <a id="nrn-link" href="https://www.google.com/maps?cid=3262225285716485915&action=write_review" target="_blank" rel="noopener">
         <span class="nrn-stars">★★★★★</span>
         <span class="nrn-text">Rate us on Google</span>
     </a>
@@ -191,7 +191,7 @@
 /* ── ③ Google Review Nudge ───────────────────────────────── */
 #nisan-review-nudge {
     position: fixed;
-    bottom: 90px;
+    bottom: 148px;
     left: 20px;
     background: #fff;
     border-radius: 50px;
@@ -240,7 +240,7 @@
 }
 .nrn-close:hover { color: #555; }
 @media (max-width: 991px) {
-    #nisan-review-nudge { bottom: 72px; }
+    #nisan-review-nudge { bottom: 130px; }
 }
 
 /* ── ④ Exit-Intent Popup ────────────────────────────────── */
