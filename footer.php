@@ -30,8 +30,9 @@
     border-radius: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    padding: 12px 18px 12px 14px;
+    padding: 12px;
     box-shadow: 0 4px 15px rgba(37,211,102,.4);
     z-index: 9999;
     text-decoration: none;
@@ -40,7 +41,9 @@
     overflow: hidden;
 }
 .whatsapp-float:hover {
-    max-width: 180px;
+    max-width: 200px;
+    padding: 12px 18px 12px 14px;
+    justify-content: flex-start;
     box-shadow: 0 6px 20px rgba(37,211,102,.5);
 }
 .whatsapp-label {
