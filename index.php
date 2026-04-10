@@ -616,18 +616,16 @@
 </main>
 <!-- main-area-end -->
 <?php include('footer.php'); ?>
-<!-- Critical JS - Load immediately -->
+<!-- JS - plugins must load before main.js (called at global scope) -->
 <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jarallax.min.js"></script>
 <script src="assets/js/main.js"></script>
-
-<!-- Non-critical JS - Load asynchronously -->
-<script src="assets/js/jquery.magnific-popup.min.js" defer></script>
 <script src="assets/js/jquery.odometer.min.js" defer></script>
 <script src="assets/js/jquery.appear.js" defer></script>
-<script src="assets/js/jarallax.min.js" defer></script>
-<script src="assets/js/slick.min.js" defer></script>
 <script src="assets/js/swiper.min.js" defer></script>
 <script src="assets/js/wow.min.js" defer></script>
 
