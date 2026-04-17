@@ -2,7 +2,38 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet & Cable TV Plans in Bilimora | Nisan Pricing</title>
+    <meta name="description" content="View Nisan's affordable internet and cable TV plans in Bilimora. FTTH broadband starting at ₹4,999/year. Personal, family, and corporate packages available.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/pricing">
+
+    <meta property="og:title" content="Internet & Cable TV Plans in Bilimora | Nisan">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nisan.co.in/pricing">
+    <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
+    <meta property="og:image:alt" content="Nisan Cable TV & Internet Plans">
+    <meta property="og:description" content="Affordable FTTH internet and cable TV packages in Bilimora. Plans starting at ₹4,999/year with free installation and 1-month risk-free trial.">
+    <meta property="og:site_name" content="Nisan Cable & Internet">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Internet & Cable TV Plans in Bilimora | Nisan">
+    <meta name="twitter:description" content="Affordable FTTH internet and cable TV packages in Bilimora. Plans from ₹4,999/year with free installation.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Packages", "item": "https://www.nisan.co.in/pricing"}
+      ]
+    }
+    </script>
+
     <?php include('common-css.php'); ?>
 </head>
 
@@ -48,7 +79,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-9">
                                 <div class="pricing-item mb-30">
                                     <div class="pricing-thumb">
-                                        <img src="assets/imgs/images/pricing_thumb01.webp" alt="">
+                                        <img src="assets/imgs/images/pricing_thumb01.webp" alt="Internet For Personal plan">
                                         <h3 class="title"><a href="/pricing.php">Internet For Personal</a></h3>
                                         <div class="net-speed">
                                             <h5>5-10 <span>MBPS</span></h5>
@@ -65,7 +96,7 @@
                                             <h3 class="price">$25.00<sub>/Month</sub></h3>
                                         </div>
                                         <div class="pricing-btn">
-                                            <a href="pricing.html" class="btn btn-link">View Plans</a>
+                                            <a href="/pricing.php" class="btn btn-link">View Plans</a>
                                         </div>
                                     </div>
                                 </div>
@@ -73,8 +104,8 @@
                             <div class="col-lg-4 col-md-6 col-sm-9">
                                 <div class="pricing-item mb-30">
                                     <div class="pricing-thumb">
-                                        <img src="assets/imgs/images/pricing_thumb02.jpg" alt="">
-                                        <h3 class="title"><a href="pricing.html">Internet For Family</a></h3>
+                                        <img src="assets/imgs/images/pricing_thumb02.webp" alt="Internet For Family plan">
+                                        <h3 class="title"><a href="/pricing.php">Internet For Family</a></h3>
                                         <div class="net-speed">
                                             <h5>10-50 <span>MBPS</span></h5>
                                         </div>
@@ -90,7 +121,7 @@
                                             <h3 class="price">$55.00<sub>/Month</sub></h3>
                                         </div>
                                         <div class="pricing-btn">
-                                            <a href="pricing.html" class="btn btn-link">View Plans</a>
+                                            <a href="/pricing.php" class="btn btn-link">View Plans</a>
                                         </div>
                                     </div>
                                 </div>
@@ -98,8 +129,8 @@
                             <div class="col-lg-4 col-md-6 col-sm-9">
                                 <div class="pricing-item mb-30">
                                     <div class="pricing-thumb">
-                                        <img src="assets/imgs/images/pricing_thumb03.jpg" alt="">
-                                        <h3 class="title"><a href="pricing.html">Internet For Corporate</a></h3>
+                                        <img src="assets/imgs/images/pricing_thumb03.webp" alt="Internet For Corporate plan">
+                                        <h3 class="title"><a href="/pricing.php">Internet For Corporate</a></h3>
                                         <div class="net-speed">
                                             <h5>Unlimited <span>MBPS</span></h5>
                                         </div>
@@ -115,7 +146,7 @@
                                             <h3 class="price">$95.00<sub>/Month</sub></h3>
                                         </div>
                                         <div class="pricing-btn">
-                                            <a href="pricing.html" class="btn btn-link">View Plans</a>
+                                            <a href="/pricing.php" class="btn btn-link">View Plans</a>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +163,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-7 col-lg-6 order-0 order-lg-2">
                             <div class="subscribe-img wow fadeInRight" data-wow-delay=".2s">
-                                <img src="assets/imgs/images/subscribe_img02.webp" alt="">
+                                <img src="assets/imgs/images/subscribe_img02.webp" alt="Nisan Cable TV and internet subscription offer">
                                 <h2 class="overlay-price"><span>Only</span> $89 <span>Per Month</span></h2>
                             </div>
                         </div>
@@ -144,7 +175,7 @@
                                 <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything hidden
                                     in the middle of text</p>
                                 <h4 class="title"><span>Subscribe Netfix TV Box & Get</span> FREE Wi-Fi For 1 Month</h4>
-                                <a href="pricing.html" class="btn">Try Us Free</a>
+                                <a href="/pricing.php" class="btn">Try Us Free</a>
                             </div>
                         </div>
                     </div>
@@ -176,7 +207,7 @@
                                     </ul>
                                 </div>
                                 <h2 class="pricing-three-price"><span>From</span> 15.99<span>/mon</span></h2>
-                                <a href="pricing.html" class="btn transparent-btn">Get Started</a>
+                                <a href="/pricing.php" class="btn transparent-btn">Get Started</a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
@@ -200,7 +231,7 @@
                                     </ul>
                                 </div>
                                 <h2 class="pricing-three-price"><span>From</span> 25.99<span>/mon</span></h2>
-                                <a href="pricing.html" class="btn transparent-btn">Get Started</a>
+                                <a href="/pricing.php" class="btn transparent-btn">Get Started</a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
@@ -225,7 +256,7 @@
                                     </ul>
                                 </div>
                                 <h2 class="pricing-three-price"><span>From</span> 45.99<span>/mon</span></h2>
-                                <a href="pricing.html" class="btn transparent-btn">Get Started</a>
+                                <a href="/pricing.php" class="btn transparent-btn">Get Started</a>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
@@ -247,7 +278,7 @@
                                     </ul>
                                 </div>
                                 <h2 class="pricing-three-price"><span>From</span> 85.99<span>/mon</span></h2>
-                                <a href="pricing.html" class="btn transparent-btn">Get Started</a>
+                                <a href="/pricing.php" class="btn transparent-btn">Get Started</a>
                             </div>
                         </div>
                     </div>
@@ -264,7 +295,7 @@
                                 <h4 class="title">Not happy with these plans? Contact Us</h4>
                                 <p>Home Internet to connect your computer, phone, and other devices in your home simultaneously. People over time-we
                                 appreciate your patience.</p>
-                                <a href="contact.html" class="btn">Contact Us</a>
+                                <a href="/contact.php" class="btn">Contact Us</a>
                             </div>
                         </div>
                     </div>

@@ -13,8 +13,33 @@
     <title>Contact Us – Nisan Cable TV & Internet in Bilimora</title>
     <meta name="description" content="Get in touch with Nisan Cable TV & Internet in Bilimora. Call, email, or visit us for inquiries about broadband and cable TV services.">
     <meta name="keywords" content="contact Nisan internet provider, customer support Bilimora, broadband help Bilimora, cable TV contact Bilimora">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/contact">
 
+    <meta property="og:title" content="Contact Nisan Cable TV & Internet in Bilimora">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nisan.co.in/contact">
+    <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
+    <meta property="og:image:alt" content="Contact Nisan Cable TV & Internet">
+    <meta property="og:description" content="Get in touch with Nisan Cable TV & Internet in Bilimora. Call, email, or visit us for inquiries about broadband and cable TV services.">
+    <meta property="og:site_name" content="Nisan Cable & Internet">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Nisan Cable TV & Internet in Bilimora">
+    <meta name="twitter:description" content="Call, email, or visit Nisan Cable TV & Internet in Bilimora for inquiries about broadband and cable TV services.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.nisan.co.in/contact"}
+      ]
+    }
+    </script>
 
     <?php include('common-css.php'); ?>
 </head>

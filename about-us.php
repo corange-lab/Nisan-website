@@ -7,9 +7,54 @@
     <meta name="description" content="Learn about Nisan Cable TV & Internet in Bilimora. Providing cable TV since 1993 and FTTH high-speed internet since 2019. Trusted for reliability and service.">
     <meta name="keywords" content="about Nisan, internet provider Bilimora, cable TV Bilimora, FTTH broadband Bilimora, high-speed internet provider, highspeed internet in bilimora, Bilimora internet, 
                                     Best internet in bilimora">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/about-us">
-    
+
+    <meta property="og:title" content="About Nisan Cable TV & Internet in Bilimora">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nisan.co.in/about-us">
+    <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
+    <meta property="og:image:alt" content="Nisan Cable TV & Internet">
+    <meta property="og:description" content="Learn about Nisan Cable TV & Internet in Bilimora. Providing cable TV since 1993 and FTTH high-speed internet since 2019. Trusted for reliability and service.">
+    <meta property="og:site_name" content="Nisan Cable & Internet">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Nisan Cable TV & Internet in Bilimora">
+    <meta name="twitter:description" content="Providing cable TV since 1993 and FTTH high-speed internet since 2019. Trusted for reliability and service in Bilimora.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"},
+        {"@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.nisan.co.in/about-us"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Nisan Cable TV & Internet",
+      "url": "https://www.nisan.co.in/about-us",
+      "description": "Learn about Nisan Cable TV & Internet in Bilimora. Providing cable TV since 1993 and FTTH high-speed internet since 2019.",
+      "mainEntity": {
+        "@type": "InternetServiceProvider",
+        "name": "Nisan Cable TV & Internet",
+        "url": "https://www.nisan.co.in",
+        "foundingDate": "1993",
+        "founder": {"@type": "Person", "name": "Kanubhai M. Patel"},
+        "description": "Reliable broadband and cable TV services in Bilimora since 1993.",
+        "areaServed": "Bilimora, Gujarat",
+        "telephone": "+91 98251 52400",
+        "email": "hello@nisan.co.in"
+      }
+    }
+    </script>
+
     <?php include('common-css.php'); ?>
 </head>
 

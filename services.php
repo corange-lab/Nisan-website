@@ -7,7 +7,52 @@
     <title>Our Services – Internet & Cable TV in Bilimora | Nisan</title>
     <meta name="description" content="Explore Nisan's broadband and cable TV services in Bilimora. High-speed FTTH internet, affordable cable packages, and 24/7 support for your home and business.">
     <meta name="keywords" content="internet services Bilimora, broadband plans Bilimora, cable TV Bilimora, unlimited internet Bilimora, FTTH provider Bilimora">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/services">
+
+    <meta property="og:title" content="Internet & Cable TV Services in Bilimora | Nisan">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nisan.co.in/services">
+    <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
+    <meta property="og:image:alt" content="Nisan Cable TV & Internet Services">
+    <meta property="og:description" content="Explore Nisan's broadband and cable TV services in Bilimora. High-speed FTTH internet, affordable cable packages, and 24/7 support for your home and business.">
+    <meta property="og:site_name" content="Nisan Cable & Internet">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Internet & Cable TV Services in Bilimora | Nisan">
+    <meta name="twitter:description" content="High-speed FTTH internet and affordable cable TV packages in Bilimora. 24/7 support for homes and businesses.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nisan.co.in/services"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "High-Speed FTTH Broadband & Cable TV",
+      "provider": {
+        "@type": "InternetServiceProvider",
+        "name": "Nisan Cable TV & Internet",
+        "url": "https://www.nisan.co.in",
+        "telephone": "+91 98251 52400",
+        "areaServed": "Bilimora, Gujarat"
+      },
+      "serviceType": "Broadband Internet, Cable TV",
+      "description": "High-speed FTTH broadband internet and affordable cable TV services in Bilimora. Plans for personal, family, and corporate use.",
+      "areaServed": "Bilimora, Gujarat",
+      "url": "https://www.nisan.co.in/services"
+    }
+    </script>
+
     <?php include('common-css.php'); ?>
 </head>
 

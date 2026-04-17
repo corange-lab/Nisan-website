@@ -26,7 +26,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <ul>
 	<li class="d-none d-xl-flex"><i class="flaticon-location"></i> <a href="https://maps.app.goo.gl/TUHbd83NAyXgmCvN9">Morden Radio, Nr. Laxmi Palace, Station
                                         Rd, Bilimora.</a></li>
-                                <li class="d-none d-lg-flex"><i class="flaticon-email"></i> <a href="#mailto:hello@nisan.co.in">hello@nisan.co.in</a></li>
+                                <li class="d-none d-lg-flex"><i class="flaticon-email"></i> <a href="mailto:hello@nisan.co.in">hello@nisan.co.in</a></li>
                                 <li><i class="flaticon-clock"></i>Time : 09: AM - 09 PM</li>
 </ul>
 </div>
@@ -53,7 +53,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 <div class="menu-wrap">
 <nav class="menu-nav">
-<div class="logo"><a href="/index.php"><img alt="logo" src="assets/imgs/logo/logo.webp" loading="eager" /></a></div>
+<div class="logo"><a href="/index.php"><img alt="Nisan Cable TV & Internet" src="assets/imgs/logo/logo.webp" loading="eager" /></a></div>
 
 <div class="navbar-wrap main-menu d-none d-lg-flex">
 <ul class="navigation">
