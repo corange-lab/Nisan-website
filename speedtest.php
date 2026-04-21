@@ -1,3 +1,9 @@
+<?php
+// Speed test page is deprecated — redirect to pricing page
+header("HTTP/1.1 301 Moved Permanently");
+header("Location: /pricing");
+exit();
+?>
 <!DOCTYPE html>
 <html lang="en">
 

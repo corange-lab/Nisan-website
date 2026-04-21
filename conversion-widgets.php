@@ -7,7 +7,7 @@
     <div class="nab-inner">
         <span class="nab-badge">Limited Time</span>
         <span class="nab-text">
-            <strong>FREE Installation</strong> + 1-Month Risk-Free Trial — No Contract, No Hidden Charges!
+            <strong>100 Mbps at ₹4,999/year</strong> — Jio charges ₹10,799 for same speed. Save ₹5,800/year. Free installation!
         </span>
         <a href="/contact.php" class="nab-cta">Claim Now</a>
     </div>
@@ -39,13 +39,13 @@
     <div id="nisan-exit-popup">
         <button class="nep-close" id="nep-close" aria-label="Close">&times;</button>
         <div class="nep-icon"><i class="fas fa-bolt"></i></div>
-        <h2 class="nep-title" id="exit-title">Wait — Don't Miss Out!</h2>
-        <p class="nep-sub">Get <strong>high-speed fiber internet</strong> in Bilimora with a <strong>FREE 1-month trial</strong>. Cancel anytime, no questions asked.</p>
+        <h2 class="nep-title" id="exit-title">Paying ₹899/month for Jio?</h2>
+        <p class="nep-sub">Nisan gives you <strong>100 Mbps for just ₹416/month</strong> in Bilimora. Same speed, half the price. Free installation.</p>
         <ul class="nep-perks">
-            <li><i class="fas fa-check-circle"></i> Free Installation</li>
-            <li><i class="fas fa-check-circle"></i> No Hidden Charges</li>
-            <li><i class="fas fa-check-circle"></i> 99% Uptime Guaranteed</li>
-            <li><i class="fas fa-check-circle"></i> Plans from ₹4,999/year</li>
+            <li><i class="fas fa-check-circle"></i> ₹4,999/year vs Jio's ₹10,799/year</li>
+            <li><i class="fas fa-check-circle"></i> Save ₹5,800 every year</li>
+            <li><i class="fas fa-check-circle"></i> Free Installation + Free Router</li>
+            <li><i class="fas fa-check-circle"></i> 1-Month Money-Back Guarantee</li>
         </ul>
         <div class="nep-actions">
             <a href="https://wa.me/919825152400?text=Hi%2C%20I%27m%20interested%20in%20a%20new%20internet%20connection" class="nep-btn-wa" target="_blank" rel="noopener">
