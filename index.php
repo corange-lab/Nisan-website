@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#0066cc">
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<title>Nisan - Cable TV &amp; Internet Service Provider in Bilimora</title>
-	<meta name="description" content="Nisan Cable TV & Internet offers fast broadband and cable TV in Bilimora. Enjoy speeds up to 200 Mbps with a risk-free 1-month trial and affordable plans.">
+	<meta name="description" content="Bilimora's #1 local ISP since 1993. FTTH internet from ₹4,999/year (50–400 Mbps), cable TV, free installation, 1-month money-back. 2,000+ happy customers in Bilimora West.">
     <meta name="keywords" content="broadband Bilimora, cable TV Bilimora, FTTH internet Bilimora, fast internet provider,
     affordable broadband Bilimora, speedtest, speed test, Internet Service Bilimora, Cable TV Bilimora, High-Speed Internet Bilimora,
     FTTH Bilimora, WiFi Bilimora, ISP Bilimora, Digital TV Bilimora, Fiber Internet Bilimora, Home Internet Bilimora,
@@ -33,108 +33,36 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "InternetServiceProvider",
-      "name": "Nisan Cable TV & Internet",
+      "@type": "WebSite",
+      "@id": "https://www.nisan.co.in/#website",
       "url": "https://www.nisan.co.in",
-      "logo": "https://www.nisan.co.in/assets/imgs/logo/logo.png",
-      "description": "Reliable broadband and cable TV services in Bilimora. FTTH high-speed internet and affordable cable TV plans starting at ₹4,999 per year.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91 98251 52400",
-        "email": "hello@nisan.co.in",
-        "contactType": "customer service",
-        "areaServed": "Bilimora, Gujarat",
-        "availableLanguage": ["en", "gu-IN"]
+      "name": "Nisan Cable TV & Internet",
+      "description": "High-speed FTTH internet and cable TV in Bilimora West. Plans from ₹4,999/year.",
+      "publisher": {"@id": "https://www.nisan.co.in/#organization"},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.nisan.co.in/speedtest.php?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": ["LocalBusiness", "InternetServiceProvider"],
+      "@id": "https://www.nisan.co.in/#organization",
+      "name": "Nisan Cable TV & Internet",
+      "alternateName": "Nisan Internet Bilimora",
+      "url": "https://www.nisan.co.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp",
+        "width": 200,
+        "height": 60
       },
-      "serviceType": "Broadband Internet, Cable TV",
-      "priceRange": "₹4,999/year"
-    },
-    {
-      "@type": "FAQPage",
-      "name": "Frequently Asked Questions about Nisan Cable TV & Internet Services",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the starting price for your internet plans?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our internet plans start at ₹4,999 per year, providing reliable, high-speed FTTH broadband for homes and businesses."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer a trial or refund if I face speed issues?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we offer a 1-month risk-free trial. If you face any issues or are not satisfied within the first month, we provide a full refund—no questions asked."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What services does Nisan offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We provide FTTH high-speed broadband internet and affordable cable TV services with combo plans that offer additional discounts."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I contact customer support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can reach our support team at +91 98251 52400 or email us at hello@nisan.co.in. Our support hours are 9 AM to 9 PM."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who is the owner of Nisan Cable TV & Internet?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The owner of Nisan Cable TV & Internet is Kanubhai M. Patel."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When was Nisan Cable TV & Internet established?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We have been providing cable TV services since 1993 and started offering broadband internet services in 2019."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you provide service in Bilimora only?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we currently provide our services within Bilimora and nearby areas, ensuring reliable local coverage."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.nisan.co.in/"
-        },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "About Us",
-              "item": "https://www.nisan.co.in/about-us.php"
-             }
-      ]
-    },
-    {
-      "@type": "LocalBusiness",
-      "name": "Nisan Cable TV & Internet",
-      "image": "https://www.nisan.co.in/assets/imgs/logo/logo.png",
-      "@id": "https://www.nisan.co.in",
-      "url": "https://www.nisan.co.in",
-      "telephone": "+91 98251 52400",
+      "image": "https://www.nisan.co.in/assets/imgs/metaog.webp",
+      "description": "Bilimora's trusted FTTH broadband and cable TV provider since 1993. Internet plans from 50 Mbps to 400 Mbps starting at ₹4,999/year. Serving Bilimora West (W Zone) with 2,000+ happy customers.",
+      "telephone": "+919825152400",
       "email": "hello@nisan.co.in",
       "address": {
         "@type": "PostalAddress",
@@ -149,25 +77,117 @@
         "latitude": 20.768292356999297,
         "longitude": 72.96571570523047
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "09:00",
-        "closes": "21:00"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bilimora West, Gujarat, India"
       },
-      "priceRange": "₹4,999/year",
-      "founder": "Kanubhai M. Patel",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        }
+      ],
+      "priceRange": "₹4,999 – ₹11,499/year",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, UPI, Bank Transfer",
+      "serviceType": ["Broadband Internet", "Cable TV", "FTTH"],
+      "founder": {
+        "@type": "Person",
+        "name": "Kanubhai M. Patel"
+      },
+      "foundingDate": "1993",
+      "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 5},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "2000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Internet Plans",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "50 Mbps Home Plan"}, "price": "4999", "priceCurrency": "INR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "100 Mbps Family Plan"}, "price": "5999", "priceCurrency": "INR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "200 Mbps Power Plan"}, "price": "7499", "priceCurrency": "INR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "300 Mbps Business Plan"}, "price": "8999", "priceCurrency": "INR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "400 Mbps Ultra Plan"}, "price": "11499", "priceCurrency": "INR"}
+        ]
+      },
       "sameAs": [
         "https://www.facebook.com/nisaninternet",
-        "https://www.instagram.com/nisaninternet"
+        "https://www.instagram.com/nisaninternet",
+        "https://g.co/kgs/nisan-bilimora"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Nisan's internet plan prices in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan offers 5 FTTH broadband plans in Bilimora: 50 Mbps at ₹4,999/year, 100 Mbps at ₹5,999/year, 200 Mbps at ₹7,499/year, 300 Mbps at ₹8,999/year, and 400 Mbps at ₹11,499/year. All plans include free installation, unlimited data, and a free router."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Nisan offer a money-back guarantee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All Nisan internet plans come with a 1-month risk-free trial. If you are not satisfied within the first month, you get a full refund — no questions asked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas does Nisan serve in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan currently serves Bilimora West (W Zone) — covering the complete western area of Bilimora, Gujarat. Call +91 98251 52400 to confirm coverage at your address."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast is Nisan's internet compared to Jio Fiber in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan offers the same 100 Mbps speed as Jio Fiber at ₹5,999/year — Jio charges ₹10,799/year for the same speed. You save ₹4,800 per year by choosing Nisan, plus you get local support from a Bilimora-based team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does Nisan offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan offers FTTH high-speed broadband internet (50 to 400 Mbps) and cable TV with 200+ channels. You can also get a combo plan with both internet and cable TV together at a discounted bundled price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Nisan for a new connection in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call or WhatsApp +91 98251 52400, or email hello@nisan.co.in. You can also visit our office at Morden Radio, Opp. Laxmi Palace, Station Road, Bilimora. Same-day installation is available in most areas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When was Nisan established and how many customers do they have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan has been providing cable TV services in Bilimora since 1993 and launched FTTH broadband in 2019. We currently serve 2,000+ happy customers across Bilimora West."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"}
       ]
     }
   ]
@@ -236,7 +256,7 @@
 <p class="wow fadeInUp" data-wow-delay=".4s">24/7 Support + No Hidden Charges + 99% Uptime <br>Internet Plans Starting at Just</p>
 
 <div class="banner-price wow fadeInUp" data-wow-delay=".6s">
-<h3 class="price">₹4999<sub>/Year</sub></h3>
+<h3 class="price">₹4,999<sub>/Year</sub></h3>
 </div>
 <a class="btn wow fadeInUp" data-wow-delay=".8s" href="/contact.php">Get Started</a></div>
 </div>
@@ -267,60 +287,56 @@
 </div>
 
 <div class="pricing-plan-wrap">
-<div class="row">
+<div class="row justify-content-center">
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="plan1" src="assets/imgs/images/pricing_thumb01.webp" loading="lazy" />
-<h3 class="title"><a href="/pricing.php">Internet For Personal</a></h3>
-
+<div class="pricing-thumb"><img alt="50 Mbps home internet plan Bilimora" src="assets/imgs/images/pricing_thumb01.webp" loading="lazy" />
+<h3 class="title"><a href="/pricing.php">Home Plan</a></h3>
 <div class="net-speed">
 <h5>50 <span>MBPS</span></h5>
 </div>
 </div>
-
 <div class="pricing-content">
 <ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Single Band Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Single Device Uses</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone &amp; Computer</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Unlimited Data</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Router Included</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> 1-Month Money-Back</li>
 </ul>
-
-<div class="price-wrap"><span>Start From</span>
-
-<h3 class="price">₹4999<sub>/Year</sub></h3>
+<div class="price-wrap"><span>Only</span>
+<h3 class="price">₹4,999<sub>/Year</sub></h3>
 </div>
-
+<div style="text-align:center; margin-bottom:10px;">
+	<small style="color:#888; font-size:12px;">= ₹416/month &nbsp;|&nbsp; Free Installation</small>
+</div>
 <div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
 </div>
 </div>
 </div>
 
 <div class="col-lg-4 col-md-6 col-sm-9">
-<div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" loading="lazy" />
-<h3 class="title"><a href="/pricing.php">Internet For Family</a></h3>
-
+<div class="pricing-item active mb-30" style="border:2px solid #0066cc; position:relative;">
+<div style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:#0066cc; color:#fff; font-size:11px; font-weight:700; padding:3px 14px; border-radius:20px; white-space:nowrap;">MOST POPULAR</div>
+<div class="pricing-thumb"><img alt="100 Mbps family internet plan Bilimora" src="assets/imgs/images/pricing_thumb02.webp" loading="lazy" />
+<h3 class="title"><a href="/pricing.php">Family Plan</a></h3>
 <div class="net-speed">
 <h5>100 <span>MBPS</span></h5>
 </div>
 </div>
-
 <div class="pricing-content">
 <ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Dualband 5G PON Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Multiple Device Connect Capability</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone, Computer & TV</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Unlimited Data</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Dual-Band 5G Router</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> 1-Month Money-Back</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Priority Support</li>
 </ul>
-
-<div class="price-wrap"><span>Start From</span>
-
-<h3 class="price">₹5999<sub>/Year</sub></h3>
+<div class="price-wrap"><span>Only</span>
+<h3 class="price">₹5,999<sub>/Year</sub></h3>
 </div>
-
+<div style="text-align:center; margin-bottom:10px;">
+	<small style="color:#888; font-size:12px;">= ₹499/month &nbsp;|&nbsp; Jio charges ₹10,799/yr</small>
+</div>
 <div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
 </div>
 </div>
@@ -328,29 +344,27 @@
 
 <div class="col-lg-4 col-md-6 col-sm-9">
 <div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb03.webp" loading="lazy" />
-<h3 class="title"><a href="/pricing.php">Internet For Corporate</a></h3>
-
+<div class="pricing-thumb"><img alt="200 Mbps high speed internet plan Bilimora" src="assets/imgs/images/pricing_thumb03.webp" loading="lazy" />
+<h3 class="title"><a href="/pricing.php">Power Plan</a></h3>
 <div class="net-speed">
-<h5>150 <span>MBPS</span></h5>
+<h5>200 <span>MBPS</span></h5>
 </div>
 </div>
-
 <div class="pricing-content">
 <ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Dualband 5G PON Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Multiple Device Connect Capability</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone, Computer & TV</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Unlimited Data</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Dual-Band 5G Router</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> 1-Month Money-Back</li>
+	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Dedicated Support</li>
 </ul>
-
-<div class="price-wrap"><span>Start From</span>
-
-<h3 class="price">₹8499<sub>/Year</sub></h3>
+<div class="price-wrap"><span>Only</span>
+<h3 class="price">₹7,499<sub>/Year</sub></h3>
 </div>
-
-<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
+<div style="text-align:center; margin-bottom:10px;">
+	<small style="color:#888; font-size:12px;">= ₹624/month &nbsp;|&nbsp; Plans up to 400 Mbps available</small>
+</div>
+<div class="pricing-btn"><a class="btn btn-link" href="/pricing.php">View All Plans</a></div>
 </div>
 </div>
 </div>
@@ -379,7 +393,7 @@
                                 <div class="row">
                                     <div class="col-md-4 col-sm-6">
                                         <div class="fact-item">
-                                            <h4 class="title"><span class="odometer" data-count="350"></span>+</h4>
+                                            <h4 class="title"><span class="odometer" data-count="400"></span>+</h4>
                                             <p>Mbps Speed Internet</p>
                                         </div>
                                     </div>
@@ -485,13 +499,13 @@
             for <strong>streaming, gaming, and working from home</strong>. Try our service risk-free for the first month.
         </p>
         <p class="broadband-description">
-            For just <strong>₹4,999/year</strong>, enjoy the best broadband service in <strong>Bilimora</strong>. Join now and stay connected without compromise.
+            Plans start at just <strong>₹4,999/year</strong> (50 Mbps) — all the way up to <strong>400 Mbps</strong> for homes and businesses in <strong>Bilimora</strong>. Join now and stay connected without compromise.
         </p>
     </div>
 </section>
 
 <div class="special-price-wrap">
-                    <h2 class="special-price"><sup>₹</sup>4999<sub>Yearly</sub></h2>
+                    <h2 class="special-price"><sup>₹</sup>4,999<sub>Yearly</sub></h2>
                     <p class="trial-link"><i class="flaticon-wifi-router"></i><a href="/contact.php">Try Free For 1 Month</a></p>
         </div>
    <a class="btn transparent-btn" href="/contact.php">Get started</a></div>
@@ -520,7 +534,7 @@
 <h4 class="title"><span>Subscribe to <strong>Cable TV</strong> and <strong>Internet</strong> together with a yearly plan &amp; Get</span> FREE Internet and Cable TV For 2 Month</h4>
 
 <div class="subscribe-plan">
-<h2 class="price"><span>Only</span> ₹8999<sub>/Year</sub></h2>
+<h2 class="price"><span>Only</span> ₹8,999<sub>/Year</sub></h2>
 <a class="btn btn-link" href="/pricing.php">View All Plans</a></div>
 </div>
 </div>
@@ -559,7 +573,7 @@
 <h2 class="accordion-header" id="headingThree"><button aria-controls="collapseThree" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseThree" data-bs-toggle="collapse" type="button">What speeds do you offer with your broadband plans?</button></h2>
 
 <div aria-labelledby="headingThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseThree">
-<div class="accordion-body">We provide high-speed internet with options up to 300 Mbps, perfect for streaming, gaming, and work-from-home setups.</div>
+<div class="accordion-body">We provide high-speed internet with options from 50 Mbps up to 400 Mbps, perfect for streaming, gaming, and work-from-home setups.</div>
 </div>
 </div>
 
@@ -739,7 +753,7 @@
                 </div>
             </div>
             <div class="nrc-stars">★★★★★</div>
-            <p class="nrc-text">"Running a small shop and needed reliable internet for billing and UPI payments. Nisan's 150 Mbps plan has never let me down. Connection has been stable for over a year. Great service."</p>
+            <p class="nrc-text">"Running a small shop and needed reliable internet for billing and UPI payments. Nisan's 100 Mbps plan has never let me down. Connection has been stable for over a year. Great service."</p>
             <span class="nrc-date">4 months ago</span>
         </div>
 

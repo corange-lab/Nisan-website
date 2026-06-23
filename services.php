@@ -47,7 +47,7 @@
         "areaServed": "Bilimora, Gujarat"
       },
       "serviceType": "Broadband Internet, Cable TV",
-      "description": "High-speed FTTH broadband internet and affordable cable TV services in Bilimora. Plans for personal, family, and corporate use.",
+      "description": "High-speed FTTH broadband internet from 50 Mbps to 400 Mbps and affordable cable TV services in Bilimora West. Plans starting at ₹4,999/year with free installation.",
       "areaServed": "Bilimora, Gujarat",
       "url": "https://www.nisan.co.in/services"
     }
@@ -103,7 +103,7 @@
                                 <li>
                                     <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
-                                        <h5><b>FTTH Broadband:</b> High-speed fiber internet up to 200 Mbps for streaming and gaming.</h5>
+                                        <h5><b>FTTH Broadband:</b> High-speed fiber internet from 50 Mbps up to 400 Mbps for streaming, gaming, and work from home.</h5>
                                     </div>
                                 </li>
                                 
@@ -115,7 +115,7 @@
                                 </li>
                                 
                                 <li>
-                                    <img src="assets/imgs/icons/check.web" alt="done">
+                                    <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
                                         <h5><b>Bundled Offers:</b> Internet + cable TV with 2 months free on yearly plans.</h5>
                                     </div>
@@ -185,93 +185,111 @@
                 </div>
 
 <div class="pricing-plan-wrap">
-<div class="row">
-<div class="col-lg-4 col-md-6 col-sm-9">
-<div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb01.webp" />
-<h3 class="title"><a href="/pricing.php">Internet For Personal</a></h3>
-
-<div class="net-speed">
-<h5>50 <span>MBPS</span></h5>
-</div>
-</div>
-
-<div class="pricing-content">
-<ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Single Band Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Single Device Uses</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Phone &amp; Computer</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Free Installation</li>
-</ul>
-
-<div class="price-wrap"><span>Start From</span>
-
-<h3 class="price">₹4999<sub>/Year</sub></h3>
-</div>
-
-<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
-</div>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-6 col-sm-9">
-<div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="" src="assets/imgs/images/pricing_thumb02.webp" />
-<h3 class="title"><a href="/pricing.php">Internet For Family</a></h3>
-
-<div class="net-speed">
-<h5>100 <span>MBPS</span></h5>
-</div>
-</div>
-
-<div class="pricing-content">
-<ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Dualband 5G PON Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Multiple Device Connect Capability</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Phone, Computer & TV</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.png" /> Free Installation</li>
-</ul>
-
-<div class="price-wrap"><span>Start From</span>
-
-<h3 class="price">₹5999<sub>/Year</sub></h3>
-</div>
-
-<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
-</div>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-6 col-sm-9">
-<div class="pricing-item mb-30">
-<div class="pricing-thumb"><img alt="pricing" src="assets/imgs/images/pricing_thumb03.webp" />
-<h3 class="title"><a href="/pricing.php">Internet For Corporate</a></h3>
-
-<div class="net-speed">
-<h5>150 <span>MBPS</span></h5>
-</div>
-</div>
-
-<div class="pricing-content">
-<ul class="pricing-list">
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Dualband 5G PON Router</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Multiple Device Connect Capability</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Phone, Computer & TV</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Random IP</li>
-	<li><img alt="" src="assets/imgs/icons/check.webp" /> Free Installation</li>e
-</ul>
-
-<div class="price-wrap"><span>Start From</span>
-
-<h3 class="price">₹8499<sub>/Year</sub></h3>
-</div>
-
-<div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
-</div>
-</div>
-</div>
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="pricing-item mb-30">
+                <div class="pricing-thumb"><img alt="50 Mbps home internet plan Bilimora" src="assets/imgs/images/pricing_thumb01.webp" />
+                <h3 class="title"><a href="/pricing.php">Home Plan</a></h3>
+                <div class="net-speed"><h5>50 <span>MBPS</span></h5></div>
+                </div>
+                <div class="pricing-content">
+                <ul class="pricing-list">
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Unlimited Data</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Router Included</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> 1-Month Money-Back</li>
+                </ul>
+                <div class="price-wrap"><span>Only</span>
+                <h3 class="price">₹4,999<sub>/Year</sub></h3></div>
+                <div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="pricing-item active mb-30" style="border:2px solid #0066cc; position:relative;">
+                <div style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:#0066cc; color:#fff; font-size:11px; font-weight:700; padding:3px 14px; border-radius:20px; white-space:nowrap;">MOST POPULAR</div>
+                <div class="pricing-thumb"><img alt="100 Mbps family internet plan Bilimora" src="assets/imgs/images/pricing_thumb02.webp" />
+                <h3 class="title"><a href="/pricing.php">Family Plan</a></h3>
+                <div class="net-speed"><h5>100 <span>MBPS</span></h5></div>
+                </div>
+                <div class="pricing-content">
+                <ul class="pricing-list">
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Unlimited Data</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Dual-Band 5G Router</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> 1-Month Money-Back</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Priority Support</li>
+                </ul>
+                <div class="price-wrap"><span>Only</span>
+                <h3 class="price">₹5,999<sub>/Year</sub></h3></div>
+                <div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="pricing-item mb-30">
+                <div class="pricing-thumb"><img alt="200 Mbps power internet plan Bilimora" src="assets/imgs/images/pricing_thumb03.webp" />
+                <h3 class="title"><a href="/pricing.php">Power Plan</a></h3>
+                <div class="net-speed"><h5>200 <span>MBPS</span></h5></div>
+                </div>
+                <div class="pricing-content">
+                <ul class="pricing-list">
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Unlimited Data</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Dual-Band 5G Router</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> 1-Month Money-Back</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Priority Support</li>
+                </ul>
+                <div class="price-wrap"><span>Only</span>
+                <h3 class="price">₹7,499<sub>/Year</sub></h3></div>
+                <div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-10">
+        <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="pricing-item mb-30">
+                <div class="pricing-thumb"><img alt="300 Mbps business internet plan Bilimora" src="assets/imgs/images/pricing_thumb01.webp" />
+                <h3 class="title"><a href="/pricing.php">Business Plan</a></h3>
+                <div class="net-speed"><h5>300 <span>MBPS</span></h5></div>
+                </div>
+                <div class="pricing-content">
+                <ul class="pricing-list">
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Unlimited Data</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Dual-Band 5G Router</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Static IP Available</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Dedicated Support</li>
+                </ul>
+                <div class="price-wrap"><span>Only</span>
+                <h3 class="price">₹8,999<sub>/Year</sub></h3></div>
+                <div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-9">
+            <div class="pricing-item mb-30" style="position:relative;">
+                <div style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:#ff6b00; color:#fff; font-size:11px; font-weight:700; padding:3px 14px; border-radius:20px; white-space:nowrap;">MAX SPEED</div>
+                <div class="pricing-thumb"><img alt="400 Mbps ultra internet plan Bilimora" src="assets/imgs/images/pricing_thumb02.webp" />
+                <h3 class="title"><a href="/pricing.php">Ultra Plan</a></h3>
+                <div class="net-speed"><h5>400 <span>MBPS</span></h5></div>
+                </div>
+                <div class="pricing-content">
+                <ul class="pricing-list">
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Unlimited Data</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Dual-Band 5G Router</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Free Installation</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Static IP Available</li>
+                    <li><img alt="check" src="assets/imgs/icons/check.webp" /> Dedicated Support</li>
+                </ul>
+                <div class="price-wrap"><span>Only</span>
+                <h3 class="price">₹11,499<sub>/Year</sub></h3></div>
+                <div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 </div>
@@ -303,5 +321,4 @@
 </body>
 
 
-<!-- Mirrored from www.devsnews.com/template/netfix-prev/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Dec 2024 09:15:07 GMT -->
 </html>

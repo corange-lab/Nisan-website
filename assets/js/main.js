@@ -515,24 +515,29 @@ $('.qtybutton-box span').on("click", function () {
 /*=============================================
 	=    		Odometer Active  	       =
 =============================================*/
-if (typeof $.fn !== 'undefined' && typeof $.fn.appear === 'function') {
-	$('.odometer').appear(function (e) {
-		var odo = $(".odometer");
-		odo.each(function () {
-			var countNumber = $(this).attr("data-count");
-			$(this).html(countNumber);
+(function () {
+	var odoEls = document.querySelectorAll('.odometer');
+	if (!odoEls.length) return;
+	var fired = false;
+	function runOdo() {
+		if (fired) return;
+		fired = true;
+		odoEls.forEach(function (el) {
+			el.innerHTML = el.getAttribute('data-count');
 		});
-	});
-} else {
-	// Fallback: initialize odometer on window load even if appear plugin is missing
-	$(window).on('load', function () {
-		var odo = $(".odometer");
-		odo.each(function () {
-			var countNumber = $(this).attr("data-count");
-			$(this).html(countNumber);
-		});
-	});
-}
+	}
+	if ('IntersectionObserver' in window) {
+		var obs = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) { runOdo(); obs.disconnect(); }
+			});
+		}, { threshold: 0.3 });
+		odoEls.forEach(function (el) { obs.observe(el); });
+	} else {
+		// Fallback for old browsers
+		window.addEventListener('load', runOdo);
+	}
+}());
 
 
 /*=============================================

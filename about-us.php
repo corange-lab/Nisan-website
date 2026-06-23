@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Nisan Cable TV & Internet in Bilimora</title>
-    <meta name="description" content="Learn about Nisan Cable TV & Internet in Bilimora. Providing cable TV since 1993 and FTTH high-speed internet since 2019. Trusted for reliability and service.">
-    <meta name="keywords" content="about Nisan, internet provider Bilimora, cable TV Bilimora, FTTH broadband Bilimora, high-speed internet provider, highspeed internet in bilimora, Bilimora internet, 
-                                    Best internet in bilimora">
+    <title>About Nisan — Bilimora's Trusted Internet & Cable TV Provider Since 1993</title>
+    <meta name="description" content="Nisan has served Bilimora West since 1993 with cable TV and since 2019 with FTTH broadband. 2,000+ happy customers, local support team, plans from ₹4,999/year.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/about-us">
 
-    <meta property="og:title" content="About Nisan Cable TV & Internet in Bilimora">
+    <meta property="og:title" content="About Nisan — Bilimora's Trusted Internet & Cable TV Provider Since 1993">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nisan.co.in/about-us">
     <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
-    <meta property="og:image:alt" content="Nisan Cable TV & Internet">
-    <meta property="og:description" content="Learn about Nisan Cable TV & Internet in Bilimora. Providing cable TV since 1993 and FTTH high-speed internet since 2019. Trusted for reliability and service.">
+    <meta property="og:image:alt" content="Nisan Cable TV & Internet Bilimora">
+    <meta property="og:description" content="Serving Bilimora West since 1993 with cable TV and FTTH broadband. 2,000+ customers, local team, plans from ₹4,999/year.">
     <meta property="og:site_name" content="Nisan Cable & Internet">
     <meta property="og:locale" content="en_IN">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Nisan Cable TV & Internet in Bilimora">
-    <meta name="twitter:description" content="Providing cable TV since 1993 and FTTH high-speed internet since 2019. Trusted for reliability and service in Bilimora.">
+    <meta name="twitter:title" content="About Nisan — Bilimora's Trusted Internet & Cable TV Provider Since 1993">
+    <meta name="twitter:description" content="Serving Bilimora West since 1993 with cable TV and FTTH broadband. 2,000+ happy customers.">
     <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 
     <script type="application/ld+json">
@@ -34,23 +32,30 @@
       ]
     }
     </script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
       "name": "About Nisan Cable TV & Internet",
       "url": "https://www.nisan.co.in/about-us",
-      "description": "Learn about Nisan Cable TV & Internet in Bilimora. Providing cable TV since 1993 and FTTH high-speed internet since 2019.",
+      "description": "Nisan Cable TV & Internet has served Bilimora West since 1993. Trusted by 2,000+ customers for FTTH broadband and cable TV.",
       "mainEntity": {
         "@type": "InternetServiceProvider",
         "name": "Nisan Cable TV & Internet",
         "url": "https://www.nisan.co.in",
         "foundingDate": "1993",
         "founder": {"@type": "Person", "name": "Kanubhai M. Patel"},
-        "description": "Reliable broadband and cable TV services in Bilimora since 1993.",
-        "areaServed": "Bilimora, Gujarat",
-        "telephone": "+91 98251 52400",
-        "email": "hello@nisan.co.in"
+        "description": "Bilimora West's trusted FTTH broadband and cable TV provider since 1993. Serving 2,000+ customers with plans from 50 Mbps to 400 Mbps.",
+        "areaServed": {"@type": "AdministrativeArea", "name": "Bilimora West, Gujarat"},
+        "telephone": "+919825152400",
+        "email": "hello@nisan.co.in",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "reviewCount": "2000"
+        }
       }
     }
     </script>
@@ -68,13 +73,13 @@
         <section class="breadcrumb-area breadcrumb-bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-8">
+                    <div class="col-lg-8 col-md-8">
                         <div class="breadcrumb-content">
                             <h1 class="title">About Nisan Cable TV & Internet</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">About</li>
+                                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
                                 </ol>
                             </nav>
                         </div>
@@ -90,26 +95,28 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-img-wrap">
-                            <img src="assets/imgs/images/about_img01.webp" alt="about us">
-                            <img src="assets/imgs/images/about_img02.webp" class="main-img" alt="about-us">
+                            <img src="assets/imgs/images/about_img01.webp" alt="Nisan team installing fiber internet in Bilimora">
+                            <img src="assets/imgs/images/about_img02.webp" class="main-img" alt="Nisan Cable TV and Internet office Bilimora">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="section-title mb-30">
-                            <h2 class="title">Your Trusted Partner for Internet and Cable TV Services</h2>
+                            <h2 class="title">Bilimora's Most Trusted Internet & Cable TV Provider</h2>
                         </div>
                         <div class="about-content">
-                            <p>At Nisan Cable TV & Internet, we have been a trusted name in the industry since 1993 for Cable TV services and have expanded into high-speed internet services since 2019. Our goal is to provide seamless connectivity and unmatched entertainment to the people of Bilimora and surrounding areas.<br><br><strong>Our Commitment to Excellence</strong><br>We specialize in FTTH (Fiber-to-the-Home) technology, ensuring that our customers experience the fastest and most reliable connections. By using the latest technology, we deliver high-speed internet and crystal-clear cable TV that keeps you connected to what matters most.</p>
+                            <p>Nisan Cable TV & Internet has been a cornerstone of Bilimora West since <strong>1993</strong> — first bringing cable TV to local homes, and since <strong>2019</strong> delivering high-speed FTTH (Fiber-to-the-Home) broadband. Today, we proudly serve <strong>2,000+ happy customers</strong> across Bilimora's W Zone.</p>
+                            <p style="margin-top:14px;">We use the latest fiber optic infrastructure to deliver speeds from <strong>50 Mbps to 400 Mbps</strong>, ensuring you get fast, stable, and reliable internet — whether you're streaming, working from home, running a business, or just browsing.</p>
                             <ul class="about-list">
-                                <li>Expert technical team</li>
-                                <li>Best network</li>
-                                <li>50+ coverage areas</li>
-                                <li>24/7 quick support</li>
-                                <li>Reasonable price packages</li>
-                                <li>Trusted & recommended</li>
-                                <li>Latest Network Infrastructure</li>
+                                <li>Local team based in Bilimora — we know your neighbourhood</li>
+                                <li>2,000+ customers trust us in Bilimora West</li>
+                                <li>FTTH fiber technology — not copper wire</li>
+                                <li>Plans from ₹4,999/year with free installation</li>
+                                <li>1-month money-back guarantee on all plans</li>
+                                <li>Responsive support team — call, WhatsApp, or visit us</li>
+                                <li>Serving Bilimora since 1993 — 30+ years of experience</li>
                             </ul>
-                            <a href="/contact.php" class="btn transparent-btn">Get Started</a>
+                            <a href="/contact.php" class="btn transparent-btn" style="margin-right:10px;">Get a New Connection</a>
+                            <a href="/pricing.php" class="btn">View Plans</a>
                         </div>
                     </div>
                 </div>
@@ -117,17 +124,48 @@
         </section>
         <!-- about-area-end -->
 
-<br>
-<br>
+        <!-- stats-area -->
+        <section style="background:#f8f9fa; padding:50px 0; margin-top:40px;">
+            <div class="container">
+                <div class="row text-center justify-content-center">
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div style="background:#fff; border-radius:12px; padding:30px 20px; box-shadow:0 2px 16px rgba(0,0,0,.07);">
+                            <h3 style="font-size:2.5rem; font-weight:800; color:#0066cc; margin:0;">2,000+</h3>
+                            <p style="margin:8px 0 0; color:#555;">Happy Customers</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div style="background:#fff; border-radius:12px; padding:30px 20px; box-shadow:0 2px 16px rgba(0,0,0,.07);">
+                            <h3 style="font-size:2.5rem; font-weight:800; color:#0066cc; margin:0;">30+</h3>
+                            <p style="margin:8px 0 0; color:#555;">Years Serving Bilimora</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div style="background:#fff; border-radius:12px; padding:30px 20px; box-shadow:0 2px 16px rgba(0,0,0,.07);">
+                            <h3 style="font-size:2.5rem; font-weight:800; color:#0066cc; margin:0;">400</h3>
+                            <p style="margin:8px 0 0; color:#555;">Mbps Max Speed</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div style="background:#fff; border-radius:12px; padding:30px 20px; box-shadow:0 2px 16px rgba(0,0,0,.07);">
+                            <h3 style="font-size:2.5rem; font-weight:800; color:#0066cc; margin:0;">4.9★</h3>
+                            <p style="margin:8px 0 0; color:#555;">Google Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- stats-area-end -->
 
         <!-- cta-area -->
-        <section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/cta_bg.webp">
+        <section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/cta_bg.webp" style="margin-top:0;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-9 col-lg-10">
                         <div class="cta-content text-center">
                             <div class="section-title white-title mb-35">
-                                <h2 class="title">Nisan: Trusted for Speed and Service Since 1993!</h2>
+                                <h2 class="title">Nisan: Trusted for Speed and Service Since 1993</h2>
+                                <p style="color:rgba(255,255,255,.85); margin-top:12px;">2,000+ families and businesses in Bilimora West rely on us every day.</p>
                             </div>
                             <div class="cta-btn-wrap">
                                 <a href="/pricing.php" class="btn">View our Plans</a>
@@ -141,37 +179,15 @@
         </section>
         <!-- cta-area-end -->
 
-       
-
-
     </main>
     <!-- main-area-end -->
 
-
 <?php include('footer.php'); ?>
 
-
-
-
-    <!-- JS here -->
-    
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery.odometer.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.flipster.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/jarallax.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/swiper.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/wow.min.js" defer></script>
     <script src="assets/js/main.js"></script>
 </body>
-
-
-
-
 </html>
