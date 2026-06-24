@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Much Internet Speed Do I Need? Guide for Bilimora Homes (2026)</title>
+    <title>How Much Internet Speed Do I Need? Guide for Bilimora Homes</title>
     <meta name="description" content="Not sure how much internet speed you need? This guide helps Bilimora families choose between 50, 100, 200, 300 or 400 Mbps based on actual usage — streaming, gaming, WFH, and more.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/how-much-internet-speed-do-i-need">
@@ -18,7 +18,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "How Much Internet Speed Do I Need? Guide for Bilimora Homes (2026)",
+      "headline": "How Much Internet Speed Do I Need? Guide for Bilimora Homes",
       "description": "Simple guide helping Bilimora residents choose the right internet speed — 50, 100, 200, 300 or 400 Mbps — based on family size and usage habits.",
       "image": "https://www.nisan.co.in/assets/imgs/metaog.webp",
       "datePublished": "2025-07-01",
