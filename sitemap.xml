@@ -1,100 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <!-- Core pages -->
-  <url>
-    <loc>https://www.nisan.co.in/</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/pricing</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/services</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/about-us</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/contact</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/speedtest</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/privacy-policy</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/refund-policy</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://www.nisan.co.in/</loc><lastmod>2026-06-23</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.nisan.co.in/pricing.php</loc><lastmod>2026-06-23</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.nisan.co.in/services.php</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.nisan.co.in/contact.php</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/about.php</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/</loc><lastmod>2026-06-23</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/speedtest.php</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/privacy-policy.php</loc><lastmod>2026-06-23</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.nisan.co.in/refund-policy.php</loc><lastmod>2026-06-23</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
-  <!-- Blog index -->
-  <url>
-    <loc>https://www.nisan.co.in/blog/</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- Blog: Comparisons -->
+  <url><loc>https://www.nisan.co.in/blog/best-internet-provider-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/internet-providers-bilimora-compared</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/jio-fiber-vs-nisan-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/jio-fiber-bilimora-comparison</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/airtel-vs-nisan-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/gtpl-vs-nisan-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/bsnl-vs-nisan-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/cheapest-broadband-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/local-isp-vs-jio-airtel-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Blog articles -->
-  <url>
-    <loc>https://www.nisan.co.in/blog/best-internet-provider-bilimora</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/blog/jio-fiber-vs-nisan-bilimora</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/blog/ftth-fiber-internet-bilimora</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/blog/how-much-internet-speed-do-i-need</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/blog/work-from-home-internet-bilimora</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.nisan.co.in/blog/cable-tv-internet-combo-bilimora</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Blog: Plans & Education -->
+  <url><loc>https://www.nisan.co.in/blog/how-much-internet-speed-do-i-need</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/internet-for-family-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/annual-vs-monthly-internet-plan-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/mbps-guide-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/ftth-fiber-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/fiber-broadband-bilimora-west</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/new-internet-connection-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/wired-vs-wireless-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/broadband-near-me-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Blog: Troubleshooting -->
+  <url><loc>https://www.nisan.co.in/blog/internet-outage-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/low-internet-speed-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Blog: Lifestyle & WFH -->
+  <url><loc>https://www.nisan.co.in/blog/work-from-home-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/work-from-home-bilimora-fiber</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/gaming-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/video-streaming-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/online-classes-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/internet-for-students-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/back-to-school-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/internet-for-seniors-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/internet-video-calling-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Blog: Business & Commercial -->
+  <url><loc>https://www.nisan.co.in/blog/internet-for-small-business-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/cctv-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/upi-payment-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/hotel-wifi-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/ecommerce-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/online-business-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/internet-for-youtube-creators-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Blog: Cable TV -->
+  <url><loc>https://www.nisan.co.in/blog/cable-tv-provider-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/gujarati-channels-cable-tv-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/cable-tv-vs-dth-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/cable-tv-connection-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/cable-tv-internet-combo-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/cable-tv-near-me-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog: Seasonal & Events -->
+  <url><loc>https://www.nisan.co.in/blog/cricket-streaming-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/ipl-streaming-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/navratri-streaming-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/diwali-internet-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/new-year-internet-upgrade-bilimora</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Blog: Trust & Brand -->
+  <url><loc>https://www.nisan.co.in/blog/nisan-bilimora-story</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/nisan-bilimora-reviews</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/why-2000-bilimora-families-trust-nisan</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
