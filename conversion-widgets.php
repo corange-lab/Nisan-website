@@ -480,6 +480,19 @@
         });
     }
 
+    /* ── Conversion tracking: phone + WhatsApp clicks ── */
+    function fireAdsConversion(label) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'conversion', { 'send_to': 'AW-938737099/' + label });
+        }
+    }
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+        el.addEventListener('click', function() { fireAdsConversion('phone_click'); });
+    });
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function() { fireAdsConversion('whatsapp_click'); });
+    });
+
     /* ── ④ Exit-Intent Popup ──────────────────────────── */
     var overlay  = document.getElementById('nisan-exit-overlay');
     var nepClose = document.getElementById('nep-close');

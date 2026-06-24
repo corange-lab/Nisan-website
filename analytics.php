@@ -13,6 +13,7 @@
 
 define('GTM_CONTAINER_ID',           'GTM-NBBLPR9W');      // Nisan GTM container
 define('GA4_MEASUREMENT_ID',         'G-WQ8D0KX6XC');      // Nisan GA4 Measurement ID
+define('GADS_CONVERSION_ID',         'AW-938737099');       // Nisan Google Ads account
 define('SEARCH_CONSOLE_VERIFICATION', 'cCtAMLuH8J9OK9f8-EEnUMUMXnC9HRaDC5jbcqfZ4zc'); // Search Console
 ?>
 
@@ -27,7 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Search Console Verification -->
 <meta name="google-site-verification" content="<?= SEARCH_CONSOLE_VERIFICATION ?>" />
 
-<!-- GA4 direct tag (fallback if GTM not yet configured) -->
+<!-- GA4 + Google Ads tags -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA4_MEASUREMENT_ID ?>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -38,4 +39,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'allow_google_signals': true,
     'allow_ad_personalization_signals': true
   });
+  gtag('config', '<?= GADS_CONVERSION_ID ?>');
 </script>
