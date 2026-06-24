@@ -15,10 +15,61 @@
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "Article", "headline": "Nisan Cable TV & Internet: 30+ Years Serving Bilimora — Our Story", "description": "Nisan's story: founded in Bilimora in 1993, 30+ years of cable TV and FTTH internet, 2,000+ customers, still locally run.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/nisan-bilimora-story"}, "keywords": "Nisan Cable TV Bilimora history, Nisan internet Bilimora, Bilimora local ISP, Nisan 1993 founded" }
+    { "@context": "https://schema.org", "@type": "Article", "headline": "Nisan Cable TV & Internet: 30+ Years Serving Bilimora — Our Story", "description": "Nisan's story: founded in Bilimora in 1993, 30+ years of cable TV and FTTH internet, 2,000+ customers, still locally run.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "Nisan Team", "worksFor": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/nisan-bilimora-story"}, "wordCount": 1624,
+      "keywords": "Nisan Cable TV Bilimora history, Nisan internet Bilimora, Bilimora local ISP, Nisan 1993 founded" }
     </script>
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.nisan.co.in/blog/"}, {"@type": "ListItem", "position": 3, "name": "Nisan Bilimora Story", "item": "https://www.nisan.co.in/blog/nisan-bilimora-story"} ] }
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When was Nisan started in Bilimora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nisan was founded in Bilimora in 1993, starting as a cable TV provider. Over 30 years, it grew into Bilimora's leading FTTH fiber internet and cable TV service provider."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who owns Nisan internet in Bilimora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nisan Cable & Internet is a local Bilimora business. It was founded and is operated by a local family with deep roots in Bilimora West. Contact: hello@nisan.co.in or +91 98251 52400."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has Nisan been in Bilimora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nisan has served Bilimora for over 30 years since 1993. Starting with cable TV, Nisan expanded into FTTH fiber internet and now serves 2,000+ households and businesses in Bilimora West."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Nisan different from other ISPs in Bilimora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nisan is Bilimora's only locally-founded ISP \u2014 built for Bilimora, not a national expansion. This means purpose-built infrastructure, local technicians who know every street, and support that responds the same day."
+      }
+    }
+      ]
+    }
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".blog-main p:first-of-type", ".blog-meta"]
+      }
+    }
     </script>
     <?php include('../common-css.php'); ?>
     <style>
@@ -60,7 +111,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="title">Nisan Bilimora Story</h1>
+                        <h2 class="title">Nisan Bilimora Story</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
@@ -148,6 +199,18 @@
 
                 <h3>How long has Nisan been providing internet (not just cable TV)?</h3>
                 <p>Nisan began with cable television in 1993 and expanded into broadband internet as the technology became available. We now provide FTTH fiber internet with speeds from 50 Mbps to 400 Mbps, operating our own fiber infrastructure in Bilimora.</p>
+                    
+                <h2>Frequently Asked Questions</h2>
+                <div itemscope itemtype="https://schema.org/FAQPage">
+                <h3>When was Nisan started in Bilimora?</h3>
+                <p>Nisan was founded in Bilimora in 1993, starting as a cable TV provider. Over 30 years, it grew into Bilimora's leading FTTH fiber internet and cable TV service provider.</p>
+                <h3>Who owns Nisan internet in Bilimora?</h3>
+                <p>Nisan Cable & Internet is a local Bilimora business. It was founded and is operated by a local family with deep roots in Bilimora West. Contact: hello@nisan.co.in or +91 98251 52400.</p>
+                <h3>How long has Nisan been in Bilimora?</h3>
+                <p>Nisan has served Bilimora for over 30 years since 1993. Starting with cable TV, Nisan expanded into FTTH fiber internet and now serves 2,000+ households and businesses in Bilimora West.</p>
+                <h3>What makes Nisan different from other ISPs in Bilimora?</h3>
+                <p>Nisan is Bilimora's only locally-founded ISP — built for Bilimora, not a national expansion. This means purpose-built infrastructure, local technicians who know every street, and support that responds the same day.</p>
+                </div>
                     </article>
                 </div>
 

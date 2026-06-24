@@ -9,4 +9,23 @@ Allow: /
 User-agent: AdsBot-Google-Mobile
 Allow: /
 
+# Allow AI crawlers for GEO — Google AI Overviews, ChatGPT, Perplexity, Gemini
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
 Sitemap: https://www.nisan.co.in/sitemap.xml

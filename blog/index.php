@@ -16,6 +16,32 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.nisan.co.in/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.nisan.co.in/blog/"}]}
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://www.nisan.co.in/blog/#blog",
+      "name": "Internet & Broadband Tips for Bilimora",
+      "description": "Helpful guides on internet plans, FTTH fiber, work from home, and cable TV in Bilimora. By Nisan Cable & Internet — serving Bilimora West since 1993.",
+      "url": "https://www.nisan.co.in/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Nisan Cable TV & Internet",
+        "url": "https://www.nisan.co.in",
+        "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}
+      },
+      "blogPost": [
+        {"@type": "BlogPosting", "headline": "Best Internet Provider in Bilimora", "url": "https://www.nisan.co.in/blog/best-internet-provider-bilimora"},
+        {"@type": "BlogPosting", "headline": "Jio Fiber vs Nisan Internet Bilimora", "url": "https://www.nisan.co.in/blog/jio-fiber-vs-nisan-bilimora"},
+        {"@type": "BlogPosting", "headline": "Internet Providers in Bilimora Compared", "url": "https://www.nisan.co.in/blog/internet-providers-bilimora-compared"},
+        {"@type": "BlogPosting", "headline": "FTTH Fiber Internet in Bilimora", "url": "https://www.nisan.co.in/blog/ftth-fiber-internet-bilimora"},
+        {"@type": "BlogPosting", "headline": "Work From Home Internet in Bilimora", "url": "https://www.nisan.co.in/blog/work-from-home-internet-bilimora"},
+        {"@type": "BlogPosting", "headline": "Cheapest Broadband in Bilimora", "url": "https://www.nisan.co.in/blog/cheapest-broadband-bilimora"},
+        {"@type": "BlogPosting", "headline": "Cable TV vs DTH in Bilimora", "url": "https://www.nisan.co.in/blog/cable-tv-vs-dth-bilimora"},
+        {"@type": "BlogPosting", "headline": "How Much Internet Speed Do I Need", "url": "https://www.nisan.co.in/blog/how-much-internet-speed-do-i-need"}
+      ]
+    }
+    </script>
     <?php include('../common-css.php'); ?>
     <style>
         .nbc{background:#fff;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,.08);overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;height:100%;margin-bottom:24px}

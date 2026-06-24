@@ -15,10 +15,61 @@
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "Article", "headline": "CCTV Camera Internet Requirements in Bilimora: How Much Speed Do You Need?", "description": "How much internet speed do CCTV cameras need in Bilimora? Calculate by number of cameras. Why FTTH fiber upload speed is essential for reliable remote CCTV viewing.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/cctv-internet-bilimora"}, "keywords": "CCTV internet speed Bilimora, CCTV camera internet requirement, upload speed CCTV, fiber internet CCTV, remote CCTV viewing, IP camera internet" }
+    { "@context": "https://schema.org", "@type": "Article", "headline": "CCTV Camera Internet Requirements in Bilimora: How Much Speed Do You Need?", "description": "How much internet speed do CCTV cameras need in Bilimora? Calculate by number of cameras. Why FTTH fiber upload speed is essential for reliable remote CCTV viewing.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "Nisan Team", "worksFor": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/cctv-internet-bilimora"}, "wordCount": 1301,
+      "keywords": "CCTV internet speed Bilimora, CCTV camera internet requirement, upload speed CCTV, fiber internet CCTV, remote CCTV viewing, IP camera internet" }
     </script>
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.nisan.co.in/blog/"}, {"@type": "ListItem", "position": 3, "name": "CCTV Internet Requirements Bilimora", "item": "https://www.nisan.co.in/blog/cctv-internet-bilimora"} ] }
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What internet speed is needed for CCTV cameras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each CCTV camera requires 1\u20132 Mbps upload speed for 1080p remote viewing. For 4 cameras in 1080p, you need at least 8 Mbps upload. Nisan's FTTH provides sufficient upload speed on all plans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I view CCTV cameras remotely over Nisan internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Nisan FTTH fiber provides the upload speed needed to stream live CCTV footage to your phone remotely. The 50 Mbps plan is sufficient for up to 8 cameras in 1080p."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can't I view my CCTV camera remotely?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is almost always an upload speed problem. Check your upload speed \u2014 if it is under 4 Mbps with 4 cameras, upgrading your plan will resolve it. Also check your CCTV app's port forwarding settings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Nisan internet support CCTV and security systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Nisan's FTTH fiber supports IP CCTV cameras, video doorbells, and remote security systems. The stable uptime and consistent upload speed make it ideal for 24/7 security monitoring."
+      }
+    }
+      ]
+    }
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".blog-main p:first-of-type", ".blog-meta"]
+      }
+    }
     </script>
     <?php include('../common-css.php'); ?>
     <style>
@@ -60,7 +111,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="title">CCTV Internet Requirements</h1>
+                        <h2 class="title">CCTV Internet Requirements</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
@@ -161,15 +212,16 @@
                 </div>
 
                 <h2>Frequently Asked Questions</h2>
-
-                <h3>My CCTV shows offline on my phone even though my internet is working. What is the problem?</h3>
-                <p>This is almost always an upload speed problem. Your internet download works fine for browsing and YouTube, but your upload speed (needed for CCTV to send video to your phone) is insufficient. Check your upload speed at fast.com or speedtest.net. If it is under 4 Mbps and you have 4 cameras, that is your issue. Upgrading to Nisan fiber will resolve it.</p>
-
-                <h3>Does Nisan fiber work with all CCTV brands — Hikvision, Dahua, CP Plus?</h3>
-                <p>Yes. Nisan fiber provides a standard internet connection that works with all IP CCTV brands and DVR/NVR systems. Hikvision, Dahua, CP Plus, Reolink — all of these work seamlessly with our fiber connection.</p>
-
-                <h3>What happens to CCTV recording if my internet goes down?</h3>
-                <p>CCTV recording to your local DVR/NVR continues even without internet — the cameras record to the hard drive inside your unit. Internet is only needed for remote viewing via your phone. With Nisan fiber's high reliability, outages are rare. For critical security applications, we recommend keeping a secondary mobile hotspot as backup for remote access during any outage.</p>
+                <div itemscope itemtype="https://schema.org/FAQPage">
+                <h3>What internet speed is needed for CCTV cameras?</h3>
+                <p>Each CCTV camera requires 1–2 Mbps upload speed for 1080p remote viewing. For 4 cameras in 1080p, you need at least 8 Mbps upload. Nisan's FTTH provides sufficient upload speed on all plans.</p>
+                <h3>Can I view CCTV cameras remotely over Nisan internet?</h3>
+                <p>Yes. Nisan FTTH fiber provides the upload speed needed to stream live CCTV footage to your phone remotely. The 50 Mbps plan is sufficient for up to 8 cameras in 1080p.</p>
+                <h3>Why can't I view my CCTV camera remotely?</h3>
+                <p>This is almost always an upload speed problem. Check your upload speed — if it is under 4 Mbps with 4 cameras, upgrading your plan will resolve it. Also check your CCTV app's port forwarding settings.</p>
+                <h3>Does Nisan internet support CCTV and security systems?</h3>
+                <p>Yes. Nisan's FTTH fiber supports IP CCTV cameras, video doorbells, and remote security systems. The stable uptime and consistent upload speed make it ideal for 24/7 security monitoring.</p>
+                </div>
                     </article>
                 </div>
 

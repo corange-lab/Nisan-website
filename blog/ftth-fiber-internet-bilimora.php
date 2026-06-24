@@ -23,13 +23,14 @@
       "image": "https://www.nisan.co.in/assets/imgs/metaog.webp",
       "datePublished": "2025-06-15",
       "dateModified": "2026-06-23",
-      "author": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"},
+      "author": {"@type": "Person", "name": "Nisan Team", "worksFor": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}},
       "publisher": {
         "@type": "Organization",
         "name": "Nisan Cable TV & Internet",
         "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}
       },
       "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/ftth-fiber-internet-bilimora"},
+      "wordCount": 1258,
       "keywords": "FTTH internet Bilimora, fiber broadband Bilimora, what is FTTH, fiber to the home Bilimora, best broadband technology"
     }
     </script>
@@ -42,6 +43,56 @@
         {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.nisan.co.in/blog/"},
         {"@type": "ListItem", "position": 3, "name": "FTTH Fiber Internet Bilimora", "item": "https://www.nisan.co.in/blog/ftth-fiber-internet-bilimora"}
       ]
+    }
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is FTTH fiber internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FTTH stands for Fiber to the Home \u2014 a direct fiber optic cable connection from the exchange to your house. It delivers the fastest, most stable internet compared to copper or cable connections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is FTTH available in Bilimora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Nisan provides FTTH fiber internet throughout Bilimora West. Plans start at 50 Mbps for \u20b94,999/year with free installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between FTTH and regular broadband?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FTTH uses fiber optic cables carrying light signals, delivering speeds up to 400 Mbps with very low latency. Regular broadband uses copper telephone lines, which are slower and more prone to interference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does FTTH fiber cost in Bilimora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nisan's FTTH fiber plans in Bilimora start at \u20b94,999/year (50 Mbps) up to \u20b911,499/year (400 Mbps). All plans include free installation and a free WiFi router."
+      }
+    }
+      ]
+    }
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".blog-main p:first-of-type", ".blog-meta"]
+      }
     }
     </script>
     <?php include('../common-css.php'); ?>
@@ -84,7 +135,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="title">What Is FTTH Internet?</h1>
+                        <h2 class="title">What Is FTTH Internet?</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
@@ -197,18 +248,16 @@
                 </div>
 
                 <h2>Frequently Asked Questions</h2>
-
-                <h3>Is FTTH available in all parts of Bilimora?</h3>
-                <p>Nisan's FTTH network currently covers Bilimora West (W Zone). Call +91 98251 52400 to confirm if your specific address is within the coverage area.</p>
-
-                <h3>What equipment do I need for FTTH?</h3>
-                <p>Nisan provides everything — the fiber cable, an Optical Network Terminal (ONT) device, and a Wi-Fi router. You don't need to buy or arrange any equipment. It's all included in the installation.</p>
-
-                <h3>Does FTTH work during rain or power cuts?</h3>
-                <p>FTTH fiber cables are not affected by rain, humidity, or electrical interference the way copper cables are. However, like any internet service, a complete power cut at your premises will interrupt connectivity until power is restored.</p>
-
-                <h3>Can I get FTTH if I live in a flat or apartment in Bilimora?</h3>
-                <p>Yes. Nisan installs FTTH in apartments and multi-storey buildings in Bilimora West. The fiber cable is run to your specific flat. Contact us to discuss your building's requirements.</p>
+                <div itemscope itemtype="https://schema.org/FAQPage">
+                <h3>What is FTTH fiber internet?</h3>
+                <p>FTTH stands for Fiber to the Home — a direct fiber optic cable connection from the exchange to your house. It delivers the fastest, most stable internet compared to copper or cable connections.</p>
+                <h3>Is FTTH available in Bilimora?</h3>
+                <p>Yes. Nisan provides FTTH fiber internet throughout Bilimora West. Plans start at 50 Mbps for ₹4,999/year with free installation.</p>
+                <h3>What is the difference between FTTH and regular broadband?</h3>
+                <p>FTTH uses fiber optic cables carrying light signals, delivering speeds up to 400 Mbps with very low latency. Regular broadband uses copper telephone lines, which are slower and more prone to interference.</p>
+                <h3>How much does FTTH fiber cost in Bilimora?</h3>
+                <p>Nisan's FTTH fiber plans in Bilimora start at ₹4,999/year (50 Mbps) up to ₹11,499/year (400 Mbps). All plans include free installation and a free WiFi router.</p>
+                </div>
                     </article>
                 </div>
 

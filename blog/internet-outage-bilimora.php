@@ -15,10 +15,61 @@
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"Internet Outage in Bilimora: How to Check Status and Get It Fixed Fast","description":"Guide to diagnosing internet outages in Bilimora and getting reconnected quickly. Local support advantage over national ISP ticket queues.","image":"https://www.nisan.co.in/assets/imgs/metaog.webp","datePublished":"2026-06-23","dateModified":"2026-06-23","author":{"@type":"Organization","name":"Nisan Cable TV & Internet","url":"https://www.nisan.co.in"},"publisher":{"@type":"Organization","name":"Nisan Cable TV & Internet","logo":{"@type":"ImageObject","url":"https://www.nisan.co.in/assets/imgs/logo/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nisan.co.in/blog/internet-outage-bilimora"},"keywords":"internet outage Bilimora, internet down Bilimora, internet not working Bilimora, ISP support Bilimora"}
+    {"@context":"https://schema.org","@type":"Article","headline":"Internet Outage in Bilimora: How to Check Status and Get It Fixed Fast","description":"Guide to diagnosing internet outages in Bilimora and getting reconnected quickly. Local support advantage over national ISP ticket queues.","image":"https://www.nisan.co.in/assets/imgs/metaog.webp","datePublished":"2026-06-23","dateModified":"2026-06-23","author":{"@type":"Organization","name":"Nisan Cable TV & Internet","url":"https://www.nisan.co.in"},"publisher":{"@type":"Organization","name":"Nisan Cable TV & Internet","logo":{"@type":"ImageObject","url":"https://www.nisan.co.in/assets/imgs/logo/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nisan.co.in/blog/internet-outage-bilimora"},"wordCount": 1125,
+      "keywords":"internet outage Bilimora, internet down Bilimora, internet not working Bilimora, ISP support Bilimora"}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.nisan.co.in/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.nisan.co.in/blog/"},{"@type":"ListItem","position":3,"name":"Internet Outage Bilimora","item":"https://www.nisan.co.in/blog/internet-outage-bilimora"}]}
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should I do if my internet is down in Bilimora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First restart your router and ONT/modem. If the issue persists after 5 minutes, call Nisan at +91 98251 52400. Nisan's local team can identify whether it is a local outage or an issue at your premises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a Nisan internet outage last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Nisan outages are resolved within 1\u20134 hours as the team is local to Bilimora. Critical issues are prioritized and technicians are dispatched the same day in most cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a Nisan internet outage today?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call Nisan at +91 98251 52400 to check current outage status in your area of Bilimora. The local team will confirm if there is a network issue and the expected resolution time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I report a Nisan internet problem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call +91 98251 52400 or WhatsApp the same number. Provide your address and describe the issue. Nisan's team will diagnose remotely and dispatch a technician if needed."
+      }
+    }
+      ]
+    }
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".blog-main p:first-of-type", ".blog-meta"]
+      }
+    }
     </script>
     <?php include('../common-css.php'); ?>
     <style>
@@ -60,7 +111,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-content">
-                        <h1 class="title">Internet Outage Bilimora</h1>
+                        <h2 class="title">Internet Outage Bilimora</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
@@ -170,15 +221,16 @@
                 </div>
 
                 <h2>Frequently Asked Questions</h2>
-
-                <h3>How do I know if there is a Nisan outage in my area of Bilimora?</h3>
-                <p>Call or WhatsApp +91 98251 52400. Our team knows immediately if there is a widespread outage in your area of Bilimora West and can give you an estimated restoration time.</p>
-
-                <h3>My internet worked fine until it suddenly stopped — what happened?</h3>
-                <p>Sudden loss without any change on your end is usually a network-side event — planned maintenance, power issue at a node, or a cable fault. A router restart is the first step; if that does not resolve it within 5 minutes, call Nisan directly.</p>
-
-                <h3>Does Nisan offer any SLA or credit for downtime?</h3>
-                <p>For extended outages caused by network issues (not customer equipment), Nisan extends customer subscriptions accordingly. Call +91 98251 52400 to discuss compensation for any significant downtime affecting your connection.</p>
+                <div itemscope itemtype="https://schema.org/FAQPage">
+                <h3>What should I do if my internet is down in Bilimora?</h3>
+                <p>First restart your router and ONT/modem. If the issue persists after 5 minutes, call Nisan at +91 98251 52400. Nisan's local team can identify whether it is a local outage or an issue at your premises.</p>
+                <h3>How long does a Nisan internet outage last?</h3>
+                <p>Most Nisan outages are resolved within 1–4 hours as the team is local to Bilimora. Critical issues are prioritized and technicians are dispatched the same day in most cases.</p>
+                <h3>Is there a Nisan internet outage today?</h3>
+                <p>Call Nisan at +91 98251 52400 to check current outage status in your area of Bilimora. The local team will confirm if there is a network issue and the expected resolution time.</p>
+                <h3>How do I report a Nisan internet problem?</h3>
+                <p>Call +91 98251 52400 or WhatsApp the same number. Provide your address and describe the issue. Nisan's team will diagnose remotely and dispatch a technician if needed.</p>
+                </div>
                     </article>
                 </div>
 
