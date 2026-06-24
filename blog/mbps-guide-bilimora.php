@@ -158,7 +158,7 @@
                 <p>Yes. 50 Mbps is solid broadband. For context, it handles four simultaneous HD streams. Most households in India consider 50+ Mbps fast internet. It is many times faster than what BSNL DSL or mobile data delivers consistently.</p>
 
                 <h3>Why does my speed test show less than my plan speed?</h3>
-                <p>Speed tests measure the connection from your device to the test server — through your WiFi, your router, and the internet. WiFi signal loss through walls, an old router, or peak-hour traffic on the test server can all lower the result. Test via ethernet cable for the most accurate reading. See Nisan's speed test at <a href="/speedtest.php">nisan.co.in/speedtest</a>.</p>
+                <p>Speed tests measure the connection from your device to the test server — through your WiFi, your router, and the internet. WiFi signal loss through walls, an old router, or peak-hour traffic on the test server can all lower the result. Test via ethernet cable for the most accurate reading. See Nisan's speed test at <a href="https://www.speedtest.net" target="_blank" rel="noopener">speedtest.net</a>.</p>
 
                 <h3>Can I upgrade from 50 Mbps to 100 Mbps later?</h3>
                 <p>Yes, at any time. Call Nisan at +91 98251 52400 and we will upgrade your plan. No new installation required in most cases — just a plan change in our system.</p>

@@ -111,7 +111,7 @@
                 <h2>The June School Year Start: A Practical Checklist</h2>
 
                 <h3>1. Check your current plan speed</h3>
-                <p>Run a speed test at <a href="/speedtest.php">nisan.co.in/speedtest</a>. If you are getting consistently below 25 Mbps, and your family has 2+ students plus a parent at home, consider upgrading before school starts.</p>
+                <p>Run a speed test at <a href="https://www.speedtest.net" target="_blank" rel="noopener">speedtest.net</a>. If you are getting consistently below 25 Mbps, and your family has 2+ students plus a parent at home, consider upgrading before school starts.</p>
 
                 <h3>2. Count active users during school hours</h3>
                 <p>School hours (8 AM–2 PM) and tuition hours (4–7 PM) are when simultaneous usage peaks. Two children on separate online classes + one parent on a work call = 25+ Mbps needed simultaneously. The 50 Mbps plan handles this comfortably; 100 Mbps gives clear headroom.</p>

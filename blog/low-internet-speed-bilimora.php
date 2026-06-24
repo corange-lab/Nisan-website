@@ -86,7 +86,7 @@
                 <p>You are on a 100 Mbps or 200 Mbps Nisan plan, but a speed test shows only 30–50 Mbps. Or your YouTube keeps buffering even though you pay for a fast plan. This is a different problem from a general slow internet connection — you have a high-speed plan, but something between the fiber and your device is reducing the actual speed you receive. This guide walks through every likely cause and how to fix each one.</p>
 
                 <div class="info-box">
-                    <strong>First step:</strong> Run a speed test via <a href="/speedtest.php" style="color:#0066cc">nisan.co.in/speedtest</a> from a device connected via ethernet cable (not WiFi). If the result matches your plan speed, the issue is in your WiFi setup. If the wired result is also low, the issue may be with the router or ISP side.
+                    <strong>First step:</strong> Run a speed test via <a href="https://www.speedtest.net" target="_blank" rel="noopener" style="color:#0066cc">speedtest.net</a> from a device connected via ethernet cable (not WiFi). If the result matches your plan speed, the issue is in your WiFi setup. If the wired result is also low, the issue may be with the router or ISP side.
                 </div>
 
                 <h2>Cause 1: Old Router With a Speed Cap</h2>

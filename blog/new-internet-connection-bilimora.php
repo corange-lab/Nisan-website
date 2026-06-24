@@ -149,7 +149,7 @@
                     <li>Place your router in a central location, not behind walls or inside a cupboard, for the best WiFi coverage.</li>
                     <li>If you have a large home (3+ rooms), ask about a WiFi range extender — Nisan can supply one at a nominal cost.</li>
                     <li>Save our number (+91 98251 52400) in your phone. If you ever have an issue, one call is all it takes.</li>
-                    <li>Run a speed test from our <a href="/speedtest.php">speed test page</a> to verify your connection speed.</li>
+                    <li>Run a speed test from our <a href="https://www.speedtest.net" target="_blank" rel="noopener">speed test page</a> to verify your connection speed.</li>
                 </ul>
 
                 <h2>What Makes Nisan Different for New Customers</h2>

@@ -107,7 +107,7 @@
                 </table>
 
                 <div class="info-box">
-                    <strong>Check your actual BSNL speed:</strong> Visit our <a href="/speedtest.php">speed test page</a> to run a test right now. If you are on BSNL and getting under 15 Mbps, you are on an outdated connection.
+                    <strong>Check your actual BSNL speed:</strong> Visit our <a href="https://www.speedtest.net" target="_blank" rel="noopener">speed test page</a> to run a test right now. If you are on BSNL and getting under 15 Mbps, you are on an outdated connection.
                 </div>
 
                 <h2>What BSNL Customers Are Missing Out On</h2>
@@ -139,7 +139,7 @@
                 <ol>
                     <li><strong>Call Nisan at +91 98251 52400</strong> and confirm your address is covered in Bilimora West (it almost certainly is).</li>
                     <li><strong>Book a same-day installation.</strong> A Nisan technician visits, installs the fiber cable and ONU device, sets up your free WiFi router, and connects all your devices.</li>
-                    <li><strong>Test and confirm</strong> your Nisan connection is working — run a speed test on our <a href="/speedtest.php">speed test page</a> to see the difference immediately.</li>
+                    <li><strong>Test and confirm</strong> your Nisan connection is working — run a speed test on our <a href="https://www.speedtest.net" target="_blank" rel="noopener">speed test page</a> to see the difference immediately.</li>
                     <li><strong>Let your BSNL plan lapse.</strong> You do not need to formally cancel BSNL — simply stop renewing the plan when it expires. The BSNL line can stay connected if you still use a landline telephone on it, or you can surrender the connection if you wish.</li>
                 </ol>
 

@@ -43,7 +43,7 @@
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://www.nisan.co.in/speedtest.php?q={search_term_string}"
+          "urlTemplate": "https://www.nisan.co.in/contact.php?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
