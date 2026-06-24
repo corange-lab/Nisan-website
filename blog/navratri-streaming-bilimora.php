@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navratri 2026 Live Streaming in Bilimora: Watch Garba Without Buffering</title>
-    <meta name="description" content="Stream Navratri 2026 Garba live from Bilimora without buffering. DD News, ETV Gujarati, YouTube Garba events — get the right fiber internet plan before the festival.">
+    <title>Navratri 2026 Live Streaming in Bilimora</title>
+    <meta name="description" content="Stream Navratri 2026 Garba live from Bilimora without buffering. DD News, ETV Gujarati, YouTube Garba events — get the right fiber internet plan before...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/navratri-streaming-bilimora">
     <meta property="og:title" content="Navratri 2026 Live Streaming in Bilimora: Watch Garba Without Buffering">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="Stream Navratri 2026 Garba live from Bilimora. DD News, ETV Gujarati, YouTube — no buffering with fiber internet.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Navratri 2026 Live Streaming in Bilimora: Watch Garba Without Buffering">
+    <meta name="twitter:description" content="Stream Navratri 2026 Garba live from Bilimora. DD News, ETV Gujarati, YouTube — no buffering with fiber internet.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "Article", "headline": "Navratri 2026 Live Streaming in Bilimora: Watch Garba Without Buffering", "description": "Stream Navratri 2026 Garba live from Bilimora without buffering. DD News, ETV Gujarati, YouTube Garba events — get the right fiber plan before the festival.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "Nisan Team", "worksFor": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/navratri-streaming-bilimora"}, "wordCount": 1217,
       "keywords": "Navratri streaming Bilimora, Garba live streaming Gujarat, Navratri 2026 internet, ETV Gujarati Navratri, fiber internet Navratri, Bilimora Garba" }

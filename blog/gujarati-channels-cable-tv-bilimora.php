@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gujarati Channels on Cable TV in Bilimora: Complete Channel List 2026</title>
-    <meta name="description" content="Complete list of Gujarati channels on Nisan cable TV in Bilimora — DD Girnar, ETV Gujarati, Zee Gujarat, Colors Gujarati & more. Better than OTT for regional content.">
+    <title>Gujarati Channels on Cable TV in Bilimora</title>
+    <meta name="description" content="Complete list of Gujarati channels on Nisan cable TV in Bilimora — DD Girnar, ETV Gujarati, Zee Gujarat, Colors Gujarati & more. Better than OTT for...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/gujarati-channels-cable-tv-bilimora">
     <meta property="og:title" content="Gujarati Channels on Cable TV in Bilimora: Complete Channel List 2026">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="All major Gujarati channels on Nisan cable TV in Bilimora. DD Girnar, ETV, Zee Gujarat, VTV & more — no extra pack needed.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gujarati Channels on Cable TV in Bilimora: Complete Channel List 2026">
+    <meta name="twitter:description" content="All major Gujarati channels on Nisan cable TV in Bilimora. DD Girnar, ETV, Zee Gujarat, VTV & more — no extra pack needed.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "Article", "headline": "Gujarati Channels on Cable TV in Bilimora: Complete Channel List 2026", "description": "Complete list of Gujarati channels on Nisan cable TV in Bilimora — DD Girnar, ETV Gujarati, Zee Gujarat, Colors Gujarati & more. Better than OTT for regional content.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "Nisan Team", "worksFor": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/gujarati-channels-cable-tv-bilimora"}, "wordCount": 1406,
       "keywords": "Gujarati channels cable TV Bilimora, DD Girnar Bilimora, ETV Gujarati, Zee Gujarat, Nisan cable TV channels" }

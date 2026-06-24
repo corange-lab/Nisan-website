@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Nisan — Bilimora's Trusted Internet & Cable TV Provider Since 1993</title>
-    <meta name="description" content="Nisan has served Bilimora West since 1993 with cable TV and since 2019 with FTTH broadband. 2,000+ happy customers, local support team, plans from ₹4,999/year.">
+    <title>About Nisan — Bilimora's ISP &amp; Cable TV Since 1993</title>
+    <meta name="description" content="Nisan has served Bilimora since 1993 with cable TV and FTTH broadband. 2,000+ customers, local support team, plans from ₹4,999/year. View plans.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/about-us">
 
-    <meta property="og:title" content="About Nisan — Bilimora's Trusted Internet & Cable TV Provider Since 1993">
+    <meta property="og:title" content="About Nisan — Bilimora's ISP &amp; Cable TV Since 1993">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nisan.co.in/about-us">
     <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <meta property="og:image:alt" content="Nisan Cable TV & Internet Bilimora">
-    <meta property="og:description" content="Serving Bilimora West since 1993 with cable TV and FTTH broadband. 2,000+ customers, local team, plans from ₹4,999/year.">
+    <meta property="og:description" content="Nisan has served Bilimora since 1993 with cable TV and FTTH broadband. 2,000+ customers, local support, plans from ₹4,999/year. View plans.">
     <meta property="og:site_name" content="Nisan Cable & Internet">
     <meta property="og:locale" content="en_IN">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Nisan — Bilimora's Trusted Internet & Cable TV Provider Since 1993">
-    <meta name="twitter:description" content="Serving Bilimora West since 1993 with cable TV and FTTH broadband. 2,000+ happy customers.">
+    <meta name="twitter:title" content="About Nisan — Bilimora's ISP &amp; Cable TV Since 1993">
+    <meta name="twitter:description" content="Nisan has served Bilimora since 1993 with cable TV and FTTH broadband. 2,000+ customers, local support, plans from ₹4,999/year.">
     <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 
     <script type="application/ld+json">

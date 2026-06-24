@@ -170,7 +170,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="copyright-text text-center text-md-end">
-                            <p>Copyrighted by Nisan</a> - All Right Reserved</p>
+                            <p>Copyrighted by Nisan - All Right Reserved &nbsp;·&nbsp; Licensed ISP under <a href="https://www.trai.gov.in" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.6)">TRAI</a> guidelines</p>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low Internet Speed Despite High-Speed Plan in Bilimora: What to Do</title>
+    <title>Low Internet Speed Despite High-Speed Plan in Bilimora</title>
     <meta name="description" content="Getting slow speeds on a 100 or 200 Mbps plan in Bilimora? The problem is often your router or WiFi, not your ISP. Here is how to diagnose and fix it.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/low-internet-speed-bilimora">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="Speed test showing less than your plan in Bilimora? Diagnose router, WiFi band, and ISP issues with this step-by-step guide.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Low Internet Speed Despite High-Speed Plan in Bilimora: What to Do">
+    <meta name="twitter:description" content="Speed test showing less than your plan in Bilimora? Diagnose router, WiFi band, and ISP issues with this step-by-step guide.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Article","headline":"Low Internet Speed Despite High-Speed Plan in Bilimora: What to Do","description":"How to diagnose and fix low speed test results when on a 100 Mbps or higher plan in Bilimora. Router, WiFi, and ISP-side checks.","image":"https://www.nisan.co.in/assets/imgs/metaog.webp","datePublished":"2026-06-23","dateModified":"2026-06-23","author":{"@type":"Organization","name":"Nisan Cable TV & Internet","url":"https://www.nisan.co.in"},"publisher":{"@type":"Organization","name":"Nisan Cable TV & Internet","logo":{"@type":"ImageObject","url":"https://www.nisan.co.in/assets/imgs/logo/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nisan.co.in/blog/low-internet-speed-bilimora"},"wordCount": 1247,
       "keywords":"low internet speed Bilimora broadband, slow speed high plan Bilimora, speed test less than plan Bilimora, internet speed fix Bilimora"}

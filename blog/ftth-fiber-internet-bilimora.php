@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What Is FTTH Fiber Internet? Benefits for Bilimora Homes & Businesses</title>
-    <meta name="description" content="Learn what FTTH (Fiber-to-the-Home) internet is and why it's the best broadband technology for homes and businesses in Bilimora. Nisan provides FTTH from ₹4,999/year.">
+    <title>What Is FTTH Fiber Internet? Benefits for Bilimora Homes...</title>
+    <meta name="description" content="Learn what FTTH (Fiber-to-the-Home) internet is and why it's the best broadband technology for homes and businesses in Bilimora. Nisan provides FTTH...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/ftth-fiber-internet-bilimora">
     <meta property="og:title" content="What Is FTTH Fiber Internet? Benefits for Bilimora Homes & Businesses">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="FTTH fiber internet explained — what it is, why it beats cable and mobile data, and how Nisan brings it to Bilimora from ₹4,999/year.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Is FTTH Fiber Internet? Benefits for Bilimora Homes & Businesses">
+    <meta name="twitter:description" content="FTTH fiber internet explained — what it is, why it beats cable and mobile data, and how Nisan brings it to Bilimora from ₹4,999/year.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

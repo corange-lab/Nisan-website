@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How Much Internet Speed Do I Need? Guide for Bilimora Homes</title>
-    <meta name="description" content="Not sure how much internet speed you need? This guide helps Bilimora families choose between 50, 100, 200, 300 or 400 Mbps based on actual usage — streaming, gaming, WFH, and more.">
+    <meta name="description" content="Not sure how much internet speed you need? This guide helps Bilimora families choose between 50, 100, 200, 300 or 400 Mbps based on actual usage —...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/how-much-internet-speed-do-i-need">
     <meta property="og:title" content="How Much Internet Speed Do I Need? Guide for Bilimora Homes">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="A simple guide to choosing the right internet speed for your home or office in Bilimora. 50 Mbps vs 100 Mbps vs 200 Mbps explained.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How Much Internet Speed Do I Need? Guide for Bilimora Homes">
+    <meta name="twitter:description" content="A simple guide to choosing the right internet speed for your home or office in Bilimora. 50 Mbps vs 100 Mbps vs 200 Mbps explained.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

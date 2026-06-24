@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Internet Provider in Bilimora — Honest Comparison</title>
-    <meta name="description" content="Looking for the best internet provider in Bilimora? Compare Nisan, Jio Fiber, and Airtel on speed, price, and local support. Nisan starts at ₹4,999/year with free installation.">
+    <meta name="description" content="Looking for the best internet provider in Bilimora? Compare Nisan, Jio Fiber, and Airtel on speed, price, and local support. Nisan starts at...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/best-internet-provider-bilimora">
     <meta property="og:title" content="Best Internet Provider in Bilimora — Honest Comparison">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="Compare the best internet providers in Bilimora. Nisan vs Jio Fiber vs Airtel — price, speed, installation, and local support breakdown.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Best Internet Provider in Bilimora — Honest Comparison">
+    <meta name="twitter:description" content="Compare the best internet providers in Bilimora. Nisan vs Jio Fiber vs Airtel — price, speed, installation, and local support breakdown.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -182,7 +186,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Starting Price/Year</td><td class="nisan-col">₹4,999</td><td>₹8,388</td><td>₹9,600+</td></tr>
+                        <tr><td>Starting Price/Year</td><td class="nisan-col"><a href="/pricing.php" style="color:#0066cc">₹4,999</a></td><td>₹8,388</td><td>₹9,600+</td></tr>
                         <tr><td>Starting Speed</td><td class="nisan-col">50 Mbps</td><td>30 Mbps</td><td>40 Mbps</td></tr>
                         <tr><td>100 Mbps Annual Price</td><td class="nisan-col">₹5,999</td><td>₹10,799</td><td>₹9,600+</td></tr>
                         <tr><td>Max Speed Available</td><td class="nisan-col">400 Mbps</td><td>1 Gbps</td><td>1 Gbps</td></tr>

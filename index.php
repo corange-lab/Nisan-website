@@ -7,8 +7,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="theme-color" content="#0066cc">
     <meta name="apple-mobile-web-app-capable" content="yes">
-	<title>Nisan - Cable TV &amp; Internet Service Provider in Bilimora</title>
-	<meta name="description" content="Bilimora's #1 local ISP since 1993. FTTH internet from ₹4,999/year (50–400 Mbps), cable TV, free installation, 1-month money-back. 2,000+ happy customers in Bilimora West.">
+	<title>Internet Provider in Bilimora — Nisan Cable TV &amp; ISP</title>
+	<meta name="description" content="Bilimora's #1 local ISP since 1993. FTTH fiber from ₹4,999/year (50–400 Mbps), cable TV, free installation, 1-month money-back. 2,000+ customers.">
     <meta name="keywords" content="broadband Bilimora, cable TV Bilimora, FTTH internet Bilimora, fast internet provider,
     affordable broadband Bilimora, speedtest, speed test, Internet Service Bilimora, Cable TV Bilimora, High-Speed Internet Bilimora,
     FTTH Bilimora, WiFi Bilimora, ISP Bilimora, Digital TV Bilimora, Fiber Internet Bilimora, Home Internet Bilimora,
@@ -195,30 +195,22 @@
 </script>
 
 <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Nisan Cable & Internet - High-Speed Broadband in Bilimora">
-<meta property="og:type" content="website"> <!-- For general pages -->
+<meta property="og:title" content="Internet Provider in Bilimora — Nisan Cable TV &amp; ISP">
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://www.nisan.co.in">
 <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
-<meta property="og:image:alt" content="Nisan Cable & Internet Logo">
+<meta property="og:image:alt" content="Nisan Cable TV & Internet — Bilimora's local ISP since 1993">
 <meta property="og:image:type" content="image/webp">
-<meta property="og:image:width" content="1200"> <!-- Width of image in pixels -->
-<meta property="og:image:height" content="630"> <!-- Height of image in pixels -->
-<meta property="og:description" content="Get blazing-fast FTTH internet and premium cable TV service in Bilimora. Trusted by locals since 1993!">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:description" content="Bilimora's #1 local ISP since 1993. FTTH fiber from ₹4,999/year (50–400 Mbps), cable TV, free installation, 1-month money-back. 2,000+ customers.">
 <meta property="og:site_name" content="Nisan Cable & Internet">
-<meta property="og:locale" content="en_IN"> <!-- For India-specific users -->
-<meta property="og:updated_time" content="2025-01-06T12:00:00+05:30"> <!-- Last updated time in ISO format -->
-
-<!-- Additional (Optional) Open Graph Tags -->
-<meta property="article:author" content="Kanubhai M Patel">
-<meta property="article:publisher" content="Nisan Internet & Cable">
-<meta property="article:published_time" content="2020-01-01T00:00:00+05:30"> <!-- Time when the business was established -->
-<meta property="article:modified_time" content="2025-01-06T12:00:00+05:30">
-<meta property="og:determiner" content="the"> <!-- Adds determiner for better context: 'a', 'an', 'the', etc. -->
+<meta property="og:locale" content="en_IN">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nisan Cable & Internet - Fast Broadband & TV in Bilimora">
-<meta name="twitter:description" content="Reliable internet and premium cable TV. Get seamless streaming, gaming, and live TV. Affordable plans starting at ₹4,999/year!">
+<meta name="twitter:title" content="Internet Provider in Bilimora — Nisan Cable TV &amp; ISP">
+<meta name="twitter:description" content="Bilimora's #1 local ISP since 1993. FTTH fiber from ₹4,999/year (50–400 Mbps), cable TV, free installation, 1-month money-back. 2,000+ customers.">
 <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 
 <meta name="facebook-domain-verification" content="zxh7pbdxqpvahj27akuscq7wz0nfm5" />

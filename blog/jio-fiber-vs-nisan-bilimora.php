@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jio Fiber vs Nisan Internet Bilimora — Which Is Better & Cheaper?</title>
-    <meta name="description" content="Jio Fiber vs Nisan Internet in Bilimora — detailed comparison on price, speed, and support. Nisan offers 100 Mbps at ₹5,999/year vs Jio's ₹10,799/year. Save ₹4,800/year.">
+    <title>Jio Fiber vs Nisan Internet Bilimora</title>
+    <meta name="description" content="Jio Fiber vs Nisan Internet in Bilimora — detailed comparison on price, speed, and support. Nisan offers 100 Mbps at ₹5,999/year vs Jio's ₹10,799/year....">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/jio-fiber-vs-nisan-bilimora">
     <meta property="og:title" content="Jio Fiber vs Nisan Internet Bilimora — Which Is Better?">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="Jio Fiber vs Nisan Internet in Bilimora. Nisan 100 Mbps = ₹5,999/year. Jio 100 Mbps = ₹10,799/year. Save ₹4,800 and get local Bilimora support.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jio Fiber vs Nisan Internet Bilimora — Which Is Better?">
+    <meta name="twitter:description" content="Jio Fiber vs Nisan Internet in Bilimora. Nisan 100 Mbps = ₹5,999/year. Jio 100 Mbps = ₹10,799/year. Save ₹4,800 and get local Bilimora support.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -169,7 +173,7 @@
                 <p>Many people in Bilimora are choosing between <strong>Jio Fiber</strong> and <strong>Nisan Cable & Internet</strong> for their home broadband. This comparison breaks down the real differences — price, speed, support, and installation — so you can decide what's right for your family or business.</p>
 
                 <div class="savings-box">
-                    <strong>The short answer:</strong> For 100 Mbps internet in Bilimora, Nisan charges ₹5,999/year while Jio charges ₹10,799/year. You save <strong>₹4,800 every year</strong> by choosing Nisan — for the exact same speed.
+                    <strong>The short answer:</strong> For 100 Mbps internet in Bilimora, Nisan charges <a href="/pricing.php" style="color:#0066cc">₹5,999/year</a> while Jio charges ₹10,799/year. You save <strong>₹4,800 every year</strong> by choosing Nisan — for the exact same speed.
                 </div>
 
                 <h2>Price Comparison: Jio Fiber vs Nisan (Bilimora, 2026)</h2>

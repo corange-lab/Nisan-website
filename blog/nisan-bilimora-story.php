@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nisan Cable TV & Internet: 30+ Years Serving Bilimora — Our Story</title>
-    <meta name="description" content="Nisan's story: founded in Bilimora in 1993 by a local family, 30+ years of cable TV and FTTH internet, 2,000+ customers, still local, still the same number to call.">
+    <title>Nisan Cable TV & Internet: 30+ Years Serving Bilimora</title>
+    <meta name="description" content="Nisan's story: founded in Bilimora in 1993 by a local family, 30+ years of cable TV and FTTH internet, 2,000+ customers, still local, still the same...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/nisan-bilimora-story">
     <meta property="og:title" content="Nisan Cable TV & Internet: 30+ Years Serving Bilimora — Our Story">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="Since 1993, Nisan has been Bilimora's local cable TV and internet provider. 30+ years, 2,000+ customers, still family-run.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nisan Cable TV & Internet: 30+ Years Serving Bilimora — Our Story">
+    <meta name="twitter:description" content="Since 1993, Nisan has been Bilimora's local cable TV and internet provider. 30+ years, 2,000+ customers, still family-run.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "Article", "headline": "Nisan Cable TV & Internet: 30+ Years Serving Bilimora — Our Story", "description": "Nisan's story: founded in Bilimora in 1993, 30+ years of cable TV and FTTH internet, 2,000+ customers, still locally run.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "Nisan Team", "worksFor": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/nisan-bilimora-story"}, "wordCount": 1624,
       "keywords": "Nisan Cable TV Bilimora history, Nisan internet Bilimora, Bilimora local ISP, Nisan 1993 founded" }
@@ -152,7 +156,7 @@
 
                 <p>Cable television was the foundation, but as Bilimora's households and businesses began needing broadband internet, Nisan expanded. The shift to FTTH (Fiber to the Home) was a significant infrastructure investment — laying fibre optic cable through the same streets where coaxial cable had gone before, and building a network capable of delivering speeds from 50 Mbps to 400 Mbps to residential and commercial customers.</p>
 
-                <p>Today, our <a href="/index.php#pricing">fiber internet plans start at ₹4,999 per year</a> for 50 Mbps — an annual pricing model that reflects how we have always approached things: be straightforward about costs, do not make customers renew every month, give them stability. The 400 Mbps plan at ₹11,499 per year serves households with multiple devices, home offices, and streaming needs that simply did not exist when we started in 1993.</p>
+                <p>Today, our <a href="/index.php#pricing">fiber internet plans start at <a href="/pricing.php" style="color:#0066cc">₹4,999</a> per year</a> for 50 Mbps — an annual pricing model that reflects how we have always approached things: be straightforward about costs, do not make customers renew every month, give them stability. The 400 Mbps plan at ₹11,499 per year serves households with multiple devices, home offices, and streaming needs that simply did not exist when we started in 1993.</p>
 
                 <div class="info-box">
                     <strong>By the numbers:</strong> Est. 1993 &nbsp;·&nbsp; 30+ years of operation &nbsp;·&nbsp; 2,000+ active customers &nbsp;·&nbsp; 200+ cable TV channels &nbsp;·&nbsp; FTTH fiber 50–400 Mbps &nbsp;·&nbsp; One local number: 98251 52400

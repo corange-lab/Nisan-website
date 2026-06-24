@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why 2,000+ Bilimora Families Trust Nisan Cable TV & Internet</title>
-    <meta name="description" content="8 reasons why 2,000+ Bilimora families choose Nisan over national ISPs: 30 years local, same-day repairs, annual pricing, free installation, cable TV + internet bundle.">
+    <meta name="description" content="8 reasons why 2,000+ Bilimora families choose Nisan over national ISPs: 30 years local, same-day repairs, annual pricing, free installation, cable TV +...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/why-bilimora-families-trust-nisan">
     <meta property="og:title" content="Why 2,000+ Bilimora Families Trust Nisan Cable TV & Internet">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="30 years in Bilimora, same-day repairs, transparent pricing, free install. 8 reasons families choose Nisan over national ISPs.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why 2,000+ Bilimora Families Trust Nisan Cable TV & Internet">
+    <meta name="twitter:description" content="30 years in Bilimora, same-day repairs, transparent pricing, free install. 8 reasons families choose Nisan over national ISPs.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "Article", "headline": "Why 2,000+ Bilimora Families Trust Nisan Cable TV & Internet", "description": "8 reasons why 2,000+ Bilimora families choose Nisan: 30 years local, same-day repairs, annual pricing, free installation, cable TV + internet bundle.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "Nisan Team", "worksFor": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/why-bilimora-families-trust-nisan"}, "wordCount": 1286,
       "keywords": "why choose Nisan Bilimora, Nisan internet trust, best ISP Bilimora, local internet provider Bilimora" }
@@ -165,7 +169,7 @@
                 <div class="reason-block">
                     <div class="reason-num">Reason 5</div>
                     <h3>Annual Pricing Transparency — No Monthly Surprises</h3>
-                    <p>Nisan's plans are priced annually: ₹4,999/year for 50 Mbps up to ₹11,499/year for 400 Mbps. You pay once, you know exactly what you are getting, and you do not have to think about recharging every month. No price hikes partway through your subscription, no hidden rental charges for the router, no extra fee for installation. See the <a href="/index.php#pricing">full pricing breakdown</a>.</p>
+                    <p>Nisan's plans are priced annually: <a href="/pricing.php" style="color:#0066cc">₹4,999/year</a> for 50 Mbps up to ₹11,499/year for 400 Mbps. You pay once, you know exactly what you are getting, and you do not have to think about recharging every month. No price hikes partway through your subscription, no hidden rental charges for the router, no extra fee for installation. See the <a href="/index.php#pricing">full pricing breakdown</a>.</p>
                 </div>
 
                 <div class="reason-block">

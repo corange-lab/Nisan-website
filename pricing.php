@@ -4,23 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Plans in Bilimora | Nisan — 50 to 400 Mbps from ₹4,999/year</title>
-    <meta name="description" content="View Nisan's affordable internet plans in Bilimora. FTTH broadband from ₹4,999/year (50 Mbps) to ₹11,499/year (400 Mbps). Free installation, unlimited data, 1-month money-back guarantee.">
+    <title>Internet Plans Bilimora | Nisan FTTH from ₹4,999/year</title>
+    <meta name="description" content="Nisan's FTTH internet plans in Bilimora: 50–400 Mbps from ₹4,999/year. Free installation, unlimited data, 1-month money-back. Get connected today.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/pricing">
 
-    <meta property="og:title" content="Internet Plans in Bilimora | Nisan — 50 to 400 Mbps">
+    <meta property="og:title" content="Internet Plans Bilimora | Nisan FTTH from ₹4,999/year">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nisan.co.in/pricing">
     <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
-    <meta property="og:image:alt" content="Nisan Cable TV & Internet Plans">
-    <meta property="og:description" content="FTTH internet plans from ₹4,999/year (50 Mbps) to ₹11,499/year (400 Mbps) in Bilimora. Free installation, unlimited data, 1-month money-back.">
+    <meta property="og:image:alt" content="Nisan internet plans in Bilimora — 50 to 400 Mbps FTTH fiber">
+    <meta property="og:description" content="Nisan's FTTH internet plans in Bilimora: 50–400 Mbps from ₹4,999/year. Free installation, unlimited data, 1-month money-back. Get connected today.">
     <meta property="og:site_name" content="Nisan Cable & Internet">
     <meta property="og:locale" content="en_IN">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Internet Plans in Bilimora | Nisan — 50 to 400 Mbps">
-    <meta name="twitter:description" content="FTTH internet plans in Bilimora from ₹4,999/year. Free installation, unlimited data, plans up to 400 Mbps.">
+    <meta name="twitter:title" content="Internet Plans Bilimora | Nisan FTTH from ₹4,999/year">
+    <meta name="twitter:description" content="Nisan FTTH internet plans in Bilimora from ₹4,999/year. 50–400 Mbps. Free installation, unlimited data, 1-month money-back.">
     <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 
     <script type="application/ld+json">
@@ -29,7 +29,21 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"},
-        {"@type": "ListItem", "position": 2, "name": "Packages", "item": "https://www.nisan.co.in/pricing"}
+        {"@type": "ListItem", "position": 2, "name": "Internet Plans", "item": "https://www.nisan.co.in/pricing"}
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is the cheapest internet plan in Bilimora?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan's cheapest internet plan in Bilimora is 50 Mbps FTTH fiber at ₹4,999/year (₹417/month). Free installation and a free WiFi router are included."}},
+        {"@type": "Question", "name": "Does Nisan charge for installation?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nisan includes free installation on every plan, every time — including upgrades and renewals. There are no hidden setup fees."}},
+        {"@type": "Question", "name": "How quickly can I get internet installed in Bilimora?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan installs within 1–2 working days of confirmation. Call or WhatsApp +91 98251 52400 to book your installation."}},
+        {"@type": "Question", "name": "Is there a contract or lock-in period?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan's plans are annual with no long-term contract. A 1-month money-back guarantee applies — if you are not satisfied in the first month, you get a full refund."}},
+        {"@type": "Question", "name": "What internet speed do I need for a family of 4?", "acceptedAnswer": {"@type": "Answer", "text": "A family of 4 with streaming, video calls, and gaming needs at least 100 Mbps. Nisan's 100 Mbps plan at ₹5,999/year handles 6–8 devices simultaneously without any buffering."}}
       ]
     }
     </script>
@@ -182,11 +196,11 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-8">
                             <div class="breadcrumb-content">
-                                <h3 class="title">Packages</h3>
+                                <h1 class="title">Internet Plans in Bilimora</h1>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Packages</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Internet Plans</li>
                                     </ol>
                                 </nav>
                             </div>

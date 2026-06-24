@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cable TV + Internet Combo in Bilimora — Save More with Nisan Bundle</title>
-    <meta name="description" content="Get cable TV and high-speed internet together in Bilimora with Nisan's combo plan. 200+ channels + FTTH broadband. One bill, one local provider. Call 98251 52400.">
+    <title>Cable TV + Internet Combo in Bilimora</title>
+    <meta name="description" content="Get cable TV and high-speed internet together in Bilimora with Nisan's combo plan. 200+ channels + FTTH broadband. One bill, one local provider. Call...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/cable-tv-internet-combo-bilimora">
     <meta property="og:title" content="Cable TV + Internet Combo in Bilimora — Save More with Nisan Bundle">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="Nisan offers cable TV + FTTH internet combo in Bilimora. 200+ channels, high-speed broadband, one bill. Get 2 months free on yearly combo plans.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cable TV + Internet Combo in Bilimora — Save More with Nisan Bundle">
+    <meta name="twitter:description" content="Nisan offers cable TV + FTTH internet combo in Bilimora. 200+ channels, high-speed broadband, one bill. Get 2 months free on yearly combo plans.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -200,7 +204,7 @@
 
                 <p>The combo price depends on which internet speed you choose. Call Nisan at +91 98251 52400 for the current combo rate — pricing is customised based on your address and chosen internet plan. Most combo customers save 10–15% compared to taking the services separately.</p>
 
-                <p>For reference, internet-only plans start at ₹4,999/year. Add cable TV at a bundled rate and you get both for less than you'd expect — with 2 months free on top.</p>
+                <p>For reference, internet-only plans start at <a href="/pricing.php" style="color:#0066cc">₹4,999/year</a>. Add cable TV at a bundled rate and you get both for less than you'd expect — with 2 months free on top.</p>
 
                 <h2>Who Is the Combo Plan Best For?</h2>
 

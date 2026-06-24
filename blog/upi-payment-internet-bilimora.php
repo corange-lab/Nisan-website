@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPI Payments Failing in Your Bilimora Shop? Your Internet Could Be the Problem</title>
-    <meta name="description" content="UPI payment failures in your Bilimora shop may be caused by poor internet latency. Learn why fiber at 10–20ms ping fixes UPI timeouts and how much it costs to ignore this.">
+    <title>UPI Payments Failing in Your Bilimora Shop? Your...</title>
+    <meta name="description" content="UPI payment failures in your Bilimora shop may be caused by poor internet latency. Learn why fiber at 10–20ms ping fixes UPI timeouts and how much it...">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/upi-payment-internet-bilimora">
     <meta property="og:title" content="UPI Payments Failing in Your Bilimora Shop? Your Internet Could Be the Problem">
@@ -14,6 +14,10 @@
     <meta property="og:description" content="UPI payment failures in Bilimora shops caused by poor internet. Fiber at 10–20ms ping fixes UPI timeouts instantly.">
     <meta property="og:site_name" content="Nisan Cable &amp; Internet">
     <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UPI Payments Failing in Your Bilimora Shop? Your Internet Could Be the Problem">
+    <meta name="twitter:description" content="UPI payment failures in Bilimora shops caused by poor internet. Fiber at 10–20ms ping fixes UPI timeouts instantly.">
+    <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "Article", "headline": "UPI Payments Failing in Your Bilimora Shop? Your Internet Could Be the Problem", "description": "UPI payment failures in your Bilimora shop may be caused by poor internet latency. Learn why fiber at 10–20ms ping fixes UPI timeouts.", "image": "https://www.nisan.co.in/assets/imgs/metaog.webp", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "Nisan Team", "worksFor": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "url": "https://www.nisan.co.in"}}, "publisher": {"@type": "Organization", "name": "Nisan Cable TV & Internet", "logo": {"@type": "ImageObject", "url": "https://www.nisan.co.in/assets/imgs/logo/logo.webp"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.nisan.co.in/blog/upi-payment-internet-bilimora"}, "wordCount": 1287,
       "keywords": "UPI payment failing Bilimora, UPI timeout shop, internet for UPI, PhonePe GPay fiber internet, UPI latency, fiber internet for shop Bilimora" }
