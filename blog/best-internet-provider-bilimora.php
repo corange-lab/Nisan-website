@@ -190,7 +190,7 @@
                     <tbody>
                         <tr><td>Starting Price/Year</td><td class="nisan-col"><a href="/pricing.php" style="color:#0066cc">₹4,999</a></td><td>₹8,388</td><td>₹9,600+</td></tr>
                         <tr><td>Starting Speed</td><td class="nisan-col">50 Mbps</td><td>30 Mbps</td><td>40 Mbps</td></tr>
-                        <tr><td>100 Mbps Annual Price</td><td class="nisan-col">₹5,999</td><td>₹10,799</td><td>₹9,600+</td></tr>
+                        <tr><td>100 Mbps Annual Price</td><td class="nisan-col">₹5,499</td><td>₹10,799</td><td>₹9,600+</td></tr>
                         <tr><td>Max Speed Available</td><td class="nisan-col">400 Mbps</td><td>1 Gbps</td><td>1 Gbps</td></tr>
                         <tr><td>Free Installation</td><td class="nisan-col">Always</td><td>Conditional</td><td>Conditional</td></tr>
                         <tr><td>Free Router</td><td class="nisan-col">Yes</td><td>Yes</td><td>Yes</td></tr>
@@ -207,7 +207,7 @@
 
                 <h3>Why customers choose Nisan</h3>
                 <ul>
-                    <li><strong>Price:</strong> 100 Mbps at ₹5,999/year vs Jio's ₹10,799 — you save ₹4,800 per year</li>
+                    <li><strong>Price:</strong> 100 Mbps at ₹5,499/year vs Jio's ₹10,799 — you save ₹4,800 per year</li>
                     <li><strong>Local team:</strong> When something goes wrong, you call a local Bilimora number — not a call center in another city</li>
                     <li><strong>1-month money-back:</strong> If you're not happy in the first month, full refund — no questions asked</li>
                     <li><strong>Free installation every time:</strong> No hidden "installation charges" if you upgrade or renew</li>
@@ -232,7 +232,7 @@
 
                 <ul>
                     <li><strong>1–2 people, light use:</strong> 50 Mbps (Nisan Home Plan at ₹4,999/year) is plenty</li>
-                    <li><strong>Family of 4, HD streaming + video calls:</strong> 100 Mbps (Family Plan at ₹5,999/year)</li>
+                    <li><strong>Family of 4, HD streaming + video calls:</strong> 100 Mbps (Family Plan at ₹5,499/year)</li>
                     <li><strong>Work from home + 4K streaming + gaming:</strong> 200 Mbps (Power Plan at ₹7,499/year)</li>
                     <li><strong>Small office or shop with multiple devices:</strong> 300–400 Mbps (Business/Ultra Plan)</li>
                 </ul>
@@ -279,7 +279,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

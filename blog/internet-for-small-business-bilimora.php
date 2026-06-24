@@ -51,7 +51,7 @@
       "name": "How much does business internet cost in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nisan's business-suitable plans start at \u20b95,999/year (100 Mbps). For businesses needing dedicated bandwidth, the 200 Mbps plan at \u20b97,499/year or 400 Mbps at \u20b911,499/year are appropriate."
+        "text": "Nisan's business-suitable plans start at \u20b95,499/year (100 Mbps). For businesses needing dedicated bandwidth, the 200 Mbps plan at \u20b97,499/year or 400 Mbps at \u20b911,499/year are appropriate."
       }
     },
     {
@@ -198,7 +198,7 @@
                 <h2>Which Nisan Plan Is Right for Your Business?</h2>
 
                 <h3>Small shop (kirana, medical store, boutique)</h3>
-                <p>The 100 Mbps plan at ₹5,999/year covers UPI, billing software, WhatsApp Business, and 2–4 CCTV cameras easily. It works out to just ₹500/month — less than most mobile recharges.</p>
+                <p>The 100 Mbps plan at ₹5,499/year covers UPI, billing software, WhatsApp Business, and 2–4 CCTV cameras easily. It works out to just ₹458/month — less than most mobile recharges.</p>
 
                 <h3>Restaurant or food business with Swiggy/Zomato</h3>
                 <p>The 200 Mbps plan ensures constant uptime for order management, plus customer WiFi for dine-in guests, plus CCTV — all without any service affecting another.</p>
@@ -210,7 +210,7 @@
 
                 <div class="blog-cta">
                     <h3>Get Business-Grade Fiber for Your Bilimora Shop</h3>
-                    <p>100 Mbps at ₹5,999/year. Symmetrical upload for CCTV. Low latency for UPI. Local support when you need it.</p>
+                    <p>100 Mbps at ₹5,499/year. Symmetrical upload for CCTV. Low latency for UPI. Local support when you need it.</p>
                     <a href="tel:+919825152400">Call: 98251 52400</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C%20I%20need%20internet%20for%20my%20business%20in%20Bilimora" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>
@@ -222,7 +222,7 @@
                 <h3>Does Nisan offer business internet in Bilimora?</h3>
                 <p>Yes. Nisan provides FTTH fiber internet suitable for small and medium businesses in Bilimora West. Plans go up to 400 Mbps. Call +91 98251 52400 for business requirements.</p>
                 <h3>How much does business internet cost in Bilimora?</h3>
-                <p>Nisan's business-suitable plans start at ₹5,999/year (100 Mbps). For businesses needing dedicated bandwidth, the 200 Mbps plan at ₹7,499/year or 400 Mbps at ₹11,499/year are appropriate.</p>
+                <p>Nisan's business-suitable plans start at ₹5,499/year (100 Mbps). For businesses needing dedicated bandwidth, the 200 Mbps plan at ₹7,499/year or 400 Mbps at ₹11,499/year are appropriate.</p>
                 <h3>Is fiber internet available for shops and offices in Bilimora?</h3>
                 <p>Yes. Nisan installs FTTH fiber for commercial premises in Bilimora West — shops, offices, hotels, and restaurants. Free installation is included on all plans.</p>
                 </div>
@@ -244,7 +244,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

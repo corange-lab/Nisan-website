@@ -188,13 +188,13 @@
                 <table>
                     <tr><th>Plan</th><th>Speed</th><th>Price</th><th>Best For</th></tr>
                     <tr><td>Home Plan</td><td>50 Mbps</td><td>₹4,999/yr</td><td>1–2 users, light usage</td></tr>
-                    <tr><td>Family Plan</td><td>100 Mbps</td><td>₹5,999/yr</td><td>Families of 3–5, most popular</td></tr>
+                    <tr><td>Family Plan</td><td>100 Mbps</td><td>₹5,499/yr</td><td>Families of 3–5, most popular</td></tr>
                     <tr><td>Power Plan</td><td>200 Mbps</td><td>₹7,499/yr</td><td>Heavy users, WFH + streaming</td></tr>
                     <tr><td>Business Plan</td><td>300 Mbps</td><td>₹8,999/yr</td><td>Small offices, shops</td></tr>
                     <tr><td>Ultra Plan</td><td>400 Mbps</td><td>₹11,499/yr</td><td>Hotels, large offices</td></tr>
                 </table>
 
-                <p>For the vast majority of Bilimora families, the <strong>100 Mbps Family Plan at ₹5,999/year</strong> is the right answer. It is significantly faster than what most households actually consume, provides a comfortable buffer for new devices and higher usage in future, and costs just ₹499/month — equivalent on an annual basis.</p>
+                <p>For the vast majority of Bilimora families, the <strong>100 Mbps Family Plan at ₹5,499/year</strong> is the right answer. It is significantly faster than what most households actually consume, provides a comfortable buffer for new devices and higher usage in future, and costs just ₹499/month — equivalent on an annual basis.</p>
 
                 <h2>Does a Higher Mbps Plan Make Your Phone Load Pages Faster?</h2>
 
@@ -236,7 +236,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

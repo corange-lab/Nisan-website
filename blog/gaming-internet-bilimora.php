@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Internet in Bilimora</title>
-    <meta name="description" content="Best internet for gaming in Bilimora. FTTH fiber gives 10–20ms ping for BGMI, Free Fire, and PC games. Plans from ₹5,999/year. No lag, no packet loss.">
+    <meta name="description" content="Best internet for gaming in Bilimora. FTTH fiber gives 10–20ms ping for BGMI, Free Fire, and PC games. Plans from ₹5,499/year. No lag, no packet loss.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/blog/gaming-internet-bilimora">
     <meta property="og:title" content="Gaming Internet in Bilimora: Low Ping Plans for PC & Mobile Gamers">
@@ -187,7 +187,7 @@
                 <h2>Which Nisan Plan Is Right for Gamers in Bilimora?</h2>
 
                 <h3>Solo gamer, gaming only</h3>
-                <p>The <strong>100 Mbps Family Plan at <a href="/pricing.php" style="color:#0066cc">₹5,999/year</a></strong> is more than enough. Online games use 3–10 Mbps at most. The extra bandwidth gives you headroom for Discord voice chat, game downloads, and streaming simultaneously.</p>
+                <p>The <strong>100 Mbps Family Plan at <a href="/pricing.php" style="color:#0066cc">₹5,499/year</a></strong> is more than enough. Online games use 3–10 Mbps at most. The extra bandwidth gives you headroom for Discord voice chat, game downloads, and streaming simultaneously.</p>
 
                 <h3>Gaming + streaming + family usage</h3>
                 <p>If your family also watches Netflix, YouTube, or has video calls happening while you game, choose the <strong>200 Mbps Power Plan at ₹7,499/year</strong>. This eliminates any chance of someone else's streaming affecting your in-game ping.</p>
@@ -219,7 +219,7 @@
 
                 <div class="blog-cta">
                     <h3>Get Low-Ping Fiber Internet for Gaming in Bilimora</h3>
-                    <p>FTTH from ₹5,999/year · 10–20ms ping · Unlimited data · Free installation</p>
+                    <p>FTTH from ₹5,499/year · 10–20ms ping · Unlimited data · Free installation</p>
                     <a href="tel:+919825152400">Call: 98251 52400</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C+I+want+fiber+internet+for+gaming+in+Bilimora" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>
@@ -253,7 +253,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

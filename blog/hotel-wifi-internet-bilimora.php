@@ -201,7 +201,7 @@
                 <p>Based on property size and guest count, here are our recommendations:</p>
 
                 <ul>
-                    <li><strong>5–8 room guest house:</strong> 100 Mbps at ₹5,999/year. Handles 15–20 devices comfortably.</li>
+                    <li><strong>5–8 room guest house:</strong> 100 Mbps at ₹5,499/year. Handles 15–20 devices comfortably.</li>
                     <li><strong>10–15 room hotel:</strong> 200 Mbps. Handles 25–40 devices with room to spare for staff usage and CCTV.</li>
                     <li><strong>20+ room hotel with restaurant:</strong> 400 Mbps. Maximum performance, covers 60+ devices, 4K streaming in rooms, full CCTV coverage, and all staff tools simultaneously.</li>
                 </ul>
@@ -244,7 +244,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

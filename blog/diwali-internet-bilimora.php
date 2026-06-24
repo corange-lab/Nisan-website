@@ -175,7 +175,7 @@
                 <p>If you are still on mobile data or an old BSNL DSL connection in Bilimora, the Diwali season is a practical reason to switch:</p>
 
                 <ul>
-                    <li>Nisan's 100 Mbps plan costs ₹5,999/year — ₹500/month</li>
+                    <li>Nisan's 100 Mbps plan costs ₹5,499/year — ₹458/month</li>
                     <li>One successful flash sale purchase of a ₹10,000 item at 30% discount saves you ₹3,000 — which is 6 months of your internet plan cost</li>
                     <li>Installation takes 1–2 days from when you call</li>
                     <li>1-month money-back guarantee if you are not satisfied</li>
@@ -193,7 +193,7 @@
 
                 <div class="blog-cta">
                     <h3>Be Ready for Diwali Sales With Nisan Fiber in Bilimora</h3>
-                    <p>Low latency · Stable UPI payments · 100 Mbps from ₹5,999/year · Free installation</p>
+                    <p>Low latency · Stable UPI payments · 100 Mbps from ₹5,499/year · Free installation</p>
                     <a href="/pricing.php">View Plans</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C+I+want+fiber+internet+in+Bilimora+before+Diwali" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>
@@ -227,7 +227,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

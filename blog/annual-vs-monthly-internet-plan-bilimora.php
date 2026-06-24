@@ -35,7 +35,7 @@
       "name": "Should I choose annual or monthly internet plan in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Annual plans are significantly cheaper. Nisan's 100 Mbps annual plan costs \u20b95,999/year (\u20b9500/month). Monthly plans are more expensive per month and suited for temporary needs only."
+        "text": "Annual plans are significantly cheaper. Nisan's 100 Mbps annual plan costs \u20b95,499/year (\u20b9458/month). Monthly plans are more expensive per month and suited for temporary needs only."
       }
     },
     {
@@ -154,7 +154,7 @@
                 <table>
                     <tr><th>Plan Type</th><th>Monthly Cost</th><th>Annual Total</th><th>What You Pay</th></tr>
                     <tr><td>Competitor monthly (100 Mbps)</td><td>₹699</td><td>₹699 × 12 = ₹8,388</td><td>₹8,388/year</td></tr>
-                    <tr><td>Nisan annual (100 Mbps)</td><td>—</td><td>₹5,999 flat</td><td>₹5,999/year</td></tr>
+                    <tr><td>Nisan annual (100 Mbps)</td><td>—</td><td>₹5,499 flat</td><td>₹5,499/year</td></tr>
                     <tr><td><strong>Savings with Nisan</strong></td><td>—</td><td>—</td><td><strong>₹2,389 saved</strong></td></tr>
                 </table>
 
@@ -219,7 +219,7 @@
                 <h2>Frequently Asked Questions</h2>
                 <div itemscope itemtype="https://schema.org/FAQPage">
                 <h3>Should I choose annual or monthly internet plan in Bilimora?</h3>
-                <p>Annual plans are significantly cheaper. Nisan's 100 Mbps annual plan costs ₹5,999/year (₹500/month). Monthly plans are more expensive per month and suited for temporary needs only.</p>
+                <p>Annual plans are significantly cheaper. Nisan's 100 Mbps annual plan costs ₹5,499/year (₹458/month). Monthly plans are more expensive per month and suited for temporary needs only.</p>
                 <h3>How much do I save with an annual internet plan?</h3>
                 <p>With Nisan, annual payment for 100 Mbps saves roughly 20–25% compared to equivalent monthly billing. Plus Nisan offers a 1-month money-back on annual plans — so you can try it risk-free.</p>
                 <h3>Is it better to pay internet yearly or monthly?</h3>
@@ -245,7 +245,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

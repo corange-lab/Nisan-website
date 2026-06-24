@@ -35,7 +35,7 @@
       "name": "How does Jio Fiber compare to Nisan in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nisan is 44\u201355% cheaper than Jio Fiber for the same speed. Jio's 100 Mbps costs \u20b910,799/year versus Nisan's \u20b95,999/year. Nisan also provides free installation and local Bilimora support."
+        "text": "Nisan is 44\u201355% cheaper than Jio Fiber for the same speed. Jio's 100 Mbps costs \u20b910,799/year versus Nisan's \u20b95,499/year. Nisan also provides free installation and local Bilimora support."
       }
     },
     {
@@ -162,7 +162,7 @@
                 <p>When you compare costs honestly over a full year, Nisan's pricing advantage is significant. Here is what a 100 Mbps connection costs annually with each provider:</p>
                 <table>
                     <tr><th>Provider</th><th>100 Mbps Monthly Rate</th><th>Annual Cost</th><th>Annual Saving vs Nisan</th></tr>
-                    <tr><td>Nisan</td><td>₹500 (annual billing)</td><td>₹5,999</td><td>—</td></tr>
+                    <tr><td>Nisan</td><td>₹500 (annual billing)</td><td>₹5,499</td><td>—</td></tr>
                     <tr><td>Jio Fiber</td><td>~₹899/mo</td><td>~₹10,788</td><td>You save ₹4,789</td></tr>
                 </table>
                 <p>Nearly ₹5,000 in savings per year — on equivalent technology and speeds — is a meaningful amount for most Bilimora families. That is money that stays in the household rather than going to Jio's national revenue pool.</p>
@@ -200,7 +200,7 @@
                 <h2>Frequently Asked Questions</h2>
                 <div itemscope itemtype="https://schema.org/FAQPage">
                 <h3>How does Jio Fiber compare to Nisan in Bilimora?</h3>
-                <p>Nisan is 44–55% cheaper than Jio Fiber for the same speed. Jio's 100 Mbps costs ₹10,799/year versus Nisan's ₹5,999/year. Nisan also provides free installation and local Bilimora support.</p>
+                <p>Nisan is 44–55% cheaper than Jio Fiber for the same speed. Jio's 100 Mbps costs ₹10,799/year versus Nisan's ₹5,499/year. Nisan also provides free installation and local Bilimora support.</p>
                 <h3>Is Jio Fiber available in Bilimora?</h3>
                 <p>Jio Fiber is available in parts of Bilimora, but coverage is not as comprehensive as Nisan's in Bilimora West. Check availability at your specific address before choosing.</p>
                 <h3>Why is Nisan cheaper than Jio Fiber in Bilimora?</h3>
@@ -226,7 +226,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

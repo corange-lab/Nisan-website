@@ -192,7 +192,7 @@
                 <h2>Which Plan for E-Commerce Sellers in Bilimora?</h2>
 
                 <ul>
-                    <li><strong>Small seller (10–50 orders/month, occasional uploads):</strong> 100 Mbps at ₹5,999/year</li>
+                    <li><strong>Small seller (10–50 orders/month, occasional uploads):</strong> 100 Mbps at ₹5,499/year</li>
                     <li><strong>Active seller (100+ orders/month, daily content creation):</strong> 200 Mbps at ₹7,499/year</li>
                     <li><strong>Multiple sellers or warehouse with staff:</strong> 300 Mbps at ₹8,999/year</li>
                 </ul>
@@ -205,7 +205,7 @@
 
                 <div class="blog-cta">
                     <h3>Power Your Bilimora E-Commerce Business With Fiber Internet</h3>
-                    <p>Fast upload · Stable connection · Plans from ₹5,999/year · Free installation</p>
+                    <p>Fast upload · Stable connection · Plans from ₹5,499/year · Free installation</p>
                     <a href="/pricing.php">View Business Plans</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C+I+run+an+e-commerce+business+in+Bilimora+and+need+fast+internet" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>
@@ -239,7 +239,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

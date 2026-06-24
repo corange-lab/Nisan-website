@@ -192,7 +192,7 @@
                 <p>The 50 Mbps plan at ₹4,999/year handles this scenario well. Both screens run smoothly in HD with plenty of bandwidth left over.</p>
 
                 <h3>Family of 4 (multiple screens, possibly 4K TV)</h3>
-                <p>The 100 Mbps plan at ₹5,999/year is the right choice. Everyone watches what they want, at the quality they want, without any family member affecting another's stream.</p>
+                <p>The 100 Mbps plan at ₹5,499/year is the right choice. Everyone watches what they want, at the quality they want, without any family member affecting another's stream.</p>
 
                 <h3>Joint family (6+ people, heavy streaming household)</h3>
                 <p>The 200 Mbps plan gives a joint family in Bilimora the bandwidth to have IPL on the big TV in 4K, two people on phones, and kids on YouTube — all simultaneously without a single buffer.</p>
@@ -235,7 +235,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

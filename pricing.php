@@ -43,7 +43,7 @@
         {"@type": "Question", "name": "Does Nisan charge for installation?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nisan includes free installation on every plan, every time — including upgrades and renewals. There are no hidden setup fees."}},
         {"@type": "Question", "name": "How quickly can I get internet installed in Bilimora?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan installs within 1–2 working days of confirmation. Call or WhatsApp +91 98251 52400 to book your installation."}},
         {"@type": "Question", "name": "Is there a contract or lock-in period?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan's plans are annual with no long-term contract. A 1-month money-back guarantee applies — if you are not satisfied in the first month, you get a full refund."}},
-        {"@type": "Question", "name": "What internet speed do I need for a family of 4?", "acceptedAnswer": {"@type": "Answer", "text": "A family of 4 with streaming, video calls, and gaming needs at least 100 Mbps. Nisan's 100 Mbps plan at ₹5,999/year handles 6–8 devices simultaneously without any buffering."}}
+        {"@type": "Question", "name": "What internet speed do I need for a family of 4?", "acceptedAnswer": {"@type": "Answer", "text": "A family of 4 with streaming, video calls, and gaming needs at least 100 Mbps. Nisan's 100 Mbps plan at ₹5,499/year handles 6–8 devices simultaneously without any buffering."}}
       ]
     }
     </script>
@@ -98,7 +98,7 @@
             "offers": {
               "@type": "Offer",
               "priceCurrency": "INR",
-              "price": "5999",
+              "price": "5499",
               "priceValidUntil": "2027-03-31",
               "availability": "https://schema.org/InStock",
               "url": "https://www.nisan.co.in/contact",
@@ -217,11 +217,11 @@
                         <div class="col-lg-10 text-center">
                             <p style="color:#fff; font-size:13px; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; opacity:.85;">Why Bilimora Customers Switch to Nisan</p>
                             <h2 style="color:#fff; font-size:clamp(1.3rem,3vw,2rem); font-weight:800; margin-bottom:20px; line-height:1.3;">
-                                100 Mbps at <span style="color:#ffd600;">₹5,999/year</span> — Jio charges <span style="color:#ff7043;">₹10,799/year</span> for the same speed
+                                100 Mbps at <span style="color:#ffd600;">₹5,499/year</span> — Jio charges <span style="color:#ff7043;">₹10,799/year</span> for the same speed
                             </h2>
                             <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:22px;">
                                 <div style="background:rgba(255,255,255,.12); border-radius:8px; padding:12px 20px; min-width:160px;">
-                                    <div style="color:#ffd600; font-size:22px; font-weight:800;">₹5,999</div>
+                                    <div style="color:#ffd600; font-size:22px; font-weight:800;">₹5,499</div>
                                     <div style="color:#fff; font-size:12px;">Nisan 100 Mbps / year</div>
                                 </div>
                                 <div style="display:flex; align-items:center; color:#fff; font-size:24px; font-weight:800;">vs</div>
@@ -252,7 +252,7 @@
                         <div class="col-xl-8 col-lg-10 col-md-11">
                             <div class="section-title text-center mb-55">
                                 <h2 class="title">Internet Plans for Bilimora</h2>
-                                <p>All plans include free installation, unlimited data, free router, and a 1-month money-back guarantee. No hidden charges, no contract.</p>
+                                <p>All plans include free installation, unlimited data, free router, and an anytime refund guarantee. Price shown is the final price — GST included, no hidden charges, no setup fees, nothing extra. What you see is what you pay.</p>
                             </div>
                         </div>
                     </div>
@@ -313,7 +313,7 @@
                                         </ul>
                                         <div class="price-wrap">
                                             <span>Only</span>
-                                            <h3 class="price">₹5,999<sub>/Year</sub></h3>
+                                            <h3 class="price">₹5,499<sub>/Year</sub></h3>
                                         </div>
                                         <div style="text-align:center; margin-bottom:10px;">
                                             <small style="color:#888; font-size:12px;">= ₹499/month &nbsp;|&nbsp; Jio charges ₹10,799/yr</small>
@@ -459,7 +459,7 @@
                                         </tr>
                                         <tr style="background:#fafafa; border-bottom:1px solid #eee;">
                                             <td style="padding:12px 18px; font-weight:600;">Annual Price</td>
-                                            <td style="padding:12px 18px; text-align:center; font-weight:800; color:#0066cc; font-size:18px;">₹5,999</td>
+                                            <td style="padding:12px 18px; text-align:center; font-weight:800; color:#0066cc; font-size:18px;">₹5,499</td>
                                             <td style="padding:12px 18px; text-align:center; color:#d32f2f;">₹10,799</td>
                                             <td style="padding:12px 18px; text-align:center; color:#d32f2f;">₹9,600+</td>
                                         </tr>

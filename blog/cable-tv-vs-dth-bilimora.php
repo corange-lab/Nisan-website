@@ -231,7 +231,7 @@
                 <h3>What is the difference between cable TV and DTH?</h3>
                 <p>Cable TV comes via a physical cable to your home — unaffected by rain and no dish required. DTH comes via satellite — requires a dish on your roof and is disrupted by heavy rain.</p>
                 <h3>How much does DTH cost compared to cable TV in Bilimora?</h3>
-                <p>DTH providers charge ₹200–₹500/month depending on the channel pack. Nisan cable TV is competitively priced and includes local Gujarati channels that DTH often bundles as paid add-ons.</p>
+                <p>DTH providers charge ₹200–₹458/month depending on the channel pack. Nisan cable TV is competitively priced and includes local Gujarati channels that DTH often bundles as paid add-ons.</p>
                 </div>
                     </article>
                 </div>
@@ -251,7 +251,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

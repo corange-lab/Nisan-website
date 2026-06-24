@@ -169,7 +169,7 @@
                     <li>Lost sales per month: ₹9,000–₹18,000</li>
                 </ul>
 
-                <p>Now compare that to the cost of Nisan's 100 Mbps fiber plan: ₹5,999 per year, or just ₹500 per month. If fiber eliminates even half of those payment failures, you recover the internet cost many times over — every single month.</p>
+                <p>Now compare that to the cost of Nisan's 100 Mbps fiber plan: ₹5,499 per year, or just ₹458 per month. If fiber eliminates even half of those payment failures, you recover the internet cost many times over — every single month.</p>
 
                 <h2>Why Mobile Data for POS Is a Bad Idea</h2>
 
@@ -195,11 +195,11 @@
                     <li>Keep your mobile as a backup — but fiber handles 99% of transactions</li>
                 </ol>
 
-                <p>The 100 Mbps plan at ₹5,999/year handles UPI payments, billing software, CCTV, WhatsApp Business, and 5–10 staff devices all simultaneously. Visit our <a href="/pricing.php">pricing page</a> to see all options, or <a href="/contact.php">contact us</a> to discuss your shop's specific requirements.</p>
+                <p>The 100 Mbps plan at ₹5,499/year handles UPI payments, billing software, CCTV, WhatsApp Business, and 5–10 staff devices all simultaneously. Visit our <a href="/pricing.php">pricing page</a> to see all options, or <a href="/contact.php">contact us</a> to discuss your shop's specific requirements.</p>
 
                 <div class="blog-cta">
                     <h3>Stop Losing Sales to Failed UPI Payments</h3>
-                    <p>Nisan 100 Mbps fiber at ₹5,999/year. 10–20ms latency. UPI that works every time, even during peak hours.</p>
+                    <p>Nisan 100 Mbps fiber at ₹5,499/year. 10–20ms latency. UPI that works every time, even during peak hours.</p>
                     <a href="tel:+919825152400">Call: 98251 52400</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C%20my%20UPI%20payments%20fail%20often%20in%20my%20Bilimora%20shop.%20I%20need%20fiber%20internet" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>
@@ -233,7 +233,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

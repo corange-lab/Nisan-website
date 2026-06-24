@@ -185,7 +185,7 @@
 
                 <p>For a senior couple using the internet mainly for WhatsApp calls, YouTube, and news, the <strong>50 Mbps Home Plan at <a href="/pricing.php" style="color:#0066cc">₹4,999/year</a></strong> (₹416/month) is completely sufficient. WhatsApp HD video calls use less than 5 Mbps. YouTube uses 3–8 Mbps. Even 4K YouTube on a smart TV is comfortable at 50 Mbps.</p>
 
-                <p>If the senior's home also serves as the residence for children and grandchildren who stream, game, and work from home, the <strong>100 Mbps Family Plan at ₹5,999/year</strong> handles everyone without any compromise.</p>
+                <p>If the senior's home also serves as the residence for children and grandchildren who stream, game, and work from home, the <strong>100 Mbps Family Plan at ₹5,499/year</strong> handles everyone without any compromise.</p>
 
                 <h2>Local Support: The Key Reason to Choose Nisan</h2>
 
@@ -236,7 +236,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

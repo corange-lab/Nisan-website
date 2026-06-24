@@ -163,7 +163,7 @@
                 <table>
                     <tr><th>Plan</th><th>Speed</th><th>Annual Price</th><th>Per Month</th></tr>
                     <tr><td>Starter</td><td>50 Mbps</td><td>₹4,999</td><td>₹416</td></tr>
-                    <tr><td>Home</td><td>100 Mbps</td><td>₹5,999</td><td>₹500</td></tr>
+                    <tr><td>Home</td><td>100 Mbps</td><td>₹5,499</td><td>₹500</td></tr>
                     <tr><td>Power</td><td>200 Mbps</td><td>₹7,999</td><td>₹666</td></tr>
                     <tr><td>Ultra</td><td>400 Mbps</td><td>₹11,499</td><td>₹958</td></tr>
                 </table>
@@ -256,7 +256,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

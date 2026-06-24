@@ -111,7 +111,7 @@
         "name": "Internet Plans",
         "itemListElement": [
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "50 Mbps Home Plan"}, "price": "4999", "priceCurrency": "INR"},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "100 Mbps Family Plan"}, "price": "5999", "priceCurrency": "INR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "100 Mbps Family Plan"}, "price": "5499", "priceCurrency": "INR"},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "200 Mbps Power Plan"}, "price": "7499", "priceCurrency": "INR"},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "300 Mbps Business Plan"}, "price": "8999", "priceCurrency": "INR"},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "400 Mbps Ultra Plan"}, "price": "11499", "priceCurrency": "INR"}
@@ -131,7 +131,7 @@
           "name": "What are Nisan's internet plan prices in Bilimora?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nisan offers 5 FTTH broadband plans in Bilimora: 50 Mbps at ₹4,999/year, 100 Mbps at ₹5,999/year, 200 Mbps at ₹7,499/year, 300 Mbps at ₹8,999/year, and 400 Mbps at ₹11,499/year. All plans include free installation, unlimited data, and a free WiFi router."
+            "text": "Nisan offers 5 FTTH broadband plans in Bilimora: 50 Mbps at ₹4,999/year, 100 Mbps at ₹5,499/year, 200 Mbps at ₹7,499/year, 300 Mbps at ₹8,999/year, and 400 Mbps at ₹11,499/year. All plans include free installation, unlimited data, and a free WiFi router."
           }
         },
         {
@@ -155,7 +155,7 @@
           "name": "How is Nisan different from Jio Fiber or Airtel in Bilimora?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nisan is a local Bilimora business — not a national call centre. For 100 Mbps, Nisan charges ₹5,999/year vs Jio's ₹10,799/year. Nisan's team works on Sundays and holidays, resolves issues same-day, offers a 1-month money-back guarantee, and provides free installation always. National ISPs offer none of these."
+            "text": "Nisan is a local Bilimora business — not a national call centre. For 100 Mbps, Nisan charges ₹5,499/year vs Jio's ₹10,799/year. Nisan's team works on Sundays and holidays, resolves issues same-day, offers a 1-month money-back guarantee, and provides free installation always. National ISPs offer none of these."
           }
         },
         {
@@ -324,7 +324,7 @@
 	<li><img alt="check" src="assets/imgs/icons/check.webp" /> Priority Support</li>
 </ul>
 <div class="price-wrap"><span>Only</span>
-<h3 class="price">₹5,999<sub>/Year</sub></h3>
+<h3 class="price">₹5,499<sub>/Year</sub></h3>
 </div>
 <div style="text-align:center; margin-bottom:10px;">
 	<small style="color:#888; font-size:12px;">= ₹499/month &nbsp;|&nbsp; Jio charges ₹10,799/yr</small>
@@ -488,7 +488,7 @@
             We do not take your trust for granted. Nisan's team works <strong>365 days a year — no Sundays off, no holidays</strong>. Internet problems don't wait for Monday morning. Neither do we. Most issues are fixed the same day you call.
         </p>
         <p class="broadband-description">
-            Plans start at <strong>₹4,999/year</strong> (50 Mbps) — up to <strong>400 Mbps</strong> for Bilimora homes and businesses. Free installation, free router, unlimited data. The only risk is not trying us sooner.
+            Plans start at <strong>₹4,999/year</strong> (50 Mbps) — up to <strong>400 Mbps</strong> for Bilimora homes and businesses. Free installation, free router, unlimited data. <strong>Price shown is the final price — GST included, no hidden fees, no taxes on top.</strong> What you see is what you pay.
         </p>
     </div>
 </section>

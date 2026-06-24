@@ -153,7 +153,7 @@
 
                 <h2>For Students Living at Home in Bilimora</h2>
 
-                <p>If you live at home and your family already has a Nisan connection, check the current plan speed. For one student doing online coaching and 2–3 other family members also using the internet simultaneously, the <strong>100 Mbps Family Plan at ₹5,999/year</strong> ensures your coaching sessions never compete with someone's YouTube or WhatsApp call.</p>
+                <p>If you live at home and your family already has a Nisan connection, check the current plan speed. For one student doing online coaching and 2–3 other family members also using the internet simultaneously, the <strong>100 Mbps Family Plan at ₹5,499/year</strong> ensures your coaching sessions never compete with someone's YouTube or WhatsApp call.</p>
 
                 <p>If the family currently has only 50 Mbps and two students at home are both attending live classes at the same time, upgrade to 100 Mbps — the additional cost is ₹1,000/year (less than ₹85/month) for significantly smoother experience for both.</p>
 
@@ -169,7 +169,7 @@
                 </ul>
 
                 <div class="info-box">
-                    <strong>PG owners:</strong> A 100 Mbps Nisan plan at ₹5,999/year (₹500/month) shared among 5 students is ₹100/month per student. Offering WiFi in your PG at ₹200–300/month per student is a profit centre, not a cost.
+                    <strong>PG owners:</strong> A 100 Mbps Nisan plan at ₹5,499/year (₹458/month) shared among 5 students is ₹100/month per student. Offering WiFi in your PG at ₹200–300/month per student is a profit centre, not a cost.
                 </div>
 
                 <h2>Online Coaching Platforms and Their Speed Requirements</h2>
@@ -185,8 +185,8 @@
 
                 <ul>
                     <li><strong>Solo student at home (light usage):</strong> 50 Mbps at ₹4,999/year</li>
-                    <li><strong>Student + family sharing connection:</strong> 100 Mbps at ₹5,999/year</li>
-                    <li><strong>PG with 3–6 students sharing:</strong> 100 Mbps at ₹5,999/year (₹83–166/student/month)</li>
+                    <li><strong>Student + family sharing connection:</strong> 100 Mbps at ₹5,499/year</li>
+                    <li><strong>PG with 3–6 students sharing:</strong> 100 Mbps at ₹5,499/year (₹83–166/student/month)</li>
                     <li><strong>Hostel with 8–12 students:</strong> 200 Mbps at ₹7,499/year</li>
                 </ul>
 
@@ -226,7 +226,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

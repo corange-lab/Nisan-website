@@ -171,7 +171,7 @@
                 <p>The <strong>50 Mbps plan at ₹4,999/year</strong> handles one or two HD streams with bandwidth to spare. Even 4K cricket on a single smart TV is comfortable at 50 Mbps.</p>
 
                 <h3>Family of 4–5 watching on multiple devices</h3>
-                <p>Smart TV (HD, 10 Mbps) + 2 phones (HD, 5 Mbps each) + one tablet (SD, 3 Mbps) = 23 Mbps total. The <strong>100 Mbps Family Plan at ₹5,999/year</strong> handles this easily — 77 Mbps remaining for anyone else in the house.</p>
+                <p>Smart TV (HD, 10 Mbps) + 2 phones (HD, 5 Mbps each) + one tablet (SD, 3 Mbps) = 23 Mbps total. The <strong>100 Mbps Family Plan at ₹5,499/year</strong> handles this easily — 77 Mbps remaining for anyone else in the house.</p>
 
                 <h3>Joint family or cricket party at home</h3>
                 <p>If you invite friends and family to watch the match, with 6–8 people on different devices simultaneously, the <strong>200 Mbps Power Plan at ₹7,499/year</strong> gives full comfort with zero risk of buffering for anyone.</p>
@@ -222,7 +222,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

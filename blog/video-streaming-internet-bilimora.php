@@ -158,13 +158,13 @@
                 <table>
                     <tr><th>Plan</th><th>Price</th><th>Comfortable Screens (1080p)</th><th>4K Screens</th></tr>
                     <tr><td>50 Mbps</td><td>₹4,999/yr</td><td>3–4 HD screens</td><td>1 (with headroom)</td></tr>
-                    <tr><td>100 Mbps</td><td>₹5,999/yr</td><td>6–8 HD screens</td><td>2–3</td></tr>
+                    <tr><td>100 Mbps</td><td>₹5,499/yr</td><td>6–8 HD screens</td><td>2–3</td></tr>
                     <tr><td>200 Mbps</td><td>₹7,499/yr</td><td>12+ HD screens</td><td>4–5</td></tr>
                     <tr><td>300 Mbps</td><td>₹8,999/yr</td><td>20+ devices</td><td>6+</td></tr>
                 </table>
 
                 <div class="info-box">
-                    <strong>Most Bilimora families of 4–5 are perfectly served by the 100 Mbps plan at ₹5,999/year.</strong> That is ₹499/month — less than a single Netflix subscription — and it handles everything your household throws at it.
+                    <strong>Most Bilimora families of 4–5 are perfectly served by the 100 Mbps plan at ₹5,499/year.</strong> That is ₹499/month — less than a single Netflix subscription — and it handles everything your household throws at it.
                 </div>
 
                 <h2>Why Does My Stream Buffer Even on a Fast Plan?</h2>
@@ -196,7 +196,7 @@
 
                 <ul>
                     <li><strong>1–2 people, mostly phones and laptop:</strong> 50 Mbps at ₹4,999/year — sufficient</li>
-                    <li><strong>Family of 4–5, one smart TV + phones:</strong> 100 Mbps at ₹5,999/year — recommended</li>
+                    <li><strong>Family of 4–5, one smart TV + phones:</strong> 100 Mbps at ₹5,499/year — recommended</li>
                     <li><strong>Family with 4K smart TV + multiple streamers:</strong> 200 Mbps at ₹7,499/year — comfortable</li>
                     <li><strong>Joint family or heavy 4K users:</strong> 300 Mbps at ₹8,999/year — future-proof</li>
                 </ul>
@@ -237,7 +237,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

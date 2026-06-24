@@ -35,7 +35,7 @@
       "name": "What internet speed is enough for a family of 4 in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A family of 4 needs at least 100 Mbps for streaming, video calls, gaming, and homework simultaneously. Nisan's 100 Mbps at \u20b95,999/year is the right choice."
+        "text": "A family of 4 needs at least 100 Mbps for streaming, video calls, gaming, and homework simultaneously. Nisan's 100 Mbps at \u20b95,499/year is the right choice."
       }
     },
     {
@@ -43,7 +43,7 @@
       "name": "What is the best family internet plan in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nisan's 100 Mbps FTTH plan at \u20b95,999/year handles Netflix 4K, YouTube, video calls, and gaming simultaneously for a family of 4 with no buffering."
+        "text": "Nisan's 100 Mbps FTTH plan at \u20b95,499/year handles Netflix 4K, YouTube, video calls, and gaming simultaneously for a family of 4 with no buffering."
       }
     },
     {
@@ -184,7 +184,7 @@
                         <li>Mobile devices background sync = 3 Mbps</li>
                     </ul>
                     <p style="margin:0"><strong>Total: ~39 Mbps + 30% headroom = 51 Mbps needed</strong><br>
-                    <strong>Recommendation: 100 Mbps plan (₹5,999/year)</strong> — comfortable with headroom</p>
+                    <strong>Recommendation: 100 Mbps plan (₹5,499/year)</strong> — comfortable with headroom</p>
                 </div>
 
                 <h2>Scenario 3: Large or Joint Family</h2>
@@ -199,14 +199,14 @@
                         <li>CCTV cameras (4 cameras, remote monitoring) = 8 Mbps upload</li>
                     </ul>
                     <p style="margin:0"><strong>Total: ~63 Mbps + 30% headroom = 82 Mbps needed</strong><br>
-                    <strong>Recommendation: 100 Mbps plan (₹5,999/year)</strong> — still within range; <strong>200 Mbps (₹7,499/year)</strong> for complete comfort</p>
+                    <strong>Recommendation: 100 Mbps plan (₹5,499/year)</strong> — still within range; <strong>200 Mbps (₹7,499/year)</strong> for complete comfort</p>
                 </div>
 
                 <h2>The Simple Rule for Bilimora Families</h2>
 
                 <ul>
                     <li><strong>1–2 people, light users:</strong> 50 Mbps — ₹4,999/year</li>
-                    <li><strong>Family of 3–5, regular streaming + phones:</strong> 100 Mbps — ₹5,999/year (most popular)</li>
+                    <li><strong>Family of 3–5, regular streaming + phones:</strong> 100 Mbps — ₹5,499/year (most popular)</li>
                     <li><strong>Large family or 1+ WFH professionals:</strong> 200 Mbps — ₹7,499/year</li>
                     <li><strong>Joint family, CCTV, multiple heavy users:</strong> 300 Mbps — ₹8,999/year</li>
                 </ul>
@@ -227,9 +227,9 @@
                 <h2>Frequently Asked Questions</h2>
                 <div itemscope itemtype="https://schema.org/FAQPage">
                 <h3>What internet speed is enough for a family of 4 in Bilimora?</h3>
-                <p>A family of 4 needs at least 100 Mbps for streaming, video calls, gaming, and homework simultaneously. Nisan's 100 Mbps at ₹5,999/year is the right choice.</p>
+                <p>A family of 4 needs at least 100 Mbps for streaming, video calls, gaming, and homework simultaneously. Nisan's 100 Mbps at ₹5,499/year is the right choice.</p>
                 <h3>What is the best family internet plan in Bilimora?</h3>
-                <p>Nisan's 100 Mbps FTTH plan at ₹5,999/year handles Netflix 4K, YouTube, video calls, and gaming simultaneously for a family of 4 with no buffering.</p>
+                <p>Nisan's 100 Mbps FTTH plan at ₹5,499/year handles Netflix 4K, YouTube, video calls, and gaming simultaneously for a family of 4 with no buffering.</p>
                 <h3>How many devices can connect to 100 Mbps?</h3>
                 <p>100 Mbps supports 8–12 devices simultaneously. Four devices streaming HD video use roughly 25 Mbps, leaving plenty of capacity for other devices.</p>
                 <h3>Does Nisan provide free WiFi router for home use?</h3>
@@ -253,7 +253,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

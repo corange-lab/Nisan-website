@@ -178,7 +178,7 @@
                 <p>Installation takes 1–2 days in Bilimora West. Booking in late May or early June means your connection is ready before the first day of school — not scrambling mid-term when a Zoom class fails.</p>
 
                 <div class="info-box">
-                    <strong>Recommended plan for families with school-going children in Bilimora:</strong> The <strong>100 Mbps Family Plan at ₹5,999/year</strong> (₹500/month) handles 2 children in online classes simultaneously, a parent on a work call, and general family internet use — all without any slowdown for anyone.
+                    <strong>Recommended plan for families with school-going children in Bilimora:</strong> The <strong>100 Mbps Family Plan at ₹5,499/year</strong> (₹458/month) handles 2 children in online classes simultaneously, a parent on a work call, and general family internet use — all without any slowdown for anyone.
                 </div>
 
                 <h2>Setting Up a Good Study Environment With Internet</h2>
@@ -226,7 +226,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

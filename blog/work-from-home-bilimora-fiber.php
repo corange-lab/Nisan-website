@@ -194,11 +194,11 @@
 
                 <h2>The Plan Remote Workers in Bilimora Need</h2>
 
-                <p>For a solo remote worker, the <strong>100 Mbps plan at ₹5,999/year</strong> is the right choice — it handles all-day video calls, large uploads, and family internet usage simultaneously. If two people in the household work from home, move to the <strong>200 Mbps plan at ₹7,499/year</strong> to ensure neither person's work is affected by the other.</p>
+                <p>For a solo remote worker, the <strong>100 Mbps plan at ₹5,499/year</strong> is the right choice — it handles all-day video calls, large uploads, and family internet usage simultaneously. If two people in the household work from home, move to the <strong>200 Mbps plan at ₹7,499/year</strong> to ensure neither person's work is affected by the other.</p>
 
                 <div class="blog-cta">
                     <h3>Work From Home Reliably in Bilimora</h3>
-                    <p>FTTH fiber from ₹5,999/year · Stable all day · Low latency · Free installation</p>
+                    <p>FTTH fiber from ₹5,499/year · Stable all day · Low latency · Free installation</p>
                     <a href="/pricing.php">View Plans</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C+I+work+from+home+and+need+reliable+internet+in+Bilimora" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>
@@ -232,7 +232,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

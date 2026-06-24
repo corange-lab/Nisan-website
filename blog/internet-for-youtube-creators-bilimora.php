@@ -184,7 +184,7 @@
                 <h2>Which Nisan Plan for Content Creators?</h2>
 
                 <h3>Casual creator (1–2 videos per week, 1080p)</h3>
-                <p>The 100 Mbps plan at ₹5,999/year is perfect. Upload times of under 3 minutes for a 1 GB video, stable enough for occasional live streams, and fast download for reference video research.</p>
+                <p>The 100 Mbps plan at ₹5,499/year is perfect. Upload times of under 3 minutes for a 1 GB video, stable enough for occasional live streams, and fast download for reference video research.</p>
 
                 <h3>Serious creator (daily uploads, 4K editing, multiple platforms)</h3>
                 <p>The 200 Mbps plan at ₹7,999/year. Handles 4K video uploads in under 10 minutes, supports simultaneous uploads to YouTube and Instagram, and allows a collaborator or editor to work on the same connection without interference.</p>
@@ -193,7 +193,7 @@
 
                 <div class="blog-cta">
                     <h3>Upload Your Videos 50x Faster With Nisan Fiber</h3>
-                    <p>100 Mbps symmetrical fiber in Bilimora. Upload a 1 GB video in under 2 minutes. Plans from ₹5,999/year.</p>
+                    <p>100 Mbps symmetrical fiber in Bilimora. Upload a 1 GB video in under 2 minutes. Plans from ₹5,499/year.</p>
                     <a href="tel:+919825152400">Call: 98251 52400</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C%20I%20am%20a%20content%20creator%20in%20Bilimora%20and%20need%20fast%20upload%20fiber%20internet" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>
@@ -227,7 +227,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

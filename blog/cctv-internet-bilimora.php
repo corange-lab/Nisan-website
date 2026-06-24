@@ -201,7 +201,7 @@
                 <h2>Choosing the Right Plan for Your CCTV Setup</h2>
 
                 <h3>Home with 2–4 cameras + family internet use</h3>
-                <p>The 100 Mbps plan at ₹5,999/year is the right choice. You get 100 Mbps symmetrical upload for smooth CCTV viewing plus full household internet usage.</p>
+                <p>The 100 Mbps plan at ₹5,499/year is the right choice. You get 100 Mbps symmetrical upload for smooth CCTV viewing plus full household internet usage.</p>
 
                 <h3>Shop or office with 4–8 cameras + staff devices</h3>
                 <p>The 200 Mbps plan ensures all cameras stream in HD while staff use the same connection for UPI, billing, and WhatsApp Business without any degradation.</p>
@@ -210,7 +210,7 @@
 
                 <div class="blog-cta">
                     <h3>Get Fiber Internet for Reliable CCTV in Bilimora</h3>
-                    <p>Symmetrical 100 Mbps upload + download. Your cameras stream live — always. Plans from ₹5,999/year.</p>
+                    <p>Symmetrical 100 Mbps upload + download. Your cameras stream live — always. Plans from ₹5,499/year.</p>
                     <a href="tel:+919825152400">Call: 98251 52400</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C%20I%20need%20fiber%20internet%20for%20CCTV%20in%20Bilimora" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>
@@ -244,7 +244,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

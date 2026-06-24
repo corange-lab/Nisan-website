@@ -221,7 +221,7 @@
                     <li><img alt="check" src="assets/imgs/icons/check.webp" /> Priority Support</li>
                 </ul>
                 <div class="price-wrap"><span>Only</span>
-                <h3 class="price">₹5,999<sub>/Year</sub></h3></div>
+                <h3 class="price">₹5,499<sub>/Year</sub></h3></div>
                 <div class="pricing-btn"><a class="btn btn-link" href="/contact.php">Get This Plan</a></div>
                 </div>
             </div>

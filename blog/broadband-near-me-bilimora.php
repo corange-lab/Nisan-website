@@ -154,13 +154,13 @@
 
                 <table>
                     <tr><th>Provider</th><th>100 Mbps Plan</th><th>Annual Cost</th><th>Notes</th></tr>
-                    <tr><td>Nisan (local)</td><td>100 Mbps</td><td>₹5,999</td><td>Annual only, no hidden fees</td></tr>
+                    <tr><td>Nisan (local)</td><td>100 Mbps</td><td>₹5,499</td><td>GST included, no hidden fees</td></tr>
                     <tr><td>Jio Fiber</td><td>100 Mbps</td><td>₹5,988–7,188</td><td>₹499–599/month, monthly billing</td></tr>
                     <tr><td>Airtel Xstream</td><td>100 Mbps</td><td>₹5,988–8,388</td><td>₹499–699/month</td></tr>
                     <tr><td>BSNL</td><td>20–50 Mbps</td><td>₹3,000–6,000</td><td>Copper DSL, actual speeds vary significantly</td></tr>
                 </table>
 
-                <p>On paper, prices are similar. But Nisan's annual plan at ₹5,999 has no monthly billing surprises, no price hike mid-year, and no convenience fee per transaction.</p>
+                <p>On paper, prices are similar. But Nisan's annual plan at ₹5,499 has no monthly billing surprises, no price hike mid-year, and no convenience fee per transaction.</p>
 
                 <h2>4. What Happens When There Is a Problem?</h2>
 
@@ -226,7 +226,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>

@@ -43,7 +43,7 @@
       "name": "How does Airtel broadband compare to Nisan in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Airtel's 100 Mbps plan costs \u20b99,000\u2013\u20b910,000/year in Bilimora versus Nisan's \u20b95,999/year for the same speed. Airtel is a national provider; Nisan is locally built for Bilimora West."
+        "text": "Airtel's 100 Mbps plan costs \u20b99,000\u2013\u20b910,000/year in Bilimora versus Nisan's \u20b95,499/year for the same speed. Airtel is a national provider; Nisan is locally built for Bilimora West."
       }
     },
     {
@@ -210,7 +210,7 @@
                 <h3>Is Airtel or Nisan better in Bilimora?</h3>
                 <p>Nisan is better than Airtel for Bilimora residents — Nisan's plans are 40–60% cheaper, installation is free on every plan, and local Bilimora support responds the same day versus Airtel's national call center.</p>
                 <h3>How does Airtel broadband compare to Nisan in Bilimora?</h3>
-                <p>Airtel's 100 Mbps plan costs ₹9,000–₹10,000/year in Bilimora versus Nisan's ₹5,999/year for the same speed. Airtel is a national provider; Nisan is locally built for Bilimora West.</p>
+                <p>Airtel's 100 Mbps plan costs ₹9,000–₹10,000/year in Bilimora versus Nisan's ₹5,499/year for the same speed. Airtel is a national provider; Nisan is locally built for Bilimora West.</p>
                 <h3>Does Airtel fiber work in Bilimora?</h3>
                 <p>Airtel fiber may be available in some parts of Bilimora, but coverage is not comprehensive in Bilimora West. Nisan covers Bilimora West with dedicated local FTTH infrastructure.</p>
                 <h3>Can I switch from Airtel to Nisan in Bilimora?</h3>
@@ -234,7 +234,7 @@
                             <h4 class="sidebar-widget-title">Our Plans</h4>
                             <ul style="list-style:none;padding:0;margin:0">
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">50 Mbps</span><span style="color:#0066cc;font-weight:700">₹4,999/yr</span></li>
-                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,999/yr</span></li>
+                                <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">100 Mbps</span><span style="color:#0066cc;font-weight:700">₹5,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">200 Mbps</span><span style="color:#0066cc;font-weight:700">₹7,499/yr</span></li>
                                 <li style="padding:8px 0;border-bottom:1px solid #E1E6EE;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">300 Mbps</span><span style="color:#0066cc;font-weight:700">₹8,999/yr</span></li>
                                 <li style="padding:8px 0;display:flex;justify-content:space-between"><span style="color:#0C1020;font-weight:600">400 Mbps</span><span style="color:#0066cc;font-weight:700">₹11,499/yr</span></li>
