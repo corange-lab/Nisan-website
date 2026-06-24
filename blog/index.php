@@ -60,7 +60,7 @@
         </div>
     </section>
 
-    <section style="padding:30px 0 70px">
+    <section class="section-space">
         <div class="container">
 
             <div class="section-title text-center" style="max-width:680px;margin:0 auto 10px">
