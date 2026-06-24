@@ -53,7 +53,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 <div class="menu-wrap">
 <nav class="menu-nav">
-<div class="logo"><a href="/index.php"><img alt="Nisan Cable TV & Internet" src="assets/imgs/logo/logo.webp" loading="eager" /></a></div>
+<div class="logo"><a href="/index.php"><img alt="Nisan Cable TV & Internet" src="/assets/imgs/logo/logo.webp" loading="eager" /></a></div>
 
 <div class="navbar-wrap main-menu d-none d-lg-flex">
 <ul class="navigation">
@@ -77,7 +77,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                         <div class="mobile-menu">
                             <nav class="menu-box">
                                 <div class="close-btn"><i class="fal fa-times"></i></div>
-                                <div class="nav-logo"><a href="/index.php"><img src="assets/imgs/logo/logo.webp" alt="logo"
+                                <div class="nav-logo"><a href="/index.php"><img src="/assets/imgs/logo/logo.webp" alt="logo"
                                             title="" loading="eager"></a>
                                 </div>
                                 <div class="menu-outer">

@@ -165,7 +165,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="footer-logo">
-                            <a href="/index.php"><img src="assets/imgs/logo/w_logo.webp" alt="Nisan logo" loading="lazy"></a>
+                            <a href="/index.php"><img src="/assets/imgs/logo/w_logo.webp" alt="Nisan logo" loading="lazy"></a>
                         </div>
                     </div>
                     <div class="col-md-8">
