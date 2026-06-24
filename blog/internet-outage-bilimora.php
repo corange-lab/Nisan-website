@@ -231,6 +231,8 @@
                 <h3>How long does a Nisan internet outage last?</h3>
                 <p>Most Nisan outages are resolved within 1–4 hours as the team is local to Bilimora. Critical issues are prioritized and technicians are dispatched the same day in most cases.</p>
                 <h3>Is there a Nisan internet outage today?</h3>
+                
+                <div class="verdict-box"><strong>Nisan's outage promise:</strong> Our team works every day of the year — Sundays, Diwali, Navratri, all holidays. When you call +91 98251 52400, a real person answers. Most Bilimora outages are resolved the same day. No call centre queues, no ticket numbers.</div>
                 <p>Call Nisan at +91 98251 52400 to check current outage status in your area of Bilimora. The local team will confirm if there is a network issue and the expected resolution time.</p>
                 <h3>How do I report a Nisan internet problem?</h3>
                 <p>Call +91 98251 52400 or WhatsApp the same number. Provide your address and describe the issue. Nisan's team will diagnose remotely and dispatch a technician if needed.</p>

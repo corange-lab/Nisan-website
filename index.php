@@ -131,7 +131,7 @@
           "name": "What are Nisan's internet plan prices in Bilimora?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nisan offers 5 FTTH broadband plans in Bilimora: 50 Mbps at ₹4,999/year, 100 Mbps at ₹5,999/year, 200 Mbps at ₹7,499/year, 300 Mbps at ₹8,999/year, and 400 Mbps at ₹11,499/year. All plans include free installation, unlimited data, and a free router."
+            "text": "Nisan offers 5 FTTH broadband plans in Bilimora: 50 Mbps at ₹4,999/year, 100 Mbps at ₹5,999/year, 200 Mbps at ₹7,499/year, 300 Mbps at ₹8,999/year, and 400 Mbps at ₹11,499/year. All plans include free installation, unlimited data, and a free WiFi router."
           }
         },
         {
@@ -139,7 +139,31 @@
           "name": "Does Nisan offer a money-back guarantee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. All Nisan internet plans come with a 1-month risk-free trial. If you are not satisfied within the first month, you get a full refund — no questions asked."
+            "text": "Yes. All Nisan internet plans come with a 1-month full money-back guarantee — no questions asked, no conditions. If you are not satisfied in the first month, you get a complete refund. No national ISP like Jio or Airtel offers this."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Nisan provide support on Sundays and holidays?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Nisan's support team works 365 days a year — including Sundays, Diwali, Navratri, Holi, and every public holiday. Most issues are resolved the same day. Call or WhatsApp +91 98251 52400 any day, 9 AM to 9 PM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Nisan different from Jio Fiber or Airtel in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan is a local Bilimora business — not a national call centre. For 100 Mbps, Nisan charges ₹5,999/year vs Jio's ₹10,799/year. Nisan's team works on Sundays and holidays, resolves issues same-day, offers a 1-month money-back guarantee, and provides free installation always. National ISPs offer none of these."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I get internet installed in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan installs within 1–2 days in Bilimora West. Call or WhatsApp +91 98251 52400. Installation is always free — for new connections, upgrades, and renewals. A free WiFi router is included with every plan."
           }
         },
         {
@@ -147,15 +171,7 @@
           "name": "Which areas does Nisan serve in Bilimora?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nisan currently serves Bilimora West (W Zone) — covering the complete western area of Bilimora, Gujarat. Call +91 98251 52400 to confirm coverage at your address."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How fast is Nisan's internet compared to Jio Fiber in Bilimora?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nisan offers the same 100 Mbps speed as Jio Fiber at ₹5,999/year — Jio charges ₹10,799/year for the same speed. You save ₹4,800 per year by choosing Nisan, plus you get local support from a Bilimora-based team."
+            "text": "Nisan serves Bilimora West (W Zone), Gujarat — PIN 396321. Call +91 98251 52400 to confirm availability at your specific address. Coverage check is free and instant."
           }
         },
         {
@@ -163,23 +179,7 @@
           "name": "What services does Nisan offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nisan offers FTTH high-speed broadband internet (50 to 400 Mbps) and cable TV with 200+ channels. You can also get a combo plan with both internet and cable TV together at a discounted bundled price."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I contact Nisan for a new connection in Bilimora?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Call or WhatsApp +91 98251 52400, or email hello@nisan.co.in. You can also visit our office at Morden Radio, Opp. Laxmi Palace, Station Road, Bilimora. Same-day installation is available in most areas."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When was Nisan established and how many customers do they have?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nisan has been providing cable TV services in Bilimora since 1993 and launched FTTH broadband in 2019. We currently serve 2,000+ happy customers across Bilimora West."
+            "text": "Nisan offers FTTH fiber internet (50–400 Mbps) and cable TV (Gujarati, Hindi, sports, kids channels) in Bilimora West. Both services can be bundled on a single bill. Support is available 365 days a year, including all holidays."
           }
         }
       ]
@@ -404,7 +404,7 @@
 <div class="row justify-content-center">
 <div class="col-xl-5 col-lg-7">
 <div class="section-title text-center mb-50">
-<h2 class="title">Find Perfect Network Solutions</h2>
+<h2 class="title">Local Service That Shows Up — Even on Holidays</h2>
 </div>
 </div>
 </div>
@@ -419,7 +419,7 @@
 <div class="services-content">
 <h3 class="title"><a href="/services.php">Broadband</a></h3>
 
-<p>Get connected with our high-speed broadband plans designed to meet all your internet needs. Whether it’s streaming, gaming, or working from home, enjoy seamless connectivity with speeds that keep you ahead.</p>
+<p>FTTH fiber from ₹4,999/year — 50 to 400 Mbps. Free installation, free router, unlimited data. No Sunday off: our team is available 365 days a year including every holiday. Call us at 9 PM on Diwali — we answer.</p>
 <a class="btn btn-link" href="/services.php">View Broadband Plans</a></div>
 </div>
 </div>
@@ -433,7 +433,7 @@
 <div class="services-content">
 <h3 class="title"><a href="/services.php">Cable TV</a></h3>
 
-<p>Enjoy endless entertainment with our Cable TV service. Access a variety of channels in HD quality, including movies, sports, news, and more. Stay entertained with affordable plans tailored for your family.</p>
+<p>Local cable TV covering all major Gujarati, Hindi, sports and kids channels — no rain disruptions unlike DTH. Bundle with internet on one bill. Same local team services both. Try once and we earn your trust.</p>
 <a class="btn btn-link" href="/services.php">Explore Cable TV Packages</a></div>
 </div>
 </div>
@@ -480,18 +480,15 @@
 <div class="section-title mb-40">
 <section class="broadband-section-unique">
     <div class="container-unique">
-        <h2 class="broadband-title">Get Reliable Broadband with a Risk-Free Guarantee!</h2>
+        <h2 class="broadband-title">Try Nisan Once — We Earn Your Trust Through Service</h2>
         <p class="broadband-description">
-            At Nisan, we are committed to providing <strong>fast and seamless internet</strong> for all your needs. 
-            Subscribe to our <strong>1-year broadband plan</strong> and experience uninterrupted connectivity. If you're not satisfied 
-            within the first month, we offer a <strong>full refund</strong> – no questions asked!
+            Not sure? We understand. That is why every Nisan plan comes with a <strong>1-month full money-back guarantee</strong> — no conditions, no questions. If you are not happy in the first 30 days, you get every rupee back.
         </p>
         <p class="broadband-description">
-            With a simple <strong>one-time annual payment</strong>, you get uninterrupted internet service. Our plans are perfect 
-            for <strong>streaming, gaming, and working from home</strong>. Try our service risk-free for the first month.
+            We do not take your trust for granted. Nisan's team works <strong>365 days a year — no Sundays off, no holidays</strong>. Internet problems don't wait for Monday morning. Neither do we. Most issues are fixed the same day you call.
         </p>
         <p class="broadband-description">
-            Plans start at just <strong>₹4,999/year</strong> (50 Mbps) — all the way up to <strong>400 Mbps</strong> for homes and businesses in <strong>Bilimora</strong>. Join now and stay connected without compromise.
+            Plans start at <strong>₹4,999/year</strong> (50 Mbps) — up to <strong>400 Mbps</strong> for Bilimora homes and businesses. Free installation, free router, unlimited data. The only risk is not trying us sooner.
         </p>
     </div>
 </section>

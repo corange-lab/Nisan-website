@@ -190,7 +190,9 @@
                     <p>This is harder to quantify than speeds or prices, but it matters. The people running Nisan, the technicians doing your installation, the person who picks up the phone — they are your neighbours. They live here, they know the streets, they care about the reputation of a business that their family has built over 30 years in the same community. That accountability is different from what you get from a company managing 10 million customers across India.</p>
                 </div>
 
-                <h2>How Nisan Compares to National ISPs for Bilimora Specifically</h2>
+                
+                <div class="info-box"><strong>Why 2,000 families chose Nisan and stayed:</strong> We work 365 days a year — no Sunday off, no holiday shutdowns. Full 1-month money-back on every plan. Free installation always. A local Bilimora team that resolves issues the same day. Not promises — backed by a refund guarantee you can actually claim.</div>
+<h2>How Nisan Compares to National ISPs for Bilimora Specifically</h2>
 
                 <table>
                     <thead>

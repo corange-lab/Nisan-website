@@ -104,16 +104,16 @@
                             <h2 class="title">Bilimora's Most Trusted Internet & Cable TV Provider</h2>
                         </div>
                         <div class="about-content">
-                            <p>Nisan Cable TV & Internet has been a cornerstone of Bilimora West since <strong>1993</strong> — first bringing cable TV to local homes, and since <strong>2019</strong> delivering high-speed FTTH (Fiber-to-the-Home) broadband. Today, we proudly serve <strong>2,000+ happy customers</strong> across Bilimora's W Zone.</p>
-                            <p style="margin-top:14px;">We use the latest fiber optic infrastructure to deliver speeds from <strong>50 Mbps to 400 Mbps</strong>, ensuring you get fast, stable, and reliable internet — whether you're streaming, working from home, running a business, or just browsing.</p>
+                            <p>Nisan Cable TV & Internet has been a cornerstone of Bilimora West since <strong>1993</strong> — first bringing cable TV to local homes, and since <strong>2019</strong> delivering high-speed FTTH fiber broadband. Today, we serve <strong>2,000+ customers</strong> across Bilimora's W Zone. But what really sets us apart is not the speed — it is the service.</p>
+                            <p style="margin-top:14px;">We work <strong>365 days a year — no Sundays off, no holidays</strong>. When your internet goes down on Diwali evening or a Sunday night, you call us and we answer. Our local Bilimora team resolves most issues the same day. No national call centre, no ticket numbers, no 48-hour wait. Just a real person who knows your street.</p>
                             <ul class="about-list">
-                                <li>Local team based in Bilimora — we know your neighbourhood</li>
-                                <li>2,000+ customers trust us in Bilimora West</li>
-                                <li>FTTH fiber technology — not copper wire</li>
-                                <li>Plans from ₹4,999/year with free installation</li>
-                                <li>1-month money-back guarantee on all plans</li>
-                                <li>Responsive support team — call, WhatsApp, or visit us</li>
-                                <li>Serving Bilimora since 1993 — 30+ years of experience</li>
+                                <li>Support every single day — Sundays, Diwali, Navratri, all holidays</li>
+                                <li>Same-day resolution for most issues in Bilimora West</li>
+                                <li>1-month full money-back guarantee — zero risk to try</li>
+                                <li>Free installation always — new connections, upgrades, renewals</li>
+                                <li>FTTH fiber technology — 50 to 400 Mbps, unlimited data</li>
+                                <li>Plans from ₹4,999/year, 40–55% cheaper than Jio and Airtel</li>
+                                <li>Flexible — we work with you on plan changes and renewals</li>
                             </ul>
                             <a href="/contact.php" class="btn transparent-btn" style="margin-right:10px;">Get a New Connection</a>
                             <a href="/pricing.php" class="btn">View Plans</a>
@@ -152,6 +152,12 @@
                             <p style="margin:8px 0 0; color:#555;">Google Rating</p>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div style="background:#fff; border-radius:12px; padding:30px 20px; box-shadow:0 2px 16px rgba(0,0,0,.07);">
+                            <h3 style="font-size:2.5rem; font-weight:800; color:#df0e0e; margin:0;">365</h3>
+                            <p style="margin:8px 0 0; color:#555;">Days/Year Support — No Day Off</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -164,8 +170,8 @@
                     <div class="col-xl-9 col-lg-10">
                         <div class="cta-content text-center">
                             <div class="section-title white-title mb-35">
-                                <h2 class="title">Nisan: Trusted for Speed and Service Since 1993</h2>
-                                <p style="color:rgba(255,255,255,.85); margin-top:12px;">2,000+ families and businesses in Bilimora West rely on us every day.</p>
+                                <h2 class="title">Try Us Once — We Earn Your Trust</h2>
+                                <p style="color:rgba(255,255,255,.85); margin-top:12px;">1-month money-back guarantee. No Sundays off. No holidays. 2,000+ Bilimora families already made the switch.</p>
                             </div>
                             <div class="cta-btn-wrap">
                                 <a href="/pricing.php" class="btn">View our Plans</a>

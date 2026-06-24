@@ -174,7 +174,9 @@
 
                 <p>We cover three main options: <strong>Nisan Cable & Internet</strong> (local FTTH provider), <strong>Jio Fiber</strong>, and <strong>Airtel Xstream Fiber</strong>.</p>
 
-                <h2>Quick Summary: Internet Providers in Bilimora</h2>
+                
+                <div class="info-box"><strong>The service difference no national ISP offers:</strong> Nisan works 365 days a year — no Sundays off, no holiday closures. Call at 9 PM on Diwali: we answer. Jio gives a ticket number and a 48-hour wait. Nisan sends a local Bilimora technician, usually the same day. Plus a 1-month full money-back guarantee — zero risk.</div>
+<h2>Quick Summary: Internet Providers in Bilimora</h2>
 
                 <table class="comparison-table">
                     <thead>

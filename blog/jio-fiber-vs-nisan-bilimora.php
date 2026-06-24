@@ -204,6 +204,9 @@
 
                 <h2>Support: Local vs Call Center</h2>
 
+                
+                <div class="verdict-box"><strong>The Sunday test:</strong> Call Nisan at 8 PM on a Sunday — we answer. Call Jio Fiber at 8 PM on a Sunday — you get a ticket number. Nisan works 365 days a year including every holiday. That is the real difference local service makes.</div>
+
                 <p>This is where the difference is felt most. When your internet goes down at 8 PM on a Sunday:</p>
 
                 <ul>

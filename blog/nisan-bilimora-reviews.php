@@ -227,6 +227,8 @@
                 <h2>Frequently Asked Questions</h2>
                 <div itemscope itemtype="https://schema.org/FAQPage">
                 <h3>What do customers say about Nisan internet in Bilimora?</h3>
+                
+                <div class="info-box"><strong>What customers say most:</strong> "They came on a Sunday." "Fixed it on Diwali." "Picked up the phone at 8 PM." This is what 2,000+ Bilimora customers trust Nisan for — not just speed, but showing up when it matters.</div>
                 <p>Nisan has a 4.9-star Google rating from customers in Bilimora. Reviews consistently mention fast speeds, responsive local support, and competitive pricing compared to Jio Fiber and Airtel.</p>
                 <h3>Is Nisan internet reliable in Bilimora?</h3>
                 <p>Yes. Nisan's FTTH fiber network in Bilimora West is purpose-built for local reliability. Over 2,000 families and businesses trust Nisan. The 4.9-star Google rating reflects consistent real-world performance.</p>
