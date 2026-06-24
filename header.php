@@ -61,6 +61,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 	<li class="<?= ($currentPage == 'about-us.php') ? 'active' : '' ?>"><a href="/about-us.php">About</a></li>
 	<li class="<?= ($currentPage == 'services.php') ? 'active' : '' ?>"><a href="/services.php">Services</a></li>
 	<li class="<?= ($currentPage == 'speedtest.php') ? 'active' : '' ?>"><a href="/speedtest.php">Speed Test</a></li>
+	<li class="<?= (strpos($_SERVER['PHP_SELF'], '/blog') !== false) ? 'active' : '' ?>"><a href="/blog/">Blog</a></li>
 	<li class="<?= ($currentPage == 'contact.php') ? 'active' : '' ?>"><a href="/contact.php">Contact</a></li>
 </ul>
 </div>
