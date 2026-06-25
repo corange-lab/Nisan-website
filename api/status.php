@@ -220,7 +220,6 @@ function buildResponse(PDO $db): array {
 
     // 24-hour hourly buckets — IST-aligned so labels match clock hours
     // Find the start of the current IST hour
-    $ist = new DateTimeZone('Asia/Kolkata');
     $nowDt = new DateTime('@' . $now);
     $nowDt->setTimezone($ist);
     // Truncate to current hour in IST
@@ -228,13 +227,14 @@ function buildResponse(PDO $db): array {
     $istHourStart = $nowDt->getTimestamp(); // start of current IST hour (UTC ts)
     $window24Start = $istHourStart - 23 * 3600; // 24 slots: 23 past hours + current
 
+    $window24End = $istHourStart + 3600; // end of current IST hour
     $hourRows = $db->query(
         "SELECT
             CAST((checked_at - {$window24Start}) / 3600 AS INTEGER) as hr_idx,
             SUM(is_up) as up_cnt, COUNT(*) as total,
             CAST(AVG(response_ms) AS INTEGER) as avg_ms
          FROM status_checks
-         WHERE checked_at >= {$window24Start} AND hr_idx BETWEEN 0 AND 23
+         WHERE checked_at >= {$window24Start} AND checked_at < {$window24End}
          GROUP BY hr_idx ORDER BY hr_idx"
     )->fetchAll(PDO::FETCH_ASSOC);
 
