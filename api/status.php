@@ -162,9 +162,16 @@ function buildDayDetail(PDO $db, string $date): array {
 }
 
 function buildResponse(PDO $db): array {
-    $now   = time();
-    $day30 = $now - 30 * 86400;
-    $day1  = $now - 86400;
+    $now = time();
+    $ist = new DateTimeZone('Asia/Kolkata');
+
+    // Anchor everything to IST midnight of today
+    $todayIst = new DateTime('now', $ist);
+    $todayIst->setTime(0, 0, 0);
+    $todayMidnightUtc = $todayIst->getTimestamp(); // today 00:00 IST in UTC
+
+    // 30-day window: from 30 IST-days ago midnight up to now
+    $day30start = $todayMidnightUtc - 30 * 86400; // 00:00 IST, 30 days ago
 
     // Current status
     $latest = $db->query(
@@ -175,31 +182,37 @@ function buildResponse(PDO $db): array {
 
     // 30-day uptime
     $counts = $db->query(
-        "SELECT SUM(is_up) as up_cnt, COUNT(*) as total FROM status_checks WHERE checked_at >= {$day30}"
+        "SELECT SUM(is_up) as up_cnt, COUNT(*) as total FROM status_checks WHERE checked_at >= {$day30start}"
     )->fetch(PDO::FETCH_ASSOC);
     $uptime30 = $counts['total'] > 0
         ? round($counts['up_cnt'] / $counts['total'] * 100, 3) : 100.0;
 
-    // 30-day daily buckets
+    // 30-day daily buckets — each bucket = one IST calendar day
     $dailyRows = $db->query(
         "SELECT
-            CAST((checked_at - {$day30}) / 86400 AS INTEGER) as day_idx,
+            CAST((checked_at - {$day30start}) / 86400 AS INTEGER) as day_idx,
             SUM(is_up) as up_cnt, COUNT(*) as total
-         FROM status_checks WHERE checked_at >= {$day30}
+         FROM status_checks WHERE checked_at >= {$day30start}
          GROUP BY day_idx ORDER BY day_idx"
     )->fetchAll(PDO::FETCH_ASSOC);
 
     $dailyMap = [];
     foreach ($dailyRows as $r) {
-        $dailyMap[(int)$r['day_idx']] = [
-            'pct'   => round($r['up_cnt'] / max($r['total'],1) * 100, 1),
-            'total' => (int)$r['total'],
-        ];
+        $idx = (int)$r['day_idx'];
+        if ($idx >= 0 && $idx < 30) {
+            $dailyMap[$idx] = [
+                'pct'   => round($r['up_cnt'] / max($r['total'],1) * 100, 1),
+                'total' => (int)$r['total'],
+            ];
+        }
     }
     $days = [];
     for ($i = 0; $i < 30; $i++) {
+        // Date label = IST date of the bucket start
+        $bucketDt = new DateTime('@' . ($day30start + $i * 86400));
+        $bucketDt->setTimezone($ist);
         $days[] = [
-            'date'  => date('Y-m-d', $day30 + $i * 86400),
+            'date'  => $bucketDt->format('Y-m-d'),  // IST calendar date
             'pct'   => $dailyMap[$i]['pct'] ?? null,
             'total' => $dailyMap[$i]['total'] ?? 0,
         ];
