@@ -46,12 +46,6 @@
     }
     .stat-val   { display: block; font-size: 1.55rem; font-weight: 700; color: #1a1a2e; font-variant-numeric: tabular-nums; }
     .stat-label { display: block; font-size: .75rem; color: #6b7280; margin-top: 4px; text-transform: uppercase; letter-spacing: .06em; }
-    /* Countdown card */
-    .stat-card.countdown-card { cursor: default; }
-    .countdown-wrap { display: flex; align-items: center; justify-content: center; gap: 6px; }
-    .countdown-num  { font-size: 1.55rem; font-weight: 700; color: #1a1a2e; font-variant-numeric: tabular-nums; min-width: 3ch; text-align: right; }
-    .countdown-sep  { font-size: 1.1rem; color: #9ca3af; margin-bottom: 2px; }
-    .countdown-sec  { font-size: 1.55rem; font-weight: 700; color: #6366f1; font-variant-numeric: tabular-nums; min-width: 2ch; text-align: left; }
 
     /* Sections */
     .status-section       { padding: 40px 0 0; }
@@ -180,13 +174,9 @@
           <span class="stat-val" id="statMs">—</span>
           <span class="stat-label">Response time</span>
         </div>
-        <div class="stat-card countdown-card">
-          <div class="countdown-wrap">
-            <span class="countdown-num" id="cdMins">—</span>
-            <span class="countdown-sep">:</span>
-            <span class="countdown-sec" id="cdSecs">--</span>
-          </div>
-          <span class="stat-label">Next check in</span>
+        <div class="stat-card">
+          <span class="stat-val" id="statLastTime">—</span>
+          <span class="stat-label">Last checked (IST)</span>
         </div>
       </div>
     </div>
@@ -260,15 +250,11 @@
 <script>
 (function () {
   /* ── constants ─────────────────────────────────────────── */
-  var POLL_UP   = 180; // seconds
-  var POLL_DOWN = 30;
+  var POLL_UP   = 180 * 1000; // ms
+  var POLL_DOWN = 30  * 1000;
 
   /* ── state ──────────────────────────────────────────────── */
-  var pollTimer     = null;
-  var cdTimer       = null;
-  var cdRemaining   = 0;
-  var nextPollSecs  = POLL_UP;
-  var lastCheckedAt = 0;
+  var pollTimer = null;
 
   /* ── DOM ────────────────────────────────────────────────── */
   var dot          = document.getElementById('statusDot');
@@ -276,8 +262,7 @@
   var sub          = document.getElementById('statusSub');
   var s30          = document.getElementById('stat30d');
   var sMs          = document.getElementById('statMs');
-  var cdMins       = document.getElementById('cdMins');
-  var cdSecs       = document.getElementById('cdSecs');
+  var sLastTime    = document.getElementById('statLastTime');
   var bars24el     = document.getElementById('bars24');
   var bars30el     = document.getElementById('bars30d');
   var bar24From    = document.getElementById('bar24From');
@@ -292,7 +277,14 @@
   dayClose.addEventListener('click', function () { dayPanel.classList.remove('open'); });
 
   /* ── helpers ─────────────────────────────────────────────── */
-  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+  function toIST(ts) {
+    // Returns "HH:MM" in IST (UTC+5:30)
+    var d = new Date((ts + 19800) * 1000); // shift to IST
+    var h = d.getUTCHours(), m = d.getUTCMinutes();
+    var ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    return h + ':' + (m < 10 ? '0' + m : m) + ' ' + ampm;
+  }
 
   function segClass(pct, total) {
     if (!total) return 'no-data';
@@ -317,28 +309,6 @@
   function shortDate(str) {
     var d = new Date(str + 'T00:00:00');
     return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
-  }
-
-  /* ── countdown ───────────────────────────────────────────── */
-  function startCountdown(seconds) {
-    cdRemaining = seconds;
-    if (cdTimer) clearInterval(cdTimer);
-    tickCountdown();
-    cdTimer = setInterval(tickCountdown, 1000);
-  }
-
-  function tickCountdown() {
-    if (cdRemaining <= 0) {
-      cdRemaining = 0;
-      cdMins.textContent = '…';
-      cdSecs.textContent = '--';
-      return;
-    }
-    var m = Math.floor(cdRemaining / 60);
-    var s = cdRemaining % 60;
-    cdMins.textContent = m;
-    cdSecs.textContent = pad2(s);
-    cdRemaining--;
   }
 
   /* ── render 24h bars ─────────────────────────────────────── */
@@ -486,15 +456,9 @@
       : (up ? 'Nisan Internet is running normally.' : 'Our team is investigating.');
 
     // Stats
-    s30.textContent = d.uptime_30d != null ? d.uptime_30d.toFixed(2) + '%' : '—';
-    sMs.textContent = d.response_ms != null ? d.response_ms + ' ms' : '—';
-
-    // Countdown — sync with server: subtract time already elapsed since last check
-    var nowSec    = Math.floor(Date.now() / 1000);
-    var elapsed   = Math.max(0, nowSec - lastCheckedAt);
-    var remaining = nextPollSecs - elapsed;
-    // If overdue (cron hasn't run yet), show a short wait then retry
-    startCountdown(remaining > 1 ? remaining : nextPollSecs);
+    s30.textContent       = d.uptime_30d  != null ? d.uptime_30d.toFixed(2) + '%' : '—';
+    sMs.textContent       = d.response_ms != null ? d.response_ms + ' ms'         : '—';
+    sLastTime.textContent = d.checked_at  ? toIST(d.checked_at) : '—';
 
     // Bars
     render24(d.hours_24);
@@ -503,7 +467,7 @@
 
     // Schedule next fetch
     if (pollTimer) clearTimeout(pollTimer);
-    pollTimer = setTimeout(load, nextPollSecs * 1000);
+    pollTimer = setTimeout(load, up ? POLL_UP : POLL_DOWN);
   }
 
   /* ── fetch ───────────────────────────────────────────────── */
@@ -513,8 +477,7 @@
       .then(render)
       .catch(function () {
         if (pollTimer) clearTimeout(pollTimer);
-        pollTimer = setTimeout(load, POLL_DOWN * 1000);
-        startCountdown(POLL_DOWN);
+        pollTimer = setTimeout(load, POLL_DOWN);
       });
   }
 
