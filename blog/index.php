@@ -127,82 +127,180 @@
             color: rgba(255,255,255,.55);
         }
 
-        /* ── Featured Cards ── */
+        /* ── Featured Cards — Premium redesign ── */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 991px) { .featured-grid { grid-template-columns: repeat(2,1fr); } }
+        @media (max-width: 575px) { .featured-grid { grid-template-columns: 1fr; } }
+
         .blog-featured-card {
-            background: #fff;
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 32px rgba(0,0,0,.11);
             display: flex;
             flex-direction: column;
             height: 100%;
-            transition: transform .22s, box-shadow .22s;
             text-decoration: none;
+            position: relative;
+            box-shadow: 0 8px 40px rgba(0,0,0,.13);
+            transition: transform .28s cubic-bezier(.34,1.56,.64,1), box-shadow .28s ease;
         }
         .blog-featured-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 44px rgba(0,0,0,.16);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 24px 64px rgba(0,0,0,.20);
             text-decoration: none;
         }
+
+        /* Shine sweep on hover */
+        .blog-featured-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.13) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform .5s ease;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .blog-featured-card:hover::before { transform: translateX(100%); }
+
+        /* Banner area */
         .bfc-banner {
-            padding: 32px 28px 24px;
+            padding: 30px 28px 26px;
             position: relative;
             overflow: hidden;
+            flex-shrink: 0;
         }
+        /* Decorative circles */
         .bfc-banner::after {
-            content: attr(data-icon);
+            content: '';
             position: absolute;
-            right: 20px; bottom: -10px;
-            font-size: 5rem;
-            opacity: .15;
+            right: -30px; bottom: -30px;
+            width: 140px; height: 140px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.08);
             pointer-events: none;
-            line-height: 1;
+        }
+        .bfc-banner::before {
+            content: '';
+            position: absolute;
+            right: 30px; bottom: 20px;
+            width: 70px; height: 70px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.06);
+            pointer-events: none;
+        }
+        .bfc-icon {
+            font-size: 2.4rem;
+            margin-bottom: 14px;
+            display: block;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,.2));
+            position: relative;
+            z-index: 1;
         }
         .bfc-banner-label {
-            display: inline-block;
-            background: rgba(255,255,255,.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,.18);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,.25);
             color: #fff;
-            font-size: 11px;
-            font-weight: 700;
+            font-size: 10.5px;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: .8px;
-            padding: 4px 10px;
-            border-radius: 4px;
-            margin-bottom: 12px;
+            letter-spacing: 1px;
+            padding: 4px 11px;
+            border-radius: 20px;
+            margin-bottom: 13px;
+            position: relative;
+            z-index: 1;
         }
         .bfc-banner h3 {
-            font-size: 1.1rem !important;
+            font-size: 1.15rem !important;
             font-weight: 800 !important;
             color: #fff !important;
             line-height: 1.35 !important;
-            margin: 0 !important;
+            margin: 0 0 16px !important;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 1px 4px rgba(0,0,0,.2);
         }
-        .bfc-body {
-            padding: 20px 24px 22px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .bfc-desc {
-            font-size: 13.5px;
-            color: #666;
-            line-height: 1.65;
-            flex: 1;
-            margin: 0 0 16px;
-        }
-        .bfc-cta {
-            font-size: 13px;
-            font-weight: 700;
-            color: #0066cc;
+        /* Key insight pill */
+        .bfc-insight {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: gap .15s;
-            text-decoration: none;
+            background: rgba(0,0,0,.22);
+            border: 1px solid rgba(255,255,255,.15);
+            color: rgba(255,255,255,.95);
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 8px;
+            position: relative;
+            z-index: 1;
         }
-        .blog-featured-card:hover .bfc-cta { gap: 10px; }
-        .bfc-compare { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
-        .bfc-guide   { background: linear-gradient(135deg, #15803d 0%, #22c55e 100%); }
+        .bfc-insight-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: #ffd600;
+            flex-shrink: 0;
+        }
+
+        /* Body area */
+        .bfc-body {
+            padding: 22px 26px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+        .bfc-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .bfc-read-time {
+            font-size: 11px;
+            color: #aaa;
+            font-weight: 600;
+        }
+        .bfc-desc {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+            flex: 1;
+            margin: 0 0 20px;
+        }
+        .bfc-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            padding: 10px 18px;
+            text-decoration: none;
+            transition: gap .2s, opacity .2s;
+            align-self: flex-start;
+            color: #fff !important;
+        }
+        .bfc-cta:hover { gap: 13px; opacity: .9; text-decoration: none; }
+        .bfc-cta-arrow { font-size: 1rem; transition: transform .2s; }
+        .blog-featured-card:hover .bfc-cta-arrow { transform: translateX(4px); }
+
+        /* Card colour themes */
+        .bfc-1 { background: linear-gradient(145deg, #0f2d6b 0%, #1d4ed8 55%, #3b82f6 100%); }
+        .bfc-1 .bfc-cta { background: #1d4ed8; }
+        .bfc-2 { background: linear-gradient(145deg, #0c3b2e 0%, #15803d 55%, #22c55e 100%); }
+        .bfc-2 .bfc-cta { background: #15803d; }
+        .bfc-3 { background: linear-gradient(145deg, #4a1577 0%, #7c3aed 55%, #a855f7 100%); }
+        .bfc-3 .bfc-cta { background: #7c3aed; }
 
         /* ── Section Headings ── */
         .blog-section-head {
@@ -450,43 +548,68 @@
                 <div class="blog-section-icon si-trust">&#127942;</div>
                 <h2>Most Read Guides</h2>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <a href="/blog/best-internet-provider-bilimora" class="blog-featured-card">
-                        <div class="bfc-banner bfc-compare" data-icon="&#127942;">
-                            <span class="bfc-banner-label">Most Popular</span>
-                            <h3>Best Internet Provider in Bilimora</h3>
+            <div class="featured-grid">
+
+                <!-- Card 1 -->
+                <a href="/blog/best-internet-provider-bilimora" class="blog-featured-card">
+                    <div class="bfc-banner bfc-1">
+                        <span class="bfc-icon">&#127942;</span>
+                        <div class="bfc-banner-label">&#128293; Most Popular</div>
+                        <h3>Best Internet Provider in Bilimora 2026</h3>
+                        <div class="bfc-insight">
+                            <span class="bfc-insight-dot"></span>
+                            Nisan saves ₹4,800/yr vs Jio on 100 Mbps
                         </div>
-                        <div class="bfc-body">
-                            <p class="bfc-desc">Compare Nisan, Jio Fiber, and Airtel on price, speed, and local support. The definitive Bilimora guide.</p>
-                            <span class="bfc-cta">Read full guide &#8594;</span>
+                    </div>
+                    <div class="bfc-body">
+                        <div class="bfc-meta">
+                            <span class="bfc-read-time">&#9201; 5 min read</span>
                         </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <a href="/blog/jio-fiber-vs-nisan-bilimora" class="blog-featured-card">
-                        <div class="bfc-banner bfc-compare" data-icon="&#9889;">
-                            <span class="bfc-banner-label">Comparison</span>
-                            <h3>Jio Fiber vs Nisan in Bilimora — Which Is Better?</h3>
+                        <p class="bfc-desc">Full comparison of every ISP in Bilimora — Nisan, Jio, Airtel, GTPL, Quest. Price, speed, uptime, and local support side by side. The definitive guide.</p>
+                        <span class="bfc-cta" style="background:#1d4ed8;">Read full guide <span class="bfc-cta-arrow">&#8594;</span></span>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="/blog/fiber-vs-air-fiber-bilimora" class="blog-featured-card">
+                    <div class="bfc-banner bfc-2">
+                        <span class="bfc-icon">&#128268;</span>
+                        <div class="bfc-banner-label">&#9889; New Guide</div>
+                        <h3>Fiber vs Air Fiber in Bilimora — Which Is Better?</h3>
+                        <div class="bfc-insight">
+                            <span class="bfc-insight-dot"></span>
+                            Air Fiber drops in monsoon. Cable fiber doesn't.
                         </div>
-                        <div class="bfc-body">
-                            <p class="bfc-desc">Side-by-side comparison of price, speed, support and real annual savings. The numbers may surprise you.</p>
-                            <span class="bfc-cta">Read full guide &#8594;</span>
+                    </div>
+                    <div class="bfc-body">
+                        <div class="bfc-meta">
+                            <span class="bfc-read-time">&#9201; 6 min read</span>
                         </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <a href="/blog/cheapest-broadband-bilimora" class="blog-featured-card">
-                        <div class="bfc-banner bfc-guide" data-icon="&#128176;">
-                            <span class="bfc-banner-label">Save Money</span>
-                            <h3>Cheapest Broadband Plan in Bilimora: Who Offers Best Value?</h3>
+                        <p class="bfc-desc">What is Air Fiber really? Why it underperforms in rain, peak hours and latency. Why Nisan's underground FTTH cable fiber wins on every count.</p>
+                        <span class="bfc-cta" style="background:#15803d;">Read full guide <span class="bfc-cta-arrow">&#8594;</span></span>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="/blog/cheapest-broadband-bilimora" class="blog-featured-card">
+                    <div class="bfc-banner bfc-3">
+                        <span class="bfc-icon">&#128176;</span>
+                        <div class="bfc-banner-label">&#128200; Save Money</div>
+                        <h3>Cheapest Broadband in Bilimora: Who Offers Best Value?</h3>
+                        <div class="bfc-insight">
+                            <span class="bfc-insight-dot"></span>
+                            ₹4,999/yr · GST included · No hidden charges
                         </div>
-                        <div class="bfc-body">
-                            <p class="bfc-desc">&#8377;4,999/year = &#8377;416/month — the cheapest per-month broadband in Bilimora. See the full breakdown.</p>
-                            <span class="bfc-cta" style="color:#16a34a;">Read full guide &#8594;</span>
+                    </div>
+                    <div class="bfc-body">
+                        <div class="bfc-meta">
+                            <span class="bfc-read-time">&#9201; 3 min read</span>
                         </div>
-                    </a>
-                </div>
+                        <p class="bfc-desc">₹4,999/year = ₹417/month — the lowest cost unlimited fiber broadband in Bilimora. Full price breakdown vs Jio, Airtel, GTPL and Quest.</p>
+                        <span class="bfc-cta" style="background:#7c3aed;">Read full guide <span class="bfc-cta-arrow">&#8594;</span></span>
+                    </div>
+                </a>
+
             </div>
 
             <!-- COMPARISONS -->
