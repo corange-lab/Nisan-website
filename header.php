@@ -62,6 +62,11 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 	<li class="<?= ($currentPage == 'services.php') ? 'active' : '' ?>"><a href="/services.php">Services</a></li>
 	<li class="<?= (strpos($_SERVER['PHP_SELF'], '/blog') !== false) ? 'active' : '' ?>"><a href="/blog/">Blog</a></li>
 	<li class="<?= ($currentPage == 'contact.php') ? 'active' : '' ?>"><a href="/contact.php">Contact</a></li>
+	<li class="<?= ($currentPage == 'status.php') ? 'active' : '' ?>">
+		<a href="/status.php" class="nav-status-link">
+			<span class="nav-status-dot" id="navStatusDot"></span>Status
+		</a>
+	</li>
 </ul>
 </div>
 
@@ -97,3 +102,48 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 </div>
 </header>
 <!-- header-area-end -->
+<style>
+.nav-status-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+}
+.nav-status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9ca3af;
+  flex-shrink: 0;
+  transition: background .4s;
+}
+.nav-status-dot.up   { background: #22c55e; }
+.nav-status-dot.down { background: #ef4444; animation: hdr-pulse 1.2s ease infinite; }
+@keyframes hdr-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .4; }
+}
+</style>
+<script>
+(function () {
+  // Lightweight header dot — fires once, no heavy polling
+  var dot = document.getElementById('navStatusDot');
+  if (!dot) return;
+  // Cache in sessionStorage so every page load doesn't re-fetch
+  var cached = sessionStorage.getItem('nisan_status');
+  var cachedTs = parseInt(sessionStorage.getItem('nisan_status_ts') || '0', 10);
+  if (cached && (Date.now() - cachedTs < 3 * 60 * 1000)) {
+    dot.className = 'nav-status-dot ' + cached;
+    return;
+  }
+  fetch('/api/status.php')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var s = d.status === 'up' ? 'up' : 'down';
+      dot.className = 'nav-status-dot ' + s;
+      sessionStorage.setItem('nisan_status', s);
+      sessionStorage.setItem('nisan_status_ts', Date.now().toString());
+    })
+    .catch(function() {});
+})();
+</script>
