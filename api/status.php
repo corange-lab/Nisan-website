@@ -98,13 +98,13 @@ function istTime(int $ts): string {
 }
 
 function buildDayDetail(PDO $db, string $date): array {
-    // Parse date
-    $dayStart = strtotime($date . ' 00:00:00');
-    $dayEnd   = $dayStart + 86400;
-    if (!$dayStart) { http_response_code(400); echo json_encode(['error'=>'Invalid date']); exit; }
-
-    // Hourly buckets 0–23 aligned to IST midnight of the selected date
     $ist = new DateTimeZone('Asia/Kolkata');
+
+    // Parse as IST midnight — strtotime() uses server UTC, so use DateTime instead
+    $dayDt = new DateTime($date . ' 00:00:00', $ist);
+    if (!$dayDt) { http_response_code(400); echo json_encode(['error'=>'Invalid date']); exit; }
+    $dayStart = $dayDt->getTimestamp();   // UTC ts of 00:00 IST on $date
+    $dayEnd   = $dayStart + 86400;
     $rows = $db->query(
         "SELECT
             CAST((checked_at - {$dayStart}) / 3600 AS INTEGER) as hr,
