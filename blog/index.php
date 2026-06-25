@@ -334,6 +334,10 @@
         }
 
         /* ── Article Cards (Premium) ── */
+        .col-lg-4 > a.nbc, .col-md-6 > a.nbc {
+            display: flex;
+            width: 100%;
+        }
         .nbc {
             background: #fff;
             border-radius: 20px;
@@ -343,6 +347,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            width: 100%;
             margin-bottom: 24px;
             position: relative;
         }
