@@ -364,12 +364,6 @@
             transition: transform .5s ease;
         }
         .nbc:hover .nbc-banner::before { transform: translateX(100%); }
-        .nbc-icon {
-            font-size: 1.8rem;
-            display: block;
-            margin-bottom: 8px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
-        }
         .nbc-tag-row {
             display: flex;
             align-items: center;
@@ -641,16 +635,16 @@
             <div class="row">
                 <?php
                 $compare = [
-                    ['/blog/best-internet-provider-bilimora','Best Internet Provider in Bilimora','Compare Nisan, Jio Fiber, and Airtel on price, speed, and local support.','Comparison','3 min','&#128202;'],
-                    ['/blog/internet-providers-bilimora-compared','Internet Providers in Bilimora Compared: Speed, Price &amp; Support','Full comparison table of all ISPs — Nisan, Jio, Airtel, GTPL, BSNL.','Comparison','4 min','&#9878;'],
-                    ['/blog/fiber-vs-air-fiber-bilimora','Fiber vs Air Fiber in Bilimora — Which Is Better?','Why cable fiber beats Air Fiber on uptime, rain, latency and price.','Education','6 min','&#128268;'],
-                    ['/blog/jio-fiber-vs-nisan-bilimora','Jio Fiber vs Nisan in Bilimora — Which Is Better?','Side-by-side comparison of price, speed, support and savings.','Comparison','4 min','&#128270;'],
-                    ['/blog/jio-fiber-bilimora-comparison','Why Bilimora Residents Choose Nisan Over Jio — 7 Real Reasons','Same-day repair, face-to-face support, 30-year local trust, annual savings.','Comparison','5 min','&#127942;'],
-                    ['/blog/airtel-vs-nisan-bilimora','Airtel Broadband vs Nisan Internet in Bilimora','Price-per-Mbps comparison. Annual vs monthly billing. Local support response time.','Comparison','3 min','&#128225;'],
-                    ['/blog/gtpl-vs-nisan-bilimora','GTPL vs Nisan Bilimora: Cable TV and Broadband','Both serve Gujarat. Compare channel lineup, broadband speeds, and local service quality.','Comparison','4 min','&#128250;'],
-                    ['/blog/bsnl-vs-nisan-bilimora','BSNL Broadband vs Nisan Internet in Bilimora','Copper DSL vs FTTH fiber — is it time to upgrade from BSNL?','Comparison','3 min','&#128191;'],
-                    ['/blog/cheapest-broadband-bilimora','Cheapest Broadband Plan in Bilimora: Who Offers the Best Value?','&#8377;4,999/year = &#8377;416/month — the cheapest per-month broadband in Bilimora.','Comparison','3 min','&#128176;'],
-                    ['/blog/local-isp-vs-jio-airtel-bilimora','Local ISP vs Jio or Airtel in Bilimora: Why Local Wins','One phone call, one person, resolved today — the case for a local provider.','Comparison','4 min','&#127968;'],
+                    ['/blog/best-internet-provider-bilimora','Best Internet Provider in Bilimora','Compare Nisan, Jio Fiber, and Airtel on price, speed, and local support.','Comparison','3 min'],
+                    ['/blog/internet-providers-bilimora-compared','Internet Providers in Bilimora Compared: Speed, Price &amp; Support','Full comparison table of all ISPs — Nisan, Jio, Airtel, GTPL, BSNL.','Comparison','4 min'],
+                    ['/blog/fiber-vs-air-fiber-bilimora','Fiber vs Air Fiber in Bilimora — Which Is Better?','Why cable fiber beats Air Fiber on uptime, rain, latency and price.','Education','6 min'],
+                    ['/blog/jio-fiber-vs-nisan-bilimora','Jio Fiber vs Nisan in Bilimora — Which Is Better?','Side-by-side comparison of price, speed, support and savings.','Comparison','4 min'],
+                    ['/blog/jio-fiber-bilimora-comparison','Why Bilimora Residents Choose Nisan Over Jio — 7 Real Reasons','Same-day repair, face-to-face support, 30-year local trust, annual savings.','Comparison','5 min'],
+                    ['/blog/airtel-vs-nisan-bilimora','Airtel Broadband vs Nisan Internet in Bilimora','Price-per-Mbps comparison. Annual vs monthly billing. Local support response time.','Comparison','3 min'],
+                    ['/blog/gtpl-vs-nisan-bilimora','GTPL vs Nisan Bilimora: Cable TV and Broadband','Both serve Gujarat. Compare channel lineup, broadband speeds, and local service quality.','Comparison','4 min'],
+                    ['/blog/bsnl-vs-nisan-bilimora','BSNL Broadband vs Nisan Internet in Bilimora','Copper DSL vs FTTH fiber — is it time to upgrade from BSNL?','Comparison','3 min'],
+                    ['/blog/cheapest-broadband-bilimora','Cheapest Broadband Plan in Bilimora: Who Offers the Best Value?','&#8377;4,999/year = &#8377;416/month — the cheapest per-month broadband in Bilimora.','Comparison','3 min'],
+                    ['/blog/local-isp-vs-jio-airtel-bilimora','Local ISP vs Jio or Airtel in Bilimora: Why Local Wins','One phone call, one person, resolved today — the case for a local provider.','Comparison','4 min'],
                 ];
                 foreach($compare as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -681,15 +675,15 @@
             <div class="row">
                 <?php
                 $guides = [
-                    ['/blog/how-much-internet-speed-do-i-need','How Much Internet Speed Do I Need? Bilimora Home Guide','50 Mbps or 100 Mbps? This guide helps you pick by family size and usage.','Guide','4 min','&#128257;'],
-                    ['/blog/internet-for-family-bilimora','How Many Mbps Does a Bilimora Family of 4 Actually Need?','Add up each person\'s real usage to calculate your ideal plan speed.','Guide','3 min','&#128106;'],
-                    ['/blog/annual-vs-monthly-internet-plan-bilimora','Annual vs Monthly Internet Plan in Bilimora: Which Saves More?','Exact savings calculation: &#8377;4,999/year vs &#8377;499/month competitors.','Guide','3 min','&#128197;'],
-                    ['/blog/mbps-guide-bilimora','Mbps vs Gbps Explained for Bilimora Internet Users','Plain-English guide to internet speed units — what you actually need.','Education','3 min','&#128161;'],
-                    ['/blog/ftth-fiber-internet-bilimora','What Is FTTH Fiber Internet? Benefits for Bilimora Homes','FTTH explained simply — why it\'s faster than cable or mobile data.','Education','4 min','&#128311;'],
-                    ['/blog/fiber-broadband-bilimora-west','Fiber Broadband in Bilimora West: Coverage &amp; Best Plans','Complete W Zone coverage — what makes fiber better in this specific area.','Guide','3 min','&#128205;'],
-                    ['/blog/new-internet-connection-bilimora','New Internet Connection in Bilimora: Step-by-Step Guide','From choosing a plan to installation day — what to expect as a new customer.','Guide','4 min','&#128640;'],
-                    ['/blog/wired-vs-wireless-internet-bilimora','Wired vs Wireless Internet at Home in Bilimora','When ethernet beats WiFi in concrete Bilimora homes — and how to set it up.','Guide','3 min','&#128247;'],
-                    ['/blog/broadband-near-me-bilimora','Broadband Internet Provider Near Me in Bilimora','What to check when searching for a broadband provider near you in Bilimora West.','Local','3 min','&#128270;'],
+                    ['/blog/how-much-internet-speed-do-i-need','How Much Internet Speed Do I Need? Bilimora Home Guide','50 Mbps or 100 Mbps? This guide helps you pick by family size and usage.','Guide','4 min'],
+                    ['/blog/internet-for-family-bilimora','How Many Mbps Does a Bilimora Family of 4 Actually Need?','Add up each person\'s real usage to calculate your ideal plan speed.','Guide','3 min'],
+                    ['/blog/annual-vs-monthly-internet-plan-bilimora','Annual vs Monthly Internet Plan in Bilimora: Which Saves More?','Exact savings calculation: &#8377;4,999/year vs &#8377;499/month competitors.','Guide','3 min'],
+                    ['/blog/mbps-guide-bilimora','Mbps vs Gbps Explained for Bilimora Internet Users','Plain-English guide to internet speed units — what you actually need.','Education','3 min'],
+                    ['/blog/ftth-fiber-internet-bilimora','What Is FTTH Fiber Internet? Benefits for Bilimora Homes','FTTH explained simply — why it\'s faster than cable or mobile data.','Education','4 min'],
+                    ['/blog/fiber-broadband-bilimora-west','Fiber Broadband in Bilimora West: Coverage &amp; Best Plans','Complete W Zone coverage — what makes fiber better in this specific area.','Guide','3 min'],
+                    ['/blog/new-internet-connection-bilimora','New Internet Connection in Bilimora: Step-by-Step Guide','From choosing a plan to installation day — what to expect as a new customer.','Guide','4 min'],
+                    ['/blog/wired-vs-wireless-internet-bilimora','Wired vs Wireless Internet at Home in Bilimora','When ethernet beats WiFi in concrete Bilimora homes — and how to set it up.','Guide','3 min'],
+                    ['/blog/broadband-near-me-bilimora','Broadband Internet Provider Near Me in Bilimora','What to check when searching for a broadband provider near you in Bilimora West.','Local','3 min'],
                 ];
                 foreach($guides as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -721,7 +715,6 @@
                 <div class="col-lg-4 col-md-6">
                     <a href="/blog/internet-outage-bilimora" class="nbc nbc-trouble" style="text-decoration:none;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon">&#128268;</span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag">Troubleshooting</span>
                                 <span class="nbc-read-time">&#9201; 4 min read</span>
@@ -737,7 +730,6 @@
                 <div class="col-lg-4 col-md-6">
                     <a href="/blog/low-internet-speed-bilimora" class="nbc nbc-trouble" style="text-decoration:none;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon">&#128246;</span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag">Troubleshooting</span>
                                 <span class="nbc-read-time">&#9201; 4 min read</span>
@@ -761,15 +753,15 @@
             <div class="row">
                 <?php
                 $life = [
-                    ['/blog/work-from-home-internet-bilimora','Best Internet for Work From Home in Bilimora','Why FTTH beats mobile data for Zoom calls, cloud apps, and stable all-day use.','Work From Home','4 min','&#128187;'],
-                    ['/blog/work-from-home-bilimora-fiber','Working From Home in Bilimora With Fiber: A Real Difference Maker','How reliable fiber changes daily life for WFH professionals in Bilimora.','Work From Home','4 min','&#127968;'],
-                    ['/blog/gaming-internet-bilimora','Gaming Internet in Bilimora: Low Ping Plans for Gamers','Why ping matters more than speed. Fiber delivers 10–20ms for BGMI, Free Fire, PC games.','Gaming','3 min','&#127918;'],
-                    ['/blog/video-streaming-internet-bilimora','Video Streaming in Bilimora: Which Plan Handles Netflix &amp; YouTube 4K?','How many screens can each plan support? Complete bandwidth guide for OTT.','Streaming','3 min','&#127902;'],
-                    ['/blog/online-classes-internet-bilimora','Online Classes Internet in Bilimora: Which Plan Is Enough for Students?','JEE/NEET coaching, school Zoom classes, and hostel student solutions.','Education','3 min','&#127979;'],
-                    ['/blog/internet-for-students-bilimora','Best Internet for Students in Bilimora: Hostel, PG &amp; Home Options','Shared PG connections, coaching platforms, and the cheapest annual plan options.','Students','4 min','&#127891;'],
-                    ['/blog/back-to-school-internet-bilimora','Back to School in Bilimora: Set Up Home Internet for Online Learning','Gujarat school year starts June. Get the right plan before the first day.','Seasonal','3 min','&#128197;'],
-                    ['/blog/internet-for-seniors-bilimora','Simple Internet Guide for Senior Citizens in Bilimora','WhatsApp video calls with family, easy setup, and local support — no tech knowledge needed.','Seniors','3 min','&#128149;'],
-                    ['/blog/internet-video-calling-bilimora','Video Calling From Bilimora: Why WiFi Quality Matters More Than Your Phone','How fiber improves WhatsApp and FaceTime calls with family abroad.','Lifestyle','3 min','&#128222;'],
+                    ['/blog/work-from-home-internet-bilimora','Best Internet for Work From Home in Bilimora','Why FTTH beats mobile data for Zoom calls, cloud apps, and stable all-day use.','Work From Home','4 min'],
+                    ['/blog/work-from-home-bilimora-fiber','Working From Home in Bilimora With Fiber: A Real Difference Maker','How reliable fiber changes daily life for WFH professionals in Bilimora.','Work From Home','4 min'],
+                    ['/blog/gaming-internet-bilimora','Gaming Internet in Bilimora: Low Ping Plans for Gamers','Why ping matters more than speed. Fiber delivers 10–20ms for BGMI, Free Fire, PC games.','Gaming','3 min'],
+                    ['/blog/video-streaming-internet-bilimora','Video Streaming in Bilimora: Which Plan Handles Netflix &amp; YouTube 4K?','How many screens can each plan support? Complete bandwidth guide for OTT.','Streaming','3 min'],
+                    ['/blog/online-classes-internet-bilimora','Online Classes Internet in Bilimora: Which Plan Is Enough for Students?','JEE/NEET coaching, school Zoom classes, and hostel student solutions.','Education','3 min'],
+                    ['/blog/internet-for-students-bilimora','Best Internet for Students in Bilimora: Hostel, PG &amp; Home Options','Shared PG connections, coaching platforms, and the cheapest annual plan options.','Students','4 min'],
+                    ['/blog/back-to-school-internet-bilimora','Back to School in Bilimora: Set Up Home Internet for Online Learning','Gujarat school year starts June. Get the right plan before the first day.','Seasonal','3 min'],
+                    ['/blog/internet-for-seniors-bilimora','Simple Internet Guide for Senior Citizens in Bilimora','WhatsApp video calls with family, easy setup, and local support — no tech knowledge needed.','Seniors','3 min'],
+                    ['/blog/internet-video-calling-bilimora','Video Calling From Bilimora: Why WiFi Quality Matters More Than Your Phone','How fiber improves WhatsApp and FaceTime calls with family abroad.','Lifestyle','3 min'],
                 ];
                 foreach($life as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -800,13 +792,13 @@
             <div class="row">
                 <?php
                 $biz = [
-                    ['/blog/internet-for-small-business-bilimora','Best Internet for Shops &amp; Small Businesses in Bilimora','UPI payments, WhatsApp Business, CCTV, billing software — what each needs.','Business','4 min','&#128722;'],
-                    ['/blog/cctv-internet-bilimora','CCTV Camera Internet Requirements in Bilimora','How much upload speed you need per camera. Why fiber handles CCTV and DSL does not.','Business','3 min','&#128247;'],
-                    ['/blog/upi-payment-internet-bilimora','UPI Payments Failing in Your Bilimora Shop? Check Your Internet','Why unstable connections cause UPI timeouts and how fiber solves it.','Business','3 min','&#128179;'],
-                    ['/blog/hotel-wifi-internet-bilimora','Internet for Bilimora Hotels &amp; Guest Houses: Guest WiFi Guide','Bandwidth planning per room, router placement, and commercial plan options.','Business','4 min','&#127970;'],
-                    ['/blog/ecommerce-internet-bilimora','E-Commerce Business From Bilimora: Internet for Amazon &amp; Flipkart Sellers','Fast upload for product listings, video shoots, and order management.','Business','3 min','&#128666;'],
-                    ['/blog/online-business-internet-bilimora','Online Business in Bilimora: Why Your Internet Is Your Most Important Tool','Freelancers, creators, consultants — how fiber uptime directly protects income.','Business','4 min','&#128188;'],
-                    ['/blog/internet-for-youtube-creators-bilimora','Best Internet for YouTube Creators &amp; Vloggers in Bilimora','Upload speed is everything. Why 100 Mbps fiber transforms your content workflow.','Business','3 min','&#127909;'],
+                    ['/blog/internet-for-small-business-bilimora','Best Internet for Shops &amp; Small Businesses in Bilimora','UPI payments, WhatsApp Business, CCTV, billing software — what each needs.','Business','4 min'],
+                    ['/blog/cctv-internet-bilimora','CCTV Camera Internet Requirements in Bilimora','How much upload speed you need per camera. Why fiber handles CCTV and DSL does not.','Business','3 min'],
+                    ['/blog/upi-payment-internet-bilimora','UPI Payments Failing in Your Bilimora Shop? Check Your Internet','Why unstable connections cause UPI timeouts and how fiber solves it.','Business','3 min'],
+                    ['/blog/hotel-wifi-internet-bilimora','Internet for Bilimora Hotels &amp; Guest Houses: Guest WiFi Guide','Bandwidth planning per room, router placement, and commercial plan options.','Business','4 min'],
+                    ['/blog/ecommerce-internet-bilimora','E-Commerce Business From Bilimora: Internet for Amazon &amp; Flipkart Sellers','Fast upload for product listings, video shoots, and order management.','Business','3 min'],
+                    ['/blog/online-business-internet-bilimora','Online Business in Bilimora: Why Your Internet Is Your Most Important Tool','Freelancers, creators, consultants — how fiber uptime directly protects income.','Business','4 min'],
+                    ['/blog/internet-for-youtube-creators-bilimora','Best Internet for YouTube Creators &amp; Vloggers in Bilimora','Upload speed is everything. Why 100 Mbps fiber transforms your content workflow.','Business','3 min'],
                 ];
                 foreach($biz as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -837,12 +829,12 @@
             <div class="row">
                 <?php
                 $cable = [
-                    ['/blog/cable-tv-provider-bilimora','Best Cable TV Provider in Bilimora','Channel lineup, HD quality, rain reliability, and local support compared.','Cable TV','3 min','&#128250;'],
-                    ['/blog/gujarati-channels-cable-tv-bilimora','Gujarati Channels on Cable TV in Bilimora: Full List','DD Girnar, ETV Gujarati, Zee Gujarat, Colors Gujarati and more.','Cable TV','3 min','&#127482;'],
-                    ['/blog/cable-tv-vs-dth-bilimora','Cable TV vs DTH in Bilimora: Which Is Better?','No dish, no rain signal loss, local support — the case for cable over DTH.','Cable TV','4 min','&#128225;'],
-                    ['/blog/cable-tv-connection-bilimora','How to Get Cable TV Connection in Bilimora: Installation &amp; Plans','Same-day installation, 200+ channels, free setup, combo offer available.','Cable TV','3 min','&#128268;'],
-                    ['/blog/cable-tv-internet-combo-bilimora','Cable TV + Internet Combo in Bilimora — Save More','2 months free on yearly combo. One bill, one local provider for both services.','Combo','3 min','&#128176;'],
-                    ['/blog/cable-tv-near-me-bilimora','Cable TV Operator Near Me in Bilimora West','Find a reliable local cable TV operator. Nisan covers all of W Zone.','Local','3 min','&#128205;'],
+                    ['/blog/cable-tv-provider-bilimora','Best Cable TV Provider in Bilimora','Channel lineup, HD quality, rain reliability, and local support compared.','Cable TV','3 min'],
+                    ['/blog/gujarati-channels-cable-tv-bilimora','Gujarati Channels on Cable TV in Bilimora: Full List','DD Girnar, ETV Gujarati, Zee Gujarat, Colors Gujarati and more.','Cable TV','3 min'],
+                    ['/blog/cable-tv-vs-dth-bilimora','Cable TV vs DTH in Bilimora: Which Is Better?','No dish, no rain signal loss, local support — the case for cable over DTH.','Cable TV','4 min'],
+                    ['/blog/cable-tv-connection-bilimora','How to Get Cable TV Connection in Bilimora: Installation &amp; Plans','Same-day installation, 200+ channels, free setup, combo offer available.','Cable TV','3 min'],
+                    ['/blog/cable-tv-internet-combo-bilimora','Cable TV + Internet Combo in Bilimora — Save More','2 months free on yearly combo. One bill, one local provider for both services.','Combo','3 min'],
+                    ['/blog/cable-tv-near-me-bilimora','Cable TV Operator Near Me in Bilimora West','Find a reliable local cable TV operator. Nisan covers all of W Zone.','Local','3 min'],
                 ];
                 foreach($cable as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -873,11 +865,11 @@
             <div class="row">
                 <?php
                 $seasonal = [
-                    ['/blog/cricket-streaming-internet-bilimora','Cricket Streaming in Bilimora: Best Internet for Live Sports','IPL, World Cup, India matches — why fiber handles peak match traffic and mobile data does not.','Cricket','3 min','&#127955;'],
-                    ['/blog/ipl-streaming-internet-bilimora','IPL Live Streaming in Bilimora: Which Plan Won\'t Buffer?','Multiple family members on different screens during IPL — speed requirements explained.','IPL','3 min','&#127954;'],
-                    ['/blog/navratri-streaming-bilimora','Navratri Live Streaming in Bilimora: Watch Garba Without Buffering','Stream DD Gujarat, YouTube Garba, and ETV Gujarati without interruption.','Navratri','3 min','&#127917;'],
-                    ['/blog/diwali-internet-bilimora','Diwali Online Shopping From Bilimora: Fast Internet for the Big Sale','Flash checkout, UPI payments, and streaming all need low-latency fiber on sale day.','Diwali','3 min','&#127881;'],
-                    ['/blog/new-year-internet-upgrade-bilimora','New Year Internet Upgrade in Bilimora: Start 2027 With Faster Fiber','One decision in January for 365 days of reliable broadband.','New Year','3 min','&#127775;'],
+                    ['/blog/cricket-streaming-internet-bilimora','Cricket Streaming in Bilimora: Best Internet for Live Sports','IPL, World Cup, India matches — why fiber handles peak match traffic and mobile data does not.','Cricket','3 min'],
+                    ['/blog/ipl-streaming-internet-bilimora','IPL Live Streaming in Bilimora: Which Plan Won\'t Buffer?','Multiple family members on different screens during IPL — speed requirements explained.','IPL','3 min'],
+                    ['/blog/navratri-streaming-bilimora','Navratri Live Streaming in Bilimora: Watch Garba Without Buffering','Stream DD Gujarat, YouTube Garba, and ETV Gujarati without interruption.','Navratri','3 min'],
+                    ['/blog/diwali-internet-bilimora','Diwali Online Shopping From Bilimora: Fast Internet for the Big Sale','Flash checkout, UPI payments, and streaming all need low-latency fiber on sale day.','Diwali','3 min'],
+                    ['/blog/new-year-internet-upgrade-bilimora','New Year Internet Upgrade in Bilimora: Start 2027 With Faster Fiber','One decision in January for 365 days of reliable broadband.','New Year','3 min'],
                 ];
                 foreach($seasonal as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -908,9 +900,9 @@
             <div class="row">
                 <?php
                 $trust = [
-                    ['/blog/nisan-bilimora-story','Nisan Cable TV &amp; Internet: 30+ Years Serving Bilimora','Founded 1993. 2,000+ customers. Why Bilimora chose a local provider over national chains.','Our Story','5 min','&#128246;'],
-                    ['/blog/nisan-bilimora-reviews','Nisan Internet Bilimora Reviews: What Customers Say','Real testimonials from WFH professionals, students, families, and shop owners.','Reviews','4 min','&#11088;'],
-                    ['/blog/why-2000-bilimora-families-trust-nisan','Why 2,000+ Bilimora Families Trust Nisan Cable TV &amp; Internet','8 reasons local families pick Nisan — service, reliability, and 30 years of presence.','Trust','5 min','&#127942;'],
+                    ['/blog/nisan-bilimora-story','Nisan Cable TV &amp; Internet: 30+ Years Serving Bilimora','Founded 1993. 2,000+ customers. Why Bilimora chose a local provider over national chains.','Our Story','5 min'],
+                    ['/blog/nisan-bilimora-reviews','Nisan Internet Bilimora Reviews: What Customers Say','Real testimonials from WFH professionals, students, families, and shop owners.','Reviews','4 min'],
+                    ['/blog/why-2000-bilimora-families-trust-nisan','Why 2,000+ Bilimora Families Trust Nisan Cable TV &amp; Internet','8 reasons local families pick Nisan — service, reliability, and 30 years of presence.','Trust','5 min'],
                 ];
                 foreach($trust as $a): ?>
                 <div class="col-lg-4 col-md-6">
