@@ -334,7 +334,8 @@
         }
 
         /* ── Article Cards (Premium) ── */
-        .col-lg-4, .col-md-6 { display: flex; flex-direction: column; }
+        .col-lg-4, .col-md-6 { display: flex !important; flex-direction: column; }
+        .col-lg-4 > a.nbc, .col-md-6 > a.nbc { flex: 1; }
         .nbc {
             background: #fff;
             border-radius: 20px;
@@ -655,9 +656,8 @@
                 ];
                 foreach($compare as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <a href="<?= $a[0] ?>" class="nbc nbc-compare" style="text-decoration:none;">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-compare" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
@@ -694,9 +694,8 @@
                 ];
                 foreach($guides as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <a href="<?= $a[0] ?>" class="nbc nbc-guide" style="text-decoration:none;">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-guide" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
@@ -720,7 +719,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <a href="/blog/internet-outage-bilimora" class="nbc nbc-trouble" style="text-decoration:none;">
+                    <a href="/blog/internet-outage-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag">Troubleshooting</span>
@@ -735,7 +734,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <a href="/blog/low-internet-speed-bilimora" class="nbc nbc-trouble" style="text-decoration:none;">
+                    <a href="/blog/low-internet-speed-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag">Troubleshooting</span>
@@ -772,9 +771,8 @@
                 ];
                 foreach($life as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <a href="<?= $a[0] ?>" class="nbc nbc-life" style="text-decoration:none;">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-life" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
@@ -809,9 +807,8 @@
                 ];
                 foreach($biz as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <a href="<?= $a[0] ?>" class="nbc nbc-biz" style="text-decoration:none;">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-biz" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
@@ -845,9 +842,8 @@
                 ];
                 foreach($cable as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <a href="<?= $a[0] ?>" class="nbc nbc-cable" style="text-decoration:none;">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-cable" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
@@ -880,9 +876,8 @@
                 ];
                 foreach($seasonal as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <a href="<?= $a[0] ?>" class="nbc nbc-seasonal" style="text-decoration:none;">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-seasonal" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
@@ -913,9 +908,8 @@
                 ];
                 foreach($trust as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <a href="<?= $a[0] ?>" class="nbc nbc-trust" style="text-decoration:none;">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-trust" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
-                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
