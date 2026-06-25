@@ -103,7 +103,8 @@ function buildDayDetail(PDO $db, string $date): array {
     $dayEnd   = $dayStart + 86400;
     if (!$dayStart) { http_response_code(400); echo json_encode(['error'=>'Invalid date']); exit; }
 
-    // Hourly buckets 0–23
+    // Hourly buckets 0–23 aligned to IST midnight of the selected date
+    $ist = new DateTimeZone('Asia/Kolkata');
     $rows = $db->query(
         "SELECT
             CAST((checked_at - {$dayStart}) / 3600 AS INTEGER) as hr,
@@ -120,10 +121,13 @@ function buildDayDetail(PDO $db, string $date): array {
 
     $hours = [];
     for ($h = 0; $h < 24; $h++) {
+        $slotTs = $dayStart + $h * 3600;
+        $slotDt = new DateTime('@' . $slotTs);
+        $slotDt->setTimezone($ist);
         $r = $map[$h] ?? null;
         $hours[] = [
             'hour'   => $h,
-            'label'  => sprintf('%02d:00', $h),
+            'label'  => $slotDt->format('g A'),  // "12 AM", "1 AM" … "11 PM"
             'pct'    => $r ? round($r['up_cnt'] / max($r['total'],1) * 100, 1) : null,
             'total'  => $r ? (int)$r['total'] : 0,
             'avg_ms' => $r && $r['avg_ms'] ? (int)$r['avg_ms'] : null,
@@ -201,13 +205,23 @@ function buildResponse(PDO $db): array {
         ];
     }
 
-    // 24-hour hourly buckets
+    // 24-hour hourly buckets — IST-aligned so labels match clock hours
+    // Find the start of the current IST hour
+    $ist = new DateTimeZone('Asia/Kolkata');
+    $nowDt = new DateTime('@' . $now);
+    $nowDt->setTimezone($ist);
+    // Truncate to current hour in IST
+    $nowDt->setTime((int)$nowDt->format('H'), 0, 0);
+    $istHourStart = $nowDt->getTimestamp(); // start of current IST hour (UTC ts)
+    $window24Start = $istHourStart - 23 * 3600; // 24 slots: 23 past hours + current
+
     $hourRows = $db->query(
         "SELECT
-            CAST((checked_at - {$day1}) / 3600 AS INTEGER) as hr_idx,
+            CAST((checked_at - {$window24Start}) / 3600 AS INTEGER) as hr_idx,
             SUM(is_up) as up_cnt, COUNT(*) as total,
             CAST(AVG(response_ms) AS INTEGER) as avg_ms
-         FROM status_checks WHERE checked_at >= {$day1}
+         FROM status_checks
+         WHERE checked_at >= {$window24Start} AND hr_idx BETWEEN 0 AND 23
          GROUP BY hr_idx ORDER BY hr_idx"
     )->fetchAll(PDO::FETCH_ASSOC);
 
@@ -216,12 +230,12 @@ function buildResponse(PDO $db): array {
 
     $hours24 = [];
     for ($i = 0; $i < 24; $i++) {
-        $ts = $day1 + $i * 3600;
+        $ts = $window24Start + $i * 3600;
         $dt = new DateTime('@' . $ts);
-        $dt->setTimezone(new DateTimeZone('Asia/Kolkata'));
+        $dt->setTimezone($ist);
         $r = $hourMap[$i] ?? null;
         $hours24[] = [
-            'label'  => $dt->format('h A'),
+            'label'  => $dt->format('g A'),   // "9 AM", "10 AM" — no leading zero
             'pct'    => $r ? round($r['up_cnt'] / max($r['total'],1) * 100, 1) : null,
             'total'  => $r ? (int)$r['total'] : 0,
             'avg_ms' => $r && $r['avg_ms'] ? (int)$r['avg_ms'] : null,

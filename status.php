@@ -340,8 +340,7 @@
   function render24(hours24) {
     bars24el.innerHTML = '';
     if (!hours24 || !hours24.length) return;
-    // label: 24 hours ago
-    bar24From.textContent = '24h ago';
+    bar24From.textContent = hours24[0].label;
     hours24.forEach(function (h) {
       var cls = segClass(h.pct, h.total);
       var tip = !h.total
@@ -485,8 +484,11 @@
     s30.textContent = d.uptime_30d != null ? d.uptime_30d.toFixed(2) + '%' : '—';
     sMs.textContent = d.response_ms != null ? d.response_ms + ' ms' : '—';
 
-    // Countdown — starts from next_poll seconds
-    startCountdown(nextPollSecs);
+    // Countdown — sync with server: subtract time already elapsed since last check
+    var nowSec    = Math.floor(Date.now() / 1000);
+    var elapsed   = nowSec - lastCheckedAt;
+    var remaining = Math.max(nextPollSecs - elapsed, 1);
+    startCountdown(remaining);
 
     // Bars
     render24(d.hours_24);
