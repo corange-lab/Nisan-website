@@ -29,3 +29,6 @@ User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://www.nisan.co.in/sitemap.xml
+
+# AI/LLM context file — live uptime and status injected dynamically
+LLMs: https://www.nisan.co.in/llms.txt
