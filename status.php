@@ -328,12 +328,17 @@
   }
 
   function tickCountdown() {
-    if (cdRemaining < 0) cdRemaining = 0;
+    if (cdRemaining <= 0) {
+      cdRemaining = 0;
+      cdMins.textContent = '…';
+      cdSecs.textContent = '--';
+      return;
+    }
     var m = Math.floor(cdRemaining / 60);
     var s = cdRemaining % 60;
     cdMins.textContent = m;
     cdSecs.textContent = pad2(s);
-    if (cdRemaining > 0) cdRemaining--;
+    cdRemaining--;
   }
 
   /* ── render 24h bars ─────────────────────────────────────── */
@@ -486,9 +491,10 @@
 
     // Countdown — sync with server: subtract time already elapsed since last check
     var nowSec    = Math.floor(Date.now() / 1000);
-    var elapsed   = nowSec - lastCheckedAt;
-    var remaining = Math.max(nextPollSecs - elapsed, 1);
-    startCountdown(remaining);
+    var elapsed   = Math.max(0, nowSec - lastCheckedAt);
+    var remaining = nextPollSecs - elapsed;
+    // If overdue (cron hasn't run yet), show a short wait then retry
+    startCountdown(remaining > 1 ? remaining : nextPollSecs);
 
     // Bars
     render24(d.hours_24);
@@ -502,9 +508,6 @@
 
   /* ── fetch ───────────────────────────────────────────────── */
   function load() {
-    if (cdTimer) clearInterval(cdTimer);
-    cdMins.textContent = '…'; cdSecs.textContent = '--';
-
     fetch('/api/status.php?v=' + Date.now())
       .then(function (r) { return r.json(); })
       .then(render)
