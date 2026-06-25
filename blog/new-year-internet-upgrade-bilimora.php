@@ -59,7 +59,7 @@
       "name": "What Nisan plans are available for new connections in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nisan's 2026 plans start at 50 Mbps (\u20b94,999/year) up to 400 Mbps (\u20b911,499/year). All plans include free installation, free WiFi router, and a 1-month money-back guarantee."
+        "text": "Nisan's 2026 plans start at 50 Mbps (\u20b94,999/year) up to 400 Mbps (\u20b911,499/year). All plans include free installation, free WiFi router, and a anytime refund guarantee."
       }
     }
       ]
@@ -220,7 +220,7 @@
                 <h3>How do I upgrade my Nisan internet plan?</h3>
                 <p>Call +91 98251 52400 or WhatsApp Nisan. Plan upgrades can be done at any time. The difference in annual cost is pro-rated for mid-plan upgrades.</p>
                 <h3>What Nisan plans are available for new connections in 2026?</h3>
-                <p>Nisan's 2026 plans start at 50 Mbps (₹4,999/year) up to 400 Mbps (₹11,499/year). All plans include free installation, free WiFi router, and a 1-month money-back guarantee.</p>
+                <p>Nisan's 2026 plans start at 50 Mbps (₹4,999/year) up to 400 Mbps (₹11,499/year). All plans include free installation, free WiFi router, and a anytime refund guarantee.</p>
                 </div>
                     </article>
                 </div>

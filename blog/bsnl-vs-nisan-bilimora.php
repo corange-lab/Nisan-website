@@ -59,7 +59,7 @@
       "name": "Why should I switch from BSNL to Nisan in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Switching from BSNL to Nisan gives you 3\u201310x faster speeds, better uptime, local support available 9 AM\u20139 PM, and a 1-month money-back guarantee. Installation is free."
+        "text": "Switching from BSNL to Nisan gives you 3\u201310x faster speeds, better uptime, local support available 9 AM\u20139 PM, and a anytime refund guarantee. Installation is free."
       }
     }
       ]
@@ -225,7 +225,7 @@
                 <h3>Is BSNL fiber available in Bilimora?</h3>
                 <p>BSNL FTTH is limited in Bilimora. Most BSNL subscribers in Bilimora are on ADSL (copper), which is significantly slower than Nisan's fiber. Check with BSNL for FTTH availability at your address.</p>
                 <h3>Why should I switch from BSNL to Nisan in Bilimora?</h3>
-                <p>Switching from BSNL to Nisan gives you 3–10x faster speeds, better uptime, local support available 9 AM–9 PM, and a 1-month money-back guarantee. Installation is free.</p>
+                <p>Switching from BSNL to Nisan gives you 3–10x faster speeds, better uptime, local support available 7 AM–10 PM, and a anytime refund guarantee. Installation is free.</p>
                 </div>
                     </article>
                 </div>

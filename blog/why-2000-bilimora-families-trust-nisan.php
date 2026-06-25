@@ -35,7 +35,7 @@
       "name": "Why do 2000 families trust Nisan in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nisan has served Bilimora since 1993 with reliable cable TV and fiber internet. The 4.9-star Google rating, local support team, competitive pricing, and 1-month money-back guarantee have earned the trust of 2,000+ customers."
+        "text": "Nisan has served Bilimora since 1993 with reliable cable TV and fiber internet. The 4.9-star Google rating, local support team, competitive pricing, and anytime refund guarantee have earned the trust of 2,000+ customers."
       }
     },
     {
@@ -51,7 +51,7 @@
       "name": "Is Nisan a trusted ISP in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Nisan is Bilimora's most trusted ISP \u2014 operating since 1993, with 2,000+ customers, a 4.9-star Google rating, and a 1-month money-back guarantee on all plans."
+        "text": "Yes. Nisan is Bilimora's most trusted ISP \u2014 operating since 1993, with 2,000+ customers, a 4.9-star Google rating, and a anytime refund guarantee on all plans."
       }
     },
     {
@@ -59,7 +59,7 @@
       "name": "What do Nisan customers like most?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nisan customers most appreciate local support (same-day response), competitive pricing (up to 55% cheaper than Jio/Airtel), free installation, and the 1-month money-back guarantee."
+        "text": "Nisan customers most appreciate local support (same-day response), competitive pricing (up to 55% cheaper than Jio/Airtel), free installation, and the anytime refund guarantee."
       }
     }
       ]
@@ -232,13 +232,13 @@
                 <h2>Frequently Asked Questions</h2>
                 <div itemscope itemtype="https://schema.org/FAQPage">
                 <h3>Why do 2000 families trust Nisan in Bilimora?</h3>
-                <p>Nisan has served Bilimora since 1993 with reliable cable TV and fiber internet. The 4.9-star Google rating, local support team, competitive pricing, and 1-month money-back guarantee have earned the trust of 2,000+ customers.</p>
+                <p>Nisan has served Bilimora since 1993 with reliable cable TV and fiber internet. The 4.9-star Google rating, local support team, competitive pricing, and anytime refund guarantee have earned the trust of 2,000+ customers.</p>
                 <h3>What is Nisan's Google rating in Bilimora?</h3>
                 <p>Nisan has a 4.9-star rating on Google from customers in Bilimora. Reviews highlight fast local support, consistent speeds, and honest pricing compared to national ISPs.</p>
                 <h3>Is Nisan a trusted ISP in Bilimora?</h3>
-                <p>Yes. Nisan is Bilimora's most trusted ISP — operating since 1993, with 2,000+ customers, a 4.9-star Google rating, and a 1-month money-back guarantee on all plans.</p>
+                <p>Yes. Nisan is Bilimora's most trusted ISP — operating since 1993, with 2,000+ customers, a 4.9-star Google rating, and a anytime refund guarantee on all plans.</p>
                 <h3>What do Nisan customers like most?</h3>
-                <p>Nisan customers most appreciate local support (same-day response), competitive pricing (up to 55% cheaper than Jio/Airtel), free installation, and the 1-month money-back guarantee.</p>
+                <p>Nisan customers most appreciate local support (same-day response), competitive pricing (up to 55% cheaper than Jio/Airtel), free installation, and the anytime refund guarantee.</p>
                 </div>
                     </article>
                 </div>

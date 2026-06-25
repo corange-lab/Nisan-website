@@ -62,7 +62,7 @@
       "name": "Why do 2,000 Bilimora families choose Nisan over national ISPs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nisan's 4.9-star Google rating reflects local trust built over 30 years \u2014 lower prices, free installation, a 1-month money-back guarantee, and a team that answers the phone in Bilimora."
+        "text": "Nisan's 4.9-star Google rating reflects local trust built over 30 years \u2014 lower prices, free installation, a anytime refund guarantee, and a team that answers the phone in Bilimora."
       }
     }
       ]
@@ -219,7 +219,7 @@
                 <h3>Is Jio Fiber available throughout Bilimora?</h3>
                 <p>Jio Fiber coverage in Bilimora is not comprehensive. Nisan covers Bilimora West fully. Always check coverage at your specific address before choosing a provider.</p>
                 <h3>Why do 2,000 Bilimora families choose Nisan over national ISPs?</h3>
-                <p>Nisan's 4.9-star Google rating reflects local trust built over 30 years — lower prices, free installation, a 1-month money-back guarantee, and a team that answers the phone in Bilimora.</p>
+                <p>Nisan's 4.9-star Google rating reflects local trust built over 30 years — lower prices, free installation, a anytime refund guarantee, and a team that answers the phone in Bilimora.</p>
                 </div>
                     </article>
                 </div>

@@ -246,7 +246,7 @@
 
                 <div class="blog-cta">
                     <h3>Get FTTH Internet in Bilimora from ₹4,999/year</h3>
-                    <p>Free installation · Unlimited data · 1-month money-back guarantee</p>
+                    <p>Free installation · Unlimited data · anytime refund guarantee</p>
                     <a href="/pricing.php">View All Plans</a>
                     <a href="https://wa.me/919825152400?text=Hi%2C+I+want+FTTH+internet+in+Bilimora" target="_blank" rel="noopener" class="wa">WhatsApp Us</a>
                 </div>

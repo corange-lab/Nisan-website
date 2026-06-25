@@ -258,7 +258,7 @@ exit();
             <div class="switch-cta-banner">
                 <div class="cta-eyebrow">Not Happy With Your Speed?</div>
                 <h2>You Deserve Faster Internet.<br>Switch to Nisan Today.</h2>
-                <p>FTTH fiber broadband in Bilimora — speeds up to 200 Mbps, free installation, and a 1-month risk-free trial. No contracts. No hidden charges.</p>
+                <p>FTTH fiber broadband in Bilimora — speeds up to 200 Mbps, free installation, and a anytime refund on annual plans. No contracts. No hidden charges.</p>
                 <div class="cta-btns">
                     <a href="/contact.php" class="btn-white">Get a Free Connection</a>
                     <a href="tel:+919825152400" class="btn-outline-white"><i class="fas fa-phone-alt me-2"></i>Call Us Now</a>

@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#0066cc">
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<title>Internet Provider in Bilimora — Nisan Cable TV &amp; ISP</title>
-	<meta name="description" content="Bilimora's #1 local ISP since 1993. FTTH fiber from ₹4,999/year (50–400 Mbps), cable TV, free installation, 1-month money-back. 2,000+ customers.">
+	<meta name="description" content="Best internet &amp; WiFi provider in Bilimora. Broadband, fiber, cable TV from ₹4,999/year. Free installation, GST included, no hidden charges. Open 365 days. Call +91 98251 52400.">
     <meta name="keywords" content="broadband Bilimora, cable TV Bilimora, FTTH internet Bilimora, fast internet provider,
     affordable broadband Bilimora, speedtest, speed test, Internet Service Bilimora, Cable TV Bilimora, High-Speed Internet Bilimora,
     FTTH Bilimora, WiFi Bilimora, ISP Bilimora, Digital TV Bilimora, Fiber Internet Bilimora, Home Internet Bilimora,
@@ -139,7 +139,7 @@
           "name": "Does Nisan offer a money-back guarantee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. All Nisan internet plans come with a 1-month full money-back guarantee — no questions asked, no conditions. If you are not satisfied in the first month, you get a complete refund. No national ISP like Jio or Airtel offers this."
+            "text": "Yes. All Nisan internet plans come with a anytime refund guarantee — no questions asked, no conditions. If you are not satisfied in the first month, you get a complete refund. No national ISP like Jio or Airtel offers this."
           }
         },
         {
@@ -147,7 +147,7 @@
           "name": "Does Nisan provide support on Sundays and holidays?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Nisan's support team works 365 days a year — including Sundays, Diwali, Navratri, Holi, and every public holiday. Most issues are resolved the same day. Call or WhatsApp +91 98251 52400 any day, 9 AM to 9 PM."
+            "text": "Yes. Nisan's support team works 365 days a year — including Sundays, Diwali, Navratri, Holi, and every public holiday. Most issues are resolved the same day. Call or WhatsApp +91 98251 52400 any day, 7 AM to 10 PM."
           }
         },
         {
@@ -155,7 +155,7 @@
           "name": "How is Nisan different from Jio Fiber or Airtel in Bilimora?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nisan is a local Bilimora business — not a national call centre. For 100 Mbps, Nisan charges ₹5,499/year vs Jio's ₹10,799/year. Nisan's team works on Sundays and holidays, resolves issues same-day, offers a 1-month money-back guarantee, and provides free installation always. National ISPs offer none of these."
+            "text": "Nisan is a local Bilimora business — not a national call centre. For 100 Mbps, Nisan charges ₹5,499/year vs Jio's ₹10,799/year. Nisan's team works on Sundays and holidays, resolves issues same-day, offers a anytime refund guarantee, and provides free installation always. National ISPs offer none of these."
           }
         },
         {
@@ -181,6 +181,46 @@
             "@type": "Answer",
             "text": "Nisan offers FTTH fiber internet (50–400 Mbps) and cable TV (Gujarati, Hindi, sports, kids channels) in Bilimora West. Both services can be bundled on a single bill. Support is available 365 days a year, including all holidays."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Which WiFi service is near me in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan Cable TV & Internet provides home WiFi and office WiFi across Bilimora West. Starting at ₹4,999/year with free installation and free WiFi router. Call +91 98251 52400 — available 7 AM to 10 PM, 365 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there broadband near me in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Nisan provides FTTH fiber broadband in Bilimora West (PIN 396321). Plans from ₹4,999/year for 50 Mbps up to ₹11,499/year for 400 Mbps. GST included, no hidden charges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which cable TV or dish cable operator is near me in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan Cable TV & Internet has been a cable TV (also called CATV or dish cable) operator in Bilimora since 1993. Underground cable means no weather disruption. Call +91 98251 52400."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 5G internet available in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan provides high-speed FTTH fiber internet up to 400 Mbps in Bilimora — faster and more stable than 5G mobile for home use. Plans start at ₹4,999/year with free WiFi router included."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which internet provider gives refund in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nisan offers an anytime refund on annual plans. If at any point you feel the service is not right for you, ask for a refund on unused months — no questions, no conditions. Owner Kanubhai Patel stands behind this personally."
+          }
         }
       ]
     },
@@ -203,14 +243,14 @@
 <meta property="og:image:type" content="image/webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:description" content="Bilimora's #1 local ISP since 1993. FTTH fiber from ₹4,999/year (50–400 Mbps), cable TV, free installation, 1-month money-back. 2,000+ customers.">
+<meta property="og:description" content="Best internet &amp; WiFi provider in Bilimora. Broadband, fiber, cable TV from ₹4,999/year. Free installation, GST included, no hidden charges. Open 365 days. Call +91 98251 52400.">
 <meta property="og:site_name" content="Nisan Cable & Internet">
 <meta property="og:locale" content="en_IN">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Internet Provider in Bilimora — Nisan Cable TV &amp; ISP">
-<meta name="twitter:description" content="Bilimora's #1 local ISP since 1993. FTTH fiber from ₹4,999/year (50–400 Mbps), cable TV, free installation, 1-month money-back. 2,000+ customers.">
+<meta name="twitter:description" content="Best internet &amp; WiFi provider in Bilimora. Broadband, fiber, cable TV from ₹4,999/year. Free installation, GST included, no hidden charges. Open 365 days. Call +91 98251 52400.">
 <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 
 <meta name="facebook-domain-verification" content="zxh7pbdxqpvahj27akuscq7wz0nfm5" />
@@ -482,7 +522,7 @@
     <div class="container-unique">
         <h2 class="broadband-title">Try Nisan Once — We Earn Your Trust Through Service</h2>
         <p class="broadband-description">
-            Not sure? We understand. That is why every Nisan plan comes with a <strong>1-month full money-back guarantee</strong> — no conditions, no questions. If you are not happy in the first 30 days, you get every rupee back.
+            Not sure? We understand. That is why every Nisan plan comes with a <strong>anytime refund guarantee</strong> — no conditions, no questions. If you are not happy in the first 30 days, you get every rupee back.
         </p>
         <p class="broadband-description">
             We do not take your trust for granted. Nisan's team works <strong>365 days a year — no Sundays off, no holidays</strong>. Internet problems don't wait for Monday morning. Neither do we. Most issues are fixed the same day you call.
@@ -578,7 +618,7 @@
 <h2 class="accordion-header" id="headingFive"><button aria-controls="collapseFive" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseFive" data-bs-toggle="collapse" type="button">What is your refund policy?</button></h2>
 
 <div aria-labelledby="headingFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseFive">
-<div class="accordion-body">We offer a 1-month risk-free trial for our broadband plans. If you're not satisfied, we provide a full refund within the first month.</div>
+<div class="accordion-body">Nisan offers an anytime refund on annual plans. If at any point during the year you feel we are not the right provider, ask us for a refund on unused months. No fine print, no conditions. This is our word — owner Kanubhai Patel stands behind it personally.</div>
 </div>
 </div>
 <div class="accordion-item">
@@ -592,10 +632,22 @@
 <h2 class="accordion-header" id="headingSeven"><button aria-controls="collapseSeven" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseSeven" data-bs-toggle="collapse" type="button">Do you provide customer support?</button></h2>
 
 <div aria-labelledby="headingSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseSeven">
-<div class="accordion-body">Yes, we offer 24/7 customer support to assist you with any queries or issues.</div>
+<div class="accordion-body">Yes. Nisan support is available 7 AM to 10 PM, 365 days a year — Sundays, Diwali, Navratri, every holiday. No complaint windows, no "call back tomorrow." If you get home at 9 PM and internet is not working, call us immediately. We act the same day.</div>
 </div>
 </div>
 
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingEight"><button aria-controls="collapseEight" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseEight" data-bs-toggle="collapse" type="button">Is WiFi or broadband available near me in Bilimora?</button></h2>
+<div aria-labelledby="headingEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseEight">
+<div class="accordion-body">Yes. Nisan provides home WiFi and office broadband across Bilimora West (W Zone, PIN 396321). Plans start at ₹4,999/year with free installation and free WiFi router. Call +91 98251 52400 to check coverage at your address — 7 AM to 10 PM, every day.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingNine"><button aria-controls="collapseNine" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseNine" data-bs-toggle="collapse" type="button">Is dish cable or local cable TV available in Bilimora?</button></h2>
+<div aria-labelledby="headingNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseNine">
+<div class="accordion-body">Yes. Nisan has been providing cable TV (also called dish cable or local cable) in Bilimora since 1993. All major Gujarati, Hindi, sports and kids channels. Underground cable means no signal loss in rain unlike DTH. Can be bundled with internet on one bill.</div>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -109,7 +109,7 @@
                             <ul class="about-list">
                                 <li>Support every single day — Sundays, Diwali, Navratri, all holidays</li>
                                 <li>Same-day resolution for most issues in Bilimora West</li>
-                                <li>1-month full money-back guarantee — zero risk to try</li>
+                                <li>anytime refund guarantee — zero risk to try</li>
                                 <li>Free installation always — new connections, upgrades, renewals</li>
                                 <li>FTTH fiber technology — 50 to 400 Mbps, unlimited data</li>
                                 <li>Plans from ₹4,999/year, 40–55% cheaper than Jio and Airtel</li>
@@ -171,7 +171,7 @@
                         <div class="cta-content text-center">
                             <div class="section-title white-title mb-35">
                                 <h2 class="title">Try Us Once — We Earn Your Trust</h2>
-                                <p style="color:rgba(255,255,255,.85); margin-top:12px;">1-month money-back guarantee. No Sundays off. No holidays. 2,000+ Bilimora families already made the switch.</p>
+                                <p style="color:rgba(255,255,255,.85); margin-top:12px;">anytime refund guarantee. No Sundays off. No holidays. 2,000+ Bilimora families already made the switch.</p>
                             </div>
                             <div class="cta-btn-wrap">
                                 <a href="/pricing.php" class="btn">View our Plans</a>

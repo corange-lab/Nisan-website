@@ -178,7 +178,7 @@
                     <li>Nisan's 100 Mbps plan costs ₹5,499/year — ₹458/month</li>
                     <li>One successful flash sale purchase of a ₹10,000 item at 30% discount saves you ₹3,000 — which is 6 months of your internet plan cost</li>
                     <li>Installation takes 1–2 days from when you call</li>
-                    <li>1-month money-back guarantee if you are not satisfied</li>
+                    <li>anytime refund guarantee if you are not satisfied</li>
                 </ul>
 
                 <h2>Tips to Maximise Your Diwali Sale Success</h2>

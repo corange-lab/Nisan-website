@@ -59,7 +59,7 @@
       "name": "What is included in a new Nisan internet connection?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every Nisan connection includes free installation, a free WiFi router, and a 1-month money-back guarantee. No hidden setup fees."
+        "text": "Every Nisan connection includes free installation, a free WiFi router, and a anytime refund guarantee. No hidden setup fees."
       }
     }
       ]
@@ -236,7 +236,7 @@
                 <h3>How long does internet installation take in Bilimora?</h3>
                 <p>Nisan completes installation within 1–2 working days of confirmation. The technician installs the fiber cable, ONT, and WiFi router in approximately 2–3 hours.</p>
                 <h3>What is included in a new Nisan internet connection?</h3>
-                <p>Every Nisan connection includes free installation, a free WiFi router, and a 1-month money-back guarantee. No hidden setup fees.</p>
+                <p>Every Nisan connection includes free installation, a free WiFi router, and a anytime refund guarantee. No hidden setup fees.</p>
                 </div>
                     </article>
                 </div>

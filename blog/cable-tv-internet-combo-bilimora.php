@@ -197,7 +197,7 @@
                     <li>Choose from 50 Mbps to 400 Mbps</li>
                     <li>Unlimited data — no FUP, no daily limits</li>
                     <li>Free router included</li>
-                    <li>1-month money-back guarantee</li>
+                    <li>anytime refund guarantee</li>
                 </ul>
 
                 <h2>Combo Plan Pricing</h2>

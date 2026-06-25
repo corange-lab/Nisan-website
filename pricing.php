@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet Plans Bilimora | Nisan FTTH from ₹4,999/year</title>
-    <meta name="description" content="Nisan's FTTH internet plans in Bilimora: 50–400 Mbps from ₹4,999/year. Free installation, unlimited data, 1-month money-back. Get connected today.">
+    <meta name="description" content="Internet &amp; WiFi plans in Bilimora from ₹4,999/year. 50–400 Mbps fiber broadband. GST included, no hidden charges. Free installation. Anytime refund. Call +91 98251 52400.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/pricing">
 
@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://www.nisan.co.in/pricing">
     <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
     <meta property="og:image:alt" content="Nisan internet plans in Bilimora — 50 to 400 Mbps FTTH fiber">
-    <meta property="og:description" content="Nisan's FTTH internet plans in Bilimora: 50–400 Mbps from ₹4,999/year. Free installation, unlimited data, 1-month money-back. Get connected today.">
+    <meta property="og:description" content="Internet &amp; WiFi plans in Bilimora from ₹4,999/year. 50–400 Mbps fiber broadband. GST included, no hidden charges. Free installation. Anytime refund. Call +91 98251 52400.">
     <meta property="og:site_name" content="Nisan Cable & Internet">
     <meta property="og:locale" content="en_IN">
 
@@ -42,8 +42,12 @@
         {"@type": "Question", "name": "What is the cheapest internet plan in Bilimora?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan's cheapest internet plan in Bilimora is 50 Mbps FTTH fiber at ₹4,999/year (₹417/month). Free installation and a free WiFi router are included."}},
         {"@type": "Question", "name": "Does Nisan charge for installation?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nisan includes free installation on every plan, every time — including upgrades and renewals. There are no hidden setup fees."}},
         {"@type": "Question", "name": "How quickly can I get internet installed in Bilimora?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan installs within 1–2 working days of confirmation. Call or WhatsApp +91 98251 52400 to book your installation."}},
-        {"@type": "Question", "name": "Is there a contract or lock-in period?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan's plans are annual with no long-term contract. A 1-month money-back guarantee applies — if you are not satisfied in the first month, you get a full refund."}},
-        {"@type": "Question", "name": "What internet speed do I need for a family of 4?", "acceptedAnswer": {"@type": "Answer", "text": "A family of 4 with streaming, video calls, and gaming needs at least 100 Mbps. Nisan's 100 Mbps plan at ₹5,499/year handles 6–8 devices simultaneously without any buffering."}}
+        {"@type": "Question", "name": "Is there a contract or lock-in period?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan's plans are annual with no long-term contract. A anytime refund guarantee applies — if you are not satisfied in the first month, you get a full refund."}},
+        {"@type": "Question", "name": "What internet speed do I need for a family of 4?", "acceptedAnswer": {"@type": "Answer", "text": "A family of 4 with streaming, video calls, and gaming needs at least 100 Mbps. Nisan's 100 Mbps plan at ₹5,499/year handles 6–8 devices simultaneously without any buffering."}},
+        {"@type": "Question", "name": "Is WiFi or broadband available near me in Bilimora?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nisan provides home WiFi and FTTH broadband across Bilimora West (PIN 396321). Plans from ₹4,999/year. GST included, no hidden charges. Call +91 98251 52400 to check availability."}},
+        {"@type": "Question", "name": "Are Nisan's prices inclusive of GST?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All Nisan plan prices are the final price — GST included, no hidden fees, no setup charges, nothing extra. ₹4,999 means you pay ₹4,999. No surprises."}},
+        {"@type": "Question", "name": "Which is the best WiFi or broadband plan in Bilimora?", "acceptedAnswer": {"@type": "Answer", "text": "Nisan's 50 Mbps plan at ₹4,999/year is the best value broadband in Bilimora for home use. For families or work from home, the 100 Mbps plan at ₹5,499/year is most popular. All plans include free installation, free WiFi router, and GST."}},
+        {"@type": "Question", "name": "Does Nisan give a refund on annual plans?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Nisan offers an anytime refund on annual plans. If at any point you feel the service is not right, ask for a refund on unused months. No conditions, no fine print. Owner Kanubhai Patel stands behind this personally."}}
       ]
     }
     </script>
@@ -63,7 +67,7 @@
           "item": {
             "@type": "Product",
             "name": "Nisan Home Plan — 50 Mbps Internet",
-            "description": "50 Mbps FTTH broadband for homes in Bilimora. Unlimited data, free router, free installation, 1-month money-back guarantee.",
+            "description": "50 Mbps FTTH broadband for homes in Bilimora. Unlimited data, free router, free installation, anytime refund guarantee.",
             "brand": {"@type": "Brand", "name": "Nisan Cable & Internet"},
             "url": "https://www.nisan.co.in/pricing",
             "image": "https://www.nisan.co.in/assets/imgs/images/pricing_thumb01.webp",

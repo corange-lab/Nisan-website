@@ -88,10 +88,10 @@
     },
     {
       "@type": "Question",
-      "name": "Does Nisan offer a money-back guarantee?",
+      "name": "Does Nisan offer a anytime refund guarantee?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Nisan offers a 1-month money-back guarantee on all plans. If you are not satisfied, you get a full refund \u2014 Jio Fiber does not offer this."
+        "text": "Yes. Nisan offers a anytime refund guarantee on all plans. If you are not satisfied, you get a full refund \u2014 Jio Fiber does not offer this."
       }
     }
       ]
@@ -259,8 +259,8 @@
                 <p>Yes. Call or WhatsApp Nisan at +91 98251 52400. Nisan installs at your location and you can run both connections briefly before cancelling Jio.</p>
                 <h3>What is Nisan's maximum internet speed in Bilimora?</h3>
                 <p>Nisan offers plans up to 400 Mbps in Bilimora West. Plans start at 50 Mbps from ₹4,999/year.</p>
-                <h3>Does Nisan offer a money-back guarantee?</h3>
-                <p>Yes. Nisan offers a 1-month money-back guarantee on all plans. If you are not satisfied, you get a full refund — Jio Fiber does not offer this.</p>
+                <h3>Does Nisan offer a anytime refund guarantee?</h3>
+                <p>Yes. Nisan offers a anytime refund guarantee on all plans. If you are not satisfied, you get a full refund — Jio Fiber does not offer this.</p>
                 </div>
                     </article>
                 </div>
