@@ -34,7 +34,7 @@ function checkOlt(): array {
     $start = microtime(true);
     $ch    = curl_init();
     curl_setopt_array($ch, [
-        CURLOPT_URL            => 'https://103.178.104.34:18292',
+        CURLOPT_URL            => 'https://103.178.104.28:18292',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_TIMEOUT        => 8,
         CURLOPT_CONNECTTIMEOUT => 5,
