@@ -333,108 +333,128 @@
             white-space: nowrap;
         }
 
-        /* ── Article Cards ── */
+        /* ── Article Cards (Premium) ── */
         .nbc {
             background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 1px 8px rgba(0,0,0,.07);
+            border-radius: 20px;
+            box-shadow: 0 8px 40px rgba(0,0,0,.11);
             overflow: hidden;
-            transition: transform .2s, box-shadow .2s;
+            transition: transform .28s cubic-bezier(.34,1.56,.64,1), box-shadow .28s ease;
             display: flex;
             flex-direction: column;
             height: 100%;
-            margin-bottom: 20px;
-            border-left: 4px solid transparent;
+            margin-bottom: 24px;
+            position: relative;
         }
         .nbc:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(0,0,0,.12);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 60px rgba(0,0,0,.18);
         }
-        .nbc-body {
-            padding: 18px 18px 16px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
+        .nbc-banner {
+            position: relative;
+            padding: 20px 20px 16px;
+            overflow: hidden;
+        }
+        .nbc-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.13) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform .5s ease;
+        }
+        .nbc:hover .nbc-banner::before { transform: translateX(100%); }
+        .nbc-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
         }
         .nbc-tag-row {
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 9px;
+            margin-bottom: 6px;
         }
         .nbc-tag {
-            font-size: 10.5px;
+            font-size: 9.5px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: .6px;
-            padding: 3px 8px;
-            border-radius: 4px;
+            letter-spacing: .7px;
+            padding: 3px 9px;
+            border-radius: 20px;
             display: inline-block;
+            background: rgba(255,255,255,.22);
+            color: #fff;
+            backdrop-filter: blur(6px);
         }
         .nbc-read-time {
-            font-size: 11px;
-            color: #bbb;
+            font-size: 10.5px;
+            color: rgba(255,255,255,.65);
             margin-left: auto;
             white-space: nowrap;
         }
         .nbc-title {
-            font-size: .9rem !important;
-            font-weight: 700 !important;
-            color: #1a1a2e !important;
-            line-height: 1.45 !important;
-            margin: 0 0 8px !important;
+            font-size: .88rem !important;
+            font-weight: 800 !important;
+            color: #fff !important;
+            line-height: 1.4 !important;
+            margin: 0 !important;
             padding: 0 !important;
+            text-shadow: 0 1px 3px rgba(0,0,0,.2);
+        }
+        .nbc-body {
+            padding: 14px 18px 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         .nbc-desc {
             font-size: 12.5px;
-            color: #777;
+            color: #666;
             line-height: 1.6;
             margin: 0 0 14px;
             flex: 1;
         }
         .nbc-link {
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
             gap: 5px;
             text-decoration: none;
-            transition: gap .15s;
+            color: #fff;
+            padding: 7px 16px;
+            border-radius: 8px;
+            transition: gap .15s, opacity .15s;
+            align-self: flex-start;
         }
-        .nbc-link:hover { text-decoration: none; gap: 8px; }
+        .nbc-link:hover { text-decoration: none; gap: 8px; opacity: .88; color: #fff; }
 
         /* Category colour themes */
-        .nbc-compare  { border-left-color: #2563eb; }
-        .nbc-compare  .nbc-tag { background: #eff6ff; color: #2563eb; }
-        .nbc-compare  .nbc-link { color: #2563eb; }
+        .nbc-compare .nbc-banner  { background: linear-gradient(145deg, #0f2d6b 0%, #1d4ed8 55%, #3b82f6 100%); }
+        .nbc-compare .nbc-link    { background: #1d4ed8; }
 
-        .nbc-guide    { border-left-color: #16a34a; }
-        .nbc-guide    .nbc-tag { background: #f0fdf4; color: #16a34a; }
-        .nbc-guide    .nbc-link { color: #16a34a; }
+        .nbc-guide .nbc-banner    { background: linear-gradient(145deg, #0c3b2e 0%, #15803d 55%, #22c55e 100%); }
+        .nbc-guide .nbc-link      { background: #15803d; }
 
-        .nbc-trouble  { border-left-color: #dc2626; }
-        .nbc-trouble  .nbc-tag { background: #fef2f2; color: #dc2626; }
-        .nbc-trouble  .nbc-link { color: #dc2626; }
+        .nbc-trouble .nbc-banner  { background: linear-gradient(145deg, #5a0a0a 0%, #b91c1c 55%, #ef4444 100%); }
+        .nbc-trouble .nbc-link    { background: #b91c1c; }
 
-        .nbc-life     { border-left-color: #d97706; }
-        .nbc-life     .nbc-tag { background: #fffbeb; color: #d97706; }
-        .nbc-life     .nbc-link { color: #d97706; }
+        .nbc-life .nbc-banner     { background: linear-gradient(145deg, #5c3600 0%, #b45309 55%, #f59e0b 100%); }
+        .nbc-life .nbc-link       { background: #b45309; }
 
-        .nbc-biz      { border-left-color: #0891b2; }
-        .nbc-biz      .nbc-tag { background: #ecfeff; color: #0891b2; }
-        .nbc-biz      .nbc-link { color: #0891b2; }
+        .nbc-biz .nbc-banner      { background: linear-gradient(145deg, #0a3040 0%, #0e7490 55%, #22d3ee 100%); }
+        .nbc-biz .nbc-link        { background: #0e7490; }
 
-        .nbc-cable    { border-left-color: #7c3aed; }
-        .nbc-cable    .nbc-tag { background: #f5f3ff; color: #7c3aed; }
-        .nbc-cable    .nbc-link { color: #7c3aed; }
+        .nbc-cable .nbc-banner    { background: linear-gradient(145deg, #2e0a5c 0%, #6d28d9 55%, #a855f7 100%); }
+        .nbc-cable .nbc-link      { background: #6d28d9; }
 
-        .nbc-seasonal { border-left-color: #db2777; }
-        .nbc-seasonal .nbc-tag { background: #fdf2f8; color: #db2777; }
-        .nbc-seasonal .nbc-link { color: #db2777; }
+        .nbc-seasonal .nbc-banner { background: linear-gradient(145deg, #5c0a2e 0%, #be185d 55%, #f472b6 100%); }
+        .nbc-seasonal .nbc-link   { background: #be185d; }
 
-        .nbc-trust    { border-left-color: #0066cc; }
-        .nbc-trust    .nbc-tag { background: #eff6ff; color: #0066cc; }
-        .nbc-trust    .nbc-link { color: #0066cc; }
+        .nbc-trust .nbc-banner    { background: linear-gradient(145deg, #001a4d 0%, #0052a3 55%, #3b82f6 100%); }
+        .nbc-trust .nbc-link      { background: #0052a3; }
 
         /* Section icon backgrounds */
         .si-compare  { background: #eff6ff; color: #2563eb; }
@@ -621,30 +641,33 @@
             <div class="row">
                 <?php
                 $compare = [
-                    ['/blog/best-internet-provider-bilimora','Best Internet Provider in Bilimora','Compare Nisan, Jio Fiber, and Airtel on price, speed, and local support.','Comparison','3 min'],
-                    ['/blog/internet-providers-bilimora-compared','Internet Providers in Bilimora Compared: Speed, Price &amp; Support','Full comparison table of all ISPs — Nisan, Jio, Airtel, GTPL, BSNL.','Comparison','4 min'],
-                    ['/blog/fiber-vs-air-fiber-bilimora','Fiber vs Air Fiber in Bilimora — Which Is Better?','Why cable fiber beats Air Fiber on uptime, rain, latency and price.','Education','6 min'],
-                    ['/blog/jio-fiber-vs-nisan-bilimora','Jio Fiber vs Nisan in Bilimora — Which Is Better?','Side-by-side comparison of price, speed, support and savings.','Comparison','4 min'],
-                    ['/blog/jio-fiber-bilimora-comparison','Why Bilimora Residents Choose Nisan Over Jio — 7 Real Reasons','Same-day repair, face-to-face support, 30-year local trust, annual savings.','Comparison','5 min'],
-                    ['/blog/airtel-vs-nisan-bilimora','Airtel Broadband vs Nisan Internet in Bilimora','Price-per-Mbps comparison. Annual vs monthly billing. Local support response time.','Comparison','3 min'],
-                    ['/blog/gtpl-vs-nisan-bilimora','GTPL vs Nisan Bilimora: Cable TV and Broadband','Both serve Gujarat. Compare channel lineup, broadband speeds, and local service quality.','Comparison','4 min'],
-                    ['/blog/bsnl-vs-nisan-bilimora','BSNL Broadband vs Nisan Internet in Bilimora','Copper DSL vs FTTH fiber — is it time to upgrade from BSNL?','Comparison','3 min'],
-                    ['/blog/cheapest-broadband-bilimora','Cheapest Broadband Plan in Bilimora: Who Offers the Best Value?','&#8377;4,999/year = &#8377;416/month — the cheapest per-month broadband in Bilimora.','Comparison','3 min'],
-                    ['/blog/local-isp-vs-jio-airtel-bilimora','Local ISP vs Jio or Airtel in Bilimora: Why Local Wins','One phone call, one person, resolved today — the case for a local provider.','Comparison','4 min'],
+                    ['/blog/best-internet-provider-bilimora','Best Internet Provider in Bilimora','Compare Nisan, Jio Fiber, and Airtel on price, speed, and local support.','Comparison','3 min','&#128202;'],
+                    ['/blog/internet-providers-bilimora-compared','Internet Providers in Bilimora Compared: Speed, Price &amp; Support','Full comparison table of all ISPs — Nisan, Jio, Airtel, GTPL, BSNL.','Comparison','4 min','&#9878;'],
+                    ['/blog/fiber-vs-air-fiber-bilimora','Fiber vs Air Fiber in Bilimora — Which Is Better?','Why cable fiber beats Air Fiber on uptime, rain, latency and price.','Education','6 min','&#128268;'],
+                    ['/blog/jio-fiber-vs-nisan-bilimora','Jio Fiber vs Nisan in Bilimora — Which Is Better?','Side-by-side comparison of price, speed, support and savings.','Comparison','4 min','&#128270;'],
+                    ['/blog/jio-fiber-bilimora-comparison','Why Bilimora Residents Choose Nisan Over Jio — 7 Real Reasons','Same-day repair, face-to-face support, 30-year local trust, annual savings.','Comparison','5 min','&#127942;'],
+                    ['/blog/airtel-vs-nisan-bilimora','Airtel Broadband vs Nisan Internet in Bilimora','Price-per-Mbps comparison. Annual vs monthly billing. Local support response time.','Comparison','3 min','&#128225;'],
+                    ['/blog/gtpl-vs-nisan-bilimora','GTPL vs Nisan Bilimora: Cable TV and Broadband','Both serve Gujarat. Compare channel lineup, broadband speeds, and local service quality.','Comparison','4 min','&#128250;'],
+                    ['/blog/bsnl-vs-nisan-bilimora','BSNL Broadband vs Nisan Internet in Bilimora','Copper DSL vs FTTH fiber — is it time to upgrade from BSNL?','Comparison','3 min','&#128191;'],
+                    ['/blog/cheapest-broadband-bilimora','Cheapest Broadband Plan in Bilimora: Who Offers the Best Value?','&#8377;4,999/year = &#8377;416/month — the cheapest per-month broadband in Bilimora.','Comparison','3 min','&#128176;'],
+                    ['/blog/local-isp-vs-jio-airtel-bilimora','Local ISP vs Jio or Airtel in Bilimora: Why Local Wins','One phone call, one person, resolved today — the case for a local provider.','Comparison','4 min','&#127968;'],
                 ];
                 foreach($compare as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-compare">
-                        <div class="nbc-body">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-compare" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
                             </div>
                             <p class="nbc-title"><?= $a[1] ?></p>
-                            <p class="nbc-desc"><?= $a[2] ?></p>
-                            <a href="<?= $a[0] ?>" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc"><?= $a[2] ?></p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -658,29 +681,32 @@
             <div class="row">
                 <?php
                 $guides = [
-                    ['/blog/how-much-internet-speed-do-i-need','How Much Internet Speed Do I Need? Bilimora Home Guide','50 Mbps or 100 Mbps? This guide helps you pick by family size and usage.','Guide','4 min'],
-                    ['/blog/internet-for-family-bilimora','How Many Mbps Does a Bilimora Family of 4 Actually Need?','Add up each person\'s real usage to calculate your ideal plan speed.','Guide','3 min'],
-                    ['/blog/annual-vs-monthly-internet-plan-bilimora','Annual vs Monthly Internet Plan in Bilimora: Which Saves More?','Exact savings calculation: &#8377;4,999/year vs &#8377;499/month competitors.','Guide','3 min'],
-                    ['/blog/mbps-guide-bilimora','Mbps vs Gbps Explained for Bilimora Internet Users','Plain-English guide to internet speed units — what you actually need.','Education','3 min'],
-                    ['/blog/ftth-fiber-internet-bilimora','What Is FTTH Fiber Internet? Benefits for Bilimora Homes','FTTH explained simply — why it\'s faster than cable or mobile data.','Education','4 min'],
-                    ['/blog/fiber-broadband-bilimora-west','Fiber Broadband in Bilimora West: Coverage &amp; Best Plans','Complete W Zone coverage — what makes fiber better in this specific area.','Guide','3 min'],
-                    ['/blog/new-internet-connection-bilimora','New Internet Connection in Bilimora: Step-by-Step Guide','From choosing a plan to installation day — what to expect as a new customer.','Guide','4 min'],
-                    ['/blog/wired-vs-wireless-internet-bilimora','Wired vs Wireless Internet at Home in Bilimora','When ethernet beats WiFi in concrete Bilimora homes — and how to set it up.','Guide','3 min'],
-                    ['/blog/broadband-near-me-bilimora','Broadband Internet Provider Near Me in Bilimora','What to check when searching for a broadband provider near you in Bilimora West.','Local','3 min'],
+                    ['/blog/how-much-internet-speed-do-i-need','How Much Internet Speed Do I Need? Bilimora Home Guide','50 Mbps or 100 Mbps? This guide helps you pick by family size and usage.','Guide','4 min','&#128257;'],
+                    ['/blog/internet-for-family-bilimora','How Many Mbps Does a Bilimora Family of 4 Actually Need?','Add up each person\'s real usage to calculate your ideal plan speed.','Guide','3 min','&#128106;'],
+                    ['/blog/annual-vs-monthly-internet-plan-bilimora','Annual vs Monthly Internet Plan in Bilimora: Which Saves More?','Exact savings calculation: &#8377;4,999/year vs &#8377;499/month competitors.','Guide','3 min','&#128197;'],
+                    ['/blog/mbps-guide-bilimora','Mbps vs Gbps Explained for Bilimora Internet Users','Plain-English guide to internet speed units — what you actually need.','Education','3 min','&#128161;'],
+                    ['/blog/ftth-fiber-internet-bilimora','What Is FTTH Fiber Internet? Benefits for Bilimora Homes','FTTH explained simply — why it\'s faster than cable or mobile data.','Education','4 min','&#128311;'],
+                    ['/blog/fiber-broadband-bilimora-west','Fiber Broadband in Bilimora West: Coverage &amp; Best Plans','Complete W Zone coverage — what makes fiber better in this specific area.','Guide','3 min','&#128205;'],
+                    ['/blog/new-internet-connection-bilimora','New Internet Connection in Bilimora: Step-by-Step Guide','From choosing a plan to installation day — what to expect as a new customer.','Guide','4 min','&#128640;'],
+                    ['/blog/wired-vs-wireless-internet-bilimora','Wired vs Wireless Internet at Home in Bilimora','When ethernet beats WiFi in concrete Bilimora homes — and how to set it up.','Guide','3 min','&#128247;'],
+                    ['/blog/broadband-near-me-bilimora','Broadband Internet Provider Near Me in Bilimora','What to check when searching for a broadband provider near you in Bilimora West.','Local','3 min','&#128270;'],
                 ];
                 foreach($guides as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-guide">
-                        <div class="nbc-body">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-guide" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
                             </div>
                             <p class="nbc-title"><?= $a[1] ?></p>
-                            <p class="nbc-desc"><?= $a[2] ?></p>
-                            <a href="<?= $a[0] ?>" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc"><?= $a[2] ?></p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -693,30 +719,36 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-trouble">
-                        <div class="nbc-body">
+                    <a href="/blog/internet-outage-bilimora" class="nbc nbc-trouble" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon">&#128268;</span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag">Troubleshooting</span>
                                 <span class="nbc-read-time">&#9201; 4 min read</span>
                             </div>
                             <p class="nbc-title">Internet Outage in Bilimora: How to Check &amp; Get It Fixed Fast</p>
-                            <p class="nbc-desc">How to diagnose outages and why local support resolves faster than national ISPs.</p>
-                            <a href="/blog/internet-outage-bilimora" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">How to diagnose outages and why local support resolves faster than national ISPs.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-trouble">
-                        <div class="nbc-body">
+                    <a href="/blog/low-internet-speed-bilimora" class="nbc nbc-trouble" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon">&#128246;</span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag">Troubleshooting</span>
                                 <span class="nbc-read-time">&#9201; 4 min read</span>
                             </div>
                             <p class="nbc-title">Low Speed Despite High-Speed Plan in Bilimora: What to Do</p>
-                            <p class="nbc-desc">Router bottleneck, WiFi band, device limits — diagnose why speed test shows less.</p>
-                            <a href="/blog/low-internet-speed-bilimora" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">Router bottleneck, WiFi band, device limits — diagnose why speed test shows less.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -729,29 +761,32 @@
             <div class="row">
                 <?php
                 $life = [
-                    ['/blog/work-from-home-internet-bilimora','Best Internet for Work From Home in Bilimora','Why FTTH beats mobile data for Zoom calls, cloud apps, and stable all-day use.','Work From Home','4 min'],
-                    ['/blog/work-from-home-bilimora-fiber','Working From Home in Bilimora With Fiber: A Real Difference Maker','How reliable fiber changes daily life for WFH professionals in Bilimora.','Work From Home','4 min'],
-                    ['/blog/gaming-internet-bilimora','Gaming Internet in Bilimora: Low Ping Plans for Gamers','Why ping matters more than speed. Fiber delivers 10–20ms for BGMI, Free Fire, PC games.','Gaming','3 min'],
-                    ['/blog/video-streaming-internet-bilimora','Video Streaming in Bilimora: Which Plan Handles Netflix &amp; YouTube 4K?','How many screens can each plan support? Complete bandwidth guide for OTT.','Streaming','3 min'],
-                    ['/blog/online-classes-internet-bilimora','Online Classes Internet in Bilimora: Which Plan Is Enough for Students?','JEE/NEET coaching, school Zoom classes, and hostel student solutions.','Education','3 min'],
-                    ['/blog/internet-for-students-bilimora','Best Internet for Students in Bilimora: Hostel, PG &amp; Home Options','Shared PG connections, coaching platforms, and the cheapest annual plan options.','Students','4 min'],
-                    ['/blog/back-to-school-internet-bilimora','Back to School in Bilimora: Set Up Home Internet for Online Learning','Gujarat school year starts June. Get the right plan before the first day.','Seasonal','3 min'],
-                    ['/blog/internet-for-seniors-bilimora','Simple Internet Guide for Senior Citizens in Bilimora','WhatsApp video calls with family, easy setup, and local support — no tech knowledge needed.','Seniors','3 min'],
-                    ['/blog/internet-video-calling-bilimora','Video Calling From Bilimora: Why WiFi Quality Matters More Than Your Phone','How fiber improves WhatsApp and FaceTime calls with family abroad.','Lifestyle','3 min'],
+                    ['/blog/work-from-home-internet-bilimora','Best Internet for Work From Home in Bilimora','Why FTTH beats mobile data for Zoom calls, cloud apps, and stable all-day use.','Work From Home','4 min','&#128187;'],
+                    ['/blog/work-from-home-bilimora-fiber','Working From Home in Bilimora With Fiber: A Real Difference Maker','How reliable fiber changes daily life for WFH professionals in Bilimora.','Work From Home','4 min','&#127968;'],
+                    ['/blog/gaming-internet-bilimora','Gaming Internet in Bilimora: Low Ping Plans for Gamers','Why ping matters more than speed. Fiber delivers 10–20ms for BGMI, Free Fire, PC games.','Gaming','3 min','&#127918;'],
+                    ['/blog/video-streaming-internet-bilimora','Video Streaming in Bilimora: Which Plan Handles Netflix &amp; YouTube 4K?','How many screens can each plan support? Complete bandwidth guide for OTT.','Streaming','3 min','&#127902;'],
+                    ['/blog/online-classes-internet-bilimora','Online Classes Internet in Bilimora: Which Plan Is Enough for Students?','JEE/NEET coaching, school Zoom classes, and hostel student solutions.','Education','3 min','&#127979;'],
+                    ['/blog/internet-for-students-bilimora','Best Internet for Students in Bilimora: Hostel, PG &amp; Home Options','Shared PG connections, coaching platforms, and the cheapest annual plan options.','Students','4 min','&#127891;'],
+                    ['/blog/back-to-school-internet-bilimora','Back to School in Bilimora: Set Up Home Internet for Online Learning','Gujarat school year starts June. Get the right plan before the first day.','Seasonal','3 min','&#128197;'],
+                    ['/blog/internet-for-seniors-bilimora','Simple Internet Guide for Senior Citizens in Bilimora','WhatsApp video calls with family, easy setup, and local support — no tech knowledge needed.','Seniors','3 min','&#128149;'],
+                    ['/blog/internet-video-calling-bilimora','Video Calling From Bilimora: Why WiFi Quality Matters More Than Your Phone','How fiber improves WhatsApp and FaceTime calls with family abroad.','Lifestyle','3 min','&#128222;'],
                 ];
                 foreach($life as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-life">
-                        <div class="nbc-body">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-life" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
                             </div>
                             <p class="nbc-title"><?= $a[1] ?></p>
-                            <p class="nbc-desc"><?= $a[2] ?></p>
-                            <a href="<?= $a[0] ?>" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc"><?= $a[2] ?></p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -765,27 +800,30 @@
             <div class="row">
                 <?php
                 $biz = [
-                    ['/blog/internet-for-small-business-bilimora','Best Internet for Shops &amp; Small Businesses in Bilimora','UPI payments, WhatsApp Business, CCTV, billing software — what each needs.','Business','4 min'],
-                    ['/blog/cctv-internet-bilimora','CCTV Camera Internet Requirements in Bilimora','How much upload speed you need per camera. Why fiber handles CCTV and DSL does not.','Business','3 min'],
-                    ['/blog/upi-payment-internet-bilimora','UPI Payments Failing in Your Bilimora Shop? Check Your Internet','Why unstable connections cause UPI timeouts and how fiber solves it.','Business','3 min'],
-                    ['/blog/hotel-wifi-internet-bilimora','Internet for Bilimora Hotels &amp; Guest Houses: Guest WiFi Guide','Bandwidth planning per room, router placement, and commercial plan options.','Business','4 min'],
-                    ['/blog/ecommerce-internet-bilimora','E-Commerce Business From Bilimora: Internet for Amazon &amp; Flipkart Sellers','Fast upload for product listings, video shoots, and order management.','Business','3 min'],
-                    ['/blog/online-business-internet-bilimora','Online Business in Bilimora: Why Your Internet Is Your Most Important Tool','Freelancers, creators, consultants — how fiber uptime directly protects income.','Business','4 min'],
-                    ['/blog/internet-for-youtube-creators-bilimora','Best Internet for YouTube Creators &amp; Vloggers in Bilimora','Upload speed is everything. Why 100 Mbps fiber transforms your content workflow.','Business','3 min'],
+                    ['/blog/internet-for-small-business-bilimora','Best Internet for Shops &amp; Small Businesses in Bilimora','UPI payments, WhatsApp Business, CCTV, billing software — what each needs.','Business','4 min','&#128722;'],
+                    ['/blog/cctv-internet-bilimora','CCTV Camera Internet Requirements in Bilimora','How much upload speed you need per camera. Why fiber handles CCTV and DSL does not.','Business','3 min','&#128247;'],
+                    ['/blog/upi-payment-internet-bilimora','UPI Payments Failing in Your Bilimora Shop? Check Your Internet','Why unstable connections cause UPI timeouts and how fiber solves it.','Business','3 min','&#128179;'],
+                    ['/blog/hotel-wifi-internet-bilimora','Internet for Bilimora Hotels &amp; Guest Houses: Guest WiFi Guide','Bandwidth planning per room, router placement, and commercial plan options.','Business','4 min','&#127970;'],
+                    ['/blog/ecommerce-internet-bilimora','E-Commerce Business From Bilimora: Internet for Amazon &amp; Flipkart Sellers','Fast upload for product listings, video shoots, and order management.','Business','3 min','&#128666;'],
+                    ['/blog/online-business-internet-bilimora','Online Business in Bilimora: Why Your Internet Is Your Most Important Tool','Freelancers, creators, consultants — how fiber uptime directly protects income.','Business','4 min','&#128188;'],
+                    ['/blog/internet-for-youtube-creators-bilimora','Best Internet for YouTube Creators &amp; Vloggers in Bilimora','Upload speed is everything. Why 100 Mbps fiber transforms your content workflow.','Business','3 min','&#127909;'],
                 ];
                 foreach($biz as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-biz">
-                        <div class="nbc-body">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-biz" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
                             </div>
                             <p class="nbc-title"><?= $a[1] ?></p>
-                            <p class="nbc-desc"><?= $a[2] ?></p>
-                            <a href="<?= $a[0] ?>" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc"><?= $a[2] ?></p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -799,26 +837,29 @@
             <div class="row">
                 <?php
                 $cable = [
-                    ['/blog/cable-tv-provider-bilimora','Best Cable TV Provider in Bilimora','Channel lineup, HD quality, rain reliability, and local support compared.','Cable TV','3 min'],
-                    ['/blog/gujarati-channels-cable-tv-bilimora','Gujarati Channels on Cable TV in Bilimora: Full List','DD Girnar, ETV Gujarati, Zee Gujarat, Colors Gujarati and more.','Cable TV','3 min'],
-                    ['/blog/cable-tv-vs-dth-bilimora','Cable TV vs DTH in Bilimora: Which Is Better?','No dish, no rain signal loss, local support — the case for cable over DTH.','Cable TV','4 min'],
-                    ['/blog/cable-tv-connection-bilimora','How to Get Cable TV Connection in Bilimora: Installation &amp; Plans','Same-day installation, 200+ channels, free setup, combo offer available.','Cable TV','3 min'],
-                    ['/blog/cable-tv-internet-combo-bilimora','Cable TV + Internet Combo in Bilimora — Save More','2 months free on yearly combo. One bill, one local provider for both services.','Combo','3 min'],
-                    ['/blog/cable-tv-near-me-bilimora','Cable TV Operator Near Me in Bilimora West','Find a reliable local cable TV operator. Nisan covers all of W Zone.','Local','3 min'],
+                    ['/blog/cable-tv-provider-bilimora','Best Cable TV Provider in Bilimora','Channel lineup, HD quality, rain reliability, and local support compared.','Cable TV','3 min','&#128250;'],
+                    ['/blog/gujarati-channels-cable-tv-bilimora','Gujarati Channels on Cable TV in Bilimora: Full List','DD Girnar, ETV Gujarati, Zee Gujarat, Colors Gujarati and more.','Cable TV','3 min','&#127482;'],
+                    ['/blog/cable-tv-vs-dth-bilimora','Cable TV vs DTH in Bilimora: Which Is Better?','No dish, no rain signal loss, local support — the case for cable over DTH.','Cable TV','4 min','&#128225;'],
+                    ['/blog/cable-tv-connection-bilimora','How to Get Cable TV Connection in Bilimora: Installation &amp; Plans','Same-day installation, 200+ channels, free setup, combo offer available.','Cable TV','3 min','&#128268;'],
+                    ['/blog/cable-tv-internet-combo-bilimora','Cable TV + Internet Combo in Bilimora — Save More','2 months free on yearly combo. One bill, one local provider for both services.','Combo','3 min','&#128176;'],
+                    ['/blog/cable-tv-near-me-bilimora','Cable TV Operator Near Me in Bilimora West','Find a reliable local cable TV operator. Nisan covers all of W Zone.','Local','3 min','&#128205;'],
                 ];
                 foreach($cable as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-cable">
-                        <div class="nbc-body">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-cable" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
                             </div>
                             <p class="nbc-title"><?= $a[1] ?></p>
-                            <p class="nbc-desc"><?= $a[2] ?></p>
-                            <a href="<?= $a[0] ?>" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc"><?= $a[2] ?></p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -832,25 +873,28 @@
             <div class="row">
                 <?php
                 $seasonal = [
-                    ['/blog/cricket-streaming-internet-bilimora','Cricket Streaming in Bilimora: Best Internet for Live Sports','IPL, World Cup, India matches — why fiber handles peak match traffic and mobile data does not.','Cricket','3 min'],
-                    ['/blog/ipl-streaming-internet-bilimora','IPL Live Streaming in Bilimora: Which Plan Won\'t Buffer?','Multiple family members on different screens during IPL — speed requirements explained.','IPL','3 min'],
-                    ['/blog/navratri-streaming-bilimora','Navratri Live Streaming in Bilimora: Watch Garba Without Buffering','Stream DD Gujarat, YouTube Garba, and ETV Gujarati without interruption.','Navratri','3 min'],
-                    ['/blog/diwali-internet-bilimora','Diwali Online Shopping From Bilimora: Fast Internet for the Big Sale','Flash checkout, UPI payments, and streaming all need low-latency fiber on sale day.','Diwali','3 min'],
-                    ['/blog/new-year-internet-upgrade-bilimora','New Year Internet Upgrade in Bilimora: Start 2027 With Faster Fiber','One decision in January for 365 days of reliable broadband.','New Year','3 min'],
+                    ['/blog/cricket-streaming-internet-bilimora','Cricket Streaming in Bilimora: Best Internet for Live Sports','IPL, World Cup, India matches — why fiber handles peak match traffic and mobile data does not.','Cricket','3 min','&#127955;'],
+                    ['/blog/ipl-streaming-internet-bilimora','IPL Live Streaming in Bilimora: Which Plan Won\'t Buffer?','Multiple family members on different screens during IPL — speed requirements explained.','IPL','3 min','&#127954;'],
+                    ['/blog/navratri-streaming-bilimora','Navratri Live Streaming in Bilimora: Watch Garba Without Buffering','Stream DD Gujarat, YouTube Garba, and ETV Gujarati without interruption.','Navratri','3 min','&#127917;'],
+                    ['/blog/diwali-internet-bilimora','Diwali Online Shopping From Bilimora: Fast Internet for the Big Sale','Flash checkout, UPI payments, and streaming all need low-latency fiber on sale day.','Diwali','3 min','&#127881;'],
+                    ['/blog/new-year-internet-upgrade-bilimora','New Year Internet Upgrade in Bilimora: Start 2027 With Faster Fiber','One decision in January for 365 days of reliable broadband.','New Year','3 min','&#127775;'],
                 ];
                 foreach($seasonal as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-seasonal">
-                        <div class="nbc-body">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-seasonal" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
                             </div>
                             <p class="nbc-title"><?= $a[1] ?></p>
-                            <p class="nbc-desc"><?= $a[2] ?></p>
-                            <a href="<?= $a[0] ?>" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc"><?= $a[2] ?></p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -864,23 +908,26 @@
             <div class="row">
                 <?php
                 $trust = [
-                    ['/blog/nisan-bilimora-story','Nisan Cable TV &amp; Internet: 30+ Years Serving Bilimora','Founded 1993. 2,000+ customers. Why Bilimora chose a local provider over national chains.','Our Story','5 min'],
-                    ['/blog/nisan-bilimora-reviews','Nisan Internet Bilimora Reviews: What Customers Say','Real testimonials from WFH professionals, students, families, and shop owners.','Reviews','4 min'],
-                    ['/blog/why-2000-bilimora-families-trust-nisan','Why 2,000+ Bilimora Families Trust Nisan Cable TV &amp; Internet','8 reasons local families pick Nisan — service, reliability, and 30 years of presence.','Trust','5 min'],
+                    ['/blog/nisan-bilimora-story','Nisan Cable TV &amp; Internet: 30+ Years Serving Bilimora','Founded 1993. 2,000+ customers. Why Bilimora chose a local provider over national chains.','Our Story','5 min','&#128246;'],
+                    ['/blog/nisan-bilimora-reviews','Nisan Internet Bilimora Reviews: What Customers Say','Real testimonials from WFH professionals, students, families, and shop owners.','Reviews','4 min','&#11088;'],
+                    ['/blog/why-2000-bilimora-families-trust-nisan','Why 2,000+ Bilimora Families Trust Nisan Cable TV &amp; Internet','8 reasons local families pick Nisan — service, reliability, and 30 years of presence.','Trust','5 min','&#127942;'],
                 ];
                 foreach($trust as $a): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="nbc nbc-trust">
-                        <div class="nbc-body">
+                    <a href="<?= $a[0] ?>" class="nbc nbc-trust" style="text-decoration:none;">
+                        <div class="nbc-banner">
+                            <span class="nbc-icon"><?= $a[5] ?></span>
                             <div class="nbc-tag-row">
                                 <span class="nbc-tag"><?= $a[3] ?></span>
                                 <span class="nbc-read-time">&#9201; <?= $a[4] ?> read</span>
                             </div>
                             <p class="nbc-title"><?= $a[1] ?></p>
-                            <p class="nbc-desc"><?= $a[2] ?></p>
-                            <a href="<?= $a[0] ?>" class="nbc-link">Read article &#8594;</a>
                         </div>
-                    </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc"><?= $a[2] ?></p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             </div>
