@@ -533,6 +533,45 @@
     </div>
 </section>
 
+<!-- reliability-area -->
+<section class="section-space-top section-meadium-bottom" style="background:#F4F8FF;">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-xl-10">
+<div class="section-title text-center mb-40">
+<h2 class="title">Most Reliable Internet in Bilimora — Here Is Why</h2>
+<p>Nisan runs underground FTTH cable fiber in Bilimora West. Underground cable is immune to rain, monsoon, and weather — unlike Air Fiber or overhead cables that degrade in heavy rain.</p>
+</div>
+<div class="row g-4">
+<div class="col-md-4">
+<div style="background:#fff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 16px rgba(0,0,0,.07);height:100%">
+<h3 style="font-size:1.1rem;color:#0066cc;font-weight:800;margin-bottom:12px">🔌 Underground Cable Fiber</h3>
+<p style="color:#555;font-size:15px;margin:0">Nisan's fiber runs underground — unaffected by rain, monsoon, storms or wind. Air Fiber and overhead cables fail in heavy rain. Nisan's cable does not.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div style="background:#fff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 16px rgba(0,0,0,.07);height:100%">
+<h3 style="font-size:1.1rem;color:#0066cc;font-weight:800;margin-bottom:12px">⚡ Same-Day Fault Resolution</h3>
+<p style="color:#555;font-size:15px;margin:0">When a fault is reported, a local Bilimora technician is dispatched the same day — 7 AM to 10 PM, every day of the year. Jio and Airtel take 48–72 hours through a call centre.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div style="background:#fff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 16px rgba(0,0,0,.07);height:100%">
+<h3 style="font-size:1.1rem;color:#0066cc;font-weight:800;margin-bottom:12px">📶 Consistent Speed at All Hours</h3>
+<p style="color:#555;font-size:15px;margin:0">Dedicated cable to your home means no peak-hour congestion. Jio AirFiber drops to 5–10 Mbps at 9 PM. Nisan fiber delivers your plan speed morning and night.</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-40">
+<p style="font-size:15px;color:#555;max-width:640px;margin:0 auto 20px">Unlike national ISPs, Nisan is owner-run by Kanubhai Patel — a local Bilimora business since 1993. Your complaint reaches a decision-maker, not a call centre queue.</p>
+<a class="btn" href="/contact.php">Get Connected — Same-Day Installation</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- reliability-area-end -->
+
 <div class="special-price-wrap">
                     <h2 class="special-price"><sup>₹</sup>4,999<sub>Yearly</sub></h2>
                     <p class="trial-link"><i class="flaticon-wifi-router"></i><a href="/contact.php">Try Free For 1 Month</a></p>
