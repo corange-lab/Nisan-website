@@ -51,7 +51,7 @@
       "name": "How is Nisan customer service in Bilimora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nisan's customer service is available 9 AM\u20139 PM, Monday to Saturday at +91 98251 52400. Being a local Bilimora business, technicians know the area and resolve most issues the same day."
+        "text": "Nisan's customer service is available 8 AM–10 PM, 365 days a year at +91 98251 52400. Being a local Bilimora business, technicians know the area and resolve most issues the same day."
       }
     },
     {
@@ -233,7 +233,7 @@
                 <h3>Is Nisan internet reliable in Bilimora?</h3>
                 <p>Yes. Nisan's FTTH fiber network in Bilimora West is purpose-built for local reliability. Over 2,000 families and businesses trust Nisan. The 4.9-star Google rating reflects consistent real-world performance.</p>
                 <h3>How is Nisan customer service in Bilimora?</h3>
-                <p>Nisan's customer service is available 7 AM–10 PM, Monday to Saturday at +91 98251 52400. Being a local Bilimora business, technicians know the area and resolve most issues the same day.</p>
+                <p>Nisan's customer service is available 8 AM–10 PM, 365 days a year at +91 98251 52400. Being a local Bilimora business, technicians know the area and resolve most issues the same day.</p>
                 <h3>Would you recommend Nisan internet in Bilimora?</h3>
                 <p>Based on 2,000+ customer reviews and a 4.9-star Google rating, Nisan is the most recommended local ISP in Bilimora — particularly for price, local support, and reliable fiber connection.</p>
                 </div>

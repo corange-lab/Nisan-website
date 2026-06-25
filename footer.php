@@ -152,8 +152,8 @@
                                 <h4 class="title">Service Schedule</h4>
                             </div>
                             <ul class="fw-schedule-list">
-                                <li>Monday - Saturday <span>9:00 AM - 9:00 PM</span></li>
-                                <li>Sunday : <span class="close">Closed</span></li>
+                                <li>Every Day <span>8:00 AM - 10:00 PM</span></li>
+                                <li>365 Days <span>No Holidays</span></li>
                             </ul>
                         </div>
                     </div>

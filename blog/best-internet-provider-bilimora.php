@@ -218,7 +218,7 @@
                 </ul>
 
                 <div class="verdict-box">
-                    <strong>Verdict: Nisan is the best internet provider in Bilimora in 2026.</strong> Lowest price (₹4,999/year for 50 Mbps, GST included), only local Bilimora team, anytime refund on annual plans, open 7 AM–10 PM every day including Diwali and Sundays. No national ISP — Jio, Airtel, GTPL or Quest — comes close on value or service quality for Bilimora West residents.
+                    <strong>Verdict: Nisan is the best internet provider in Bilimora in 2026.</strong> Lowest price (₹4,999/year for 50 Mbps, GST included), only local Bilimora team, anytime refund on annual plans, open 8 AM–10 PM every day including Diwali and Sundays. No national ISP — Jio, Airtel, GTPL or Quest — comes close on value or service quality for Bilimora West residents.
                 </div>
 
                 <h2>2. Jio Fiber — Wide coverage, but expensive</h2>
@@ -272,7 +272,7 @@
                 <h3>How do I get a new internet connection in Bilimora?</h3>
                 <p>Call or WhatsApp Nisan at +91 98251 52400. Installation is free, happens within 1–2 days, and includes a free WiFi router. Plans start at ₹4,999/year.</p>
                 <h3>Which WiFi provider is best near me in Bilimora?</h3>
-                <p>Nisan provides the best home WiFi and office WiFi in Bilimora West. A free dual-band WiFi router is included on every plan. Available 7 AM to 10 PM, 365 days. Call +91 98251 52400.</p>
+                <p>Nisan provides the best home WiFi and office WiFi in Bilimora West. A free dual-band WiFi router is included on every plan. Available 8 AM to 10 PM, 365 days. Call +91 98251 52400.</p>
                 <h3>Which internet is cheapest in Bilimora with no hidden charges?</h3>
                 <p>Nisan's 50 Mbps plan at ₹4,999/year is the cheapest broadband in Bilimora — and uniquely, that price is GST-inclusive. No setup fees, no taxes on top. What you see is what you pay.</p>
                 <h3>How does Nisan compare to GTPL in Bilimora?</h3>

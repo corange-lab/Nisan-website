@@ -85,8 +85,8 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "09:00",
-          "closes": "21:00"
+          "opens": "08:00",
+          "closes": "22:00"
         }
       ],
       "priceRange": "₹4,999 – ₹11,499/year",
@@ -147,7 +147,7 @@
           "name": "Does Nisan provide support on Sundays and holidays?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Nisan's support team works 365 days a year — including Sundays, Diwali, Navratri, Holi, and every public holiday. Most issues are resolved the same day. Call or WhatsApp +91 98251 52400 any day, 7 AM to 10 PM."
+            "text": "Yes. Nisan's support team works 365 days a year — including Sundays, Diwali, Navratri, Holi, and every public holiday. Most issues are resolved the same day. Call or WhatsApp +91 98251 52400 any day, 8 AM to 10 PM."
           }
         },
         {
@@ -187,7 +187,7 @@
           "name": "Which WiFi service is near me in Bilimora?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nisan Cable TV & Internet provides home WiFi and office WiFi across Bilimora West. Starting at ₹4,999/year with free installation and free WiFi router. Call +91 98251 52400 — available 7 AM to 10 PM, 365 days."
+            "text": "Nisan Cable TV & Internet provides home WiFi and office WiFi across Bilimora West. Starting at ₹4,999/year with free installation and free WiFi router. Call +91 98251 52400 — available 8 AM to 10 PM, 365 days."
           }
         },
         {
@@ -632,14 +632,14 @@
 <h2 class="accordion-header" id="headingSeven"><button aria-controls="collapseSeven" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseSeven" data-bs-toggle="collapse" type="button">Do you provide customer support?</button></h2>
 
 <div aria-labelledby="headingSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseSeven">
-<div class="accordion-body">Yes. Nisan support is available 7 AM to 10 PM, 365 days a year — Sundays, Diwali, Navratri, every holiday. No complaint windows, no "call back tomorrow." If you get home at 9 PM and internet is not working, call us immediately. We act the same day.</div>
+<div class="accordion-body">Yes. Nisan support is available 8 AM to 10 PM, 365 days a year — Sundays, Diwali, Navratri, every holiday. No complaint windows, no "call back tomorrow." If you get home at 9 PM and internet is not working, call us immediately. We act the same day.</div>
 </div>
 </div>
 
 <div class="accordion-item">
 <h2 class="accordion-header" id="headingEight"><button aria-controls="collapseEight" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseEight" data-bs-toggle="collapse" type="button">Is WiFi or broadband available near me in Bilimora?</button></h2>
 <div aria-labelledby="headingEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseEight">
-<div class="accordion-body">Yes. Nisan provides home WiFi and office broadband across Bilimora West (W Zone, PIN 396321). Plans start at ₹4,999/year with free installation and free WiFi router. Call +91 98251 52400 to check coverage at your address — 7 AM to 10 PM, every day.</div>
+<div class="accordion-body">Yes. Nisan provides home WiFi and office broadband across Bilimora West (W Zone, PIN 396321). Plans start at ₹4,999/year with free installation and free WiFi router. Call +91 98251 52400 to check coverage at your address — 8 AM to 10 PM, every day.</div>
 </div>
 </div>
 <div class="accordion-item">
