@@ -421,7 +421,7 @@
                                 <div class="row">
                                     <div class="col-md-4 col-sm-6">
                                         <div class="fact-item">
-                                            <h4 class="title"><span class="odometer" data-count="400"></span>+</h4>
+                                            <h4 class="title"><span class="counter-anim" data-count="400">0</span>+</h4>
                                             <p>Mbps Speed Internet</p>
                                         </div>
                                     </div>
@@ -1019,5 +1019,37 @@
 <script src="assets/js/swiper.min.js" defer></script>
 <script src="assets/js/wow.min.js" defer></script>
 <script src="assets/js/main.js" defer></script>
-
+<script>
+// Inline counter — runs immediately, no plugin dependency
+(function(){
+  function animateCounter(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var duration = 1800;
+    var start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      // ease-out
+      var val = Math.floor(progress * (2 - progress) * target);
+      el.textContent = val;
+      if(progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  var els = document.querySelectorAll('.counter-anim');
+  if(!els.length) return;
+  if('IntersectionObserver' in window){
+    var fired = false;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && !fired){ fired=true; els.forEach(animateCounter); obs.disconnect(); }
+      });
+    }, {threshold: 0.2});
+    els.forEach(function(el){ obs.observe(el); });
+  } else {
+    els.forEach(animateCounter);
+  }
+})();
+</script>
 </body>
