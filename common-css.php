@@ -10,11 +10,12 @@
 	<link href="/assets/css/style.css" rel="stylesheet" />
 	<link href="/assets/css/accessibility.css" rel="stylesheet" />
 
+	<!-- Icons: inline SVG replacement for FontAwesome + Flaticon (8KB vs 1.4MB) -->
+	<link href="/assets/css/icons.css" rel="stylesheet" />
+
 	<!-- Non-critical CSS - Load asynchronously -->
 	<link href="/assets/css/animate.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-	<link href="/assets/css/fontawesome-pro.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 	<link href="/assets/css/owl.carousel.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-	<link href="/assets/css/flaticon.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 	<link href="/assets/css/odometer.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 	<link href="/assets/css/swiper.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 	<link href="/assets/css/slick.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -23,9 +24,7 @@
 	<!-- Fallback for browsers that don't support preload -->
 	<noscript>
 		<link href="/assets/css/animate.min.css" rel="stylesheet" />
-		<link href="/assets/css/fontawesome-pro.css" rel="stylesheet" />
 		<link href="/assets/css/owl.carousel.min.css" rel="stylesheet" />
-		<link href="/assets/css/flaticon.css" rel="stylesheet" />
 		<link href="/assets/css/odometer.css" rel="stylesheet" />
 		<link href="/assets/css/swiper.min.css" rel="stylesheet" />
 		<link href="/assets/css/slick.css" rel="stylesheet" />
