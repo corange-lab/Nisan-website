@@ -265,9 +265,6 @@
 
 <?php include('header.php'); ?>
 <!-- main-area -->
-<!-- Preloader -->
-    <div id="preloader" role="status" aria-label="Loading page"><img alt="Loading..." src="assets/imgs/preloader.gif" /></div>
-<!-- Preloader-end -->
 
 <!-- Scroll-top -->
 
