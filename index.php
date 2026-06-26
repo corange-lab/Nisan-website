@@ -521,7 +521,7 @@
             Not sure? We understand. That is why every Nisan plan comes with a <strong>anytime refund guarantee</strong> — no conditions, no questions. If you are not happy in the first 30 days, you get every rupee back.
         </p>
         <p class="broadband-description">
-            We do not take your trust for granted. Nisan's team works <strong>365 days a year — no Sundays off, no holidays</strong>. Internet problems don't wait for Monday morning. Neither do we. Most issues are fixed the same day you call.
+            We do not take your trust for granted. Nisan's team is available <strong>8 AM to 10 PM, 365 days a year</strong>. Most issues are fixed the same day you call.
         </p>
         <p class="broadband-description">
             Plans start at <strong>₹4,999/year</strong> (50 Mbps) — up to <strong>400 Mbps</strong> for Bilimora homes and businesses. Free installation, free router, unlimited data. <strong>Price shown is the final price — GST included, no hidden fees, no taxes on top.</strong> What you see is what you pay.
@@ -541,20 +541,29 @@
 <div class="row g-4">
 <div class="col-md-4">
 <div style="background:#fff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 16px rgba(0,0,0,.07);height:100%">
-<h3 style="font-size:1.1rem;color:#0066cc;font-weight:800;margin-bottom:12px">🔌 Underground Cable Fiber</h3>
-<p style="color:#555;font-size:15px;margin:0">Nisan's fiber runs underground — unaffected by rain, monsoon, storms or wind. Air Fiber and overhead cables fail in heavy rain. Nisan's cable does not.</p>
+<div style="width:48px;height:48px;background:#EEF4FF;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 576 512" fill="#0066cc"><path d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32H544c17.7 0 32 14.3 32 32V288c0 17.7-14.3 32-32 32s-32-14.3-32-32V205.3L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160H384z"/></svg>
+</div>
+<h3 style="font-size:1.05rem;color:#1a1a2e;font-weight:800;margin-bottom:10px">Underground Cable Fiber</h3>
+<p style="color:#666;font-size:14.5px;margin:0;line-height:1.6">Nisan's fiber runs underground — unaffected by rain, monsoon, storms or wind. Air Fiber and overhead cables fail in heavy rain. Nisan's cable does not.</p>
 </div>
 </div>
 <div class="col-md-4">
 <div style="background:#fff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 16px rgba(0,0,0,.07);height:100%">
-<h3 style="font-size:1.1rem;color:#0066cc;font-weight:800;margin-bottom:12px">⚡ Same-Day Fault Resolution</h3>
-<p style="color:#555;font-size:15px;margin:0">When a fault is reported, a local Bilimora technician is dispatched the same day — 7 AM to 10 PM, every day of the year. Jio and Airtel take 48–72 hours through a call centre.</p>
+<div style="width:48px;height:48px;background:#EEF4FF;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512" fill="#0066cc"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H233.7L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H214.3L349.4 44.6z"/></svg>
+</div>
+<h3 style="font-size:1.05rem;color:#1a1a2e;font-weight:800;margin-bottom:10px">Same-Day Fault Resolution</h3>
+<p style="color:#666;font-size:14.5px;margin:0;line-height:1.6">When a fault is reported, a local Bilimora technician is dispatched the same day — 8 AM to 10 PM, 365 days a year. Jio and Airtel take 48–72 hours through a call centre.</p>
 </div>
 </div>
 <div class="col-md-4">
 <div style="background:#fff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 16px rgba(0,0,0,.07);height:100%">
-<h3 style="font-size:1.1rem;color:#0066cc;font-weight:800;margin-bottom:12px">📶 Consistent Speed at All Hours</h3>
-<p style="color:#555;font-size:15px;margin:0">Dedicated cable to your home means no peak-hour congestion. Jio AirFiber drops to 5–10 Mbps at 9 PM. Nisan fiber delivers your plan speed morning and night.</p>
+<div style="width:48px;height:48px;background:#EEF4FF;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 512" fill="#0066cc"><path d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.3-.9s11.8-33-.9-45.3C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.3 .9zM320 256c56.8 0 108.6 21.1 148.2 55.7c13.4 11.7 33.6 10.4 45.3-3s10.4-33.6-3-45.3C459.8 219.2 392 192 320 192s-139.8 27.2-190.5 71.4c-13.4 11.7-14.7 31.9-3 45.3s31.9 14.7 45.3 3C211.4 277.1 263.2 256 320 256zm0 96c-27.6 0-52.6 11.4-70.7 29.7c-12.3 12.5-12.1 32.7 .4 45s32.7 12.1 45-.4c6.7-6.8 16-11.3 26.3-11.3s19.6 4.4 26.3 11.3c12.3 12.5 32.5 12.7 45 .4s12.7-32.5 .4-45C372.6 363.4 347.6 352 320 352zm0 96a32 32 0 1 0 0 64 32 32 0 1 0 0-64z"/></svg>
+</div>
+<h3 style="font-size:1.05rem;color:#1a1a2e;font-weight:800;margin-bottom:10px">Consistent Speed at All Hours</h3>
+<p style="color:#666;font-size:14.5px;margin:0;line-height:1.6">Dedicated cable to your home means no peak-hour congestion. Jio AirFiber drops to 5–10 Mbps at 9 PM. Nisan fiber delivers your plan speed morning and night.</p>
 </div>
 </div>
 </div>
