@@ -190,10 +190,10 @@
 
 <?php include('footer.php'); ?>
 
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/jarallax.min.js" defer></script>
     <script src="assets/js/wow.min.js" defer></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ header("Content-Security-Policy: " .
         "https://www.google-analytics.com https://*.google-analytics.com " .
         "https://www.googleadservices.com https://googleads.g.doubleclick.net " .
         "https://www.google.com https://connect.facebook.net; " .
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " .
+    "style-src 'self' 'unsafe-inline'; " .
     "font-src 'self' https://fonts.gstatic.com; " .
     "img-src 'self' data: https: blob:; " .
     "frame-src https://www.googletagmanager.com https://td.doubleclick.net; " .

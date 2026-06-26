@@ -20,7 +20,6 @@
      High-speed internet for gaming Bilimora, 24/7 customer support internet Bilimora">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
     <link rel="dns-prefetch" href="//maps.app.goo.gl">
     <link rel="preload" as="image" href="assets/imgs/slider/banner_bg.webp">
@@ -1008,17 +1007,17 @@
 </main>
 <!-- main-area-end -->
 <?php include('footer.php'); ?>
-<!-- JS - plugins must load before main.js (called at global scope) -->
-<script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jarallax.min.js"></script>
-<script src="assets/js/main.js"></script>
+<!-- JS - jQuery + plugins must load in order before main.js -->
+<script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+<script src="assets/js/bootstrap.min.js" defer></script>
+<script src="assets/js/owl.carousel.min.js" defer></script>
+<script src="assets/js/slick.min.js" defer></script>
+<script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+<script src="assets/js/jarallax.min.js" defer></script>
 <script src="assets/js/jquery.odometer.min.js" defer></script>
 <script src="assets/js/jquery.appear.js" defer></script>
 <script src="assets/js/swiper.min.js" defer></script>
 <script src="assets/js/wow.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 
 </body>
