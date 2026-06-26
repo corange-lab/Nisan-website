@@ -523,7 +523,14 @@ $('.qtybutton-box span').on("click", function () {
 		if (fired) return;
 		fired = true;
 		odoEls.forEach(function (el) {
-			el.innerHTML = el.getAttribute('data-count');
+			// Init Odometer on the element first, then set value to trigger animation
+			if (window.Odometer) {
+				var od = new Odometer({ el: el, value: 0 });
+				od.update(parseInt(el.getAttribute('data-count'), 10));
+			} else {
+				// Odometer not loaded yet — just show the number
+				el.innerHTML = el.getAttribute('data-count');
+			}
 		});
 	}
 	if ('IntersectionObserver' in window) {
@@ -534,7 +541,6 @@ $('.qtybutton-box span').on("click", function () {
 		}, { threshold: 0.3 });
 		odoEls.forEach(function (el) { obs.observe(el); });
 	} else {
-		// Fallback for old browsers
 		window.addEventListener('load', runOdo);
 	}
 }());
