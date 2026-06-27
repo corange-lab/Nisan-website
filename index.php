@@ -240,6 +240,38 @@
             "@type": "Answer",
             "text": "For most addresses in Bilimora West, Nisan completes broadband installation within 1–2 days of your call. Same-day visits are common. No long waiting, no paperwork. Call +91 98251 52400 any day, 8 AM to 10 PM."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents are required for a new broadband connection in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Just one government-issued photo ID — Aadhaar card is easiest. No advance deposit, no lengthy forms. Share a photo on WhatsApp or show it when our technician visits. That is all that is needed for a new internet connection in Bilimora."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there any installation charge for a new internet connection in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Nisan provides free installation for all new broadband and cable TV connections in Bilimora. A free WiFi router is included with every plan. The annual price shown is the final price — GST included, nothing extra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is JioFiber available in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JioFiber has limited and patchy coverage in Bilimora West (W Zone, PIN 396321). Even where available, Jio's 100 Mbps plan costs around ₹7,188/year — nearly ₹1,700 more than Nisan's ₹5,499/year plan. Nisan covers all of Bilimora West with same-day local support and free installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch to Nisan from another internet provider in Bilimora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Switching to Nisan from Jio, GTPL, BSNL or any other provider is simple — no need to cancel your existing connection first. Call +91 98251 52400, we install your new connection, and you switch once satisfied. Anytime refund guarantee applies if you are not happy."
+          }
         }
       ]
     },
@@ -733,6 +765,30 @@
 <h2 class="accordion-header" id="headingEleven"><button aria-controls="collapseEleven" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseEleven" data-bs-toggle="collapse" type="button">How long does it take to get a new broadband connection?</button></h2>
 <div aria-labelledby="headingEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseEleven">
 <div class="accordion-body">For most addresses in Bilimora West, we complete the installation within 1–2 days of your call. We visit the same day to check your location, and if the cable is already nearby, we can sometimes connect you the same day. No long waiting, no paperwork — just call +91 98251 52400.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingTwelve"><button aria-controls="collapseTwelve" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseTwelve" data-bs-toggle="collapse" type="button">What documents are required for a new broadband connection in Bilimora?</button></h2>
+<div aria-labelledby="headingTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseTwelve">
+<div class="accordion-body">Very minimal paperwork — just one government-issued photo ID (Aadhaar card is easiest) and a recent address proof if your Aadhaar shows a different address. No lengthy forms, no advance deposit. Bring your Aadhaar card when our technician visits, or share a photo on WhatsApp. That's it.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingThirteen"><button aria-controls="collapseThirteen" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseThirteen" data-bs-toggle="collapse" type="button">Is there any installation charge for a new internet connection in Bilimora?</button></h2>
+<div aria-labelledby="headingThirteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseThirteen">
+<div class="accordion-body">No installation charge — ever. New connection, plan upgrade, or annual renewal — installation and setup is always free. A free WiFi router is also included with every plan. The price you see is the only price you pay. GST included, nothing extra.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFourteen"><button aria-controls="collapseFourteen" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseFourteen" data-bs-toggle="collapse" type="button">Is JioFiber available in Bilimora?</button></h2>
+<div aria-labelledby="headingFourteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseFourteen">
+<div class="accordion-body">JioFiber has limited coverage in Bilimora and is not available in all areas of Bilimora West (W Zone). Even where available, Jio's 100 Mbps plan costs around ₹599/month (₹7,188/year) — nearly ₹1,700 more per year than Nisan's 100 Mbps plan at ₹5,499/year. Nisan is fully available across Bilimora West with same-day support and free installation. Call +91 98251 52400 to confirm coverage at your address.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFifteen"><button aria-controls="collapseFifteen" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseFifteen" data-bs-toggle="collapse" type="button">Can I switch to Nisan from another internet provider in Bilimora?</button></h2>
+<div aria-labelledby="headingFifteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseFifteen">
+<div class="accordion-body">Yes — switching to Nisan is simple. You do not need to cancel your old connection first. Call us on +91 98251 52400, we visit, install your new Nisan connection, and you switch over once you are satisfied. Many customers switch from Jio, GTPL, and BSNL because of faster local support and lower annual pricing. If your new Nisan connection does not meet your expectations, our anytime refund guarantee means you can get a refund — no questions asked.</div>
 </div>
 </div>
 </div>
