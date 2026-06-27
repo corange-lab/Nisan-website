@@ -10,24 +10,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us – Nisan Cable TV & Internet in Bilimora</title>
-    <meta name="description" content="Get in touch with Nisan Cable TV & Internet in Bilimora. Call, email, or visit us for inquiries about broadband and cable TV services.">
-    <meta name="keywords" content="contact Nisan internet provider, customer support Bilimora, broadband help Bilimora, cable TV contact Bilimora">
+    <title>New Internet Connection in Bilimora — Get Connected | Nisan</title>
+    <meta name="description" content="Get a new broadband or internet connection in Bilimora. Call Nisan — free installation, same-day visit, plans from ₹4,999/yr. Open 365 days, 8 AM–10 PM. +91 98251 52400.">
+    <meta name="keywords" content="new internet connection Bilimora, broadband connection Bilimora, new broadband connection Bilimora, internet connection near me Bilimora, WiFi connection Bilimora, fiber internet connection Bilimora, get internet connection Bilimora, contact Nisan internet provider, customer support Bilimora">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/contact">
 
-    <meta property="og:title" content="Contact Nisan Cable TV & Internet in Bilimora">
+    <meta property="og:title" content="New Internet Connection in Bilimora — Get Connected | Nisan">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nisan.co.in/contact">
     <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
-    <meta property="og:image:alt" content="Contact Nisan Cable TV & Internet">
-    <meta property="og:description" content="Get in touch with Nisan Cable TV & Internet in Bilimora. Call, email, or visit us for inquiries about broadband and cable TV services.">
+    <meta property="og:image:alt" content="New Internet Connection in Bilimora — Nisan">
+    <meta property="og:description" content="Get a new broadband or internet connection in Bilimora. Free installation, same-day visit, plans from ₹4,999/yr. Open 365 days. Call +91 98251 52400.">
     <meta property="og:site_name" content="Nisan Cable & Internet">
     <meta property="og:locale" content="en_IN">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Nisan Cable TV & Internet in Bilimora">
-    <meta name="twitter:description" content="Call, email, or visit Nisan Cable TV & Internet in Bilimora for inquiries about broadband and cable TV services.">
+    <meta name="twitter:title" content="New Internet Connection in Bilimora — Get Connected | Nisan">
+    <meta name="twitter:description" content="Get a new broadband or internet connection in Bilimora. Free installation, same-day visit, plans from ₹4,999/yr. Open 365 days. Call +91 98251 52400.">
     <meta name="twitter:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
 
     <script type="application/ld+json">
@@ -36,8 +36,34 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nisan.co.in/"},
-        {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.nisan.co.in/contact"}
+        {"@type": "ListItem", "position": 2, "name": "New Internet Connection", "item": "https://www.nisan.co.in/contact"}
       ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "New Internet Connection in Bilimora",
+      "alternateName": ["Broadband Connection Bilimora", "New Broadband Connection Bilimora", "WiFi Connection Bilimora", "Fiber Internet Connection Bilimora"],
+      "description": "Get a new home or office broadband internet connection in Bilimora. Free installation, free WiFi router, plans from ₹4,999/year. Same-day visit. 365 days support.",
+      "provider": {
+        "@type": "InternetServiceProvider",
+        "name": "Nisan Cable TV & Internet",
+        "url": "https://www.nisan.co.in",
+        "telephone": "+919825152400",
+        "areaServed": {"@type": "City", "name": "Bilimora"}
+      },
+      "areaServed": {"@type": "City", "name": "Bilimora"},
+      "offers": {
+        "@type": "Offer",
+        "price": "4999",
+        "priceCurrency": "INR",
+        "priceSpecification": {"@type": "UnitPriceSpecification", "billingDuration": "P1Y"},
+        "description": "Broadband internet connection from ₹4,999/year. Free installation included."
+      },
+      "url": "https://www.nisan.co.in/contact"
     }
     </script>
 
@@ -55,7 +81,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
                         <div class="breadcrumb-content">
-                            <h1 class="title">Contact Nisan – Your Local Internet & Cable Provider</h1>
+                            <h1 class="title">Get a New Internet Connection in Bilimora</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
@@ -75,7 +101,8 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="contact-title">
-                            <h3 class="title">Get in Touch</h3>
+                            <h3 class="title">Apply for a New Broadband or Internet Connection</h3>
+                            <p style="margin-bottom:20px; color:#555; line-height:1.7;">Want a new internet connection in Bilimora? Fill in the form below — we'll call you back the same day, visit your home, and install for free. Plans start at ₹4,999/year. No hidden charges, GST included.</p>
                         </div>
                         <form action="/thank-you" method="post" class="contact-form">
                             <div class="row">
