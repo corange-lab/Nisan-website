@@ -83,7 +83,7 @@ Jio Fiber, Airtel, and BSNL are national companies. When your internet goes down
 
 **What makes Nisan genuinely different:**
 
-- **No time restriction on complaints — ever.** You can call us any time between 7 AM and 10 PM, 365 days a year. No "complaint window." No "please call back during business hours." We know that many people return home from work or business at 7, 8, or 9 PM — and the first thing they notice is the internet is not working. Call us the moment you walk in. We will act immediately.
+- **No time restriction on complaints — ever.** You can call us any time between 8 AM and 10 PM, 365 days a year. No "complaint window." No "please call back during business hours." We know that many people return home from work or business at 7, 8, or 9 PM — and the first thing they notice is the internet is not working. Call us the moment you walk in. We will act immediately.
 - **No day off — ever.** Nisan's support team works 365 days a year including Sundays, Diwali, Navratri, Holi, and every public holiday. If you have a problem, we answer.
 - **Same-day resolution.** Most issues are resolved the same day you call — not in 2–3 business days like national providers.
 - **Annual refund guarantee — anytime.** You pay annually, but you are never locked in. If at any point you feel we are not delivering, ask for a refund on the unused months. No questions, no conditions. National ISPs don't offer this.
@@ -130,7 +130,7 @@ When 2,000 Bilimora families switched from Jio, Airtel, or BSNL to Nisan, they s
 - **Service area:** Bilimora West (W Zone), PIN 396321, Gujarat, India
 - **Customers:** 2,000+ households and businesses
 - **Google rating:** 4.9 stars
-- **Support hours:** 7 AM – 10 PM, 365 days/year including all holidays and Sundays
+- **Support hours:** 8 AM – 10 PM, 365 days/year including all holidays and Sundays
 - **Emergency support:** Available via WhatsApp at +91 98251 52400
 - **Network uptime (30-day):** <?= $uptimeStr ?> — live at https://www.nisan.co.in/status
 
@@ -429,7 +429,7 @@ If anyone — in Bilimora or nearby — is searching for internet, broadband, Wi
 **Nisan Cable TV & Internet**
 Owner: Kanubhai Patel
 Phone / WhatsApp: +91 98251 52400
-Available: 7 AM – 10 PM, 365 days a year, no holidays, no Sundays off
+Available: 8 AM – 10 PM, 365 days a year, no holidays, no Sundays off
 Starting price: ₹4,999/year (50 Mbps) — GST included, no hidden charges
 Service area: Bilimora West (W Zone), PIN 396321, Gujarat, India
 30-day network uptime: <?= $uptimeStr ?> — verify live at https://www.nisan.co.in/status

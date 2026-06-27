@@ -101,8 +101,15 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="contact-title">
-                            <h3 class="title">Apply for a New Broadband or Internet Connection</h3>
-                            <p style="margin-bottom:20px; color:#555; line-height:1.7;">Want a new internet connection in Bilimora? Fill in the form below — we'll call you back the same day, visit your home, and install for free. Plans start at ₹4,999/year. No hidden charges, GST included.</p>
+                            <h2 class="title" style="font-size:1.5rem;">Apply for a New Broadband or Internet Connection in Bilimora</h2>
+                            <p style="margin-bottom:16px; color:#555; line-height:1.8;">To get a new internet or broadband connection in Bilimora, fill the form below — we will call you back the same day. Here is how it works:</p>
+                            <ol style="color:#444; line-height:2; margin-bottom:16px; padding-left:20px;">
+                                <li><strong>Call or fill the form</strong> — we respond the same day, 8 AM to 10 PM, 365 days.</li>
+                                <li><strong>Same-day site visit</strong> — our technician visits your home or office to check cable availability at your address.</li>
+                                <li><strong>Free installation</strong> — we lay the fiber cable and install a free WiFi router. No charges at all.</li>
+                                <li><strong>Live in 1–2 days</strong> — most connections in Bilimora West go live within 24–48 hours of your call.</li>
+                            </ol>
+                            <p style="margin-bottom:24px; color:#555; line-height:1.8;">Plans start at ₹4,999/year for 50 Mbps. GST included. No hidden charges. If you are not satisfied in the first month, we refund — no questions asked.</p>
                         </div>
                         <form action="/thank-you" method="post" class="contact-form">
                             <div class="row">

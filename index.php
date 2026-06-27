@@ -78,8 +78,11 @@
         "longitude": 72.96571570523047
       },
       "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Bilimora West, Gujarat, India"
+        "@type": "City",
+        "name": "Bilimora",
+        "postalCode": "396321",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
       },
       "openingHoursSpecification": [
         {
@@ -493,7 +496,27 @@
 </div>
 </div>
 </section>
-<!-- services-area-end --><!-- cta-area -->
+<!-- services-area-end -->
+
+<!-- isp-near-me-prose-area -->
+<section style="padding:50px 0; background:#f8f9fa;">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-10">
+
+<h2 style="font-size:1.55rem; font-weight:700; margin-bottom:14px; color:#111;">Internet Service Provider in Bilimora — Nisan Cable TV & Internet</h2>
+<p style="color:#444; line-height:1.85; margin-bottom:28px;">Nisan Cable TV & Internet is Bilimora's most trusted local internet service provider (ISP) — serving homes and offices in Bilimora West since 1993. As a local ISP, we offer fiber broadband from 50 Mbps to 400 Mbps, home WiFi connections, and cable TV, all at prices 40–55% lower than Jio Fiber and Airtel. Every plan includes free installation, a free WiFi router, and GST. Support is available every day of the year — 8 AM to 10 PM, including Sundays and all holidays. <a href="/services.php" style="color:#0066cc;">See all services →</a></p>
+
+<h2 style="font-size:1.55rem; font-weight:700; margin-bottom:14px; color:#111;">Broadband & Internet Connection Near Me in Bilimora</h2>
+<p style="color:#444; line-height:1.85; margin-bottom:0;">Looking for a new broadband or internet connection near you in Bilimora? Nisan covers Bilimora West (W Zone, PIN 396321) including Station Road, Soniwad, Jamna Nagar, and nearby areas. Getting a new connection is fast — call +91 98251 52400, we visit the same day, and install within 1–2 days for free. Plans from ₹4,999/year. No long wait, no paperwork, no hidden charges. We are your local Bilimora ISP — not a call centre. <a href="/contact.php" style="color:#0066cc;">Apply for a new connection →</a></p>
+
+</div>
+</div>
+</div>
+</section>
+<!-- isp-near-me-prose-area-end -->
+
+<!-- cta-area -->
 
 <section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/cta_bg.webp">
 <div class="container">

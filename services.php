@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services – Internet & Cable TV in Bilimora | Nisan</title>
-    <meta name="description" content="Explore Nisan's broadband and cable TV services in Bilimora. High-speed FTTH internet, affordable cable packages, and 24/7 support for your home and business.">
-    <meta name="keywords" content="internet services Bilimora, broadband plans Bilimora, cable TV Bilimora, unlimited internet Bilimora, FTTH provider Bilimora">
+    <title>Internet Service Provider in Bilimora — Nisan Cable TV & Internet</title>
+    <meta name="description" content="Nisan is Bilimora's trusted internet service provider (ISP) since 1993. New broadband connections, WiFi, fiber internet & cable TV. Free installation. Plans from ₹4,999/yr. Call +91 98251 52400.">
+    <meta name="keywords" content="internet service provider Bilimora, ISP Bilimora, broadband connection Bilimora, WiFi connection Bilimora, new internet connection Bilimora, fiber internet Bilimora, cable TV Bilimora, unlimited internet Bilimora, FTTH provider Bilimora">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/services">
 
-    <meta property="og:title" content="Internet & Cable TV Services in Bilimora | Nisan">
+    <meta property="og:title" content="Internet Service Provider in Bilimora — Nisan Cable TV & Internet">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nisan.co.in/services">
     <meta property="og:image" content="https://www.nisan.co.in/assets/imgs/metaog.webp">
@@ -46,9 +46,15 @@
         "telephone": "+91 98251 52400",
         "areaServed": "Bilimora, Gujarat"
       },
-      "serviceType": "Broadband Internet, Cable TV",
-      "description": "High-speed FTTH broadband internet from 50 Mbps to 400 Mbps and affordable cable TV services in Bilimora West. Plans starting at ₹4,999/year with free installation.",
-      "areaServed": "Bilimora, Gujarat",
+      "serviceType": ["Broadband Internet", "WiFi Connection", "Cable TV", "FTTH Fiber Internet", "New Internet Connection"],
+      "description": "Nisan is the internet service provider (ISP) in Bilimora offering FTTH fiber broadband, WiFi connections, and cable TV. New connections from ₹4,999/year with free installation.",
+      "areaServed": {
+        "@type": "City",
+        "name": "Bilimora",
+        "postalCode": "396321",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
       "url": "https://www.nisan.co.in/services"
     }
     </script>
@@ -69,7 +75,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
                         <div class="breadcrumb-content">
-                            <h1 class="title">Reliable Internet & Cable TV Services in Bilimora</h1>
+                            <h1 class="title">Internet Service Provider in Bilimora — Nisan</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
@@ -95,36 +101,33 @@
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="section-title mb-30">
-                            <h2 class="title">Our Services</h2>
+                            <h2 class="title">Broadband, WiFi & Cable TV Services in Bilimora</h2>
                         </div>
                         <div class="services-inner-content">
-                            <p>Explore our high-speed FTTH broadband and premium cable TV packages designed to meet your entertainment and work needs.</p>
+                            <p>Nisan is Bilimora's local internet service provider (ISP) since 1993 — serving 2,000+ homes and offices in Bilimora West with FTTH fiber broadband, home WiFi connections, and cable TV. We handle new connections, upgrades, and renewals, with free installation every time.</p>
                             <ul class="services-inner-list">
                                 <li>
                                     <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
-                                        <h5><b>FTTH Broadband:</b> High-speed fiber internet from 50 Mbps up to 400 Mbps for streaming, gaming, and work from home.</h5>
+                                        <h5><b>Broadband & Fiber Internet:</b> FTTH fiber from 50 Mbps to 400 Mbps. Unlimited data, no throttling, no FUP.</h5>
                                     </div>
                                 </li>
-                                
                                 <li>
                                     <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
-                                        <h5><b>Cable TV Packages:</b> 100+ HD channels with movies, sports, and entertainment.</h5>
+                                        <h5><b>WiFi Connection:</b> Every new broadband connection includes a free WiFi router — your entire home is covered wirelessly.</h5>
                                     </div>
                                 </li>
-                                
                                 <li>
                                     <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
-                                        <h5><b>Bundled Offers:</b> Internet + cable TV with 2 months free on yearly plans.</h5>
+                                        <h5><b>Cable TV Packages:</b> 200+ Gujarati, Hindi, sports and kids channels. Bundle with internet on one bill.</h5>
                                     </div>
                                 </li>
-                                
                                 <li>
                                     <img src="assets/imgs/icons/check.webp" alt="done">
                                     <div>
-                                        <h5><b>24/7 Support:</b> Get assistance whenever you need it.</h5>
+                                        <h5><b>365-Day Support:</b> Support available 8 AM–10 PM every single day — Sundays, Diwali, all holidays. No day off.</h5>
                                     </div>
                                 </li>
                             </ul>
@@ -171,6 +174,25 @@
             </div>
         </section>
         <!-- services-area-end -->
+
+        <!-- isp-wifi-prose-area -->
+        <section style="background:#f8f9fa; padding:50px 0;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 style="font-size:1.6rem; font-weight:700; margin-bottom:18px; color:#111;">WiFi Connection in Bilimora — Free with Every Plan</h2>
+                        <p style="color:#444; line-height:1.8; margin-bottom:28px;">Every Nisan broadband connection comes with a free WiFi router installed at your home or office. You do not need to buy a router separately. Our technician sets it up, configures the password, and makes sure every room gets a strong signal. WiFi connection in Bilimora starts at ₹4,999/year — unlimited data, free installation, GST included. Call +91 98251 52400 to get your WiFi connection today.</p>
+
+                        <h2 style="font-size:1.6rem; font-weight:700; margin-bottom:18px; color:#111;">Broadband Connection Near Me in Bilimora</h2>
+                        <p style="color:#444; line-height:1.8; margin-bottom:28px;">Looking for a broadband connection near you in Bilimora? Nisan covers Bilimora West (W Zone, PIN 396321) — Station Road, Soniwad, Jamna Nagar, and surrounding areas. We are a local team, not a national call centre, so we know your street. Getting a new broadband connection near you in Bilimora takes 1–2 days: call us, we visit the same day, and install for free. Check your address availability by calling +91 98251 52400, open every day 8 AM to 10 PM.</p>
+
+                        <h2 style="font-size:1.6rem; font-weight:700; margin-bottom:18px; color:#111;">Nisan — Internet Service Provider in Bilimora Since 1993</h2>
+                        <p style="color:#444; line-height:1.8;">Nisan Cable TV & Internet is Bilimora's oldest and most trusted internet service provider (ISP). We started with cable TV in 1993 and launched FTTH fiber internet in 2019. As a local Bilimora ISP, we offer what national providers like Jio Fiber and Airtel Xstream Fiber cannot — same-day visits, Sunday support, and a personal refund guarantee from the owner. With 2,000+ active connections in Bilimora West, we are the most established ISP in the area. Plans from ₹4,999/year, 50 Mbps to 400 Mbps, unlimited data. <a href="/contact.php" style="color:#0066cc;">Apply for a new connection →</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- isp-wifi-prose-area-end -->
 
         <!-- pricing-area -->
         <section class="pricing-area position-relative section-space">
