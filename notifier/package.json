@@ -1,0 +1,13 @@
+{
+  "name": "nisan-outage-notifier",
+  "version": "1.0.0",
+  "description": "Polls Nisan status API and sends WhatsApp alerts when network is down > 10 min",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5"
+  }
+}
