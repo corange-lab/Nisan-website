@@ -111,6 +111,15 @@
                             </ol>
                             <p style="margin-bottom:24px; color:#555; line-height:1.8;">Plans start at ₹4,999/year for 50 Mbps. GST included. No hidden charges. If you are not satisfied in the first month, we refund — no questions asked.</p>
                         </div>
+
+                        <?php include('whatsapp-inquiry.php'); ?>
+
+                        <div style="display:flex;align-items:center;gap:12px;margin:32px 0 24px;color:#9aa4b2;font-size:13px;font-weight:600;">
+                            <span style="flex:1;height:1px;background:#e1e6ee;"></span>
+                            OR SEND US A MESSAGE
+                            <span style="flex:1;height:1px;background:#e1e6ee;"></span>
+                        </div>
+
                         <form action="/thank-you" method="post" class="contact-form">
                             <div class="row">
                                 <div class="col-md-6">

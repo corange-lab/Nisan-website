@@ -677,11 +677,19 @@
             <div class="blog-section-head">
                 <div class="blog-section-icon si-guide">&#127891;</div>
                 <h2>Choose the Right Plan</h2>
-                <span class="bsh-count">9 articles</span>
+                <span class="bsh-count">17 articles</span>
             </div>
             <div class="row">
                 <?php
                 $guides = [
+                    ['/blog/how-to-choose-right-isp-bilimora','How to Choose the Right ISP: Technical Checklist Before You Buy','Fiber vs DSL, pure vs shared bandwidth, contention ratio, IP types &amp; what to ask before buying.','Buyer Guide','10 min'],
+                    ['/blog/static-vs-dynamic-ip-explained','Static vs Dynamic IP Address Explained: Which Do You Need?','The difference, pros &amp; cons, CGNAT, and when a static IP is worth it (most homes don\'t need one).','Education','6 min'],
+                    ['/blog/what-is-latency-ping-explained','What Is Latency &amp; Ping? Why Low Ping Beats High Speed','Ping, jitter &amp; packet loss explained, good ping values, and how to reduce lag.','Education','6 min'],
+                    ['/blog/how-much-data-usage-guide-bilimora','How Much Internet Data Do You Use? Streaming &amp; Gaming Guide','Per-hour data for Netflix, YouTube, calls &amp; games — and what a family really uses per month.','Education','6 min'],
+                    ['/blog/wifi-plans-bilimora','WiFi Plans in Bilimora: Speeds, Prices &amp; Best Value','Every WiFi plan in Bilimora compared — speeds, yearly prices and which fits your home.','Plans','4 min'],
+                    ['/blog/broadband-plans-price-list-bilimora','Broadband Plans &amp; Price List in Bilimora 2026','The full FTTH fiber rate chart — every speed and yearly price, GST included.','Price List','4 min'],
+                    ['/blog/unlimited-internet-plans-bilimora','Unlimited Internet Plans in Bilimora: No Data Cap, No FUP','What "unlimited" really means and which fiber plan gives you truly unlimited data.','Plans','4 min'],
+                    ['/blog/best-wifi-for-home-bilimora','Best WiFi for Home in Bilimora: Speed, Router &amp; Plan Guide','Pick the right speed, router and provider for the best home WiFi in Bilimora.','Guide','5 min'],
                     ['/blog/how-much-internet-speed-do-i-need','How Much Internet Speed Do I Need? Bilimora Home Guide','50 Mbps or 100 Mbps? This guide helps you pick by family size and usage.','Guide','4 min'],
                     ['/blog/internet-for-family-bilimora','How Many Mbps Does a Bilimora Family of 4 Actually Need?','Add up each person\'s real usage to calculate your ideal plan speed.','Guide','3 min'],
                     ['/blog/annual-vs-monthly-internet-plan-bilimora','Annual vs Monthly Internet Plan in Bilimora: Which Saves More?','Exact savings calculation: &#8377;4,999/year vs &#8377;499/month competitors.','Guide','3 min'],
@@ -715,9 +723,99 @@
             <div class="blog-section-head">
                 <div class="blog-section-icon si-trouble">&#128296;</div>
                 <h2>Troubleshoot Internet Problems</h2>
-                <span class="bsh-count">2 articles</span>
+                <span class="bsh-count">8 articles</span>
             </div>
             <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/router-lights-meaning-troubleshooting" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">Troubleshooting</span>
+                                <span class="nbc-read-time">&#9201; 6 min read</span>
+                            </div>
+                            <p class="nbc-title">Router Lights Meaning + Quick Internet Troubleshooting Guide</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">What power, PON, LOS &amp; internet lights mean, and step-by-step fixes when the internet stops.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/how-to-secure-home-wifi-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">WiFi Security</span>
+                                <span class="nbc-read-time">&#9201; 6 min read</span>
+                            </div>
+                            <p class="nbc-title">How to Secure Your Home WiFi — 10 Steps to Stop Freeloaders</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">Strong password, WPA3, guest network &amp; firmware — stop neighbours stealing your WiFi.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/mesh-wifi-vs-extender-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">WiFi Tips</span>
+                                <span class="nbc-read-time">&#9201; 6 min read</span>
+                            </div>
+                            <p class="nbc-title">Mesh WiFi vs Extender vs Repeater — Which Fixes Dead Zones?</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">The difference, pros &amp; cons, and which one to pick for a big or multi-floor home.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/how-wifi-works-2-4ghz-vs-5ghz" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">WiFi Basics</span>
+                                <span class="nbc-read-time">&#9201; 8 min read</span>
+                            </div>
+                            <p class="nbc-title">How WiFi Works + 2.4 GHz vs 5 GHz Explained (Benefits &amp; Drawbacks)</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">A simple guide to how routers &amp; WiFi work, and when to use the 2.4 GHz vs 5 GHz band.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/how-to-increase-wifi-speed-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">WiFi Tips</span>
+                                <span class="nbc-read-time">&#9201; 6 min read</span>
+                            </div>
+                            <p class="nbc-title">How to Increase WiFi Speed at Home in Bilimora — 12 Proven Tips</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">Router placement, band selection, channel settings and when a plan upgrade is the real fix.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/wifi-router-placement-guide-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">WiFi Tips</span>
+                                <span class="nbc-read-time">&#9201; 5 min read</span>
+                            </div>
+                            <p class="nbc-title">Best WiFi Router Placement Guide for Bilimora Homes</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">Room-by-room placement tips, what to avoid, and mesh setup for concrete &amp; multi-floor homes.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
                 <div class="col-lg-4 col-md-6">
                     <a href="/blog/internet-outage-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
