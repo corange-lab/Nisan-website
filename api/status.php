@@ -155,6 +155,7 @@ function buildDayDetail(PDO $db, string $date): array {
             'started_fmt' => istTime((int)$inc['started_at']),
             'resolved_fmt'=> $inc['resolved_at'] ? istTime((int)$inc['resolved_at']) : null,
             'duration'    => $dur ? fmtDur($dur) : null,
+            'title'       => $inc['title'] ?: 'Network Outage',
         ];
     }, $incRows);
 
@@ -273,6 +274,7 @@ function buildResponse(PDO $db): array {
             'resolved_fmt'  => $ongoing ? null : istTime((int)$inc['resolved_at']),
             'duration'      => fmtDur($dur),
             'duration_sec'  => $dur,
+            'title'         => $inc['title'] ?: 'Network Outage',
         ];
     }, $incRows);
 

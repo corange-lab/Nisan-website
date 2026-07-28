@@ -415,6 +415,14 @@
     timeline.appendChild(r1);
     timeline.appendChild(r2);
 
+    // Reason when a custom cause was recorded
+    if (inc.title && inc.title !== 'Network Outage') {
+      var r3 = document.createElement('div');
+      r3.className = 'inc-row';
+      r3.innerHTML = '<span class="inc-row-label">Reason</span><span>' + inc.title + '</span>';
+      timeline.appendChild(r3);
+    }
+
     // Duration pill
     if (inc.duration) {
       var pill = document.createElement('span');
