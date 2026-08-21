@@ -17,6 +17,18 @@
   <url><loc>https://www.nisan.co.in/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Blog posts -->
+  <url><loc>https://www.nisan.co.in/blog/what-is-dns-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/modem-ont-vs-router-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/wifi-6-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/what-is-vpn-explained</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/ipv4-vs-ipv6-explained</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/how-to-read-speed-test</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/upload-vs-download-speed</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/what-is-fup-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/dual-band-vs-tri-band-router</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/how-to-change-wifi-password</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/monsoon-internet-tips-bilimora</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/internet-for-apartments-bilimora</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nisan.co.in/blog/how-to-choose-right-isp-bilimora</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.nisan.co.in/blog/static-vs-dynamic-ip-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nisan.co.in/blog/what-is-latency-ping-explained</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -81,5 +93,15 @@
   <url><loc>https://www.nisan.co.in/blog/nisan-bilimora-story</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nisan.co.in/blog/nisan-bilimora-reviews</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nisan.co.in/blog/why-2000-bilimora-families-trust-nisan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/fiber-broadband-coverage-areas-bilimora</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/smart-tv-ott-streaming-internet-bilimora</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/commercial-office-internet-bilimora</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/smart-home-cctv-wifi-bilimora</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/online-exam-prep-internet-bilimora</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/whatsapp-web-login-guide-fixes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/google-meet-zoom-meeting-guide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/jio-unlimited-internet-plan-vs-fiber</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/192-168-1-1-router-login-wifi-password</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.nisan.co.in/blog/internet-speedtest-fast-com-guide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>

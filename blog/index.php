@@ -39,7 +39,17 @@
         {"@type": "BlogPosting", "headline": "Work From Home Internet in Bilimora", "url": "https://www.nisan.co.in/blog/work-from-home-internet-bilimora"},
         {"@type": "BlogPosting", "headline": "Cheapest Broadband in Bilimora", "url": "https://www.nisan.co.in/blog/cheapest-broadband-bilimora"},
         {"@type": "BlogPosting", "headline": "Cable TV vs DTH in Bilimora", "url": "https://www.nisan.co.in/blog/cable-tv-vs-dth-bilimora"},
-        {"@type": "BlogPosting", "headline": "How Much Internet Speed Do I Need", "url": "https://www.nisan.co.in/blog/how-much-internet-speed-do-i-need"}
+        {"@type": "BlogPosting", "headline": "How Much Internet Speed Do I Need", "url": "https://www.nisan.co.in/blog/how-much-internet-speed-do-i-need"},
+        {"@type": "BlogPosting", "headline": "Fiber Broadband Coverage in Bilimora", "url": "https://www.nisan.co.in/blog/fiber-broadband-coverage-areas-bilimora"},
+        {"@type": "BlogPosting", "headline": "Best Fiber Broadband for Smart TVs in Bilimora", "url": "https://www.nisan.co.in/blog/smart-tv-ott-streaming-internet-bilimora"},
+        {"@type": "BlogPosting", "headline": "Commercial Fiber Broadband for Businesses in Bilimora", "url": "https://www.nisan.co.in/blog/commercial-office-internet-bilimora"},
+        {"@type": "BlogPosting", "headline": "Smart Home & CCTV Security WiFi Setup in Bilimora", "url": "https://www.nisan.co.in/blog/smart-home-cctv-wifi-bilimora"},
+        {"@type": "BlogPosting", "headline": "Best Internet for Students & Exam Prep in Bilimora", "url": "https://www.nisan.co.in/blog/online-exam-prep-internet-bilimora"},
+        {"@type": "BlogPosting", "headline": "WhatsApp Web (web.whatsapp.com) Login & Fixes", "url": "https://www.nisan.co.in/blog/whatsapp-web-login-guide-fixes"},
+        {"@type": "BlogPosting", "headline": "Google Meet & Zoom Meeting Guide", "url": "https://www.nisan.co.in/blog/google-meet-zoom-meeting-guide"},
+        {"@type": "BlogPosting", "headline": "Jio Unlimited Internet Plan vs Fiber Broadband", "url": "https://www.nisan.co.in/blog/jio-unlimited-internet-plan-vs-fiber"},
+        {"@type": "BlogPosting", "headline": "192.168.1.1 Router Login & WiFi Password Setup", "url": "https://www.nisan.co.in/blog/192-168-1-1-router-login-wifi-password"},
+        {"@type": "BlogPosting", "headline": "Speedtest & Fast.com WiFi Speed Test Guide", "url": "https://www.nisan.co.in/blog/internet-speedtest-fast-com-guide"}
       ]
     }
     </script>
@@ -532,13 +542,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <div class="blog-hero-kicker">&#128337; 50+ Guides &middot; Updated 2026</div>
+                    <div class="blog-hero-kicker">&#128337; 85+ Guides &middot; Updated 2026</div>
                     <h1 class="blog-hero-title">Internet Guides for<br><span>Bilimora Residents</span></h1>
                     <p class="blog-hero-sub">From comparing plans to fixing slow WiFi — everything you need to stay connected in Bilimora West. Written by Nisan's local team.</p>
                     <div class="blog-hero-stats">
                         <div class="blog-stat">
                             <div class="blog-stat-icon">&#128225;</div>
-                            <div class="blog-stat-text"><strong>50+ Articles</strong><span>Guides &amp; comparisons</span></div>
+                            <div class="blog-stat-text"><strong>85+ Articles</strong><span>Guides &amp; comparisons</span></div>
                         </div>
                         <div class="blog-stat">
                             <div class="blog-stat-icon">&#127968;</div>
@@ -638,7 +648,7 @@
             <div class="blog-section-head">
                 <div class="blog-section-icon si-compare">&#128202;</div>
                 <h2>Compare Internet Providers in Bilimora</h2>
-                <span class="bsh-count">9 articles</span>
+                <span class="bsh-count">11 articles</span>
             </div>
             <div class="row">
                 <?php
@@ -653,6 +663,7 @@
                     ['/blog/bsnl-vs-nisan-bilimora','BSNL Broadband vs Nisan Internet in Bilimora','Copper DSL vs FTTH fiber — is it time to upgrade from BSNL?','Comparison','3 min'],
                     ['/blog/cheapest-broadband-bilimora','Cheapest Broadband Plan in Bilimora: Who Offers the Best Value?','&#8377;4,999/year = &#8377;416/month — the cheapest per-month broadband in Bilimora.','Comparison','3 min'],
                     ['/blog/local-isp-vs-jio-airtel-bilimora','Local ISP vs Jio or Airtel in Bilimora: Why Local Wins','One phone call, one person, resolved today — the case for a local provider.','Comparison','4 min'],
+                    ['/blog/jio-unlimited-internet-plan-vs-fiber','Jio Unlimited Internet Plan vs Fiber Broadband','FUP caps, mobile tower congestion vs truly unlimited FTTH fiber compared.','Comparison','6 min'],
                 ];
                 foreach($compare as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -677,12 +688,21 @@
             <div class="blog-section-head">
                 <div class="blog-section-icon si-guide">&#127891;</div>
                 <h2>Choose the Right Plan</h2>
-                <span class="bsh-count">17 articles</span>
+                <span class="bsh-count">30 articles</span>
             </div>
             <div class="row">
                 <?php
                 $guides = [
                     ['/blog/how-to-choose-right-isp-bilimora','How to Choose the Right ISP: Technical Checklist Before You Buy','Fiber vs DSL, pure vs shared bandwidth, contention ratio, IP types &amp; what to ask before buying.','Buyer Guide','10 min'],
+                    ['/blog/what-is-dns-explained','What Is DNS? How It Works &amp; Does Changing DNS Help Speed?','DNS explained simply — and why it is not a substitute for a faster fiber plan.','Education','6 min'],
+                    ['/blog/modem-ont-vs-router-explained','Modem vs ONT vs Router Explained','What each box does in a fiber home — and which one actually creates your WiFi.','Education','5 min'],
+                    ['/blog/wifi-6-explained','What Is WiFi 6? Benefits &amp; Do You Need It in 2026?','WiFi 6 vs WiFi 5 in plain words — when an upgrade is worth it for busy homes.','Education','6 min'],
+                    ['/blog/what-is-vpn-explained','What Is a VPN? Do You Need One for Home Internet?','VPN benefits and limits — when it helps, and when home WiFi security matters more.','Education','5 min'],
+                    ['/blog/ipv4-vs-ipv6-explained','IPv4 vs IPv6 Explained — What Changed and Why It Matters','Why IPv6 exists, what dual-stack means, and what home users should actually do.','Education','5 min'],
+                    ['/blog/upload-vs-download-speed','Upload vs Download Speed — Why Upload Matters','Zoom, CCTV and creators live on upload — here is how much you really need.','Education','5 min'],
+                    ['/blog/what-is-fup-explained','What Is FUP in Internet Plans? Fair Usage Explained','How "unlimited" plans throttle after a data limit — and how to avoid surprises.','Education','5 min'],
+                    ['/blog/dual-band-vs-tri-band-router','Dual-Band vs Tri-Band Router — Which Do You Need?','Most homes need dual-band. Here is when tri-band is actually worth the extra cost.','Education','5 min'],
+                    ['/blog/internet-for-apartments-bilimora','Best Internet for Apartments &amp; Societies in Bilimora','Dedicated fiber vs shared society WiFi — what works in multi-floor flats.','Local','6 min'],
                     ['/blog/static-vs-dynamic-ip-explained','Static vs Dynamic IP Address Explained: Which Do You Need?','The difference, pros &amp; cons, CGNAT, and when a static IP is worth it (most homes don\'t need one).','Education','6 min'],
                     ['/blog/what-is-latency-ping-explained','What Is Latency &amp; Ping? Why Low Ping Beats High Speed','Ping, jitter &amp; packet loss explained, good ping values, and how to reduce lag.','Education','6 min'],
                     ['/blog/how-much-data-usage-guide-bilimora','How Much Internet Data Do You Use? Streaming &amp; Gaming Guide','Per-hour data for Netflix, YouTube, calls &amp; games — and what a family really uses per month.','Education','6 min'],
@@ -699,6 +719,10 @@
                     ['/blog/new-internet-connection-bilimora','New Internet Connection in Bilimora: Step-by-Step Guide','From choosing a plan to installation day — what to expect as a new customer.','Guide','4 min'],
                     ['/blog/wired-vs-wireless-internet-bilimora','Wired vs Wireless Internet at Home in Bilimora','When ethernet beats WiFi in concrete Bilimora homes — and how to set it up.','Guide','3 min'],
                     ['/blog/broadband-near-me-bilimora','Broadband Internet Provider Near Me in Bilimora','What to check when searching for a broadband provider near you in Bilimora West.','Local','3 min'],
+                    ['/blog/fiber-broadband-coverage-areas-bilimora','Fiber Broadband Coverage in Bilimora','Area-by-area availability guide for Station Road, Gandevi Road, Desra &amp; Bilimora West.','Coverage','5 min'],
+                    ['/blog/whatsapp-web-login-guide-fixes','WhatsApp Web (web.whatsapp.com) Login &amp; Fixes','Step-by-step QR code scan, multi-device sync &amp; fixing connection drops.','Web Utility','6 min'],
+                    ['/blog/192-168-1-1-router-login-wifi-password','192.168.1.1 &amp; 192.168.0.1 Router Admin Login','Access gateway admin panel, change WiFi password &amp; fix IP errors.','Router','6 min'],
+                    ['/blog/internet-speedtest-fast-com-guide','Speedtest &amp; Fast.com WiFi Speed Test Guide','How Speedtest.net vs Fast.com work, reading ping &amp; measuring real Mbps.','Speed Test','6 min'],
                 ];
                 foreach($guides as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -723,9 +747,54 @@
             <div class="blog-section-head">
                 <div class="blog-section-icon si-trouble">&#128296;</div>
                 <h2>Troubleshoot Internet Problems</h2>
-                <span class="bsh-count">8 articles</span>
+                <span class="bsh-count">12 articles</span>
             </div>
             <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/how-to-read-speed-test" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">Speed Test</span>
+                                <span class="nbc-read-time">&#9201; 6 min read</span>
+                            </div>
+                            <p class="nbc-title">How to Read a Speed Test — Download, Upload &amp; Ping</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">What each number means, and how to tell a WiFi problem from a plan problem.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/how-to-change-wifi-password" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">WiFi Security</span>
+                                <span class="nbc-read-time">&#9201; 5 min read</span>
+                            </div>
+                            <p class="nbc-title">How to Change Your WiFi Password — Step-by-Step</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">Kick freeloaders off and secure your network in a few minutes.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/monsoon-internet-tips-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">Monsoon</span>
+                                <span class="nbc-read-time">&#9201; 6 min read</span>
+                            </div>
+                            <p class="nbc-title">Monsoon Internet Tips for Bilimora Homes</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">Keep fiber working through heavy rain, power cuts and moisture risks.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
                 <div class="col-lg-4 col-md-6">
                     <a href="/blog/router-lights-meaning-troubleshooting" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
                         <div class="nbc-banner">
@@ -846,13 +915,28 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="/blog/smart-home-cctv-wifi-bilimora" class="nbc nbc-trouble" style="text-decoration:none;display:block;">
+                        <div class="nbc-banner">
+                            <div class="nbc-tag-row">
+                                <span class="nbc-tag">Smart Home</span>
+                                <span class="nbc-read-time">&#9201; 6 min read</span>
+                            </div>
+                            <p class="nbc-title">Smart Home &amp; CCTV Security WiFi Setup Guide for Bilimora Homes</p>
+                        </div>
+                        <div class="nbc-body">
+                            <p class="nbc-desc">Connect CCTV cameras, Alexa &amp; smart locks with symmetrical fiber upload bandwidth.</p>
+                            <span class="nbc-link">Read article &#8594;</span>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <!-- LIFESTYLE & WFH -->
             <div class="blog-section-head">
                 <div class="blog-section-icon si-life">&#127968;</div>
                 <h2>Work, Study &amp; Lifestyle</h2>
-                <span class="bsh-count">9 articles</span>
+                <span class="bsh-count">12 articles</span>
             </div>
             <div class="row">
                 <?php
@@ -866,6 +950,9 @@
                     ['/blog/back-to-school-internet-bilimora','Back to School in Bilimora: Set Up Home Internet for Online Learning','Gujarat school year starts June. Get the right plan before the first day.','Seasonal','3 min'],
                     ['/blog/internet-for-seniors-bilimora','Simple Internet Guide for Senior Citizens in Bilimora','WhatsApp video calls with family, easy setup, and local support — no tech knowledge needed.','Seniors','3 min'],
                     ['/blog/internet-video-calling-bilimora','Video Calling From Bilimora: Why WiFi Quality Matters More Than Your Phone','How fiber improves WhatsApp and FaceTime calls with family abroad.','Lifestyle','3 min'],
+                    ['/blog/smart-tv-ott-streaming-internet-bilimora','Best Fiber Broadband for Smart TVs &amp; 4K Streaming in Bilimora','Fix TV buffering forever on Netflix, Hotstar &amp; Prime with fast dual-band fiber WiFi.','Smart TV','6 min'],
+                    ['/blog/online-exam-prep-internet-bilimora','Best Internet Connection for Students &amp; Exam Prep in Bilimora','Zero disconnects for JEE, NEET, CA live coaching &amp; online mock exams.','Students','5 min'],
+                    ['/blog/google-meet-zoom-meeting-guide','Google Meet &amp; Zoom Meeting Guide: Join Links &amp; Fix Lag','Join via meeting code, fix video call lag &amp; reduce data usage during calls.','Video Calls','6 min'],
                 ];
                 foreach($life as $a): ?>
                 <div class="col-lg-4 col-md-6">
@@ -890,7 +977,7 @@
             <div class="blog-section-head">
                 <div class="blog-section-icon si-biz">&#128188;</div>
                 <h2>Business &amp; Commercial Use</h2>
-                <span class="bsh-count">7 articles</span>
+                <span class="bsh-count">8 articles</span>
             </div>
             <div class="row">
                 <?php
@@ -902,6 +989,7 @@
                     ['/blog/ecommerce-internet-bilimora','E-Commerce Business From Bilimora: Internet for Amazon &amp; Flipkart Sellers','Fast upload for product listings, video shoots, and order management.','Business','3 min'],
                     ['/blog/online-business-internet-bilimora','Online Business in Bilimora: Why Your Internet Is Your Most Important Tool','Freelancers, creators, consultants — how fiber uptime directly protects income.','Business','4 min'],
                     ['/blog/internet-for-youtube-creators-bilimora','Best Internet for YouTube Creators &amp; Vloggers in Bilimora','Upload speed is everything. Why 100 Mbps fiber transforms your content workflow.','Business','3 min'],
+                    ['/blog/commercial-office-internet-bilimora','Commercial Fiber Broadband for Businesses &amp; Shops in Bilimora','Dedicated IP, fast UPI transactions, POS billing &amp; 99.9% uptime for commercial hubs.','Commercial','6 min'],
                 ];
                 foreach($biz as $a): ?>
                 <div class="col-lg-4 col-md-6">
