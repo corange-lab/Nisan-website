@@ -121,6 +121,11 @@
                         </div>
 
                         <form action="/thank-you" method="post" class="contact-form">
+                            <input type="hidden" name="utm_source" id="utm_source" value="">
+                            <input type="hidden" name="utm_medium" id="utm_medium" value="">
+                            <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+                            <input type="hidden" name="utm_content" id="utm_content" value="">
+                            <input type="hidden" name="fbclid" id="fbclid" value="">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-grp">
@@ -144,13 +149,23 @@
                             </div>
                         
                             <p class="contact-form-check">
-                                <input type="checkbox" class="form-check-input" id="cookies-consent">
+                                <input type="checkbox" class="form-check-input" id="cookies-consent" required>
                                 <label for="cookies-consent" class="form-check-label">I agree with that, my data is
                                     being saved for further contact, see our <a href="/privacy-policy.php">Privacy
                                         Policy</a></label>
                             </p>
                             <button type="submit" class="btn">Submit Message</button>
                         </form>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            if (typeof nisanGetAttribution !== 'function') return;
+                            var attribution = nisanGetAttribution();
+                            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'fbclid'].forEach(function (key) {
+                                var field = document.getElementById(key);
+                                if (field) field.value = attribution[key] || '';
+                            });
+                        });
+                        </script>
                     </div>
                     <div class="col-lg-4">
                         <div class="contact-info-wrap">

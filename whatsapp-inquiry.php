@@ -193,6 +193,14 @@ function nisanSendWhatsApp(e) {
         gtag('event', 'conversion', { 'send_to': 'AW-938737099/whatsapp_click' });
         gtag('event', 'whatsapp_inquiry', { 'event_category': 'lead', 'event_label': interest });
     }
+    if (typeof nisanTrackMeta === 'function') {
+        nisanTrackMeta('Lead', {
+            content_name: 'Qualified WhatsApp inquiry',
+            content_category: interest,
+            contact_method: 'whatsapp',
+            area_provided: area ? 'yes' : 'no'
+        });
+    }
 
     window.open(url, '_blank', 'noopener');
     return false;

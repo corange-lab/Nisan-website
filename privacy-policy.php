@@ -82,14 +82,23 @@
                                 <p>Our website uses cookies and similar tracking technologies to enhance your browsing
                                     experience. These technologies may collect information about your use of our
                                     website, such as your IP address, browser type, and pages visited.</p>
+                                <p>With your permission, we use Google Analytics, Google Ads and the Meta Pixel to
+                                    measure website visits, form submissions, phone clicks and WhatsApp enquiries. This
+                                    helps us understand which advertisements are useful and avoid wasting advertising
+                                    budget. Meta and Google may process device, browser, campaign and interaction data
+                                    according to their own privacy policies. We do not send the contents of your
+                                    WhatsApp conversations to these analytics tools.</p>
                                 <p>You can choose to disable cookies through your browser settings. However, please note
                                     that some features of our website may not function properly if cookies are disabled.
-                                </p>
+                                    You can also choose “Essential only” in our cookie notice; the website and contact
+                                    options will continue to work without advertising cookies. <button type="button"
+                                    onclick="if (typeof nisanResetCookieConsent === 'function') nisanResetCookieConsent();"
+                                    style="border:0;background:none;color:#0066cc;text-decoration:underline;padding:0;cursor:pointer;">Review cookie choices</button>.</p>
                             </div>
                             <div class="privacy-wrapper-box">
                                 <h5>5. Third-Party Links</h5>
                                 <p>Our website may contain links to third-party websites or services that are not
-                                    controlled or operated by Netfix. We are not responsible for the privacy practices
+                                    controlled or operated by Nisan. We are not responsible for the privacy practices
                                     or content of these third-party websites. We encourage you to review the privacy
                                     policies of those websites before providing any personal information.</p>
                             </div>

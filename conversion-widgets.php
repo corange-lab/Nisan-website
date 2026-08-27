@@ -7,7 +7,7 @@
     <div class="nab-inner">
         <span class="nab-badge">Limited Time</span>
         <span class="nab-text">
-            <strong>100 Mbps at ₹4,999/year</strong> — Jio charges ₹10,799 for same speed. Save ₹5,800/year. Free installation!
+            <strong>Fiber plans from ₹4,999/year</strong> — free router, free installation and GST included.
         </span>
         <a href="/contact.php" class="nab-cta">Claim Now</a>
     </div>
@@ -39,11 +39,11 @@
     <div id="nisan-exit-popup">
         <button class="nep-close" id="nep-close" aria-label="Close">&times;</button>
         <div class="nep-icon"><i class="fas fa-bolt"></i></div>
-        <h2 class="nep-title" id="exit-title">Paying ₹899/month for Jio?</h2>
-        <p class="nep-sub">Nisan gives you <strong>100 Mbps for just ₹416/month</strong> in Bilimora. Same speed, half the price. Free installation.</p>
+        <h2 class="nep-title" id="exit-title">Ready for Better Home WiFi?</h2>
+        <p class="nep-sub">Get <strong>100 Mbps for ₹5,499/year</strong> in Bilimora — about ₹458/month, billed annually. Free installation.</p>
         <ul class="nep-perks">
-            <li><i class="fas fa-check-circle"></i> ₹4,999/year vs Jio's ₹10,799/year</li>
-            <li><i class="fas fa-check-circle"></i> Save ₹5,800 every year</li>
+            <li><i class="fas fa-check-circle"></i> 100 Mbps at ₹5,499/year</li>
+            <li><i class="fas fa-check-circle"></i> GST included, no hidden fees</li>
             <li><i class="fas fa-check-circle"></i> Free Installation + Free Router</li>
             <li><i class="fas fa-check-circle"></i> 1-Month Money-Back Guarantee</li>
         </ul>
@@ -487,10 +487,16 @@
         }
     }
     document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-        el.addEventListener('click', function() { fireAdsConversion('phone_click'); });
+        el.addEventListener('click', function() {
+            fireAdsConversion('phone_click');
+            if (typeof nisanTrackMeta === 'function') nisanTrackMeta('Contact', { contact_method: 'phone' });
+        });
     });
-    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-        el.addEventListener('click', function() { fireAdsConversion('whatsapp_click'); });
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+            fireAdsConversion('whatsapp_click');
+            if (typeof nisanTrackMeta === 'function') nisanTrackMeta('Contact', { contact_method: 'whatsapp' });
+        });
     });
 
     /* ── ④ Exit-Intent Popup ──────────────────────────── */

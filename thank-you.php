@@ -1,14 +1,21 @@
 <?php
 // Process form submission
+$validSubmission = false;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name    = htmlspecialchars(trim($_POST["name"] ?? ''));
     $phone   = htmlspecialchars(trim($_POST["number"] ?? ''));
     $email   = filter_var(trim($_POST["email"] ?? ''), FILTER_SANITIZE_EMAIL);
+    $utmSource   = htmlspecialchars(trim($_POST["utm_source"] ?? ''));
+    $utmMedium   = htmlspecialchars(trim($_POST["utm_medium"] ?? ''));
+    $utmCampaign = htmlspecialchars(trim($_POST["utm_campaign"] ?? ''));
+    $utmContent  = htmlspecialchars(trim($_POST["utm_content"] ?? ''));
+    $fbclid      = htmlspecialchars(trim($_POST["fbclid"] ?? ''));
 
     if ($name && $phone) {
+        $validSubmission = true;
         $to      = "hello@nisan.co.in";
         $subject = "New Connection Request from $name";
-        $body    = "Name: $name\nPhone: $phone\nEmail: $email\n";
+        $body    = "Name: $name\nPhone: $phone\nEmail: $email\n\nCampaign attribution:\nUTM source: $utmSource\nUTM medium: $utmMedium\nUTM campaign: $utmCampaign\nUTM content: $utmContent\nFacebook click ID: $fbclid\n";
         $headers = "From: noreply@nisan.co.in\r\nReply-To: $email";
         mail($to, $subject, $body, $headers);
     }
@@ -19,14 +26,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 <head>
-    <!-- Conversion tracking fired on thank-you page load -->
+    <?php include('common-css.php'); ?>
+    <?php if ($validSubmission): ?>
+    <!-- Conversion tracking fires only after a valid form POST -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('event', 'conversion', { 'send_to': 'AW-938737099/oaWPCO7v14AaEMv7z78D' });
+        gtag('event', 'generate_lead', { 'lead_source': 'website_form' });
+        var nisanMetaLeadTracked = false;
+        function trackNisanMetaLead() {
+            if (nisanMetaLeadTracked) return;
+            if (typeof nisanTrackMeta === 'function') {
+                nisanMetaLeadTracked = nisanTrackMeta('Lead', { content_name: 'Website connection request', contact_method: 'form' });
+            }
+        }
+        document.addEventListener('nisanMetaReady', trackNisanMetaLead, { once: true });
+        document.addEventListener('DOMContentLoaded', trackNisanMetaLead, { once: true });
     </script>
+    <?php endif; ?>
     <title>Thank You – Nisan Cable TV & Internet</title>
-    <?php include('common-css.php'); ?>
 </head>
 
 
