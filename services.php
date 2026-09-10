@@ -142,35 +142,58 @@
         <section class="services-area section-space">
             <div class="container">
                 <div class="row justify-content-center">
-<div class="col-xl-3 col-lg-4 col-md-6">
-<div class="services-item">
-<div class="services-icon">
-    <i class="flaticon-wifi-router"></i>
-</div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+                        <div class="services-item">
+                            <div class="services-icon">
+                                <i class="flaticon-wifi-router"></i>
+                            </div>
+                            <div class="services-content">
+                                <h3 class="title"><a href="/services-details.php">FTTH Fiber Broadband</a></h3>
+                                <p>Speeds from 50 to 400 Mbps. Unlimited data, free dual-band WiFi router, and anytime refund guarantee. Powered by underground fiber.</p>
+                                <a class="btn btn-link" href="/services-details.php">Explore Broadband &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="services-content">
-<h3 class="title"><a href="/services.php">Broadband</a></h3>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+                        <div class="services-item">
+                            <div class="services-icon">
+                                <i class="flaticon-satellite-dish"></i>
+                            </div>
+                            <div class="services-content">
+                                <h3 class="title"><a href="/cable-tv.php">Cable TV &amp; CATV</a></h3>
+                                <p>200+ HD/SD channels (Gujarati, Hindi, Sports, Kids). Zero rain fade in monsoon unlike satellite dish antennas. Same-day service.</p>
+                                <a class="btn btn-link" href="/cable-tv.php">Explore Cable TV &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
 
-<p>Get connected with our high-speed broadband plans designed to meet all your internet needs. Whether it’s streaming, gaming, or working from home, enjoy seamless connectivity with speeds that keep you ahead.</p>
-<a class="btn btn-link" href="/services.php">Read more</a></div>
-</div>
-</div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+                        <div class="services-item">
+                            <div class="services-icon">
+                                <i class="flaticon-tv"></i>
+                            </div>
+                            <div class="services-content">
+                                <h3 class="title"><a href="/pricing.php">Internet + TV Combo</a></h3>
+                                <p>Combine 100 Mbps fiber internet and 200+ digital cable channels on a single discounted bill. Save up to 45% compared to separate bills.</p>
+                                <a class="btn btn-link" href="/pricing.php">View Combo Plans &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="col-xl-3 col-lg-4 col-md-6">
-<div class="services-item">
-<div class="services-icon">
-    <i class="flaticon-satellite-dish"></i>
-</div>
-
-<div class="services-content">
-<h3 class="title"><a href="/services.php">Cable TV</a></h3>
-
-<p>Enjoy endless entertainment with our Cable TV service. Access a variety of channels in HD quality, including movies, sports, news, and more. Stay entertained with affordable plans tailored for your family.</p>
-<a class="btn btn-link" href="/services.php">Read more</a></div>
-</div>
-</div>
-</div>
-</div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+                        <div class="services-item">
+                            <div class="services-icon">
+                                <i class="flaticon-location"></i>
+                            </div>
+                            <div class="services-content">
+                                <h3 class="title"><a href="/coverage-areas-bilimora.php">Coverage Areas</a></h3>
+                                <p>Serving Station Road, Bilimora West (W Zone), Goharbaug, Desra, Somnath Road, Jamna Nagar, Soniwad, and surrounding localities.</p>
+                                <a class="btn btn-link" href="/coverage-areas-bilimora.php">Check Coverage &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- services-area-end -->
@@ -183,11 +206,14 @@
                         <h2 style="font-size:1.6rem; font-weight:700; margin-bottom:18px; color:#111;">WiFi Connection in Bilimora — Free with Every Plan</h2>
                         <p style="color:#444; line-height:1.8; margin-bottom:28px;">Every Nisan broadband connection comes with a free WiFi router installed at your home or office. You do not need to buy a router separately. Our technician sets it up, configures the password, and makes sure every room gets a strong signal. WiFi connection in Bilimora starts at ₹4,999/year — unlimited data, free installation, GST included. Call +91 98251 52400 to get your WiFi connection today.</p>
 
+                        <h2 style="font-size:1.6rem; font-weight:700; margin-bottom:18px; color:#111;">Bilimora's Trusted "Cable Wala" &amp; "Dishwala" (CATV Network) Since 1993</h2>
+                        <p style="color:#444; line-height:1.8; margin-bottom:28px;">Before fiber internet existed, Nisan began in 1993 as Bilimora's primary Cable TV operator from Morden Radio on Station Road. Known locally as the go-to <strong>"Cable Wala"</strong> and <strong>"Dishwala"</strong> across Bilimora West, Kanubhai Patel built a network that now serves over 2,000 households. Unlike satellite dish antennas that drop signal ("No Signal" error) during Bilimora's monsoon storms, our underground CATV lines deliver crystal-clear Gujarati news, serials, live cricket, and entertainment without missing a second. <a href="/cable-tv.php" style="color:#0066cc; font-weight:600;">Learn more about our Cable TV packages &rarr;</a></p>
+
                         <h2 style="font-size:1.6rem; font-weight:700; margin-bottom:18px; color:#111;">Broadband Connection Near Me in Bilimora</h2>
-                        <p style="color:#444; line-height:1.8; margin-bottom:28px;">Looking for a broadband connection near you in Bilimora? Nisan covers Bilimora West (W Zone, PIN 396321) — Station Road, Soniwad, Jamna Nagar, and surrounding areas. We are a local team, not a national call centre, so we know your street. Getting a new broadband connection near you in Bilimora takes 1–2 days: call us, we visit the same day, and install for free. Check your address availability by calling +91 98251 52400, open every day 8 AM to 10 PM.</p>
+                        <p style="color:#444; line-height:1.8; margin-bottom:28px;">Looking for a broadband connection near you in Bilimora? Nisan covers Bilimora West (W Zone, PIN 396321) — Station Road, Soniwad, Jamna Nagar, Goharbaug, Desra, Somnath Road, and surrounding areas. We are a local team, not a national call centre, so we know your street. Getting a new broadband connection near you in Bilimora takes 1–2 days: call us, we visit the same day, and install for free. Check your address availability by calling +91 98251 52400, open every day 8 AM to 10 PM.</p>
 
                         <h2 style="font-size:1.6rem; font-weight:700; margin-bottom:18px; color:#111;">Nisan — Internet Service Provider in Bilimora Since 1993</h2>
-                        <p style="color:#444; line-height:1.8;">Nisan Cable TV & Internet is Bilimora's oldest and most trusted internet service provider (ISP). We started with cable TV in 1993 and launched FTTH fiber internet in 2019. As a local Bilimora ISP, we offer what national providers like Jio Fiber and Airtel Xstream Fiber cannot — same-day visits, Sunday support, and a personal refund guarantee from the owner. With 2,000+ active connections in Bilimora West, we are the most established ISP in the area. Plans from ₹4,999/year, 50 Mbps to 400 Mbps, unlimited data. <a href="/contact.php" style="color:#0066cc;">Apply for a new connection →</a></p>
+                        <p style="color:#444; line-height:1.8;">Nisan Cable TV &amp; Internet is Bilimora's oldest and most trusted internet service provider (ISP). We started with cable TV in 1993 and launched FTTH fiber internet in 2019. As a local Bilimora ISP, we offer what national providers like Jio Fiber and Airtel Xstream Fiber cannot — same-day visits, Sunday support, and a personal refund guarantee from the owner. With 2,000+ active connections in Bilimora West, we are the most established ISP in the area. Plans from ₹4,999/year, 50 Mbps to 400 Mbps, unlimited data. <a href="/contact.php" style="color:#0066cc; font-weight:600;">Apply for a new connection &rarr;</a></p>
                     </div>
                 </div>
             </div>

@@ -109,51 +109,80 @@
     <footer>
         <div class="footer-wrap">
             <div class="container">
-                <div class="row g-0 justify-content-center">
-                    <div class="col-3">
+                <div class="row justify-content-between">
+                    <div class="col-lg-3 col-md-6 mb-30">
                         <div class="footer-widget">
                             <div class="footer-contact">
-                                <div class="footer-call">
+                                <div class="footer-call" style="margin-bottom:18px;">
                                     <div class="icon">
                                         <i class="flaticon-support"></i>
                                     </div>
                                     <div class="content">
-                                        <span>Call us 24/7</span>
+                                        <span>Call Local Support (365 Days)</span>
                                         <h6 class="title"><a href="tel:+919825152400">+91 98251 52400</a></h6>
                                     </div>
                                 </div>
-                                <h6 class="title">Contact info</h6>
-                                <p><strong>Morden Radio </strong><br>Opp. Laxmi Palace, <br>Station Road, <br>Bilimora-396321.</p>
+                                <h6 class="title" style="margin-bottom:8px; font-size:15px; color:#fff;">Bilimora Head Office</h6>
+                                <p style="font-size:13px; line-height:1.7; color:rgba(255,255,255,0.75); margin-bottom:14px;">
+                                    <strong>Morden Radio</strong><br>
+                                    Opp. Laxmi Palace, Station Road,<br>
+                                    Bilimora, Gujarat — 396321.
+                                </p>
+                                <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.08); padding:4px 10px; border-radius:6px; font-size:12px; color:#fbbf24; margin-bottom:14px;">
+                                    <span>★ 4.9 Rating</span> &bull; <span style="color:rgba(255,255,255,0.8);">2,000+ Bilimora Families</span>
+                                </div>
                                 <div class="footer-social">
-                                    <a href="https://www.facebook.com/nisaninternet"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/nisaninternet"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/nisaninternet" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/nisaninternet" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                    
-                    <div class="col-2">
+                    <div class="col-lg-3 col-md-6 mb-30">
                         <div class="footer-widget">
                             <div class="fw-title">
-                                <h4 class="title">About Company</h4>
+                                <h4 class="title">Internet &amp; Fiber</h4>
                             </div>
                             <ul class="fw-list">
-                                <li><a href="/about-us.php">About Company</a></li>
-                                <li><a href="/contact.php">Contact Us</a></li>
-                                <li><a href="/privacy-policy.php">Privacy policy</a></li>
-                                <li><a href="/refund-policy.php">Terms & Conditions</a></li>
-                               
+                                <li><a href="/services-details.php">FTTH Fiber Broadband</a></li>
+                                <li><a href="/pricing.php">Internet Plans (from ₹4,999)</a></li>
+                                <li><a href="/speedtest.php">Speed Test Online</a></li>
+                                <li><a href="/status.php">Live Network Status</a></li>
+                                <li><a href="/about-us.php">About Kanubhai &amp; Nisan</a></li>
+                                <li><a href="/refund-policy.php">Anytime Refund Policy</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-2">
+
+                    <div class="col-lg-3 col-md-6 mb-30">
                         <div class="footer-widget">
                             <div class="fw-title">
-                                <h4 class="title">Service Schedule</h4>
+                                <h4 class="title">Cable TV &amp; WiFi</h4>
                             </div>
-                            <ul class="fw-schedule-list">
-                                <li>Every Day <span>8:00 AM - 10:00 PM</span></li>
-                                <li>365 Days <span>No Holidays</span></li>
+                            <ul class="fw-list">
+                                <li><a href="/cable-tv.php">Cable TV &amp; CATV (200+ Ch)</a></li>
+                                <li><a href="/cable-wala-bilimora.php">Bilimora Cable Wala / Dishwala</a></li>
+                                <li><a href="/wifi-connection-bilimora.php">New WiFi Connection</a></li>
+                                <li><a href="/pricing.php">Internet + Cable TV Combo</a></li>
+                                <li><a href="/nisan-news-network.php">Nisan News Network (Regd.)</a></li>
+                                <li><a href="/contact.php">Book New Connection</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="fw-title">
+                                <h4 class="title">Bilimora Localities</h4>
+                            </div>
+                            <ul class="fw-list">
+                                <li><a href="/internet-station-road-bilimora.php">Station Road &amp; Laxmi Palace</a></li>
+                                <li><a href="/internet-desra-bilimora.php">Desra Rd Nr. Somnath Mandir</a></li>
+                                <li><a href="/internet-shanti-nagar-bilimora.php">Shanti Nagar &amp; Sahyog Society</a></li>
+                                <li><a href="/internet-bandar-road-bilimora.php">Bandar Rd &amp; Vakhariya Bander</a></li>
+                                <li><a href="/internet-bandar-road-bilimora.php">MG Road &amp; Talav Fadiya</a></li>
+                                <li><a href="/coverage-areas-bilimora.php">All Coverage Areas Directory</a></li>
                             </ul>
                         </div>
                     </div>
@@ -170,7 +199,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="copyright-text text-center text-md-end">
-                            <p>Copyrighted by Nisan - All Right Reserved &nbsp;·&nbsp; Licensed ISP under <a href="https://www.trai.gov.in" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.6)">TRAI</a> guidelines</p>
+                            <p>Copyrighted by Nisan (Nisan News Network) - All Rights Reserved &nbsp;·&nbsp; Licensed ISP under <a href="https://www.trai.gov.in" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.6)">TRAI</a> guidelines</p>
                         </div>
                     </div>
                 </div>

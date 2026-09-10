@@ -19,10 +19,11 @@ google-ads/
 Thumbs.db
 
 # --- IDE/project files ---
-.vscode/
 .idea/
 
 # --- Python ---
 __pycache__/
 *.pyc
 venv/
+config.bat
+node_modules

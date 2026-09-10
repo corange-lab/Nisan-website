@@ -7,9 +7,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="theme-color" content="#0066cc">
     <meta name="apple-mobile-web-app-capable" content="yes">
-	<title>Best Internet &amp; WiFi Provider in Bilimora — Nisan | From ₹4,999/yr</title>
-	<meta name="description" content="Best internet &amp; WiFi provider in Bilimora. Broadband, fiber, cable TV from ₹4,999/year. Free installation, GST included, no hidden charges. Open 365 days. Call +91 98251 52400.">
-    <meta name="keywords" content="broadband Bilimora, cable TV Bilimora, FTTH internet Bilimora, fast internet provider,
+	<title>Best Internet &amp; Cable TV Provider in Bilimora — Nisan | Broadband, WiFi &amp; CATV</title>
+	<meta name="description" content="Bilimora's trusted FTTH fiber broadband &amp; Cable TV provider since 1993. Internet from ₹4,999/year. 200+ TV channels, zero rain fade, free router &amp; free installation. Open 365 days. Call +91 98251 52400.">
+    <meta name="keywords" content="Nisan News Network, Nisan Cable TV & Internet, Bilimora Desra, Desra Road Nr. Somnath Mandir, Talav Fadiya, Shanti Nagar Township, Bandar Road, MG Road, Vakhariya Bander Road, Sahyog Society, Laxmi Palace, Station Road Bilimora, broadband Bilimora, cable TV Bilimora, cable wala bilimora, dishwala bilimora, CATV Bilimora, dish tv bilimora, FTTH internet Bilimora, fast internet provider,
     affordable broadband Bilimora, speedtest, speed test, Internet Service Bilimora, Cable TV Bilimora, High-Speed Internet Bilimora,
     FTTH Bilimora, WiFi Bilimora, ISP Bilimora, Digital TV Bilimora, Fiber Internet Bilimora, Home Internet Bilimora,
     internet connection bilimora, wifi connection bilimora, new internet connection Bilimora, new broadband connection Bilimora,
@@ -18,7 +18,8 @@
     Unlimited internet plans in Bilimora, Fiber to the home services Bilimora, Reliable WiFi connection in Bilimora,
     Top-rated ISP in Bilimora, Digital cable TV providers Bilimora, Fast fiber internet Bilimora,
     Home broadband services in Bilimora, Internet and cable TV bundles Bilimora, Local internet providers in Bilimora,
-    Cheapest broadband plans Bilimora, High-speed internet for gaming Bilimora, 24/7 customer support internet Bilimora">
+    Cheapest broadband plans Bilimora, High-speed internet for gaming Bilimora, 24/7 customer support internet Bilimora,
+    કેબલ વાળા બિલીમોરા, ડિશ વાળા બિલીમોરા, ઇન્ટરનેટ કનેક્શન બિલીમોરા, વાઇફાઇ બિલીમોરા">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
@@ -49,10 +50,12 @@
       }
     },
     {
-      "@type": ["LocalBusiness", "InternetServiceProvider"],
+      "@type": ["LocalBusiness", "InternetServiceProvider", "TelevisionService"],
       "@id": "https://www.nisan.co.in/#organization",
       "name": "Nisan Cable TV & Internet",
-      "alternateName": "Nisan Internet Bilimora",
+      "legalName": "Nisan News Network",
+      "alternateName": ["Nisan News Network", "Nisan Internet Bilimora", "Nisan Cable Bilimora", "Nisan Cable Wala", "Nisan Dishwala", "Morden Radio Bilimora"],
+      "knowsAbout": ["FTTH Fiber Broadband", "Cable Television", "CATV", "WiFi Routers", "Digital TV Channels", "Bilimora Telecommunications"],
       "url": "https://www.nisan.co.in",
       "logo": {
         "@type": "ImageObject",
@@ -498,31 +501,59 @@
 </div>
 
 <div class="row justify-content-center">
-<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
 <div class="services-item">
 <div class="services-icon">
     <i class="flaticon-wifi-router"></i>
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="/services.php">Broadband</a></h3>
+<h3 class="title"><a href="/services-details.php">Broadband</a></h3>
 
 <p>FTTH fiber from ₹4,999/year — 50 to 400 Mbps. Free installation, free router, unlimited data. No Sunday off: our team is available 365 days a year including every holiday. Call us at 9 PM on Diwali — we answer.</p>
-<a class="btn btn-link" href="/services.php">View Broadband Plans</a></div>
+<a class="btn btn-link" href="/services-details.php">View Broadband Plans &rarr;</a></div>
 </div>
 </div>
 
-<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
 <div class="services-item">
 <div class="services-icon">
     <i class="flaticon-satellite-dish"></i>
 </div>
 
 <div class="services-content">
-<h3 class="title"><a href="/services.php">Cable TV</a></h3>
+<h3 class="title"><a href="/cable-tv.php">Cable TV (CATV)</a></h3>
 
-<p>Local cable TV covering all major Gujarati, Hindi, sports and kids channels — no rain disruptions unlike DTH. Bundle with internet on one bill. Same local team services both. Try once and we earn your trust.</p>
-<a class="btn btn-link" href="/services.php">Explore Cable TV Packages</a></div>
+<p>Bilimora's trusted Cable operator since 1993. 200+ HD/SD channels (Gujarati, Hindi, Sports, Kids). Zero rain fade in monsoon unlike satellite dish antennas. Same-day wireman visit.</p>
+<a class="btn btn-link" href="/cable-tv.php">Explore Cable TV &rarr;</a></div>
+</div>
+</div>
+
+<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+<div class="services-item">
+<div class="services-icon">
+    <i class="flaticon-tv"></i>
+</div>
+
+<div class="services-content">
+<h3 class="title"><a href="/pricing.php">Internet + TV Combo</a></h3>
+
+<p>Bundle high-speed FTTH broadband with 200+ digital cable channels on a single discounted bill. Save up to 45% compared to paying separate providers. One local team to call.</p>
+<a class="btn btn-link" href="/pricing.php">View Combo Deal &rarr;</a></div>
+</div>
+</div>
+
+<div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+<div class="services-item">
+<div class="services-icon">
+    <i class="flaticon-location"></i>
+</div>
+
+<div class="services-content">
+<h3 class="title"><a href="/coverage-areas-bilimora.php">Coverage Areas</a></h3>
+
+<p>Active underground fiber and cable grid across Station Road, Bilimora West, Goharbaug, Desra, Somnath Road, Jamna Nagar, Soniwad, and nearby societies. Same-day setup.</p>
+<a class="btn btn-link" href="/coverage-areas-bilimora.php">Check Your Address &rarr;</a></div>
 </div>
 </div>
 </div>
@@ -536,11 +567,17 @@
 <div class="row justify-content-center">
 <div class="col-lg-10">
 
-<h2 style="font-size:1.55rem; font-weight:700; margin-bottom:14px; color:#111;">Internet Service Provider in Bilimora — Nisan Cable TV & Internet</h2>
-<p style="color:#444; line-height:1.85; margin-bottom:28px;">Nisan Cable TV & Internet is Bilimora's most trusted local internet service provider (ISP) — serving homes and offices in Bilimora West since 1993. As a local ISP, we offer fiber broadband from 50 Mbps to 400 Mbps, home WiFi connections, and cable TV, all at prices 40–55% lower than Jio Fiber and Airtel. Every plan includes free installation, a free WiFi router, and GST. Support is available every day of the year — 8 AM to 10 PM, including Sundays and all holidays. <a href="/services.php" style="color:#0066cc;">See all services →</a></p>
+<h2 style="font-size:1.55rem; font-weight:700; margin-bottom:14px; color:#111;">Internet Service Provider in Bilimora — Nisan Cable TV &amp; Internet</h2>
+<p style="color:#444; line-height:1.85; margin-bottom:28px;">Nisan Cable TV &amp; Internet is Bilimora's most trusted local internet service provider (ISP) — serving homes and offices in Bilimora West since 1993. As a local ISP, we offer fiber broadband from 50 Mbps to 400 Mbps, home WiFi connections, and cable TV, all at prices 40–55% lower than Jio Fiber and Airtel. Every plan includes free installation, a free WiFi router, and GST. Support is available every day of the year — 8 AM to 10 PM, including Sundays and all holidays. <a href="/services.php" style="color:#0066cc;">See all services &rarr;</a></p>
 
-<h2 style="font-size:1.55rem; font-weight:700; margin-bottom:14px; color:#111;">Broadband & Internet Connection Near Me in Bilimora</h2>
-<p style="color:#444; line-height:1.85; margin-bottom:0;">Looking for a new broadband or internet connection near you in Bilimora? Nisan covers Bilimora West (W Zone, PIN 396321) including Station Road, Soniwad, Jamna Nagar, and nearby areas. Getting a new connection is fast — call +91 98251 52400, we visit the same day, and install within 1–2 days for free. Plans from ₹4,999/year. No long wait, no paperwork, no hidden charges. We are your local Bilimora ISP — not a call centre. <a href="/contact.php" style="color:#0066cc;">Apply for a new connection →</a></p>
+<h2 style="font-size:1.55rem; font-weight:700; margin-bottom:14px; color:#111;">Bilimora's #1 "Cable Wala" &amp; "Dishwala" (CATV Network) Since 1993</h2>
+<p style="color:#444; line-height:1.85; margin-bottom:28px;">Before broadband existed, Nisan started in 1993 as Bilimora's premier Cable TV network operating out of Morden Radio on Station Road. Known locally as the top <strong>"Cable Wala"</strong> and <strong>"Dishwala"</strong> across Bilimora West, Kanubhai Patel built a network that today provides uninterrupted entertainment to over 2,000 families. Unlike satellite DTH dishes that cut out with "No Signal" errors whenever rain or clouds appear over Bilimora, our underground cable lines guarantee continuous transmission through the heaviest monsoon storms. 200+ channels in crystal-clear quality. <a href="/cable-tv.php" style="color:#0066cc;">Explore Cable TV Packages &rarr;</a></p>
+
+<h2 style="font-size:1.55rem; font-weight:700; margin-bottom:14px; color:#111;">Broadband &amp; Internet Connection Near Me in Bilimora</h2>
+<p style="color:#444; line-height:1.85; margin-bottom:28px;">Looking for a new broadband or internet connection near you in Bilimora? Nisan covers Bilimora West (W Zone, PIN 396321) including Station Road, Goharbaug, Desra Road, Somnath Road, Jamna Nagar, Soniwad, and Mahadev Nagar. Getting a new connection is fast — call +91 98251 52400, we visit the same day, and install within 1–2 days for free. Plans from ₹4,999/year. No long wait, no paperwork, no hidden charges. We are your local Bilimora ISP — not a call centre. <a href="/contact.php" style="color:#0066cc;">Apply for a new connection &rarr;</a></p>
+
+<h2 style="font-size:1.55rem; font-weight:700; margin-bottom:14px; color:#111;">Hyper-Local Coverage Across Every Corner of Bilimora</h2>
+<p style="color:#444; line-height:1.85; margin-bottom:0;">Whether you reside in Goharbaug bungalows, an apartment on Desra Road, near Somnath Mandir, or along Station Road, Nisan's dedicated fiber lines and cable ports are ready for immediate connection. Check your locality and see why your neighbors trust Nisan over national brands: <a href="/coverage-areas-bilimora.php" style="color:#0066cc; font-weight:600;">View Bilimora Coverage Directory &rarr;</a></p>
 
 </div>
 </div>

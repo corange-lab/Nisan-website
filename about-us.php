@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Nisan — Bilimora's ISP &amp; Cable TV Since 1993</title>
     <meta name="description" content="Nisan has served Bilimora since 1993 with cable TV and FTTH broadband. 2,000+ customers, local support team, plans from ₹4,999/year. View plans.">
+    <meta name="keywords" content="Nisan News Network, Nisan Cable TV & Internet, Bilimora Desra, Desra Road Nr. Somnath Mandir, Talav Fadiya, Shanti Nagar Township, Bandar Road, MG Road, Vakhariya Bander Road, Sahyog Society, Laxmi Palace, Station Road Bilimora, Cable wala Bilimora, Dishwala Bilimora">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/about-us">
 
@@ -39,14 +40,16 @@
       "@type": "AboutPage",
       "name": "About Nisan Cable TV & Internet",
       "url": "https://www.nisan.co.in/about-us",
-      "description": "Nisan Cable TV & Internet has served Bilimora West since 1993. Trusted by 2,000+ customers for FTTH broadband and cable TV.",
+      "description": "Nisan Cable TV & Internet (registered as Nisan News Network) has served Bilimora West since 1993. Trusted by 2,000+ customers for FTTH broadband and cable TV.",
       "mainEntity": {
         "@type": "InternetServiceProvider",
         "name": "Nisan Cable TV & Internet",
+        "legalName": "Nisan News Network",
+        "alternateName": ["Nisan News Network", "Nisan Cable Wala", "Nisan Dishwala", "Morden Radio Bilimora"],
         "url": "https://www.nisan.co.in",
         "foundingDate": "1993",
         "founder": {"@type": "Person", "name": "Kanubhai M. Patel"},
-        "description": "Bilimora West's trusted FTTH broadband and cable TV provider since 1993. Serving 2,000+ customers with plans from 50 Mbps to 400 Mbps.",
+        "description": "Bilimora West's trusted FTTH broadband and cable TV provider since 1993 (registered as Nisan News Network). Serving 2,000+ customers with plans from 50 Mbps to 400 Mbps.",
         "areaServed": {"@type": "AdministrativeArea", "name": "Bilimora West, Gujarat"},
         "telephone": "+919825152400",
         "email": "hello@nisan.co.in",
@@ -104,7 +107,7 @@
                             <h2 class="title">Bilimora's Most Trusted Internet & Cable TV Provider</h2>
                         </div>
                         <div class="about-content">
-                            <p>Nisan Cable TV & Internet has been a cornerstone of Bilimora West since <strong>1993</strong> — first bringing cable TV to local homes, and since <strong>2019</strong> delivering high-speed FTTH fiber broadband. Today, we serve <strong>2,000+ customers</strong> across Bilimora's W Zone. But what really sets us apart is not the speed — it is the service.</p>
+                            <p>Nisan Cable TV & Internet (registered as <strong>Nisan News Network</strong>) has been a cornerstone of Bilimora West since <strong>1993</strong> — first bringing cable TV to local homes, and since <strong>2019</strong> delivering high-speed FTTH fiber broadband. Today, we serve <strong>2,000+ customers</strong> across Bilimora's W Zone, including Station Road, Laxmi Palace, Desra Road (Nr. Somnath Mandir), Talav Fadiya, Shanti Nagar Township, Bandar Road, MG Road, Vakhariya Bander Road, and Sahyog Society. But what really sets us apart is not the speed — it is the service.</p>
                             <p style="margin-top:14px;">We work <strong>365 days a year — no Sundays off, no holidays</strong>. When your internet goes down on Diwali evening or a Sunday night, you call us and we answer. Our local Bilimora team resolves most issues the same day. No national call centre, no ticket numbers, no 48-hour wait. Just a real person who knows your street.</p>
                             <ul class="about-list">
                                 <li>Support every single day — Sundays, Diwali, Navratri, all holidays</li>

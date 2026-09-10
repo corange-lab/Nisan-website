@@ -9,10 +9,6 @@ ob_start(function ($buffer) {
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
-<!doctype html>
-<html lang="en">
-
-
 <?php include_once('conversion-widgets.php'); ?>
 
 <!-- header-area -->
@@ -27,7 +23,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 	<li class="d-none d-xl-flex"><i class="flaticon-location"></i> <a href="https://maps.app.goo.gl/TUHbd83NAyXgmCvN9">Morden Radio, Nr. Laxmi Palace, Station
                                         Rd, Bilimora.</a></li>
                                 <li class="d-none d-lg-flex"><i class="flaticon-email"></i> <a href="mailto:hello@nisan.co.in">hello@nisan.co.in</a></li>
-                                <li><i class="flaticon-clock"></i>Time : 09: AM - 09 PM</li>
+                                <li><i class="flaticon-clock"></i>Time : 08: AM - 10 PM (365 Days)</li>
 </ul>
 </div>
 </div>
@@ -59,7 +55,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <ul class="navigation">
 	<li class="<?= ($currentPage == 'index.php') ? 'active' : '' ?>"><a href="/index.php">Home</a></li>
 	<li class="<?= ($currentPage == 'about-us.php') ? 'active' : '' ?>"><a href="/about-us.php">About</a></li>
-	<li class="<?= ($currentPage == 'services.php') ? 'active' : '' ?>"><a href="/services.php">Services</a></li>
+	<li class="<?= ($currentPage == 'services.php' || $currentPage == 'services-details.php') ? 'active' : '' ?>"><a href="/services.php">Services</a></li>
+	<li class="<?= ($currentPage == 'cable-tv.php') ? 'active' : '' ?>"><a href="/cable-tv.php">Cable TV</a></li>
+	<li class="<?= ($currentPage == 'pricing.php') ? 'active' : '' ?>"><a href="/pricing.php">Plans</a></li>
 	<li class="<?= (strpos($_SERVER['PHP_SELF'], '/blog') !== false) ? 'active' : '' ?>"><a href="/blog/">Blog</a></li>
 	<li class="<?= ($currentPage == 'contact.php') ? 'active' : '' ?>"><a href="/contact.php">Contact</a></li>
 	<li class="<?= ($currentPage == 'status.php') ? 'active' : '' ?>">

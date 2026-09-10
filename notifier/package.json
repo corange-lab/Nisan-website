@@ -4,7 +4,7 @@
   "description": "Polls Nisan status API and sends WhatsApp alerts when network is down > 10 min",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node api.js && node index.js"
   },
   "dependencies": {
     "axios": "^1.7.2",
