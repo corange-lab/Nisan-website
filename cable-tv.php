@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cable TV &amp; CATV Connection in Bilimora — Best Cable Wala &amp; Dishwala | Nisan</title>
-    <meta name="description" content="Bilimora's trusted Cable TV (CATV) provider since 1993. 200+ HD/SD channels with Gujarati, Hindi, Sports &amp; Kids. Underground weatherproof network — no monsoon rain fade. Combo with Fiber Internet. Call +91 98251 52400.">
+    <title>Cable TV &amp; CATV Connection in Bilimora | 200+ Channels</title>
+    <meta name="description" content="Get Cable TV or CATV in Bilimora with 200+ HD and SD channel options, Gujarati and Hindi packs, local installation and no satellite rain fade.">
     <meta name="keywords" content="Nisan News Network, Bilimora Desra, Desra Road Nr. Somnath Mandir, Talav Fadiya, Shanti Nagar Township, Bandar Road, MG Road, Vakhariya Bander Road, Sahyog Society, Laxmi Palace, Station Road Bilimora, cable tv bilimora, cable connection bilimora, cable wala bilimora, dishwala bilimora, CATV bilimora, dish tv bilimora, TV connection bilimora, nisan cable bilimora, gujarati channels cable tv bilimora, cable operator bilimora, set top box bilimora, bilimora cable network">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.nisan.co.in/cable-tv">
@@ -558,6 +558,11 @@
                                 <strong>Serving every corner of Bilimora:</strong> Station Road, Bilimora West (W Zone), Goharbaug, Desra, Somnath Road, Jamna Nagar, Soniwad, Mahadev Nagar, Bazar, and Devsar. 
                                 <a href="/coverage-areas-bilimora.php" style="color:#0066cc; font-weight:700; margin-left:6px;">View all coverage areas &rarr;</a>
                             </p>
+                        </div>
+
+                        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:12px; padding:24px; margin-top:22px;">
+                            <h3 style="font-size:1.25rem;">Explore Cable TV services in Bilimora</h3>
+                            <p style="margin:0;line-height:2;"><a href="/local-cable-tv-operator-bilimora">Local Cable TV operator</a> · <a href="/cable-connection-bilimora">New cable connection</a> · <a href="/catv-provider-bilimora">CATV provider</a> · <a href="/gujarati-cable-tv-bilimora">Gujarati Cable TV</a> · <a href="/cable-tv-for-apartments-bilimora">Cable TV for apartments</a> · <a href="/internet-cable-combo-bilimora">Internet and Cable TV combo</a></p>
                         </div>
 
                     </div>

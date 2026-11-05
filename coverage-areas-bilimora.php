@@ -405,6 +405,12 @@
                 </div>
 
                 <!-- Not in list callout -->
+                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:28px;margin-top:30px;">
+                    <h2 style="font-size:1.5rem;">Detailed locality coverage pages</h2>
+                    <p style="line-height:2;margin:0;"><a href="/internet-bilimora-west">Bilimora West</a> · <a href="/internet-goharbaug-bilimora">Goharbaug</a> · <a href="/internet-somnath-road-bilimora">Somnath Road</a> · <a href="/internet-jamna-nagar-bilimora">Jamna Nagar</a> · <a href="/internet-soniwad-bilimora">Soniwad</a> · <a href="/internet-mahadev-nagar-bilimora">Mahadev Nagar</a> · <a href="/internet-devsar-bilimora">Devsar side</a></p>
+                </div>
+
+                <!-- Not in list callout -->
                 <div style="background: linear-gradient(135deg, #09132b, #0052a3); color: #ffffff; border-radius: 16px; padding: 35px; text-align: center; margin-top: 30px;">
                     <h3 style="color: #ffffff; font-size: 1.6rem; font-weight: 800; margin-bottom: 10px;">Don't See Your Society Listed?</h3>
                     <p style="color: rgba(255,255,255,0.9); max-width: 680px; margin: 0 auto 20px; font-size: 15px;">

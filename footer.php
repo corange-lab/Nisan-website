@@ -146,6 +146,7 @@
                             </div>
                             <ul class="fw-list">
                                 <li><a href="/services-details.php">FTTH Fiber Broadband</a></li>
+                                <li><a href="/internet-service-provider-bilimora.php">Internet Provider Bilimora</a></li>
                                 <li><a href="/pricing.php">Internet Plans (from ₹4,999)</a></li>
                                 <li><a href="/speedtest.php">Speed Test Online</a></li>
                                 <li><a href="/status.php">Live Network Status</a></li>
@@ -165,6 +166,7 @@
                                 <li><a href="/cable-wala-bilimora.php">Bilimora Cable Wala / Dishwala</a></li>
                                 <li><a href="/wifi-connection-bilimora.php">New WiFi Connection</a></li>
                                 <li><a href="/pricing.php">Internet + Cable TV Combo</a></li>
+                                <li><a href="/internet-cable-tv-provider-bilimora.php">Internet &amp; CATV Provider</a></li>
                                 <li><a href="/nisan-news-network.php">Nisan News Network (Regd.)</a></li>
                                 <li><a href="/contact.php">Book New Connection</a></li>
                             </ul>
